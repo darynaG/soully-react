@@ -26,18 +26,6 @@ body {
   font-size: 40px;
   padding-top: 210px;
 }
-.mood-picker input[type="radio"] + .far,
-.mood-picker input[type="radio"] + label > .far {
-  cursor: pointer;
-}
-.mood-picker input[type="radio"] + .far:before,
-.mood-picker input[type="radio"] + label > .far:before {
-  color: black;
-}
-.mood-picker input[type="radio"]:checked + .far:before,
-.mood-picker input[type="radio"]:checked + label > .far:before {
-  color: #004d40;
-}
 .activity-picker {
   display: flex;
   flex-direction: column;
@@ -59,18 +47,6 @@ body {
 }
 .activity-picker .block {
   padding-top: 100px;
-}
-.activity-picker input[type="checkbox"] + .fas,
-.activity-picker input[type="checkbox"] + label > .fas {
-  cursor: pointer;
-}
-.activity-picker input[type="checkbox"] + .fas:before,
-.activity-picker input[type="checkbox"] + label > .fas:before {
-  color: black;
-}
-.activity-picker input[type="checkbox"]:checked + .fas:before,
-.activity-picker input[type="checkbox"]:checked + label > .fas:before {
-  color: #004d40;
 }
 .story-sharer {
   display: flex;
@@ -169,4 +145,9 @@ body {
   object-fit: fill;
   min-height: 100%;
   min-width: 100%;
+}
+.h3-label {
+  text-align: center;
+  font-family: 'Courier New', Courier, monospace;
+  color: black;
 }

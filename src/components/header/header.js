@@ -16,19 +16,19 @@ function Header ()
                 <Link to="/">Home</Link>
                 </li>
                 <li>
-                <Link to="/day">Day</Link>
+                <Link to="/recomendations">Day</Link>
                 </li>
                 <li>
-                <Link to="/topics">Month</Link>
+                <Link to="/topics/components">Month</Link>
                 </li>
                 <li>
-                <Link to="/">Stories</Link>
+                <Link to="/stories">Stories</Link>
                 </li>
             </ul>
         </div>
             <div class="top-menu-nav-list">
                 <li>
-                    <a href="login.html">Log out</a> 
+                   Log out
                  </li>
             </div>
         </nav>

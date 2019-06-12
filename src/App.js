@@ -15,7 +15,7 @@ function App() {
 
         <Route exact path="/" component={Home} />
         <Route path="/day" component={Day} />
-        <Route path="/topics" component={Topics} />
+        <Route path="/month" component={Topics} />
       </div>
     </Router>
   );
@@ -25,8 +25,8 @@ function Home() {
   return (
     <div>
       <MoodGroup/>
-      <MoodGroup/>
     </div>
+    //return mood-page
   );
 }
 

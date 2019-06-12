@@ -14,7 +14,7 @@ body{
     //height: 91vh;    
     //width: 100vw;
     
-    display: flex;
+         display: flex;
         flex-direction: column;
         justify-content: center;
         align-content: center;
@@ -32,16 +32,7 @@ body{
         font-size: 40px;    
         padding-top: 210px;
         }
-        input[type="radio"] + .far,
-        input[type="radio"] + label > .far { cursor: pointer; }
-
-        input[type="radio"] + .far:before,
-        input[type="radio"] + label > .far:before { color: black;}
-        input[type="radio"]:checked + .far:before,
-        input[type="radio"]:checked + label > .far:before 
-        { color: @green; 
-           
-        }
+        
 
 
 }
@@ -74,17 +65,7 @@ body{
     .block {
         padding-top: 100px;
     }
-    input[type="checkbox"] + .fas,
-    input[type="checkbox"] + label > .fas { cursor: pointer; }
-
-    input[type="checkbox"] + .fas:before,
-    input[type="checkbox"] + label > .fas:before { color: black;}
-    input[type="checkbox"]:checked + .fas:before,
-    input[type="checkbox"]:checked + label > .fas:before 
-    {   
-        color: @green;  
-        
-    }
+    
         
 }
 .story-sharer{
@@ -209,6 +190,10 @@ z-index: -100;
 object-fit: fill;
 min-height: 100%;
 min-width: 100%;
-
     }
 
+    .h3-label {
+        text-align: center;
+        font-family: @font-label;   
+        color: black;
+    }

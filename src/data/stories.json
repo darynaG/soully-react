@@ -1,0 +1,25 @@
+[
+    {
+    "id":1,
+    "mood":"sad",
+    "username": "Aizek",
+    "text": "No matter how much the world tries to hold you back, always continue with the belief that what you want to achieve is possible. Believing you can become successful is the most important step in actually achieving it."
+},
+{
+    "id":2,
+    "mood":"sad",
+    "username": "Alice",
+    "text": "FFFFFFF matter how much the world tries to hold you back, always continue with the belief that what you want to achieve is possible. Believing you can become successful is the most important step in actually achieving it."
+},
+{
+    "id":3,
+    "mood":"sad",
+    "username": "Tom",
+    "text": "Thow much the world tries to hold you back, always continue with the belief that what you want to achieve is possible. Believing you can become successful is the most important step in actually achieving it."
+},
+{
+    "id":4,
+    "mood":"happy",
+    "username": "Jack",
+    "text": "YYYY matter how much the world tries to hold you back, always continue with the belief that what you want to achieve is possible. Believing you can become successful is the most important step in actually achieving it."
+}]

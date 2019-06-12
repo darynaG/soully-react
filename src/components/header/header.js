@@ -1,4 +1,5 @@
 import React from 'react';
+import { BrowserRouter as Router, Route, Link } from "react-router-dom";
 
 function Header () 
 {
@@ -12,16 +13,16 @@ function Header ()
         <div class="centered">
             <ul class="top-menu-nav-list">
                 <li>
-                   <a href="new-recomendation-page.html">Home</a> 
+                <Link to="/">Home</Link>
                 </li>
                 <li>
-                    <a href="new-mood-page.html">Day</a>
+                <Link to="/day">Day</Link>
                 </li>
                 <li>
-                  <a href="new-recomendation-page.html">Month</a>
+                <Link to="/topics">Month</Link>
                 </li>
                 <li>
-                   <a href="new-recomendation-page.html">Stories</a> 
+                <Link to="/">Stories</Link>
                 </li>
             </ul>
         </div>

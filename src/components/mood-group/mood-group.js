@@ -9,7 +9,17 @@ import {
         faMehRollingEyes,
         faLaughWink,
         faLaughBeam,
-        faLaughSquint
+        faLaughSquint,
+        faGlassWhiskey,
+    faTableTennis,
+    faCouch,
+    faWalking,
+    faRunning,
+    faHiking,
+    faHeart,
+    faBirthdayCake,
+    faGlassCheers,
+    faHandHoldingHeart
   
 } from '@fortawesome/free-solid-svg-icons'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
@@ -21,7 +31,17 @@ library.add(
         faMehRollingEyes,
         faLaughWink,
         faLaughBeam,
-        faLaughSquint
+        faLaughSquint,
+        faGlassWhiskey,
+    faTableTennis,
+    faCouch,
+    faWalking,
+    faRunning,
+    faHiking,
+    faHeart,
+    faBirthdayCake,
+    faGlassCheers,
+    faHandHoldingHeart
 )
  
 class MoodGroup extends React.Component{
@@ -45,7 +65,7 @@ render ()
         return (
 <div className="mood-picker">
     <h3 className="h3-label">What is your mood?</h3>  
-    
+    <form>
     <ul className="block">            
         <li className="flex-item">  
         <label>
@@ -109,6 +129,7 @@ render ()
        </label>
         </li>     
         </ul>  
+</form>
         <video  className="video" playsInline autoPlay muted loop id="myVideo">
                                 <source src={videoClip} type="video/mp4"/>
         </video>                                

@@ -16,6 +16,7 @@ function Header ()
                 <Link to="/">Home</Link>
                 </li>
                 <li>
+
                 <Link to="/recomendations">Day</Link>
                 </li>
                 <li>
@@ -23,6 +24,7 @@ function Header ()
                 </li>
                 <li>
                 <Link to="/stories">Stories</Link>
+
                 </li>
             </ul>
         </div>

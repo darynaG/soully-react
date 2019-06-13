@@ -21,6 +21,10 @@ import { library } from '@fortawesome/fontawesome-svg-core'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faGhost } from '@fortawesome/free-solid-svg-icons'
 
+import videoClip from './assets/video/Nature.mp4'
+import Reservation from './components/mood-group/test'
+
+import MoodG from './components/mood-group/test'
 library.add(faGhost)
 
 
@@ -35,7 +39,7 @@ function App() {
         <Route exact path="/" component={Home} />
         <Route path="/day" component={Day} />
         <Route path="/month" component={Topics} />
-
+        <Route path="/mood" component={MoodG} />
       </div>
     </Router>
   );
@@ -52,11 +56,19 @@ function Guest(){
 }
 
 function Home() {
-  return (
-    <div>
-      <MoodGroup/>
+  return(
+     <div>
     </div>
   );
+  /*return (
+  <div>
+      <MoodGroup/>
+      <video  className="video" playsInline autoPlay muted loop id="myVideo">
+                                <source src={videoClip} type="video/mp4"/>
+        </video> 
+      <Reservation/>
+    </div>
+  );*/
 }
 
 function Day() {

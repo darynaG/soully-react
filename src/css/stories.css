@@ -1,0 +1,134 @@
+.storyboard {
+  justify-content: space-between;
+  width: 80%;
+  font-family: 'Courier New', Courier, monospace;
+  padding: 5px;
+  display: flex;
+  flex-wrap: wrap;
+  position: relative;
+  flex-direction: row;
+}
+.storyboard::after {
+  display: flexbox;
+  clear: both;
+}
+.story {
+  background-color: rgba(240, 230, 230, 0.705);
+  display: flexbox;
+  margin: 20px;
+  padding: 15px;
+  border-radius: 2px;
+  font-family: 'Courier New', Courier, monospace;
+}
+.story .story_footer {
+  display: flex;
+  justify-content: flex-end;
+  padding: 10px;
+  font-size: 20;
+  font-weight: bold;
+  border-style: solid;
+  border-color: #EDEAE5;
+  border-width: 1px 0px 0px 0px;
+  vertical-align: middle;
+}
+.story .story_footer .h6-label {
+  text-align: center;
+  font-family: 'Courier New', Courier, monospace;
+  font-size: 13px;
+  visibility: hidden;
+  margin-top: 20px;
+  padding-right: 5px;
+}
+.story .story_footer p {
+  padding-right: 10%;
+  padding-top: 2%;
+}
+.story .story_footer i {
+  font-size: 40px;
+  font-weight: 100;
+  color: whitesmoke;
+}
+.story .story_footer i:hover {
+  color: #9e0741d5;
+}
+.story .story_footer i:hover .h6-label,
+.story .story_footer i:hover .h5-label {
+  color: #9e0741d5;
+  visibility: visible;
+  background-color: rgba(240, 248, 255, 0.205);
+}
+.story .story_footer:hover {
+  color: #9e0741d5;
+}
+.story .story_footer:hover .h6-label,
+.story .story_footer:hover .h5-label {
+  color: #9e0741d5;
+  visibility: visible;
+  background-color: rgba(240, 248, 255, 0.205);
+}
+.image_user {
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  margin: 7px;
+  margin-bottom: 15px;
+  display: inline-block;
+}
+.left {
+  flex: 70%;
+}
+.right {
+  flex: 30%;
+}
+.story article {
+  font-family: 'Courier New', Courier, monospace;
+  font-size: 20px;
+}
+.story_head {
+  display: flex;
+  flex-direction: row;
+  justify-content: right;
+  font-family: 'Courier New', Courier, monospace;
+  font-weight: bold;
+  font-size: 25px;
+}
+.title-text {
+  padding: 35px;
+  max-width: 60%;
+  font-family: 'Courier New', Courier, monospace;
+  font-size: 40px;
+}
+.right-align {
+  right: 0px;
+}
+.row {
+  display: flex;
+  flex-direction: column;
+}
+.add-margin {
+  margin-top: 50px;
+}
+.add-margin {
+  margin-top: 150px;
+}
+.story-board {
+  margin-top: 10%;
+  min-height: 100%;
+  /* Right column */
+}
+.story-board .leftcolumn {
+  float: left;
+  width: 80%;
+}
+.story-board .rightcolumn {
+  float: left;
+  width: 20%;
+}
+.story-board .rightcolumn .articles {
+  border-radius: 10px;
+  background-color: #004d408f;
+  margin-top: 7%;
+  margin-right: 3%;
+  padding: 7%;
+  justify-content: center;
+}

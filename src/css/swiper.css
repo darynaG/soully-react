@@ -1,0 +1,16 @@
+.container {
+  width: 35%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  font-family: 'Courier New', Courier, monospace;
+}
+.container .content {
+  width: 80%;
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+}
+.container .content p {
+  text-align: justify;
+}

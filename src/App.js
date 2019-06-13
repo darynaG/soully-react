@@ -1,6 +1,6 @@
 import React from 'react';
+import ReactDOM from 'react-dom'
 import { BrowserRouter as Router, Route, Link } from "react-router-dom";
-
 import './App.css';
 import '././css/header_s.css';
 import '././css/new-mood-page.css';
@@ -12,22 +12,35 @@ import StoryBoard from './components/guest-page/storyBord';
 import Quote from './components/guest-page/quote'
 import StoryLine from './components/story-page/storyline'
 
+import '././css/daily-log.css';
+import '././css/header_s.css';
+import '././css/calendar.css';
+import DailyMood from './components/recomendation-page/daily-status/daily';
+
+import { library } from '@fortawesome/fontawesome-svg-core'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faGhost } from '@fortawesome/free-solid-svg-icons'
+
+library.add(faGhost)
+
+
 
 function App() {
   return (
     <Router>
       <div>
         <Header_func />
-       
+
+
         <Route exact path="/" component={Home} />
         <Route path="/day" component={Day} />
-        <Route path="/topics" component={Topics} />
-        <Guest/>
-       
+        <Route path="/month" component={Topics} />
+
       </div>
     </Router>
   );
 }
+
 function Guest(){
   return (
   <div>
@@ -42,13 +55,17 @@ function Home() {
   return (
     <div>
       <MoodGroup/>
-      <MoodGroup/>
     </div>
   );
 }
 
 function Day() {
-  return <h2>About</h2>;
+  var action=["Running","Water","Sport"];
+  return(
+    <div>
+    <DailyMood username="Tom" mood="sad" actions={action}/> 
+    </div>
+  );
   // return recomendation page
 }
 

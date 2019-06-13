@@ -21,14 +21,18 @@ class StoryBoard extends Component {
     constructor(props){
         super(props);
        
-        var mood_stories=[];// choose stories for your mood only 
-       Messages.map((data,index)=>{ if(this.props.mood==data.mood) mood_stories.push(data);})
+        var mood_stories=[];// choose stories for your mood only
+        if(props.mood){
+       Messages.map((data,index)=>{ if(this.props.mood==data.mood) mood_stories.push(data);})}
+       else {
+        Messages.map((data,index)=>{ mood_stories.push(data);})
+       }
         var maxNumber=mood_stories.length-2;
         var rand=Math.floor(Math.random()*maxNumber);
        this.state={visibility:props.visible,mood:props.mood,stories:mood_stories, i:rand};
 
-        console.log(this.state)
-        console.log(this.state.stories);
+        //console.log(this.state)
+       
     }
     
     render(){

@@ -24,6 +24,8 @@
   display: flex;
   justify-content: flex-end;
   padding: 10px;
+  font-size: 20;
+  font-weight: bold;
   border-style: solid;
   border-color: #EDEAE5;
   border-width: 1px 0px 0px 0px;
@@ -36,6 +38,10 @@
   visibility: hidden;
   margin-top: 20px;
   padding-right: 5px;
+}
+.story .story_footer p {
+  padding-right: 10%;
+  padding-top: 2%;
 }
 .story .story_footer i {
   font-size: 40px;
@@ -83,6 +89,8 @@
   flex-direction: row;
   justify-content: right;
   font-family: 'Courier New', Courier, monospace;
+  font-weight: bold;
+  font-size: 25px;
 }
 .title-text {
   padding: 35px;

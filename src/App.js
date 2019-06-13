@@ -5,10 +5,12 @@ import './App.css';
 import '././css/header_s.css';
 import '././css/new-mood-page.css';
 import '././css/stories.css'
+import '././css/quote.css'
 import Header from './components/header/header';
 import MoodGroup from './components/mood-group/mood-group';
 import StoryBoard from './components/guest-page/storyBord';
 import Quote from './components/guest-page/quote'
+import StoryLine from './components/story-page/storyline'
 
 
 function App() {
@@ -16,18 +18,24 @@ function App() {
     <Router>
       <div>
         <Header_func />
-        <Guest/>
+       
         <Route exact path="/" component={Home} />
         <Route path="/day" component={Day} />
         <Route path="/topics" component={Topics} />
+        <Guest/>
        
       </div>
     </Router>
   );
 }
 function Guest(){
-  return <StoryBoard mood="sad" visible='true'/>;
-  return <Quote mood="sad" />
+  return (
+  <div>
+  <StoryBoard mood="sad" visible='true'/>
+ <Quote mood="sad" />
+ <StoryLine></StoryLine>
+ </div>
+  )
 }
 
 function Home() {

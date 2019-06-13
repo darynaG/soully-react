@@ -24,7 +24,7 @@ import {
 
 } from '@fortawesome/free-solid-svg-icons'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { runInThisContext } from 'vm';
+
 library.add(
     faQuoteLeft,
     faQuoteRight,
@@ -89,9 +89,10 @@ class DailyMood extends React.Component{
         < li className="flex-item"> <FontAwesomeIcon icon={action} size="3x"> </FontAwesomeIcon>
         </li>
         );
+        console.log("vghvghv");
    
         const stor=this.state.stories.map((story)=>
-        <ol>
+        <ol className="story">
             <FontAwesomeIcon icon={faQuoteLeft}> </FontAwesomeIcon>
         <article className="story_text">
         {story.text}

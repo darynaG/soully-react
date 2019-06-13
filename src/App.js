@@ -16,9 +16,10 @@ import '././css/daily-log.css';
 import '././css/header_s.css';
 import '././css/calendar.css';
 import DailyMood from './components/recomendation-page/daily-status/daily';
+import DailyLog from './components/recomendation-page/daily-log/daily-log';
+import Recomendation from './components/recomendation-page/swiper/swiper';
 
 import { library } from '@fortawesome/fontawesome-svg-core'
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faGhost } from '@fortawesome/free-solid-svg-icons'
 
 library.add(faGhost)
@@ -64,6 +65,8 @@ function Day() {
   return(
     <div>
     <DailyMood username="Tom" mood="sad" actions={action}/> 
+    <DailyLog username="Tom" mood="sad" actions={action}/>
+    <Recomendation mood="sad" category="books"/>
     </div>
   );
   // return recomendation page

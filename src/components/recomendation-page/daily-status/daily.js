@@ -86,7 +86,7 @@ class DailyMood extends React.Component{
     render(){
         
         const actions_=this.state.act_img.map((action)=>
-        <li> <FontAwesomeIcon icon={action} size="3x"> </FontAwesomeIcon>
+        < li className="flex-item"> <FontAwesomeIcon icon={action} size="3x"> </FontAwesomeIcon>
         </li>
         );
    
@@ -112,7 +112,7 @@ class DailyMood extends React.Component{
                 </div>
                 <div className="action">
                     <h1>You've been up to</h1>
-                    <ul>
+                    <ul  className="block">
                        {actions_}
                     </ul>
                 </div>    

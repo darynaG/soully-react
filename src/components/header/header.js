@@ -4,14 +4,14 @@ import { BrowserRouter as Router, Route, Link } from "react-router-dom";
 function Header () 
 {
     return (
-        <header class="top-menu">
+        <header className="top-menu">
 
-        <nav class="top-menu-nav">
-            <div class="logo">
+        <nav className="top-menu-nav">
+            <div className="logo">
                   LOGO
             </div>
-        <div class="centered">
-            <ul class="top-menu-nav-list">
+        <div className="centered">
+            <ul className="top-menu-nav-list">
                 <li>
                 <Link to="/">Home</Link>
                 </li>
@@ -26,7 +26,7 @@ function Header ()
                 </li>
             </ul>
         </div>
-            <div class="top-menu-nav-list">
+            <div className="top-menu-nav-list">
                 <li>
                    Log out
                  </li>

@@ -40,7 +40,7 @@ function Home() {
 }
 
 function Day() {
-  var action=["run","sleep","cry"];
+  var action=["Running","Water","Sport"];
   return(
     <div>
     <DailyMood username="Tom" mood="sad" actions={action}/> 

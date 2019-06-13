@@ -3,30 +3,93 @@ import Stories from '../../../data/stories.json';
 import FontAwesome from '../../../data/fontawesome.json';
 import { library } from '@fortawesome/fontawesome-svg-core'
 import {
-  
     faQuoteLeft,
-    faQuoteRight
+    faQuoteRight,
+    faSadTear,
+    faFrownOpen,
+    faMehRollingEyes,
+    faLaughWink,
+    faLaughBeam,
+    faLaughSquint,
+    faGlassWhiskey,
+    faTableTennis,
+    faCouch,
+    faWalking,
+    faRunning,
+    faHiking,
+    faHeart,
+    faBirthdayCake,
+    faGlassCheers,
+    faHandHoldingHeart
+
 } from '@fortawesome/free-solid-svg-icons'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { runInThisContext } from 'vm';
 library.add(
     faQuoteLeft,
-    faQuoteRight
+    faQuoteRight,
+    faSadTear,
+    faFrownOpen,
+    faMehRollingEyes,
+    faLaughWink,
+    faLaughBeam,
+    faLaughSquint,
+    faGlassWhiskey,
+    faTableTennis,
+    faCouch,
+    faWalking,
+    faRunning,
+    faHiking,
+    faHeart,
+    faBirthdayCake,
+    faGlassCheers,
+    faHandHoldingHeart
 )
 class DailyMood extends React.Component{
+
+    
     constructor(props){
         super(props);
-        var mood_stories=[];// choose stories for your mood only 
+        var MapMood=new Map();
+        MapMood.set("sad",faSadTear);
+        MapMood.set("wow",faFrownOpen);
+        MapMood.set("excited",faLaughWink);
+        MapMood.set("good",faLaughBeam);
+        MapMood.set("happy",faLaughSquint);
+
+        var MapActions=new Map();
+        MapActions.set("Water",faGlassWhiskey);
+        MapActions.set("Sport",faTableTennis);
+        MapActions.set("Lazy day",faCouch);
+        MapActions.set("Walking",faWalking);
+        MapActions.set("Running",faRunning);
+        MapActions.set("Hiking",faHiking);
+        MapActions.set("Date",faHeart);
+        MapActions.set("Birthday",faBirthdayCake);
+        MapActions.set("Party",faGlassCheers);
+        MapActions.set("Charity",faHandHoldingHeart);
+        var actions_img=[];
+
+        for(let i=0;i<this.props.actions.length;i++){
+            actions_img.push(MapActions.get(this.props.actions[i]));
+        }
+
+
+
+        var mood_stories=[];
         Stories.map((data,index)=>{ if(this.props.username==data.username) mood_stories.push(data);})
         var actions=[];
-        this.state={ username:this.props.username,mood:this.props.mood, actions:this.props.actions,stories:mood_stories}
+        this.state={ username:this.props.username,mood:this.props.mood, actions:this.props.actions,stories:mood_stories,mood_img:MapMood.get(this.props.mood), act_img:actions_img}
+
     }
-   
-   
 
     render(){
-        const actions_=this.state.actions.map((action)=>
-        <li>{action}</li>);
+        
+        const actions_=this.state.act_img.map((action)=>
+        <li> <FontAwesomeIcon icon={action} size="3x"> </FontAwesomeIcon>
+        </li>
+        );
+   
         const stor=this.state.stories.map((story)=>
         <ol>
             <FontAwesomeIcon icon={faQuoteLeft}> </FontAwesomeIcon>
@@ -35,13 +98,17 @@ class DailyMood extends React.Component{
         </article>
         <FontAwesomeIcon icon={faQuoteRight}>
             </FontAwesomeIcon></ol>);
+            const a=faQuoteLeft;
         
         return(
+            
             <div className="daily-log">
                 <h1>Daily mood</h1>
-                <i className="fa fa-close"></i>
                 <div className="mood">
-                <h1> Your mood is {this.state.mood}</h1>
+                <h1> Your mood is</h1>
+                <FontAwesomeIcon icon={this.state.mood_img} size="5x"></FontAwesomeIcon>
+    
+           
                 </div>
                 <div className="action">
                     <h1>You've been up to</h1>

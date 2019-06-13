@@ -91,7 +91,7 @@ class DailyMood extends React.Component{
         );
    
         const stor=this.state.stories.map((story)=>
-        <ol>
+        <ol className="story">
             <FontAwesomeIcon icon={faQuoteLeft}> </FontAwesomeIcon>
         <article className="story_text">
         {story.text}

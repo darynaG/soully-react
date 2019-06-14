@@ -1,13 +1,24 @@
 import React from 'react';
 import ReactDOM from 'react-dom'
 import { BrowserRouter as Router, Route, Link } from "react-router-dom";
+import './App.css';
+import '././css/header_s.css';
 import '././css/new-mood-page.css';
+import '././css/stories.css'
+import '././css/quote.css'
+import Header from './components/header/header';
+import MoodGroup from './components/mood-group/mood-group';
+import StoryBoard from './components/guest-page/storyBord';
+import Quote from './components/guest-page/quote'
+import StoryLine from './components/story-page/storyline'
+
 import '././css/daily-log.css';
 import '././css/header_s.css';
 import '././css/calendar.css';
+
 import '././css/recomendation.css';
-import Header from './components/header/header';
-import MoodGroup from './components/mood-group/mood-group';
+
+
 import DailyMood from './components/recomendation-page/daily-status/daily';
 import DailyLog from './components/recomendation-page/daily-log/daily-log';
 import Recomendation from './components/recomendation-page/swiper/swiper';
@@ -16,7 +27,12 @@ import Calendar from './components/recomendation-page/monthly-log/monthly-log';
 import { library } from '@fortawesome/fontawesome-svg-core'
 import { faGhost } from '@fortawesome/free-solid-svg-icons'
 
+import videoClip from './assets/video/Nature.mp4'
+import Reservation from './components/mood-group/test'
+
+import MoodG from './components/mood-group/test'
 library.add(faGhost)
+
 
 
 function App() {
@@ -25,22 +41,44 @@ function App() {
       <div>
         <Header_func />
 
+
         <Route exact path="/" component={Home} />
         <Route path="/day" component={Day} />
+
         <Route path="/month" component={Month} />
        
+
+        <Route path="/mood" component={MoodG} />
+
       </div>
     </Router>
   );
 }
 
-function Home() {
+function Guest(){
   return (
-    <div>
-      <MoodGroup/>
-      <MoodGroup/>
+  <div>
+  <StoryBoard mood="sad" visible='true'/>
+ <Quote mood="sad" />
+ <StoryLine></StoryLine>
+ </div>
+  )
+}
+
+function Home() {
+  return(
+     <div>
     </div>
   );
+  /*return (
+  <div>
+      <MoodGroup/>
+      <video  className="video" playsInline autoPlay muted loop id="myVideo">
+                                <source src={videoClip} type="video/mp4"/>
+        </video> 
+      <Reservation/>
+    </div>
+  );*/
 }
 
 function Day() {
@@ -57,7 +95,6 @@ function Day() {
    
     </div>
   );
- 
   // return recomendation page
 }
 function Month(){
@@ -93,7 +130,6 @@ function Topics({ match }) {
         path={match.path}
         render={() => <h3>Please select a topic.</h3>}
       />
->>>>>>> d9be73876569f52c07bb3a6ffbf78faa07f75941
     </div>
   );
 }

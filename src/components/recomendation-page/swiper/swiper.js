@@ -1,4 +1,5 @@
 import React from 'react';
+
 import arrowRight from '../../../img/book.jpeg';
 import arrowLeft from '../../../img/film.jpeg';
 import '../../../css/swiper.css';
@@ -89,4 +90,4 @@ export default Recomendation;
 
 
 
-        
+ 

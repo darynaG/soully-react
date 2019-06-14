@@ -1,0 +1,18 @@
+.centered-text {
+  display: flexbox;
+  padding: 35px;
+  max-width: 75%;
+  margin: 40px;
+  text-align: center;
+  left: 10%;
+  right: 10%;
+  top: 30%;
+  font-size: 40px;
+  background-color: rgba(20, 10, 10, 0.1);
+  justify-content: space-around;
+  display: flex;
+}
+.centered-text p {
+  font-size: 30px;
+  text-align: left;
+}

@@ -5,13 +5,17 @@ class Mood extends React.Component {
     constructor(props) {
         super(props);
         this.state = {  
-            mood : this.props.mood
+            mood : this.props.mood,
+            img : this.props.img
             
         };
                     
  }
-                
+    
+
+    
     render() {
+      
       return (
           <div   className="flex-item" style = {{marginTop:"300px"}} >
               
@@ -19,13 +23,13 @@ class Mood extends React.Component {
 <label>        <input className="hide"
                
               name="mood"
-              type="radio"
+              type={this.props.type}
              
-              value={this.state.mood}
+                value={this.state.mood}
                 onClick={this.props.onRadioChange}
                />
-             <i style = {{fontSize:"100px", fontStyle:"normal"}}> &#128540;</i>
-        <h6 className="h5-label"> {this.state.mood}</h6>
+            <img src = {this.state.img}/>
+        <h6 className="h5-label"> {this.state.mood}</h6>             
          
           </label>    
           </div>
@@ -34,7 +38,7 @@ class Mood extends React.Component {
   }
   export default Mood
 /*
-
+<i style = {{fontSize:"100px", fontStyle:"normal"}}> &#128540;</i>
 class Mood extends React.Component{
 constructor(props) {
         super(props);

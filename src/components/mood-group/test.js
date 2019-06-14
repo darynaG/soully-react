@@ -1,7 +1,8 @@
 
 import React from 'react';
 import Mood from './mood';
-
+import imgL from '../../img/angle-left.png'
+import imgH from '../../img/angle-right.png'
 class MoodG extends React.Component {
     constructor(props) {
         super(props);
@@ -23,15 +24,15 @@ class MoodG extends React.Component {
           <div>
           <form > 
             <ul className="block">
-            <Mood mood="sad"   onRadioChange={this.onRadioChange}/>
+            <Mood mood="sad" img1={imgL} img2={imgH} type="radio" onRadioChange={this.onRadioChange}/>
         
-            <Mood mood="wow"  onRadioChange={this.onRadioChange}/>
-            <Mood mood="wtf"   onRadioChange={this.onRadioChange}/>
+            <Mood mood="wow"  img={imgL} img2={imgH} type="checkbox" onRadioChange={this.onRadioChange}/>
+            <Mood mood="wtf"   img={imgL} img2={imgH} type="radio" onRadioChange={this.onRadioChange}/>
         
-            <Mood mood="good"  onRadioChange={this.onRadioChange}/>
-            <Mood mood="exiced"   onRadioChange={this.onRadioChange}/>
+            <Mood mood="good"  img={imgL} img2={imgH} type="radio" onRadioChange={this.onRadioChange}/>
+            <Mood mood="exiced"   img={imgL} img2={imgH} type="radio" onRadioChange={this.onRadioChange}/>
         
-            <Mood mood="happy"  onRadioChange={this.onRadioChange}/>
+            <Mood mood="happy"  img={imgL} img2={imgH} type="radio" onRadioChange={this.onRadioChange}/>
       </ul>
           </form>
           <h1 style = {{marginTop:"200px"}}>You choose {this.state.mood}</h1>

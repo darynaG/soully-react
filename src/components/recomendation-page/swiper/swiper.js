@@ -10,22 +10,31 @@ import {
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { library } from '@fortawesome/fontawesome-svg-core'
 import Books from '../../../data/book.json'
-import { runInThisContext } from 'vm';
-
+import Films from '../../../data/film.json'
+import Actions from '../../../data/do.json'
 library.add(
     faAngleLeft,
     faAngleRight
 )
-
 class Recomendation extends React.Component {
     constructor(props) {
         super(props);
-        var content=[];
+        let content=[];
         switch(this.props.category){
+            
             case("books"):
             Books.map((data,index)=>{if(this.props.mood==data.mood) content.push(data);})
+            break;
+            case("films"):
+            Films.map((data,index)=>{if(this.props.mood==data.mood) content.push(data);})
+            break;
+            case("activities"):
+            Actions.map((data,index)=>{if(this.props.mood==data.mood) content.push(data);})
+            break;
             
         }
+       
+        
     this.state = {
        
        currentIndex: 0,
@@ -55,20 +64,19 @@ prevSlide() {
 
    render() {
     const index = this.state.currentIndex;
-    //const current = this.props.items[index];
     let first = this.state.contents.slice(index, index + 1);
-   /* if (first.length < 1) {
-      first = first.concat(this.state.contents.slice(0, 1- first.length))
-    }*/
+
     return (
         <div className="container">
          <FontAwesomeIcon icon={faAngleLeft} size="3x"onClick={this.prevSlide}/>
-         {first.map((contents,index)=>
+         {first.map((contents)=>
 
          <div className="content">
-            <img key={index} src={contents.image} alt=""/>
-            <h3 key={index} >{contents.title}</h3>
-            <p key={index}>{contents.description}</p>
+            <img  src={contents.image} alt=""/>
+            <h2 >{contents.title}</h2>
+            <p >{contents.description}</p>
+            <i className="tag">{contents.tag}</i>
+          
          </div>)}
          <FontAwesomeIcon icon={faAngleRight} size="3x" onClick={this.nextSlide}/>
         </div>

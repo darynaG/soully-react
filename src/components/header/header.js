@@ -20,7 +20,9 @@ function Header ()
                 <Link to="/recomendations">Day</Link>
                 </li>
                 <li>
-                <Link to="/topics/components">Month</Link>
+
+                <Link to="/month">Month</Link>
+
                 </li>
                 <li>
                 <Link to="/stories">Stories</Link>

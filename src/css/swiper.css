@@ -13,4 +13,12 @@
 }
 .container .content p {
   text-align: justify;
+  font-size: 18px;
+}
+.container .content i {
+  text-align: justify;
+  align-self: baseline;
+  padding-top: 5%;
+  color: #004d40;
+  font-size: 20px;
 }

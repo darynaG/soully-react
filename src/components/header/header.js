@@ -19,7 +19,7 @@ function Header ()
                 <Link to="/day">Day</Link>
                 </li>
                 <li>
-                <Link to="/topics">Month</Link>
+                <Link to="/month">Month</Link>
                 </li>
                 <li>
                 <Link to="/">Stories</Link>

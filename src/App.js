@@ -5,11 +5,13 @@ import '././css/new-mood-page.css';
 import '././css/daily-log.css';
 import '././css/header_s.css';
 import '././css/calendar.css';
+import '././css/recomendation.css';
 import Header from './components/header/header';
 import MoodGroup from './components/mood-group/mood-group';
 import DailyMood from './components/recomendation-page/daily-status/daily';
 import DailyLog from './components/recomendation-page/daily-log/daily-log';
 import Recomendation from './components/recomendation-page/swiper/swiper';
+import Calendar from './components/recomendation-page/monthly-log/monthly-log';
 
 import { library } from '@fortawesome/fontawesome-svg-core'
 import { faGhost } from '@fortawesome/free-solid-svg-icons'
@@ -25,7 +27,8 @@ function App() {
 
         <Route exact path="/" component={Home} />
         <Route path="/day" component={Day} />
-        <Route path="/topics" component={Topics} />
+        <Route path="/month" component={Month} />
+       
       </div>
     </Router>
   );
@@ -44,13 +47,26 @@ function Day() {
   var action=["Running","Water","Sport"];
   return(
     <div>
-    <DailyMood username="Tom" mood="sad" actions={action}/> 
-    <DailyLog username="Tom" mood="sad" actions={action}/>
+    <div className="recomendation">
     <Recomendation mood="sad" category="books"/>
+    <Recomendation mood="sad" category="films"/>
+    <Recomendation mood="sad" category="activities"/>
+    </div>
+    <DailyMood username="Tom" mood="sad" actions={action}/> 
+
+   
     </div>
   );
  
   // return recomendation page
+}
+function Month(){
+  return (
+    <div>
+   <Calendar /> 
+   </div>
+  );
+
 }
 
 function Topic({ match }) {

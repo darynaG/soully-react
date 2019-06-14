@@ -37,6 +37,8 @@ class StoryBoard extends Component {
     
     render(){
     return(
+        <React.Fragment>
+            <h1 >Stories</h1>
         <div className="storyboard">
        
     <div className="story_column left">
@@ -89,6 +91,7 @@ class StoryBoard extends Component {
         
     </div>
 </div>
+</React.Fragment>
     );
 };
 }

@@ -6,11 +6,15 @@ import '././css/header_s.css';
 import '././css/new-mood-page.css';
 import '././css/stories.css'
 import '././css/quote.css'
+import '././css/containers.css'
+import '././css/story-input.css'
+import '././css/button.css'
 import Header from './components/header/header';
 import MoodGroup from './components/mood-group/mood-group';
 import StoryBoard from './components/guest-page/storyBord';
 import Quote from './components/guest-page/quote'
 import StoryLine from './components/story-page/storyline'
+import StoryEdit from './components/story-page/story-editor'
 
 import '././css/daily-log.css';
 import '././css/header_s.css';
@@ -31,11 +35,12 @@ function App() {
       <div>
         <Header_func />
 
-
+        
         <Route exact path="/" component={Home} />
         <Route path="/day" component={Day} />
         <Route path="/month" component={Topics} />
-
+        <Route path="/guest" component={Guest} />
+        <Route path="/stories" component={Storypage} />
       </div>
     </Router>
   );
@@ -44,10 +49,21 @@ function App() {
 function Guest(){
   return (
   <div>
+     <MoodGroup/>
+     <div className="container add-margin">
+    <Quote mood="sad" />
   <StoryBoard mood="sad" visible='true'/>
- <Quote mood="sad" />
- <StoryLine></StoryLine>
+  </div>
+
  </div>
+  )
+}
+function Storypage(){
+  return(
+    <div>
+    <StoryEdit></StoryEdit>
+    <StoryLine></StoryLine>
+    </div>
   )
 }
 

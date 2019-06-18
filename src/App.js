@@ -6,6 +6,8 @@ import '././css/header_s.css';
 import '././css/new-mood-page.css';
 import '././css/stories.css'
 import '././css/quote.css'
+import moment from 'moment';
+
 import Header from './components/header/header';
 import MoodGroup from './components/mood-group/mood-group';
 import StoryBoard from './components/guest-page/storyBord';
@@ -22,7 +24,7 @@ import '././css/recomendation.css';
 import DailyMood from './components/recomendation-page/daily-status/daily';
 import DailyLog from './components/recomendation-page/daily-log/daily-log';
 import Recomendation from './components/recomendation-page/swiper/swiper';
-import Calendar from './components/recomendation-page/monthly-log/monthly-log';
+import MonthDetail from './components/recomendation-page/monthly-log/month-container';
 
 import { library } from '@fortawesome/fontawesome-svg-core'
 import { faGhost } from '@fortawesome/free-solid-svg-icons'
@@ -45,7 +47,7 @@ function App() {
         <Route exact path="/" component={Home} />
         <Route path="/day" component={Day} />
 
-        <Route path="/month" component={Month} />
+        <Route path="/month" component={Guest} />
        
 
         <Route path="/mood" component={MoodG} />
@@ -83,6 +85,8 @@ function Home() {
 
 function Day() {
   var action=["Running","Water","Sport"];
+  var date=moment().format("YYYY-MM-DD");
+  console.log("date now ",date);
   return(
     <div>
     <div className="recomendation">
@@ -90,7 +94,9 @@ function Day() {
     <Recomendation mood="sad" category="films"/>
     <Recomendation mood="sad" category="activities"/>
     </div>
-    <DailyMood username="Tom" mood="sad" actions={action}/> 
+    <DailyMood username="Tom" mood="sad" actions={action} date={date}/> 
+
+    <MonthDetail/>
 
    
     </div>
@@ -100,7 +106,7 @@ function Day() {
 function Month(){
   return (
     <div>
-   <Calendar /> 
+ <StoryBoard/>
    </div>
   );
 

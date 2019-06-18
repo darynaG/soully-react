@@ -1,9 +1,10 @@
 import React from 'react';
-
+/*
 import { library } from '@fortawesome/fontawesome-svg-core'
 
-import { far} from '@fortawesome/free-brands-svg-icons'
+import { far} from '@fortawesome/free-brands-svg-icons'*/
 import Users from '../../data/users.json'
+/*
 import {
         faSadTear,
         faFrownOpen,
@@ -24,8 +25,9 @@ import {
   
 } from '@fortawesome/free-solid-svg-icons'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+*/
 //import videoClip from '../../assets/video/Nature.mp4'
-
+/*
 library.add(
         faSadTear,
         faFrownOpen,
@@ -44,7 +46,7 @@ library.add(
     faGlassCheers,
     faHandHoldingHeart
 )
- 
+ */
 class MoodGroup extends React.Component{
 
 constructor(props) {
@@ -77,6 +79,7 @@ render ()
 {
         
         return (
+                <h3 className="h3-label">What is your mood?</h3>  /*
 <div className="mood-picker">
     <h3 className="h3-label">What is your mood?</h3>  
     <form>
@@ -155,7 +158,7 @@ render ()
 
 </form>     
 <h1 style={{marginTop:"200px"}}>chosen mood {this.state.mood} !</h1>                       
-</div>
+</div>*/
 );
       
 }

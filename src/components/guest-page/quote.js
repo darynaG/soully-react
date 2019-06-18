@@ -1,6 +1,7 @@
 import React ,{ Component}from 'react';
 import { BrowserRouter as Router, Route, Link } from "react-router-dom";
 import Q from '../../data/quotes';
+/*
 import { library } from '@fortawesome/fontawesome-svg-core'
 
 import { far} from '@fortawesome/free-brands-svg-icons'
@@ -15,7 +16,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 library.add(
     faQuoteLeft,
     faQuoteRight
-)
+)*/
 class Quote extends Component{
 constructor(props){
     super(props);
@@ -42,9 +43,7 @@ render(){
         <div className="centered-text">  
     
            <article>
-           <FontAwesomeIcon icon={faQuoteLeft} size="0.5x"/>
                {this.state.text}
-               <FontAwesomeIcon icon={faQuoteRight} size="0.5x"/>
               <br></br>
                <p>-{this.state.author}-</p>
            </article>

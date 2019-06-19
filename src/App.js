@@ -1,5 +1,8 @@
 import React from 'react';
 import ReactDOM from 'react-dom'
+import { createStore } from 'redux'
+import soullyApp from './reducers/reducers'
+import { addStory, likeStory,setVisibilityFilter,VisibilityFilters} from './actions/actions'
 import { BrowserRouter as Router, Route, Link } from "react-router-dom";
 import './App.css';
 import '././css/header_s.css';
@@ -14,7 +17,7 @@ import MoodGroup from './components/mood-group/mood-group';
 import StoryBoard from './components/guest-page/storyBord';
 import Quote from './components/guest-page/quote'
 import StoryLine from './components/story-page/storyline'
-import StoryEdit from './components/story-page/story-editor'
+import StoryEdit from './containers/story-editor'
 
 import '././css/daily-log.css';
 import '././css/header_s.css';
@@ -34,7 +37,7 @@ function App() {
     <Router>
       <div>
         <Header_func />
-
+        
         
         <Route exact path="/" component={Home} />
         <Route path="/day" component={Day} />
@@ -45,6 +48,7 @@ function App() {
     </Router>
   );
 }
+
 
 function Guest(){
   return (

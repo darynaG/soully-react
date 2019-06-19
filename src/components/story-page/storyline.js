@@ -3,6 +3,7 @@ import Messages from '../../data/posts.js';
 import im1 from '../../assets/img/camera.jpeg'
 import { BrowserRouter as Router, Route, Link } from "react-router-dom";
 import { library } from '@fortawesome/fontawesome-svg-core'
+import Post from '../story-page/message'
 
 import { far, faGratipay} from '@fortawesome/free-brands-svg-icons'
 
@@ -43,26 +44,7 @@ class StoryLine extends Component{
                     { 
                             this.state.M.map((data,index)=>{
                                 return(
-                                    <div className="story">
-                        
-                                <div className="story_head">
-                                <img className="image_user" src={im1}/>
-                                <div> {data.username}</div>
-                               </div>
-                           <br/>
-                                <article className="story_text"> 
-                                        <FontAwesomeIcon icon={faQuoteLeft} size="0.5x"/>
-                                        {data.text}
-                                         <FontAwesomeIcon icon={faQuoteRight} size="0.5x"/>
-                                </article> 
-                              <div className="story_footer">
-                              <p> Hugs: { data.hugs} </p>
-                              <FontAwesomeIcon icon={faGratipay} size="3x"/></div>
-                       
-                      
-                      
-                       
-                    </div>
+                             <Post/>
                                 )
                             })
                         }  

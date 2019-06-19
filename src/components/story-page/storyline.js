@@ -2,7 +2,7 @@ import React ,{ Component}from 'react';
 import Messages from '../../data/posts.js';
 import im1 from '../../assets/img/camera.jpeg'
 import { BrowserRouter as Router, Route, Link } from "react-router-dom";
-/*
+
 import { library } from '@fortawesome/fontawesome-svg-core'
 import Post from '../story-page/message'
 
@@ -19,7 +19,8 @@ library.add(
     faQuoteLeft,
     faQuoteRight,
     faGratipay
-)*/
+)
+
 class StoryLine extends Component{
     constructor(props){
         super(props);
@@ -63,10 +64,7 @@ class StoryLine extends Component{
 
     }
 }
-    </div>
-    </div>
-                            );
-}
-
-}
+   
+   
+                        
 export default StoryLine;

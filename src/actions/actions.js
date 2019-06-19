@@ -24,10 +24,10 @@ export const VisibilityFilters = {
 /*
  * action creators
  */
-
-export function chooseMood(text) {
-  return { type: CHOOSE_MOOD, text }
-}
+export const chooseMood = text => ({
+  type: 'CHOOSE_MOOD',
+  text
+})
 
 export function addStory(text) {
   return { type: ADD_STORY, text}
@@ -36,5 +36,5 @@ export function setVisibilityFilter(filter) {
     return { type: SET_VISIBILITY_FILTER, filter }
   }
 export function likeStory(index){
-    return{ type: LIKE_STORY, index}
+    return { type: LIKE_STORY, index}
 }

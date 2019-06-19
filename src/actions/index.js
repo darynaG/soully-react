@@ -1,10 +1,12 @@
-
+import * as types from '../constants/action-types'
 let nextTodoId = 0
 export const addStory = text => ({
   type: 'ADD_TODO',
   id: nextTodoId++,
   text
 })
+
+
 
 export const setVisibilityFilter = filter => ({
   type: 'SET_VISIBILITY_FILTER',
@@ -16,6 +18,10 @@ export const likeStory = id => ({
   id
 })
 
+export const chooseMood = mood => ({
+  type: 'CHOOSE_MOOD',
+  mood
+})
 export const VisibilityFilters = {
     SHOW_ALL: 'SHOW_ALL',
     SAD_MOOD: 'SAD_MOOD',
@@ -26,7 +32,7 @@ export const VisibilityFilters = {
     GOOD_MOOD:'GOOD_MOOD'
   }
 
-import * as types from '../constants/action-types'
+
 export const PrevMonth = () =>({
     type: types.CALENDAR_PREV_MONTH
 })

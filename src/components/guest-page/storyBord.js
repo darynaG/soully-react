@@ -1,77 +1,103 @@
 import React ,{ Component}from 'react';
-import Messages from '../../data/posts.json';
+import Messages from '../../data/posts.js';
 import { BrowserRouter as Router, Route, Link } from "react-router-dom";
 
 class StoryBoard extends Component {
     constructor(props){
         super(props);
        
-        var mood_stories=[];// choose stories for your mood only
-        if(props.mood){
-       Messages.map((data,index)=>{ if(this.props.mood==data.mood) mood_stories.push(data);})}
-       else {
-        Messages.map((data,index)=>{ mood_stories.push(data);})
-       }
-        var maxNumber=mood_stories.length-2;
-        var rand=Math.floor(Math.random()*maxNumber);
-       this.state={visibility:props.visible,mood:props.mood,stories:mood_stories, i:rand};
-
+      
+      // this.state={visibility:props.visible,mood:props.mood,stories:mood_stories, i:rand};
+        this.state={stories:[]};
         //console.log(this.state)
-       
+      
     }
     
+    componentDidMount(){
+        var mood_stories=[];
+        var st=[];
+        var a=Messages.getAll().then((data)=>{
+           
+            for(var i=0;i<data.length;i++){
+                if(this.props.mood){
+                    if(this.props.mood==data[i].mood)
+                    st.push(data[i]);
+                }else{
+                    st.push(data[i]);
+                }}
+                var maxNumber=st.length-2;
+                var rand=Math.floor(Math.random()*maxNumber);
+                for(var j=0;j<3;j++){
+                    mood_stories.push(st[rand+j]);
+                }
+                //console.log("mmoood",mood_stories);
+      
+    
+        })//.then(()=>{console.log("this is mood_stories",mood_stories.length)})
+        .then(()=>{
+            
+            this.setState({stories:mood_stories});
+        })
+    }
     render(){
     return(
+        <React.Fragment>
+            <h1 >Stories</h1>
         <div className="storyboard">
        
     <div className="story_column left">
-            <div className="story">
+         {
+             this.state.stories.slice(0,2).map((data)=>{
+                
+                    return(
+                    <div className="story">
                     
                     <div className="story_head">
                        
-                       <div> {this.state.stories[this.state.i].username}
+                       <div> {data.username}
                        </div>
                     </div>
                    
-                    {this.state.stories[this.state.i].text}
-              
-                    
+
+                    <article className="story_text"> <FontAwesomeIcon icon={faQuoteLeft} size="1x"/>
+                    {data.text}
+      
             </div>
-            <div className="story">
-                    
-                    <div className="story_head">
-                       
-                       <div> {this.state.stories[this.state.i+1].username}
-                       </div>
-                    </div>
-                   
-                    <article className="story_text"> 
-                    {this.state.stories[this.state.i+1].text}
-              
-                    </article> 
-                    
-            </div>
-           
+
+             )
+         
+         })
+        }
+
     </div>
 
     <div className="story_column right">
-    <div className="story">
+    
+    {
+             this.state.stories.slice(2,3).map((data)=>{
+                 return(
+                    <div className="story">
                     
                     <div className="story_head">
                        
-                       <div> {this.state.stories[this.state.i+2].username}
+                       <div> {data.username}
                        </div>
                     </div>
                    
-                    <article className="story_text">
-                    {this.state.stories[this.state.i+2].text}
+
+                    <article className="story_text"> <FontAwesomeIcon icon={faQuoteLeft} size="1x"/>
+                    {data.text}
+
               
               </article> 
                     
             </div>
-        
+             )
+         })
+        }
     </div>
 </div>
+</React.Fragment>
     );
 }
 }

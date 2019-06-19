@@ -1,0 +1,23 @@
+.round-btn {
+  display: block;
+  height: 90px;
+  width: 90px;
+  border-radius: 50%;
+  margin: auto ;
+  position: relative;
+  font-family: 'Courier New', Courier, monospace;
+  color: #004d40;
+  font-size: 21px;
+  border: solid;
+  border-color: #004d40;
+  border-width: 2px;
+  background: transparent;
+  background-image: linear-gradient(to left, transparent, transparent 50%, #004d40, 50%, #004d40);
+  background-position: 100% 0;
+  background-size: 200% 100%;
+  transition: all 0.25s ease-in;
+}
+.round-btn:hover {
+  background-position: 0 0;
+  color: white;
+}

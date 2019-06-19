@@ -1,18 +1,28 @@
 import React from 'react';
 import ReactDOM from 'react-dom'
+import { createStore } from 'redux'
+import soullyApp from './reducers/reducers'
+import { addStory, likeStory,setVisibilityFilter,VisibilityFilters} from './actions/actions'
 import { BrowserRouter as Router, Route, Link } from "react-router-dom";
 import './App.css';
 import '././css/header_s.css';
 import '././css/new-mood-page.css';
 import '././css/stories.css'
 import '././css/quote.css'
+
+import '././css/containers.css'
+import '././css/story-input.css'
+import '././css/button.css'
+
 import moment from 'moment';
+
 
 import Header from './components/header/header';
 import MoodGroup from './components/mood-group/mood-group';
 import StoryBoard from './components/guest-page/storyBord';
 import Quote from './components/guest-page/quote'
 import StoryLine from './components/story-page/storyline'
+import StoryEdit from './containers/story-editor'
 
 import '././css/daily-log.css';
 import '././css/header_s.css';
@@ -42,12 +52,14 @@ function App() {
     <Router>
       <div>
         <Header_func />
-
-
+        
+        
         <Route exact path="/" component={Home} />
         <Route path="/day" component={Day} />
 
-        <Route path="/month" component={Guest} />
+        <Route path="/guest" component={Guest} />
+        <Route path="/stories" component={Storypage} />
+  <Route path="/month" component={Guest} />
        
 
         <Route path="/mood" component={MoodG} />
@@ -57,13 +69,25 @@ function App() {
   );
 }
 
+
 function Guest(){
   return (
   <div>
+     <MoodGroup/>
+     <div className="container add-margin">
+    <Quote mood="sad" />
   <StoryBoard mood="sad" visible='true'/>
- <Quote mood="sad" />
- <StoryLine></StoryLine>
+  </div>
+
  </div>
+  )
+}
+function Storypage(){
+  return(
+    <div>
+    <StoryEdit></StoryEdit>
+    <StoryLine></StoryLine>
+    </div>
   )
 }
 

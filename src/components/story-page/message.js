@@ -11,29 +11,31 @@ import {
   
 } from '@fortawesome/free-solid-svg-icons'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { likeStory } from '../../actions/actions';
 
 
-const Post= ({ data , onClick}) => (
-    <div className="story">
+const Post= ({ localData ,visible, onClick}) => (
+    <div className="story" visibility={visible}>
                         
     <div className="story_head">
     <img className="image_user" src={im1}/>
-    <div> {data.username}</div>
+    <div> {localData.username}</div>
    </div>
 <br/>
     <article className="story_text"> 
             <FontAwesomeIcon icon={faQuoteLeft} size="0.5x"/>
-            {data.text}
+            {localData.text}
              <FontAwesomeIcon icon={faQuoteRight} size="0.5x"/>
     </article> 
-  <button className="story_footer">
-      onClick={onClick}
-  <p> Hugs: { data.hugs} </p>
+  <button className="story_footer" onClick={()=>{likeStory(localData.id)}}> 
+      
+  <p> Hugs: { localData.hugs} </p>
   <FontAwesomeIcon icon={faGratipay} size="3x"/></button>
 
 
 
 
 </div>
+
 )
 export default Post;

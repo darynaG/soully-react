@@ -12,7 +12,7 @@ const StoryEdit =({dispatch})=>{
         return(
             <div className="story-sharer minimize" id="story">
            
-                <form className="story-input" onSubmit={e=>{      
+                <form className="story-input" method="post" onSubmit={e=>{      
                                 e.preventDefault();
                                     var a={
                                         "mood":"happy",
@@ -23,7 +23,7 @@ const StoryEdit =({dispatch})=>{
                                     dispatch(addStory(j));
                                     input.value ='';
                                     P.newPost(j);
-                                    alert('You Wrote: ' + j);
+                                    //alert('You Wrote: ' + j);
                                     //add json to file
                                 //update storyline
                                 }}>

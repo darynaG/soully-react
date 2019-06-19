@@ -2,7 +2,7 @@ import React ,{ Component}from 'react';
 import Messages from '../../data/posts.js';
 import im1 from '../../assets/img/camera.jpeg'
 import { BrowserRouter as Router, Route, Link } from "react-router-dom";
-/*
+
 import { library } from '@fortawesome/fontawesome-svg-core'
 import Post from '../story-page/message'
 
@@ -14,12 +14,13 @@ import {
   
 } from '@fortawesome/free-solid-svg-icons'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import FilterStory from '../../containers/FilterStory.js';
 
 library.add(
     faQuoteLeft,
     faQuoteRight,
     faGratipay
-)*/
+)
 class StoryLine extends Component{
     constructor(props){
         super(props);
@@ -28,13 +29,13 @@ class StoryLine extends Component{
     componentDidMount(){
         var temp=[];
         //console.log("this is temp",temp.length);
-        var a=Messages.getAll().then((data)=>{
-            for(var i=0;i<data.length;i++){
+        var a = Messages.getAll().then((data)=>{
+            for(var i = 0; i < data.length; i++){
             temp.push(data[i]);
         //console.log("iiii",data[i])
     }
-        })//.then(()=>{console.log("this is temp",temp.length)})
-        .then(()=>{
+        })//.then(() = >{console.log("this is temp",temp.length)})
+        .then(() =>{
             this.setState({M:temp});
         })
     }
@@ -48,7 +49,7 @@ class StoryLine extends Component{
                             this.state.M.map((data,index)=>{
                                 return(
 
-                             <Post/>
+                             <FilterStory localData={data}/>
                                 )
 
                             })
@@ -63,10 +64,8 @@ class StoryLine extends Component{
 
     }
 }
-    </div>
-    </div>
-                            );
-}
+   
 
-}
+
+
 export default StoryLine;

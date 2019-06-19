@@ -1,4 +1,4 @@
-
+import * as types from '../constants/action-types'
 let nextTodoId = 0
 export const addStory = text => ({
   type: 'ADD_TODO',
@@ -12,7 +12,7 @@ export const setVisibilityFilter = filter => ({
 })
 
 export const likeStory = id => ({
-  type: 'TOGGLE_TODO',
+  type: 'LIKE_STORY',
   id
 })
 
@@ -26,7 +26,7 @@ export const VisibilityFilters = {
     GOOD_MOOD:'GOOD_MOOD'
   }
 
-import * as types from '../constants/action-types'
+
 export const PrevMonth = () =>({
     type: types.CALENDAR_PREV_MONTH
 })

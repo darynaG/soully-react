@@ -30,6 +30,7 @@
   border-color: #EDEAE5;
   border-width: 1px 0px 0px 0px;
   vertical-align: middle;
+  background-color: transparent;
 }
 .story .story_footer .h6-label {
   text-align: center;
@@ -125,9 +126,7 @@
 }
 .story-board .rightcolumn .articles {
   border-radius: 10px;
-
   background-color: #EDEAE5;
-
   margin-top: 7%;
   margin-right: 3%;
   padding: 7%;

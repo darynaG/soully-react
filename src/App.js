@@ -9,9 +9,14 @@ import '././css/header_s.css';
 import '././css/new-mood-page.css';
 import '././css/stories.css'
 import '././css/quote.css'
+
 import '././css/containers.css'
 import '././css/story-input.css'
 import '././css/button.css'
+
+import moment from 'moment';
+
+
 import Header from './components/header/header';
 import MoodGroup from './components/mood-group/mood-group';
 import StoryBoard from './components/guest-page/storyBord';
@@ -22,12 +27,22 @@ import StoryEdit from './containers/story-editor'
 import '././css/daily-log.css';
 import '././css/header_s.css';
 import '././css/calendar.css';
+
+import '././css/recomendation.css';
+
+
 import DailyMood from './components/recomendation-page/daily-status/daily';
+import DailyLog from './components/recomendation-page/daily-log/daily-log';
+import Recomendation from './components/recomendation-page/swiper/swiper';
+import MonthDetail from './components/recomendation-page/monthly-log/month-container';
 
 import { library } from '@fortawesome/fontawesome-svg-core'
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faGhost } from '@fortawesome/free-solid-svg-icons'
 
+import videoClip from './assets/video/Nature.mp4'
+import Reservation from './components/mood-group/test'
+
+import MoodG from './components/mood-group/test'
 library.add(faGhost)
 
 
@@ -41,9 +56,14 @@ function App() {
         
         <Route exact path="/" component={Home} />
         <Route path="/day" component={Day} />
-        <Route path="/month" component={Topics} />
+
         <Route path="/guest" component={Guest} />
         <Route path="/stories" component={Storypage} />
+  <Route path="/month" component={Guest} />
+       
+
+        <Route path="/mood" component={MoodG} />
+
       </div>
     </Router>
   );
@@ -72,21 +92,48 @@ function Storypage(){
 }
 
 function Home() {
-  return (
-    <div>
-      <MoodGroup/>
+  return(
+     <div>
     </div>
   );
+  /*return (
+  <div>
+      <MoodGroup/>
+      <video  className="video" playsInline autoPlay muted loop id="myVideo">
+                                <source src={videoClip} type="video/mp4"/>
+        </video> 
+      <Reservation/>
+    </div>
+  );*/
 }
 
 function Day() {
   var action=["Running","Water","Sport"];
+  var date=moment().format("YYYY-MM-DD");
+  console.log("date now ",date);
   return(
     <div>
-    <DailyMood username="Tom" mood="sad" actions={action}/> 
+    <div className="recomendation">
+    <Recomendation mood="sad" category="books"/>
+    <Recomendation mood="sad" category="films"/>
+    <Recomendation mood="sad" category="activities"/>
+    </div>
+    <DailyMood username="Tom" mood="sad" actions={action} date={date}/> 
+
+    <MonthDetail/>
+
+   
     </div>
   );
   // return recomendation page
+}
+function Month(){
+  return (
+    <div>
+ <StoryBoard/>
+   </div>
+  );
+
 }
 
 function Topic({ match }) {

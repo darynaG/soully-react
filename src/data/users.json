@@ -1,0 +1,10 @@
+[
+    {
+        "id":1,
+        "mood":"sad",
+        "username": "Aizek",
+        "activities" : {
+            "running": "true"
+        }
+    }
+]

@@ -1,21 +1,6 @@
 import React ,{ Component}from 'react';
 import Messages from '../../data/posts.js';
 import { BrowserRouter as Router, Route, Link } from "react-router-dom";
-import { library } from '@fortawesome/fontawesome-svg-core'
-
-import { far} from '@fortawesome/free-brands-svg-icons'
-
-import {
-        faQuoteLeft,
-        faQuoteRight
-  
-} from '@fortawesome/free-solid-svg-icons'
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-
-library.add(
-    faQuoteLeft,
-    faQuoteRight
-)
 
 class StoryBoard extends Component {
     constructor(props){
@@ -73,16 +58,17 @@ class StoryBoard extends Component {
                        </div>
                     </div>
                    
+
                     <article className="story_text"> <FontAwesomeIcon icon={faQuoteLeft} size="1x"/>
                     {data.text}
-              
-                    <FontAwesomeIcon icon={faQuoteRight} size="1x"/></article> 
-                    
+      
             </div>
+
              )
          
          })
         }
+
     </div>
 
     <div className="story_column right">
@@ -98,10 +84,12 @@ class StoryBoard extends Component {
                        </div>
                     </div>
                    
+
                     <article className="story_text"> <FontAwesomeIcon icon={faQuoteLeft} size="1x"/>
                     {data.text}
+
               
-                    <FontAwesomeIcon icon={faQuoteRight} size="1x"/></article> 
+              </article> 
                     
             </div>
              )
@@ -111,6 +99,6 @@ class StoryBoard extends Component {
 </div>
 </React.Fragment>
     );
-};
+}
 }
 export default StoryBoard;

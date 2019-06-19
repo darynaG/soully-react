@@ -1,49 +1,82 @@
-.calendar {
-  width: 80%;
-  height: 80%;
-  margin: 1em auto;
-  padding: 0.5em 0;
-  background-color: #f2ecf5;
+.calendar-container,
+.calendar,
+.calendar-header,
+td,
+tr {
+  padding: 0;
+  margin: 0;
 }
-.calendar__info {
-  display: flex;
-  align-items: center;
-  padding: 0 2em;
+.calendar-container {
+  border: 2px solid lightcoral;
+  width: 100%;
+  height: 100vh;
+  font-family: 'Courier New', Courier, monospace;
+}
+.calendar-container .calendar {
+  background-color: white;
+  border-spacing: 0;
+  border-collapse: collapse;
+  width: 100%;
+}
+.calendar-container .calendar .week-day {
   font-size: 1.2em;
-  text-transform: uppercase;
+  font-weight: bold;
 }
-.calendar__prev,
-.calendar__next {
+.calendar-container .calendar .calendar-header {
+  border-bottom: 1px dashed lightcoral;
+  font-size: 1.2em;
+}
+.calendar-container .calendar .calendar-header td {
+  border-spacing: 0;
+  padding-left: 5px;
+}
+.calendar-container .calendar .calendar-header .prev,
+.calendar-container .calendar .calendar-header .next {
+  font-size: 4em;
   cursor: pointer;
-  font-size: 1.3em;
+  padding-left: 5%;
 }
-.calendar__prev {
-  margin-right: auto;
+.calendar-container .calendar .calendar-header .editor-year {
+  max-width: 5em;
+  font-size: 1em;
 }
-.calendar__next {
-  margin-left: auto;
+.calendar-container .calendar .calendar-header .label-month,
+.calendar-container .calendar .calendar-header .label-yaer {
+  font-size: 1em;
+  cursor: pointer;
 }
-.calendar__week,
-.calendar__dates {
-  display: grid;
-  grid-template-columns: repeat(7, 1fr);
-  grid-gap: 10px;
+.calendar-container .calendar .day {
+  cursor: pointer;
+  width: 24px;
+  height: 24px;
+  line-height: 24px;
+  font-size: 18px;
 }
-.calendar__month,
-.calendar__year {
-  padding: 0.5em 1em;
-}
-.calendar__item {
-  text-align: center;
-  line-height: 2;
-}
-.calendar__today {
+.calendar-container .calendar .current-day {
   background-color: lightcoral;
+  width: 28px;
+  height: 28px;
+  line-height: 28px;
   color: white;
-  width: 50%;
-  border-radius: 50%;
-  margin: auto;
 }
-.calendar__last-days {
-  color: transparent;
+.calendar-container .calendar .selected-day {
+  background-color: #f5bfe3;
+  width: 28px;
+  height: 28px;
+  line-height: 28px;
+  color: black;
+}
+.calendar-container .calendar .month-popup {
+  position: absolute;
+  padding: 5px;
+  background: white;
+  border: 2px solid skyblue;
+}
+.calendar-container .calendar .month-popup div {
+  padding: 0.3em;
+}
+.calendar-container .calendar .nav-month {
+  top: 0.6em;
+  font-size: 0.6em;
+  right: 3px;
 }

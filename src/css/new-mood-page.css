@@ -151,3 +151,6 @@ body {
   font-family: 'Courier New', Courier, monospace;
   color: black;
 }
+label.checked svg path {
+  fill: red;
+}

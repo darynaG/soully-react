@@ -2,6 +2,7 @@ import React ,{ Component}from 'react';
 import Messages from '../../data/posts.js';
 import im1 from '../../assets/img/camera.jpeg'
 import { BrowserRouter as Router, Route, Link } from "react-router-dom";
+/*
 import { library } from '@fortawesome/fontawesome-svg-core'
 import Post from '../story-page/message'
 
@@ -18,7 +19,7 @@ library.add(
     faQuoteLeft,
     faQuoteRight,
     faGratipay
-)
+)*/
 class StoryLine extends Component{
     constructor(props){
         super(props);
@@ -38,23 +39,34 @@ class StoryLine extends Component{
         })
     }
     render(){
+
        return(
+
                     <div className="story-board">
                     <div className="leftcolumn">
                     { 
                             this.state.M.map((data,index)=>{
                                 return(
+
                              <Post/>
                                 )
+
                             })
                         }  
                     
                        
+
                 </div>
                 </div>
             
                     )
+
     }
+}
+    </div>
+    </div>
+                            );
+}
 
 }
 export default StoryLine;

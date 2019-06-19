@@ -17,10 +17,12 @@ function Header ()
                 </li>
                 <li>
 
-                <Link to="/recomendations">Day</Link>
+                <Link to="/day">Day</Link>
                 </li>
                 <li>
-                <Link to="/topics/components">Month</Link>
+
+                <Link to="/month">Month</Link>
+
                 </li>
                 <li>
                 <Link to="/stories">Stories</Link>

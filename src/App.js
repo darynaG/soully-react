@@ -13,6 +13,7 @@ import MoodGroup from './components/mood-group/mood-group';
 import StoryBoard from './components/guest-page/storyBord';
 import Quote from './components/guest-page/quote'
 import StoryLine from './components/story-page/storyline'
+import Calendar from '../src/components/recomendation-page/Calendar/Calendar'
 
 import '././css/daily-log.css';
 import '././css/header_s.css';
@@ -33,6 +34,25 @@ import videoClip from './assets/video/Nature.mp4'
 import Reservation from './components/mood-group/test'
 
 import MoodG from './components/mood-group/test'
+
+import './index.css';
+import Calendar_ from '../src/components/recomendation-page/Calendar/Calendar';
+
+import { Provider } from 'react-redux'
+import { createStore, applyMiddleware } from 'redux'
+import { createLogger } from 'redux-logger'
+
+import reducer from './reducers'
+
+const middleware = []
+if (process.env.NODE_ENV !== 'production') {
+  middleware.push(createLogger())
+}
+
+const store = createStore(
+  reducer,
+  applyMiddleware(...middleware)
+)
 library.add(faGhost)
 
 
@@ -97,6 +117,9 @@ function Day() {
     <DailyMood username="Tom" mood="sad" actions={action} date={date}/> 
 
     <MonthDetail/>
+    <Provider store={store}>
+    <Calendar_ />
+  </Provider>
 
    
     </div>

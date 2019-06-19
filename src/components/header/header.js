@@ -17,7 +17,7 @@ function Header ()
                 </li>
                 <li>
 
-                <Link to="/recomendations">Day</Link>
+                <Link to="/day">Day</Link>
                 </li>
                 <li>
 

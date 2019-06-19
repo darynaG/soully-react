@@ -1,0 +1,12 @@
+.container {
+  width: 100%;
+  height: 100vh;
+  position: relative;
+}
+.container .dayContainer,
+.container .calendarContainer {
+  width: 50vw;
+}
+.container .dayContainer .daily-log {
+  width: 50vw;
+}

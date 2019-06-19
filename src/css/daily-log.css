@@ -6,7 +6,6 @@
   box-sizing: border-box;
   align-items: center;
   font-family: 'Courier New', Courier, monospace;
-  background-image: url(../img/bck_2.jpg);
   background-size: cover;
 }
 .daily-log .scroll {

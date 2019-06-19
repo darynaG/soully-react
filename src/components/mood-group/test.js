@@ -1,8 +1,8 @@
 
 import React from 'react';
 import Mood from './mood';
-import imgL from '../../img/angle-left.png'
-import imgH from '../../img/angle-right.png'
+import imgL from '../../assets/img/angle-left.png'
+import imgH from '../../assets/img/angle-right.png'
 class MoodG extends React.Component {
     constructor(props) {
         super(props);

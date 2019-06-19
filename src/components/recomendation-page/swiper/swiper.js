@@ -1,7 +1,7 @@
 import React from 'react';
 
-import arrowRight from '../../../img/book.jpeg';
-import arrowLeft from '../../../img/film.jpeg';
+import arrowRight from '../../../assets/img/angle-right.png';
+import arrowLeft from '../../../assets/img/angle-left.png';
 import '../../../css/swiper.css';
 import {
     faAngleLeft,

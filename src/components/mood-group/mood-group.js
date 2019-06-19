@@ -48,7 +48,7 @@ library.add(
 )
  */
 class MoodGroup extends React.Component{
-
+age;
 constructor(props) {
                 super(props);
                 this.state = {  
@@ -62,6 +62,8 @@ jsonParser() {
 var users=[];
 Users.map((data,index)=>{ 
 users.push(data);})
+this.age = 5;
+console.log(this.age)
 }      
         handleInputChange(event) {
                  

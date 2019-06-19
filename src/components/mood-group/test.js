@@ -4,6 +4,7 @@ import Mood from './mood';
 import imgL from '../../assets/img/angle-left.png'
 import imgH from '../../assets/img/angle-right.png'
 class MoodG extends React.Component {
+
     constructor(props) {
         super(props);
     this.state={
@@ -20,13 +21,14 @@ class MoodG extends React.Component {
         console.log(this.state);
   }
     render() {
+      
       return (
           <div>
           <form > 
             <ul className="block">
-            <Mood mood="sad" img1={imgL} img2={imgH} type="radio" onRadioChange={this.onRadioChange}/>
+            <Mood mood="sad" img={imgL} img2={imgH} type="radio" onRadioChange={this.onRadioChange}/>
         
-            <Mood mood="wow"  img={imgL} img2={imgH} type="checkbox" onRadioChange={this.onRadioChange}/>
+            <Mood mood="wow"  img={imgL} img2={imgH} type="radio" onRadioChange={this.onRadioChange}/>
             <Mood mood="wtf"   img={imgL} img2={imgH} type="radio" onRadioChange={this.onRadioChange}/>
         
             <Mood mood="good"  img={imgL} img2={imgH} type="radio" onRadioChange={this.onRadioChange}/>

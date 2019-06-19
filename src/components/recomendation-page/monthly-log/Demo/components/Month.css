@@ -1,0 +1,43 @@
+.up {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+  }
+  
+      .title {
+        color: #523249;
+        font-size: 30px;
+        margin: 20px 0;
+      }
+  
+      .content {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 350px;
+        background-color: #E2C2C6;
+      }
+  
+          .allMemos {
+            flex:1;
+            text-align: left;
+            margin: 20px 0;
+            border-radius: 4px;
+            overflow-y: scroll;
+          }
+  
+      .whenMemos {
+        position: relative;
+      }
+  
+          .buttonSeeAllMemos {
+            position: absolute;
+            top: 30px;
+            right: 10px;
+            border: none;
+            background-color: transparent;
+          }
+  
+          .buttonSeeAllMemos:hover {
+            color: white;
+          }

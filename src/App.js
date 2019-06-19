@@ -9,11 +9,11 @@ import '././css/quote.css'
 import moment from 'moment';
 
 import Header from './components/header/header';
-import MoodGroup from './components/mood-group/mood-group';
 import StoryBoard from './components/guest-page/storyBord';
 import Quote from './components/guest-page/quote'
 import StoryLine from './components/story-page/storyline'
-import Calendar from '../src/components/recomendation-page/Calendar/Calendar'
+import Calendar from '../src/components/recomendation-page/monthly-log/Calendar/Calendar'
+import WithMonth from "../src/components/recomendation-page/monthly-log/Demo/containers/WithMonth";
 
 import '././css/daily-log.css';
 import '././css/header_s.css';
@@ -23,21 +23,14 @@ import '././css/recomendation.css';
 
 
 import DailyMood from './components/recomendation-page/daily-status/daily';
-import DailyLog from './components/recomendation-page/daily-log/daily-log';
 import Recomendation from './components/recomendation-page/swiper/swiper';
 import MonthDetail from './components/recomendation-page/monthly-log/month-container';
 
 import { library } from '@fortawesome/fontawesome-svg-core'
 import { faGhost } from '@fortawesome/free-solid-svg-icons'
 
-import videoClip from './assets/video/Nature.mp4'
-import Reservation from './components/mood-group/test'
 
 import MoodG from './components/mood-group/test'
-
-import './index.css';
-import Calendar_ from '../src/components/recomendation-page/Calendar/Calendar';
-
 import { Provider } from 'react-redux'
 import { createStore, applyMiddleware } from 'redux'
 import { createLogger } from 'redux-logger'
@@ -92,15 +85,6 @@ function Home() {
      <div>
     </div>
   );
-  /*return (
-  <div>
-      <MoodGroup/>
-      <video  className="video" playsInline autoPlay muted loop id="myVideo">
-                                <source src={videoClip} type="video/mp4"/>
-        </video> 
-      <Reservation/>
-    </div>
-  );*/
 }
 
 function Day() {
@@ -118,13 +102,13 @@ function Day() {
 
     <MonthDetail/>
     <Provider store={store}>
-    <Calendar_ />
-  </Provider>
+      <Calendar/>
+    </Provider>
+    <WithMonth />
 
    
     </div>
   );
-  // return recomendation page
 }
 function Month(){
   return (
@@ -167,20 +151,6 @@ function Header_func() {
   return (
     <Header/>
   );
-  /*return (
-    <ul>
-      <li>
-        <Link to="/">Home</Link>
-      </li>
-      <li>
-        <Link to="/about">About</Link>
-      </li>
-      <li>
-        <Link to="/topics">Topics</Link>
-      </li>
-    </ul>
-  );*/
-
 }
 
 export default App;

@@ -1,7 +1,7 @@
 /*
  * action types
  */
-
+export const CHOOSE_ACTIVITY = 'CHOOSE_ACTIVITY'
 export const CHOOSE_MOOD = 'CHOOSE_MOOD'
 export const ADD_STORY = 'ADD_STORY'
 export const LIKE_STORY = 'LIKE_STORY'

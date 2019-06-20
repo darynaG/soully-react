@@ -7,20 +7,21 @@ import { connect } from 'react-redux'
 import {chooseMood} from '../../actions';
 
 class MoodGroup extends React.Component {
+  
   render() {
     return (
       <div>
       <form>
        <ul className="block">
-        <Mood mood="sad" img={imgL} imgClicked={imgH} type="radio" onClick={this.props.onMoodChange}/>
+        <Mood mood="sad" img={imgL} imgClicked={imgH} type="radio"  onClick={this.props.onMoodChange}/>
         <Mood mood="wow"  img={imgL} imgClicked={imgH} type="radio" onClick={this.props.onMoodChange}/>
          <Mood mood="wtf"   img={imgL} imgClicked={imgH} type="radio" onClick={this.props.onMoodChange} />
          <Mood mood="good"  img={imgL} imgClicked={imgH} type="radio" onClick={this.props.onMoodChange}/>
-         <Mood mood="exiced"  img={imgL} imgClicked={imgH} type="radio" onClick={this.props.onMoodChange}/>
+         <Mood mood="excited"  img={imgL} imgClicked={imgH} type="radio" onClick={this.props.onMoodChange}/>
        <Mood mood="happy"  img={imgL} imgClicked={imgH} type="radio" onClick={this.props.onMoodChange}/>
        </ul> 
      </form>
-     <h1 style = {{marginTop:"200px"}}>You choose {}</h1>
+     <h1 style = {{marginTop:"200px"}}>You choose {this.props.mood}</h1>
      </div>
     );
   }

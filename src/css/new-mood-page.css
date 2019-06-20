@@ -122,6 +122,24 @@ body {
   visibility: visible;
   background-color: rgba(240, 248, 255, 0.205);
 }
+.flex-item:hover .sad {
+  content: url(../assets/img/angle-right.png);
+}
+.flex-item:hover .happy {
+  content: url(../assets/img/angle-right.png);
+}
+.flex-item:hover .good {
+  content: url(../assets/img/angle-right.png);
+}
+.flex-item:hover .wow {
+  content: url(../assets/img/angle-right.png);
+}
+.flex-item:hover .wtf {
+  content: url(../assets/img/angle-right.png);
+}
+.flex-item:hover .excited {
+  content: url(../assets/img/angle-right.png);
+}
 .h5-label {
   font-family: 'Courier New', Courier, monospace;
   font-size: 18px;
@@ -150,7 +168,4 @@ body {
   text-align: center;
   font-family: 'Courier New', Courier, monospace;
   color: black;
-}
-label.checked svg path {
-  fill: red;
 }

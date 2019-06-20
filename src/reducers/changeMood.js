@@ -6,7 +6,9 @@ const initialState ={
 const changeMood = (state =initialState, action) => {
     switch(action.type){
     case 'CHOOSE_MOOD':
-        return {mood: action.mood}
+        return {
+            ...state, 
+            mood: action.mood}
     default:
         return state;
     }

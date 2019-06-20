@@ -30,6 +30,7 @@ import StoryEdit from './containers/story-editor'
 import DailyMood from './components/recomendation-page/daily-status/daily';
 import Recomendation from './components/recomendation-page/swiper/swiper';
 import MonthDetail from './components/recomendation-page/monthly-log/month-container';
+import MoodPage  from './components/mood-group/moodPage';
 import MoodGroup from './components/mood-group/test'
 
 const store = createStore(reducer);
@@ -40,7 +41,7 @@ function App () {
     <Router>
       <div>
         <Header />
-        <Route exact path="/" component={MoodGroup} />
+        <Route exact path="/" component={MoodPage} />
         <Route path="/day" component={Day} />
         <Route path="/guest" component={Guest} />
         <Route path="/stories" component={Storypage} />

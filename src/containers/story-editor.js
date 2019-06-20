@@ -4,7 +4,7 @@ import { BrowserRouter as Router, Route, Link } from "react-router-dom";
 import { addStory } from '../actions/actions.js';
 import { addTodo } from '../actions/index.js';
 import P from '../data/posts'
-const StoryEdit =({dispatch})=>{
+const StoryEdit =(props)=>{
    
     let input
 
@@ -15,14 +15,14 @@ const StoryEdit =({dispatch})=>{
                 <form className="story-input" onSubmit={e=>{      
                                 e.preventDefault();
                                     var a={
-                                        "mood":"happy",
+                                        "mood":props.mood,
                                         "text":input.value
                                     }
                                     
                                     var j=JSON.stringify(a);
-                                    dispatch(addStory(j));
+                                   
                                     input.value ='';
-                                    P.newPost(j);
+                                   
                                     alert('You Wrote: ' + j);
                                     //add json to file
                                 //update storyline
@@ -37,4 +37,4 @@ const StoryEdit =({dispatch})=>{
         )
     
 }
-export default connect()(StoryEdit);
+export default (StoryEdit);

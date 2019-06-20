@@ -3,6 +3,8 @@
   flex-direction: row;
   width: 100%;
   font-family: 'Courier New', Courier, monospace;
+  background-image: url(../assets//img//sky.jpg);
+  background-size: cover;
 }
 .up .calendar {
   width: 50%;

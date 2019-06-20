@@ -1,8 +1,12 @@
-import { combineReducers } from 'redux'
-import changeMood from './changeMood'
-import todos from './todos'
-import visibilityFilter from './visibilityFilter'
 
-export default combineReducers({
+import { combineReducers } from "redux";
+import currentday from "./currentDay";
+import changeMood from './changeMood'
+
+const rootReducer = combineReducers({
+  currentday,
   changeMood
-})
+});
+
+export default rootReducer;
+

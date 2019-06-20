@@ -1,10 +1,12 @@
+
 import { combineReducers } from "redux";
 import currentday from "./currentDay";
-import data from './dataReducer';
+import changeMood from './changeMood'
 
 const rootReducer = combineReducers({
   currentday,
-  data
+  changeMood
 });
 
 export default rootReducer;
+

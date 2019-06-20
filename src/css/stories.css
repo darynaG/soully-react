@@ -5,7 +5,7 @@
   padding: 5px;
   display: flex;
   flex-wrap: wrap;
-  position: relative;
+  position: sticky;
   flex-direction: row;
 }
 .storyboard::after {
@@ -112,7 +112,6 @@
   margin-top: 150px;
 }
 .story-board {
-  margin-top: 10%;
   min-height: 100%;
   /* Right column */
 }
@@ -126,7 +125,7 @@
 }
 .story-board .rightcolumn .articles {
   border-radius: 10px;
-  background-color: #004d40;
+  background-color: #EDEAE5;
   margin-top: 7%;
   margin-right: 3%;
   padding: 7%;

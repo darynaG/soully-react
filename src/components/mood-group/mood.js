@@ -1,82 +1,85 @@
 import React from 'react';
+import { chooseMood } from '../../actions';
+/*class Mood extends React.Component {
+    constructor(props)
+    {
+    super(props);
 
+    this.state = {
+        img = this.props.img
+    };
+}
+render() {
+    return (
+        <div   className="flex-item" style = {{marginTop:"300px"}} >
+                <label>        
+            <input className="hide"
+                name="mood"
+                type={this.props.type}   
+                value={this.props.mood}
+                onClick={this.props.onClick}
+                checked = {this.state.img = this.props.imgClicked}
+               />
+            <img src = {this.state.img}/>
+        <h6 className="h5-label"> {this.props.mood}</h6>             
+         
+          </label>    
+    </div>
+    );
+}
+}
+export default Mood
+*/
+/*
+const Mood = (props) => (
+    <div   className="flex-item" style = {{marginTop:"300px"}} >
+                <label>        
+            <input className="hide"
+                name="mood"
+                type={props.type}   
+                value={props.mood}
+                onClick={props.onClick}
+                checked = {}
+               />
+            <img src = {props.img}/>
+        <h6 className="h5-label"> {props.mood}</h6>             
+         
+          </label>    
+    </div>
+)
+
+export default Mood;*/
 
 class Mood extends React.Component {
     constructor(props) {
         super(props);
         this.state = {  
-            mood : this.props.mood,
+            
             img : this.props.img
             
         };
                     
  }
     
-
-    
     render() {
-      
       return (
-          <div   className="flex-item" style = {{marginTop:"300px"}} >
-              
-          
-<label>        <input className="hide"
-               
-              name="mood"
-              type={this.props.type}
-             
-                value={this.state.mood}
-                onClick={this.props.onRadioChange}
-               />
-            <img src = {this.state.img}/>
-        <h6 className="h5-label"> {this.state.mood}</h6>             
-         
-          </label>    
-          </div>
+        <div   className="flex-item" style = {{marginTop:"300px"}} >
+        <label>        
+    <input className="hide" 
+        name="mood"
+        type={this.props.type}   
+        value={this.props.mood}
+        onClick={this.props.onClick} 
+        //onChange={this.state.img = this.props.imgClicked}
+        //checked = {this.state.img = this.props.imgClicked}
+        // <img className={this.props.mood} src = {this.state.img}/>
+       />
+    <img className={this.props.mood} src = {this.state.img}/>
+    <h6 className="h5-label"> {this.props.mood}</h6>             
+ 
+  </label>    
+</div>
       );
     }
   }
   export default Mood
-/*
-<i style = {{fontSize:"100px", fontStyle:"normal"}}> &#128540;</i>
-class Mood extends React.Component{
-constructor(props) {
-        super(props);
-        this.state = {  
-            mood = this.props.mood,
-            img = this.props.img
-        };
-                    
-        this.handleInputChange = this.handleInputChange.bind(this);
-                      }
-            
-        handleInputChange(event) {
-                         
-        const target = event.target;
-        const value =  target.value;
-        const name = target.name;
-                        
-            this.setState({
-                 [name]: value
-                          }); 
-                console.log(this.state);
-        }
-             
-        render ()
-        {
-        return (          
-        <li className="flex-item">  
-        <label>
-        <input 
-            type="radio" className="hide" name="mood" value={this.state.mood} checked ={this.state.mood === this.state.mood} onChange={this.handleInputChange}
-            />
-                
-        <img src =""/>
-        <h6 className="h5-label">sad</h6>
-        </label>
-        </li>
-        );
-        }
-    }
-    export default Mood
-    */

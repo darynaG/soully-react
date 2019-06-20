@@ -1,0 +1,58 @@
+.story-sharer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-content: center;
+  margin-top: 200px;
+}
+.story-sharer .h3-label {
+  font-size: 40px;
+}
+.story-input {
+  display: flex;
+  flex-direction: column;
+}
+.story-input .story-text {
+  font-family: 'Courier New', Courier, monospace;
+  font-size: 18px;
+  resize: none;
+  word-wrap: normal;
+  margin: auto;
+  margin-top: 70px;
+  width: 30%;
+  height: 200px;
+  outline: none;
+  -moz-appearance: none;
+  border: none;
+}
+.story-input .row-container {
+  display: flex;
+  flex-direction: row;
+}
+.story-input .round-btn {
+  margin: auto;
+  margin-top: 50px;
+  margin-bottom: 100px;
+}
+.minimize {
+  justify-content: left;
+  background-color: #004d408f;
+  margin-top: 7%;
+  padding: 20px;
+}
+.minimize .h3-label {
+  font-size: 20px;
+  align-self: center;
+}
+.minimize .min {
+  height: 70px;
+  width: 50%;
+  margin: 0;
+  margin-left: 5%;
+  margin-top: 10px;
+}
+.minimize .min-btn {
+  margin: 0;
+  margin-left: 10%;
+  justify-self: right;
+}

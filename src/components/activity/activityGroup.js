@@ -29,8 +29,8 @@ class Group extends React.Component {
 
 const mapStateToProps = (state) => {
  return {
-   activities : state.chooseActivity.activities
- };
+   //activities : state.chooseActivity.activities
+ }
 }
 
 const mapDispatchToProps = (dispatch) => {

@@ -65,15 +65,17 @@ class Mood extends React.Component {
       return (
         <div   className="flex-item" style = {{marginTop:"300px"}} >
         <label>        
-    <input className="hide"
+    <input className="hide" 
         name="mood"
         type={this.props.type}   
         value={this.props.mood}
         onClick={this.props.onClick} 
+        //onChange={this.state.img = this.props.imgClicked}
         //checked = {this.state.img = this.props.imgClicked}
+        // <img className={this.props.mood} src = {this.state.img}/>
        />
-    <img src = {this.state.img}/>
-<h6 className="h5-label"> {this.props.mood}</h6>             
+    <img className={this.props.mood} src = {this.state.img}/>
+    <h6 className="h5-label"> {this.props.mood}</h6>             
  
   </label>    
 </div>

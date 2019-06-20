@@ -13,15 +13,27 @@ export const setVisibilityFilter = filter => ({
   filter
 })
 
-export const likeStory = id => ({
-  type: 'TOGGLE_TODO',
-  id
-})
+
 
 export const chooseMood = mood => ({
   type: 'CHOOSE_MOOD',
   mood
 })
+
+export const chooseActivity = activities => ({
+  type: 'SELECT_ACTIVITY',
+  
+    activities
+  
+})
+
+export const unselectActivity = activities => ({
+  type: 'UNSELECT_ACTIVITY',
+
+    activities
+  
+})
+
 export const VisibilityFilters = {
     SHOW_ALL: 'SHOW_ALL',
     SAD_MOOD: 'SAD_MOOD',

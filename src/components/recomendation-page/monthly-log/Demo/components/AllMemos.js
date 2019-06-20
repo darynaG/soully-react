@@ -1,10 +1,12 @@
 import React, { Component } from "react";
 import PropTypes from "prop-types";
 import "./AllMemos.css";
-
 import OneMemo from "./OneMemo";
+import Day from '../../../daily-status/Day'
 
 class AllMemos extends Component {
+ 
+ 
   allMemos = () => {
     const { memos, day } = this.props;
     return memos.map(memo => {
@@ -13,9 +15,10 @@ class AllMemos extends Component {
           <OneMemo
             day={day}
             date={memo.date}
-            dataid={memo.id}
-            text={memo.text.content}
-            deleteItem={this.props.deleteItem}
+            username={memo.username}
+            text={memo.text}
+            mood={memo.mood}
+            activities = {memo.activities}
           />
         </li>
       );

@@ -4,6 +4,7 @@
     "mood":"sad",
     "username": "Aizek",
     "date":"18/6/2019",
+    "activities": ["running", "reading"],
     "text": "No matter how much the world tries to hold you back, always continue with the belief that what you want to achieve is possible. Believing you can become successful is the most important step in actually achieving it."
 },
 {
@@ -11,6 +12,7 @@
     "mood":"sad",
     "username": "Alice",
     "date":"18/5/2019",
+    "activities": ["running", "sleep"],
     "text": "FFFFFFF matter how much the world tries to hold you back, always continue with the belief that what you want to achieve is possible. Believing you can become successful is the most important step in actually achieving it."
 },
 {
@@ -18,6 +20,7 @@
     "mood":"sad",
     "username": "Tom",
     "date":"19/6/2019",
+    "activities": ["walking", "reading"],
     "text": "Thow much the world tries to hold you back, always continue with the belief that what you want to achieve is possible. Believing you can become successful is the most important step in actually achieving it."
 },
 {
@@ -25,5 +28,15 @@
     "mood":"happy",
     "username": "Jack",
     "date":"18/6/2019",
+    "activities": ["running", "working"],
     "text": "YYYY matter how much the world tries to hold you back, always continue with the belief that what you want to achieve is possible. Believing you can become successful is the most important step in actually achieving it."
-}]
+},
+{
+    "id":5,
+    "mood":"happy",
+    "username": "Jack",
+    "date":"20/6/2019",
+    "activities": ["running", "working","sleeping"],
+    "text": "matter how much the world tries to hold you back, always continue with the belief that what you want to achieve is possible. Believing you can become successful is the most important step in actually achieving it."
+}
+]

@@ -1,7 +1,7 @@
 export function fetchData() {
     return dispatch => {
         dispatch(fetchDataBegin());
-        return  fetch("http://localhost:3003/soully/posts")
+        return  fetch("http://localhost:3002/soully/posts")
         .then(res => res.json())
         .then(json => {
             dispatch(fetchDataSuccess(json));

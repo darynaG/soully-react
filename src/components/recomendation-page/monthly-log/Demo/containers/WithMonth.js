@@ -3,31 +3,20 @@ import Month from "../components/Month";
 import Messages from '../../../../../data/posts'
 import * as actions from "../actions";
 
-const mapStateToProps = state => {
-  var memo = []
-  var a = Messages.getAll().then((data)=>{
-    console.log(state.currentday)
-    for(let i=0;i<data.length;i++){
-        if(state.currentday == data[i].date)
-        memo.push(data[i]);
-    }
-    console.log("with memos")
-    console.log(memo)
-  });
 
+const mapStateToProps = state => {
+ 
   return {
     day: state.currentday,
-    memos: memo
+    memos: state.data.items
   };
 };
 
 const mapDispatchToProps = dispatch => {
+
  
   return {
     onClickDay: (dateObj, memos) => {
-
-      console.log("dispathc")
-      console.log(memos)
       let day = dateObj.getDate();
       if (day < 10) {
         day = "0" + day;

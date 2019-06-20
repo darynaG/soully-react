@@ -1,38 +1,27 @@
 import { connect } from "react-redux";
 import ManageMemo from "../components/ManageMemo";
 import * as actions from "../actions";
+import Messages from '/Users/admin/Documents/front-end/soully-react 2/src/data/stories.json'
 
-const getFilteredMemos = (day, memos) => {
-  let memosFilter;
-  if (day === "All Memos") {
-    memosFilter = [...memos];
-  } else {
-    if (memos) {
-      memosFilter = memos.filter(e => {
-        return e.date === day;
-      });
-    } else {
-      memosFilter = [];
-    }
-  }
-  return memosFilter;
-};
 
 const mapStateToProps = state => {
+  var stor = [];
+  Messages.map((data)=>{
+    if(state.currentday ==data.date)
+    stor.push({
+      username:data.username,
+      mood:data.mood,
+      text:data.text,
+      activities: data.activities
+    })
+  })
+  console.log(stor);
+
   return {
-    memos: getFilteredMemos(state.currentday, state.memos),
+    memos: stor,
     day: state.currentday
   };
 };
-
-const mapDispatchToProps = dispatch => {
-  return {
-    deleteItem: id => {
-      dispatch(actions.deleteAMemo(id));
-    }
-  };
-};
-
-const WithManageMemo = connect(mapStateToProps, mapDispatchToProps)(ManageMemo);
+const WithManageMemo = connect(mapStateToProps)(ManageMemo);
 
 export default WithManageMemo;

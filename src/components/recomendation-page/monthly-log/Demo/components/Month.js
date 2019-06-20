@@ -7,19 +7,11 @@ import Calendar from "react-calendar";
 
 import WithManageMemo from "../containers/WithManageMemo";
 
-const Month = ({ onClickDay, onClickSeeAll, day, memos }) => {
-    
-       /* var a = Messages.getAll().then((data)=>{
-            for(let i=0;i<data.length;i++){
-                if(day == data[i].date)
-                memos.push(data[i].text);
-            }
-        })
-        console.log(memos);*/
+const Month = ({ onClickDay,  day, memos }) => {
   return (
     <div className="up">
       <div className="title">
-        <div>My Calendar with Redux</div>
+        <div>Monthly Log</div>
       </div>
       <div className="content">
         <div className="calendarContainer">
@@ -33,16 +25,7 @@ const Month = ({ onClickDay, onClickSeeAll, day, memos }) => {
       </div>
       {day && (
         <div className="whenMemos">
-          {day !== "All Memos" && (
-            <button
-              className="buttonSeeAllMemos"
-              onClick={() => {
-                onClickSeeAll(memos);
-              }}
-            >
-              See all memos
-            </button>
-          )}
+          {day !== "All Memos" }
           <WithManageMemo />
         </div>
       )}
@@ -52,7 +35,6 @@ const Month = ({ onClickDay, onClickSeeAll, day, memos }) => {
 
 Month.propTypes = {
   onClickDay: PropTypes.func.isRequired,
-  onClickSeeAll: PropTypes.func.isRequired,
   day: PropTypes.string,
   memos: PropTypes.array
 };

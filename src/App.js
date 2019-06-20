@@ -12,7 +12,7 @@ import Header from './components/header/header';
 import StoryBoard from './components/guest-page/storyBord';
 import Quote from './components/guest-page/quote'
 import StoryLine from './components/story-page/storyline'
-import Calendar from '../src/components/recomendation-page/monthly-log/Calendar/Calendar'
+
 import WithMonth from "../src/components/recomendation-page/monthly-log/Demo/containers/WithMonth";
 
 import '././css/daily-log.css';
@@ -20,33 +20,11 @@ import '././css/header_s.css';
 import '././css/calendar.css';
 
 import '././css/recomendation.css';
-
-
 import DailyMood from './components/recomendation-page/daily-status/daily';
 import Recomendation from './components/recomendation-page/swiper/swiper';
-import MonthDetail from './components/recomendation-page/monthly-log/month-container';
-
-import { library } from '@fortawesome/fontawesome-svg-core'
-import { faGhost } from '@fortawesome/free-solid-svg-icons'
-
-
 import MoodG from './components/mood-group/test'
-import { Provider } from 'react-redux'
-import { createStore, applyMiddleware } from 'redux'
-import { createLogger } from 'redux-logger'
+import CurrentDay from './components/recomendation-page/daily-status/Day'
 
-import reducer from './reducers'
-
-const middleware = []
-if (process.env.NODE_ENV !== 'production') {
-  middleware.push(createLogger())
-}
-
-const store = createStore(
-  reducer,
-  applyMiddleware(...middleware)
-)
-library.add(faGhost)
 
 
 
@@ -89,7 +67,7 @@ function Home() {
 
 function Day() {
   var action=["Running","Water","Sport"];
-  var date=moment().format("YYYY-MM-DD");
+  var date=moment().format("DD/M/YYYY");
   console.log("date now ",date);
   return(
     <div>
@@ -100,13 +78,9 @@ function Day() {
     </div>
     <DailyMood username="Tom" mood="sad" actions={action} date={date}/> 
 
-    <MonthDetail/>
-    <Provider store={store}>
-      <Calendar/>
-    </Provider>
     <WithMonth />
-
-   
+    <CurrentDay/>
+    
     </div>
   );
 }

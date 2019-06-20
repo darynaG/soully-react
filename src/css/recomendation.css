@@ -1,6 +1,7 @@
 .recomendation {
   display: flex;
   flex-direction: row;
+  align-items: baseline;
 }
 .recomendation .container {
   width: 35%;

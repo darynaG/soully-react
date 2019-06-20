@@ -1,3 +1,0 @@
-export const DISPLAY_DETAILS_DAY = 'DISPLAY_DETAILS_DAY';
-export const ADD_A_MEMO = 'ADD_A_MEMO';
-

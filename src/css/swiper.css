@@ -10,6 +10,8 @@
   align-items: center;
   display: flex;
   flex-direction: column;
+  background-color: white;
+  height: 100%;
 }
 .container .content p {
   text-align: justify;

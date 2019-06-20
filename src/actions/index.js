@@ -1,13 +1,10 @@
-import * as types from '../constants/action-types'
-export const prevMonth = () =>({
-    type: types.CALENDAR_PREV_MONTH
-})
-export const nextMonth = () =>({
-    type: types.CALENDAR_NEXT_MONTH
-})
+import * as actionTypes from "../constants/action-types";
 
-export const showDetail = (weekIndex, weekdayIndex) =>({
-    type: types.CALENDAR_SHOW_DETAILS,
-    payload: {weekIndex, weekdayIndex}
-
-})
+export const displayDetailsDays = day => {
+  return {
+    type: actionTypes.DISPLAY_DETAILS_DAY,
+    payload: {
+      day: day
+    }
+  };
+};

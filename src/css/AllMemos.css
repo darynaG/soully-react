@@ -1,0 +1,12 @@
+.allMemosList {
+  list-style-type: none;
+  width: 100%;
+  padding: 0;
+}
+.dateMemoText {
+  color: grey;
+  font-size: 12px;
+}
+.listMemoText {
+  font-size: 15px;
+}

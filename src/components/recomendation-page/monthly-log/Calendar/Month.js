@@ -1,27 +1,27 @@
 import React from "react";
 import PropTypes from "prop-types";
-import "./Month.css";
-import Messages from '../../../../../data/posts'
-
+import "../../../../css/Month_.css";
 import Calendar from "react-calendar";
 
-import WithManageMemo from "../containers/WithManageMemo";
+import WithManageMemo from "../../../../containers/WithManageMemo";
 
 const Month = ({ onClickDay,  day, memos }) => {
   return (
-    <div className="up">
-      <div className="title">
-        <div>Monthly Log</div>
+    <div className = "up">
+      <div class = "calendar">
+      <div className = "title">
+        <div> Monthly Log </div>
       </div>
-      <div className="content">
-        <div className="calendarContainer">
+      <div className = "content">
+        <div className = "calendarContainer">
           <Calendar
-            className="calendar"
-            onClickDay={day => {
+            className = "calendar"
+            onClickDay = {day => {
               onClickDay(day, memos);
             }}
           />
         </div>
+      </div>
       </div>
       {day && (
         <div className="whenMemos">

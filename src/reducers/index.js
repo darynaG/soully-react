@@ -1,8 +1,10 @@
-import { combineReducers } from 'redux'
-import calendarReducer from './calendar-reducer'
+import { combineReducers } from "redux";
+import currentday from "./currentDay";
+import data from './dataReducer';
 
-const allReducers = combineReducers({
-  calendar: calendarReducer
-})
+const rootReducer = combineReducers({
+  currentday,
+  data
+});
 
-export default allReducers
+export default rootReducer;

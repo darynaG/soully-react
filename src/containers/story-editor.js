@@ -1,7 +1,6 @@
 import React ,{ Component}from 'react';
 import { connect } from 'react-redux'
 import { BrowserRouter as Router, Route, Link } from "react-router-dom";
-import { addStory } from '../actions/actions.js';
 import { addTodo } from '../actions/index.js';
 import P from '../data/posts'
 const StoryEdit =(props)=>{

@@ -1,6 +1,5 @@
 import React ,{ Component}from 'react';
 import Messages from '../../data/posts.js';
-import { BrowserRouter as Router, Route, Link } from "react-router-dom";
 import { library } from '@fortawesome/fontawesome-svg-core'
 
 import { far} from '@fortawesome/free-brands-svg-icons'

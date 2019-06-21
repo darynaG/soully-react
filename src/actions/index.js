@@ -34,7 +34,7 @@ export const chooseMood = mood => ({
 export const chooseActivity = activities => ({
   type: 'SELECT_ACTIVITY',
   
-    activities
+    activities 
   
 })
 

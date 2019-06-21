@@ -1,19 +1,14 @@
 import React ,{ Component}from 'react';
 import Messages from '../../data/posts.js';
-import im1 from '../../assets/img/camera.jpeg'
-import { BrowserRouter as Router, Route, Link } from "react-router-dom";
-
 import { library } from '@fortawesome/fontawesome-svg-core'
 import Post from '../story-page/message'
-
 import { far, faGratipay} from '@fortawesome/free-brands-svg-icons'
-
 import {
         faQuoteLeft,
         faQuoteRight
   
 } from '@fortawesome/free-solid-svg-icons'
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+
 
 library.add(
     faQuoteLeft,

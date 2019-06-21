@@ -10,19 +10,19 @@ const StoryEdit =(props)=>{
     
         return(
             <div className="story-sharer minimize" id="story">
-           
-                <form className="story-input" onSubmit={e=>{      
+                <form className="story-input" method="post" onSubmit={e=>{      
                                 e.preventDefault();
                                     var a={
                                         "mood":props.mood,
                                         "text":input.value
                                     }
-                                    
                                     var j=JSON.stringify(a);
+
                                    
                                     input.value ='';
                                    
                                     alert('You Wrote: ' + j);
+
                                     //add json to file
                                 //update storyline
                                 }}>
@@ -34,6 +34,5 @@ const StoryEdit =(props)=>{
                 </form>
              </div>
         )
-    
 }
 export default (StoryEdit);

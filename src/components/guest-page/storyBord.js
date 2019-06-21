@@ -16,6 +16,18 @@ library.add(
     faQuoteRight
 )
 
+import { library } from '@fortawesome/fontawesome-svg-core'
+import Post from '../story-page/message'
+
+import { far, faGratipay} from '@fortawesome/free-brands-svg-icons'
+
+import {
+        faQuoteLeft,
+        faQuoteRight
+  
+} from '@fortawesome/free-solid-svg-icons'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+
 class StoryBoard extends Component {
     constructor(props){
         super(props);
@@ -56,7 +68,7 @@ class StoryBoard extends Component {
     render(){
     return(
         <React.Fragment>
-            <h1 >Stories</h1>
+            <h1 className="centered-text">Stories</h1>
         <div className="storyboard">
        
     <div className="story_column left">
@@ -75,7 +87,10 @@ class StoryBoard extends Component {
 
                     <article className="story_text"> <FontAwesomeIcon icon={faQuoteLeft} size="1x"/>
                     {data.text}
-                    </article>
+
+                        </article>
+
+
             </div>
 
              )

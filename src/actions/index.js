@@ -1,3 +1,4 @@
+
 import * as actionTypes from "../constants/action-types";
 
 export const displayDetailsDays = day => {
@@ -8,7 +9,6 @@ export const displayDetailsDays = day => {
     }
   };
 };
-
 
 let nextTodoId = 0
 export const addStory = text => ({
@@ -24,6 +24,11 @@ export const setVisibilityFilter = filter => ({
   filter
 })
 
+
+export const likeStory = (liked,id )=> ({
+  type: 'LIKE_STORY',
+  payload: {liked,id}
+})
 
 
 export const chooseMood = mood => ({
@@ -42,7 +47,6 @@ export const unselectActivity = activities => ({
   type: 'UNSELECT_ACTIVITY',
 
     activities
-  
 })
 
 export const VisibilityFilters = {

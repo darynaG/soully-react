@@ -15,9 +15,7 @@ import '././css/header_s.css';
 import '././css/calendar.css';
 import '././css/recomendation.css';
 
-
 import videoClip from './assets/video/Nature.mp4';
-
 
 import Header from './components/header/header';
 import StoryBoard from './components/guest-page/storyBord';
@@ -51,9 +49,9 @@ function App () {
 function Guest (){
   return (
   <div>
-    
+
      <MoodGroup />
-    <div className="container add-margin">
+    <div>
     <Quote mood="sad" />
     <StoryBoard mood="sad" visible='true'/>
     </div>
@@ -62,15 +60,14 @@ function Guest (){
   )
 }
 
-function Storypage (){
+function Storypage(){
   return(
-
-     <div>
+    <div>
+    <StoryEdit></StoryEdit>
+    <PostsWithLikes/>
     </div>
-  );
+  )
 }
-
-
 
 function Day () {
  

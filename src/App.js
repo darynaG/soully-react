@@ -25,6 +25,8 @@ import DailyMood from './components/recomendation-page/daily-status/daily';
 import Recomendation from './components/recomendation-page/swiper/swiper';
 import MoodPage  from './components/mood-group/moodPage';
 import MoodGroup from './components/mood-group/test'
+import StoryEdit from './containers/story-editor'
+import PostsWithLikes from './containers/LikedStoryline'
 
 //const store = createStore(reducer);
 

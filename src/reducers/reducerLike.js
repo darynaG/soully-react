@@ -1,8 +1,4 @@
-import { connect } from 'react-redux'
-import { likeStory } from '../actions';
-import { combineReducers } from 'redux'
-import {Posts} from '../components/story-page/storyline';
-import Messages from '../data/posts';
+
 const postsData=[
   {
   id:1,
@@ -92,25 +88,3 @@ export function postsLikeCounters(state=initialState.postsLikeCounters, action) 
   }
 }
 
-// Now we're combining all reducers into a single rootReducer
-export const rootReducer = combineReducers({
-  posts,
-  postsLikes,
-  postsLikeCounters
-});
-
-const onLike = (post) => ({ type: 'LIKE_POST', post });
-const onUnlike = (post) => ({ type: 'UNLIKE_POST', post });
-function mapStateToProps(state) {
-  return {
-    posts: state.posts,
-    postsLikes: state.postsLikes,
-    postsLikeCounters: state.postsLikeCounters
-  };
-};
-const mapDispatchToProps = {
-  onLike,
-  onUnlike
-};
-const PostsWithLikes = connect(mapStateToProps, mapDispatchToProps)(Posts);
-export default PostsWithLikes

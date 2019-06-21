@@ -7,6 +7,7 @@ const Check = (props) => (
                 type={props.type}   
                 value={props.mood}
                 //onClick={props.onClick}
+                
                 onChange={props.onClick}
                />
             

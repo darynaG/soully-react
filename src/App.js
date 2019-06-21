@@ -14,6 +14,7 @@ import '././css/daily-log.css';
 import '././css/header_s.css';
 import '././css/calendar.css';
 import '././css/recomendation.css';
+import '././css/responsible-mood.css'
 
 import videoClip from './assets/video/Nature.mp4';
 

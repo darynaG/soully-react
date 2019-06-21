@@ -3,11 +3,11 @@ const Check = (props) => (
     <div   className="flex-item" style = {{marginTop:"300px"}} >
                 <label>        
             <input 
-                name="mood"
+                name={props.mood}
                 type={props.type}   
                 value={props.mood}
                 //onClick={props.onClick}
-                
+                checked={props.checked}
                 onChange={props.onClick}
                />
             

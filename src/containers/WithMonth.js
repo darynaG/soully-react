@@ -7,7 +7,7 @@ const mapStateToProps = state => {
  
   return {
     day: state.currentday,
-    memos: state.data.items
+    memos: state.data
   };
 };
 

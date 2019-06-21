@@ -69,8 +69,8 @@ class Mood extends React.Component {
         name="mood"
         type={this.props.type}   
         value={this.props.mood}
-        onClick={this.props.onClick} 
-        //onChange={this.state.img = this.props.imgClicked}
+        //onClick={this.props.onClick} 
+        onChange={this.props.onClick}
         //checked = {this.state.img = this.props.imgClicked}
         // <img className={this.props.mood} src = {this.state.img}/>
        />

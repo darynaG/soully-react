@@ -2,9 +2,7 @@ import React from 'react';
 import Mood from './mood';
 import imgL from '../../assets/img/angle-left.png'
 import imgH from '../../assets/img/angle-right.png'
-import storyEditor from '../../containers/story-editor';
 import { connect } from 'react-redux'
-import {chooseMood} from '../../actions';
 
 class MoodGroup extends React.Component {
   

@@ -1,6 +1,20 @@
 import React ,{ Component}from 'react';
 import Messages from '../../data/posts.js';
-import { BrowserRouter as Router, Route, Link } from "react-router-dom";
+import { library } from '@fortawesome/fontawesome-svg-core'
+
+import { far} from '@fortawesome/free-brands-svg-icons'
+
+import {
+        faQuoteLeft,
+        faQuoteRight
+  
+} from '@fortawesome/free-solid-svg-icons'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+
+library.add(
+    faQuoteLeft,
+    faQuoteRight
+)
 
 import { library } from '@fortawesome/fontawesome-svg-core'
 import Post from '../story-page/message'
@@ -73,7 +87,10 @@ class StoryBoard extends Component {
 
                     <article className="story_text"> <FontAwesomeIcon icon={faQuoteLeft} size="1x"/>
                     {data.text}
+
                         </article>
+
+
             </div>
 
              )

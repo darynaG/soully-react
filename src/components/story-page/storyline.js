@@ -1,10 +1,7 @@
 import React ,{ Component}from 'react';
-
 import { library } from '@fortawesome/fontawesome-svg-core'
 import Post from '../story-page/message'
-
 import { far, faGratipay} from '@fortawesome/free-brands-svg-icons'
-
 import {
         faQuoteLeft,
         faQuoteRight
@@ -16,10 +13,10 @@ library.add(
     faQuoteRight,
     faGratipay
 )
+
 export  const Posts=(props)  =>
   
        (
-
                     <div className="story-board">
                     <div className="leftcolumn">
                     { 
@@ -40,4 +37,9 @@ export  const Posts=(props)  =>
                 </div>
                 </div>
             
+
                     );
+
+   
+   
+

@@ -1,10 +1,9 @@
 import React ,{ Component}from 'react';
 import { connect } from 'react-redux'
 import { BrowserRouter as Router, Route, Link } from "react-router-dom";
-
 import { addTodo } from '../actions/index.js';
 import P from '../data/posts'
-const StoryEdit =({dispatch})=>{
+const StoryEdit =(props)=>{
    
     let input
 
@@ -14,14 +13,16 @@ const StoryEdit =({dispatch})=>{
                 <form className="story-input" method="post" onSubmit={e=>{      
                                 e.preventDefault();
                                     var a={
-                                        "mood":"happy",
+                                        "mood":props.mood,
                                         "text":input.value
                                     }
                                     var j=JSON.stringify(a);
-                                 
-                                    input.value ='';
-                                    P.newPost(j);
+
                                    
+                                    input.value ='';
+                                   
+                                    alert('You Wrote: ' + j);
+
                                     //add json to file
                                 //update storyline
                                 }}>
@@ -34,4 +35,4 @@ const StoryEdit =({dispatch})=>{
              </div>
         )
 }
-export default connect()(StoryEdit);
+export default (StoryEdit);

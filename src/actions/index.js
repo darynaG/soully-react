@@ -1,4 +1,15 @@
-import * as types from '../constants/action-types'
+
+import * as actionTypes from "../constants/action-types";
+
+export const displayDetailsDays = day => {
+  return {
+    type: actionTypes.DISPLAY_DETAILS_DAY,
+    payload: {
+      day: day
+    }
+  };
+};
+
 let nextTodoId = 0
 export const addStory = text => ({
   type: 'ADD_TODO',
@@ -6,14 +17,36 @@ export const addStory = text => ({
   text
 })
 
+
+
 export const setVisibilityFilter = filter => ({
   type: 'SET_VISIBILITY_FILTER',
   filter
 })
 
+
 export const likeStory = (liked,id )=> ({
   type: 'LIKE_STORY',
   payload: {liked,id}
+})
+
+
+export const chooseMood = mood => ({
+  type: 'CHOOSE_MOOD',
+  mood
+})
+
+export const chooseActivity = activities => ({
+  type: 'SELECT_ACTIVITY',
+  
+    activities 
+  
+})
+
+export const unselectActivity = activities => ({
+  type: 'UNSELECT_ACTIVITY',
+
+    activities
 })
 
 export const VisibilityFilters = {
@@ -25,26 +58,3 @@ export const VisibilityFilters = {
     EXCITED_MOOD:'EXCITED_MOOD',
     GOOD_MOOD:'GOOD_MOOD'
   }
-
-
-export const PrevMonth = () =>({
-    type: types.CALENDAR_PREV_MONTH
-})
-export const NextMonth = () =>({
-    type: types.CALENDAR_NEXT_MONTH
-})
-export const NextYear = () =>({
-    type: types.CALENDAR_NEXT_YEAR
-})
-export const PrevYear = () =>({
-    type: types.CALENDAR_PREV_YEAR
-})
-export const EditYear = () =>({
-    type: types.CALENDAR_EDIT_YEAR
-})
-export const ShowDetail = (weekIndex, weekdayIndex) =>({
-    type: types.CALENDAR_SHOW_DETAILS.CALENDAR_EDIT_YEAR,
-    payload: {weekIndex, weekdayIndex}
-
-})
-

@@ -38,15 +38,7 @@ export const chooseMood = mood => ({
 
 export const chooseActivity = activities => ({
   type: 'SELECT_ACTIVITY',
-  
-    activities 
-  
-})
-
-export const unselectActivity = activities => ({
-  type: 'UNSELECT_ACTIVITY',
-
-    activities
+  activities
 })
 
 export const VisibilityFilters = {

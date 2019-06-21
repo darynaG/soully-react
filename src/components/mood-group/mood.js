@@ -74,7 +74,7 @@ class Mood extends React.Component {
         //checked = {this.state.img = this.props.imgClicked}
         // <img className={this.props.mood} src = {this.state.img}/>
        />
-    <img className={this.props.mood} src = {this.state.img}/>
+    <img className={this.props.mood} src = {this.props.img}/>
     <h6 className="h5-label"> {this.props.mood}</h6>             
  
   </label>    

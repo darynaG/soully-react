@@ -5,26 +5,28 @@ import imgH from '../../assets/img/angle-right.png'
 import { connect } from 'react-redux'
 
 class Group extends React.Component {
-  
-  render() {
+   arr;
+   render() {
     return (
       <div>
       <form>
        <ul className="block">
-        <Check mood="sad" img={imgL} imgClicked={imgH} type="checkbox"  onClick={this.props.onActivitySelect}/>
+        <Check mood="sad"  type="checkbox"  onClick={this.props.onActivitySelect}  />
         <Check mood="wow"  img={imgL} imgClicked={imgH} type="checkbox" onClick={this.props.onActivitySelect}/>
-         <Check mood="wtf"   img={imgL} imgClicked={imgH} type="checkbox" onClick={this.props.onActivitySelect} />
+        <Check mood="wtf"   img={imgL} imgClicked={imgH} type="checkbox" onClick={this.props.onActivitySelect} />
        </ul> 
      </form>
-     <h1 style = {{marginTop:"200px"}}>You choose {this.props.mood}</h1>
+     <h1 style = {{marginTop:"200px"}}>You choose {this.props.activities}</h1>
      </div>
     );
   }
 }
-
+ 
 const mapStateToProps = (state) => {
+    console.log(state.activities);
  return {
-  // activities : state.chooseActivity.activities
+
+  activities : state.activities
  }
 }
 
@@ -33,12 +35,10 @@ const mapDispatchToProps = (dispatch) => {
     // explicitly forwarding arguments
     
     onActivitySelect: (event) => {
-      console.log(event.target.value);
+    
       event.preventDefault();
-      dispatch({type: 'SELECT_ACTIVITY', activities: event.target.value})},
-    onActivityUnselect: (event) => {
-        event.preventDefault();
-        dispatch({type: 'UNSELECT_ACTIVITY', activities: event.target.value})}
+      dispatch({type: 'SELECT_ACTIVITY', activities: ["sad", "happy"]})},
+    
 }
 }
 

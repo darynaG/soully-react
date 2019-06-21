@@ -1,7 +1,7 @@
 import React ,{ Component}from 'react';
 import { connect } from 'react-redux'
 import { BrowserRouter as Router, Route, Link } from "react-router-dom";
-import { addStory } from '../actions/actions.js';
+
 import { addTodo } from '../actions/index.js';
 import P from '../data/posts'
 const StoryEdit =({dispatch})=>{
@@ -11,19 +11,17 @@ const StoryEdit =({dispatch})=>{
     
         return(
             <div className="story-sharer minimize" id="story">
-           
                 <form className="story-input" method="post" onSubmit={e=>{      
                                 e.preventDefault();
                                     var a={
                                         "mood":"happy",
                                         "text":input.value
                                     }
-                                    
                                     var j=JSON.stringify(a);
-                                    dispatch(addStory(j));
+                                 
                                     input.value ='';
                                     P.newPost(j);
-                                    //alert('You Wrote: ' + j);
+                                   
                                     //add json to file
                                 //update storyline
                                 }}>
@@ -35,6 +33,5 @@ const StoryEdit =({dispatch})=>{
                 </form>
              </div>
         )
-    
 }
 export default connect()(StoryEdit);

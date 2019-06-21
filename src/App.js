@@ -21,8 +21,9 @@ import Header from './components/header/header';
 import MoodGroup from './components/mood-group/mood-group';
 import StoryBoard from './components/guest-page/storyBord';
 import Quote from './components/guest-page/quote'
-import StoryLine from './components/story-page/storyline'
+import Posts from './components/story-page/storyline'
 import StoryEdit from './containers/story-editor'
+import PostsWithLikes from './containers/LikedStoryline'
 
 import '././css/daily-log.css';
 import '././css/header_s.css';
@@ -35,7 +36,7 @@ import DailyMood from './components/recomendation-page/daily-status/daily';
 import DailyLog from './components/recomendation-page/daily-log/daily-log';
 import Recomendation from './components/recomendation-page/swiper/swiper';
 import MonthDetail from './components/recomendation-page/monthly-log/month-container';
-
+//import LikedStoryLine from './containers/LikedStoryline'
 import { library } from '@fortawesome/fontawesome-svg-core'
 import { faGhost } from '@fortawesome/free-solid-svg-icons'
 
@@ -73,8 +74,8 @@ function App() {
 function Guest(){
   return (
   <div>
-     <MoodGroup/>
-     <div className="container add-margin">
+     <MoodG/>
+     <div >
     <Quote mood="sad" />
   <StoryBoard mood="sad" visible='true'/>
   </div>
@@ -86,7 +87,7 @@ function Storypage(){
   return(
     <div>
     <StoryEdit></StoryEdit>
-    <StoryLine></StoryLine>
+    <PostsWithLikes/>
     </div>
   )
 }

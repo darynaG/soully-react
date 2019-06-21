@@ -11,9 +11,9 @@ export const setVisibilityFilter = filter => ({
   filter
 })
 
-export const likeStory = id => ({
+export const likeStory = (liked,id )=> ({
   type: 'LIKE_STORY',
-  id
+  payload: {liked,id}
 })
 
 export const VisibilityFilters = {

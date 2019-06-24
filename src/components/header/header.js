@@ -1,5 +1,6 @@
 import React from 'react';
 import { BrowserRouter as Router, Route, Link } from "react-router-dom";
+import logo from "../../assets/img/logo_soully.png";
 
 function Header () 
 {
@@ -8,7 +9,7 @@ function Header ()
 
         <nav className="top-menu-nav">
             <div className="logo">
-                  LOGO
+                  <img src= {logo}/>
             </div>
         <div className="centered">
             <ul className="top-menu-nav-list">

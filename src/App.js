@@ -1,14 +1,5 @@
 import React from 'react';
-
-import ReactDOM from 'react-dom'
-import { createStore } from 'redux'
-import soullyApp from './reducers/reducers'
-import { addStory, likeStory,setVisibilityFilter,VisibilityFilters} from './actions/actions'
-
 import { BrowserRouter as Router, Route, Link } from "react-router-dom";
-import moment from 'moment';
-import reducer from './reducers'
-
 import './App.css';
 import '././css/header_s.css';
 import '././css/new-mood-page.css';
@@ -24,25 +15,17 @@ import '././css/header_s.css';
 import '././css/calendar.css';
 import '././css/recomendation.css';
 
-
-import videoClip from './assets/video/Nature.mp4';
-
-
 import Header from './components/header/header';
 import StoryBoard from './components/guest-page/storyBord';
 import Quote from './components/guest-page/quote'
-import StoryLine from './components/story-page/storyline'
-
 import WithMonth from "../src/containers/WithMonth";
-
-import StoryEdit from './containers/story-editor'
 import DailyMood from './components/recomendation-page/daily-status/daily';
 import Recomendation from './components/recomendation-page/swiper/swiper';
-import MonthDetail from './components/recomendation-page/monthly-log/month-container';
 import MoodPage  from './components/mood-group/moodPage';
 import MoodGroup from './components/mood-group/test'
-
-//const store = createStore(reducer);
+import burger from './containers/HamburgerIconContainer'
+import HamburgerIconContainer from './containers/HamburgerIconContainer';
+import Footer from '../src/components/footer/footer';
 
 
 function App () {
@@ -50,11 +33,13 @@ function App () {
     <Router>
       <div>
         <Header />
+        
         <Route exact path="/" component={MoodPage} />
         <Route path="/day" component={Day} />
         <Route path="/guest" component={Guest} />
         <Route path="/stories" component={Storypage} />
-        <Route path="/month" component={Guest} />
+        <Route path="/month" component={Month} />
+        <Footer/>
 
       </div>
     </Router>
@@ -90,25 +75,28 @@ function Day () {
  
   return(
     <div>
+      
     <div className = "recomendation">
+      
       <Recomendation mood = "sad" category = "books"/>
       <Recomendation mood = "sad" category = "films"/>
       <Recomendation mood = "sad" category = "activities"/>
-    </div>
-
-    <DailyMood username = "Tom" mood = "sad" date = '19/6/2019'/> 
-    <WithMonth />
+      </div>
+      <DailyMood  username = "Tom" mood = "sad" date = '19/6/2019'/> 
+    
 
     </div>
   );
 }
 
 
+
+
 function Month (){
 
   return (
     <div>
-      <StoryBoard/>
+     <WithMonth /> 
    </div>
   );
 

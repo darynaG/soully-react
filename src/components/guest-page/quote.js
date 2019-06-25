@@ -42,7 +42,7 @@ componentDidMount(){
             }
   
 }
-    })//.then(()=>{console.log("this is mood_quotes",mood_quotes.length)})
+    })
     .then(()=>{
         var maxNumber=mood_quotes.length;
         var rand=Math.floor(Math.random()*maxNumber);

@@ -1,21 +1,25 @@
 .recomendation {
   display: flex;
-  flex-direction: row;
-  align-items: baseline;
+  padding-top: 15vh;
+  background: linear-gradient(to bottom, #ffffff, #f2e3de, #e5c7bd);
 }
 .recomendation .container {
-  width: 35%;
   display: flex;
   align-items: center;
   font-family: 'Courier New', Courier, monospace;
   justify-content: center;
-  height: 100vh;
   align-items: baseline;
+  background-color: transparent;
+}
+.recomendation .content p,
+.recomendation .content i {
+  padding: 5%;
 }
 .recomendation .content img {
   height: 30vh;
-  width: 20vw;
+  width: 90%;
+  padding-top: 5%;
 }
 .recomendation .content h2 {
-  padding: 10%;
+  padding-top: 5%;
 }

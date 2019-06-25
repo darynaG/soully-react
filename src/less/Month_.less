@@ -1,19 +1,16 @@
 .up {
+  padding-top:15vh;
     display: flex;
-    flex-direction: row;
     width: 100%;
     font-family: 'Courier New', Courier, monospace;
-    //background-color: #B9929F;
-   background-image: url(../assets//img//sky.jpg);
-    background-size: cover;
+    border-left:1px solid black;
     .calendar{
-        width: 50%;
         justify-self: center;
         height: 100vh;
+       
         .title {
-            color: #523249;
+            color: black;
             font-size: 30px;
-            background-color: #E2C2C6;
             text-align: center;
           }
           .content {
@@ -21,8 +18,7 @@
             justify-content: center;
             align-items: center;
             height: 93%;
-       
-            background-color: #E2C2C6;
+      
             .calendarContainer{
                 display: flex;
                 flex-direction: column;
@@ -31,15 +27,51 @@
                 .react-calendar{
                     font-family: 'Courier New', Courier, monospace;
                     font-size: 20px;
+                    width: 60%;
+                    border: 0px;
+                    .react-calendar__navigation{
+                      height:40%;
+                      background-image: url(../assets//img/blur.jpeg);
+                      background-size: cover;
+                      background-position-y: center;
+
+                      button{
+                        font-size: 130%;
+                        font-family: cursive;
+                        &:hover{
+                          background-color: transparent;
+                        }
+                        &:focus{
+                          background-color: transparent;
+                        }
+                      }
+                    }
+                    .react-calendar__tile--hasActive {
+                      background: #f7d3c7;
+                      border-radius: 10%;
+                      color: white;
+                  }
+                    .react-calendar__month-view{
+                      .react-calendar__month-view__weekdays{
+                        font-family: 'Courier New', Courier, monospace;
+                        abbr{
+                          text-decoration: none;
+                        }
+                      }
+                      .react-calendar__tile--active {
+                        background: #f7d3c7;
+                        border-radius: 10%;
+                        color: white;
+                    }
+                    }
                 }
             }
           }
     }
     .whenMemos {
         position: relative;
-        width: 50%;
-        height: 100vh;
-        background-color:  #B9929F;
-        ;
+        //height: 100vh;
+       background-size:cover;
+        
       }
   }

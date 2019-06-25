@@ -6,18 +6,30 @@
   margin: auto ;
   position: relative;
   font-family: 'Courier New', Courier, monospace;
-  color: #004d40;
+  color: black;
   font-size: 21px;
   border: solid;
-  border-color: #004d40;
+  border-color: #e5c7bd;
   border-width: 2px;
   background: transparent;
-  background-image: linear-gradient(to left, transparent, transparent 50%, #004d40, 50%, #004d40);
+  background-image: linear-gradient(to left, transparent, transparent 50%, #e5c7bd, 50%, #e5c7bd);
   background-position: 100% 0;
   background-size: 200% 100%;
   transition: all 0.25s ease-in;
 }
+.round-btn a {
+  text-decoration: none;
+}
+.round-btn a:visited {
+  color: black;
+}
+.round-btn a:hover {
+  color: #ffffff;
+}
 .round-btn:hover {
   background-position: 0 0;
+  background-color: #e5c7bd;
+}
+.round-btn:hover a {
   color: white;
 }

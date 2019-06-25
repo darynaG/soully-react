@@ -8,7 +8,7 @@ const MoodPage = (props) => (
     <div>
      <MoodGroup />
      <Group />
-     <StoryEditor mood= "good"/>
+     <StoryEditor mood= "good" isMin="false"/>
      <video className="video" playsInline autoPlay muted loop id="myVideo">
          <source src={videoClip} type="video/mp4"/>
      </video>

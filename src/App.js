@@ -66,7 +66,7 @@ function Guest (){
 function Storypage(){
   return(
     <div>
-    <StoryEdit></StoryEdit>
+    <StoryEdit isMin={true}></StoryEdit>
     <PostsWithLikes/>
     </div>
   )

@@ -6,8 +6,23 @@ import P from '../data/posts'
 const StoryEdit =(props)=>{
    
     let input
-
-    
+    let divElement;
+    if (props.isMin === true)
+    {
+    divElement = <div className="row-container">
+                    <h5 className="h3-label">Share your story</h5>
+         <textarea className={"story-text min" } name="subject" placeholder="Write something.." ref={node=>input=node} ></textarea>
+         <button className={"round-btn min-btn" } type="submit"  > Share</button>
+         
+         </div>;
+    }
+    else {
+        divElement =    <div className="story-sharer" >
+        <h5 className="h3-label">Share your story</h5>
+         <textarea className={"story-text" } name="subject" placeholder="Write something.." ref={node=>input=node} ></textarea>
+        <button className={"round-btn" } type="submit"  > Share</button>
+        </div>;
+    }
         return(
             <div className="story-sharer minimize" id="story">
                 <form className="story-input" method="post" onSubmit={e=>{      
@@ -26,11 +41,7 @@ const StoryEdit =(props)=>{
                                     //add json to file
                                 //update storyline
                                 }}>
-                    <div className="row-container">
-                    <h5 className="h3-label">Share your story</h5>
-                    <textarea className="story-text min" name="subject" placeholder="Write something.." ref={node=>input=node} ></textarea>
-                    <button className="round-btn min-btn"  type="submit"  > Share</button>
-                    </div>
+                    {divElement}
                 </form>
              </div>
         )

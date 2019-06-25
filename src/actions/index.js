@@ -36,9 +36,9 @@ export const chooseMood = mood => ({
   mood
 })
 
-export const chooseActivity = activities => ({
+export const selectActivity = (checked, name) => ({
   type: 'SELECT_ACTIVITY',
-  activities
+  payload: {checked, name}
 })
 
 export const VisibilityFilters = {

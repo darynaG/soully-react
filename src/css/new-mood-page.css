@@ -106,6 +106,21 @@ body {
   font-weight: bold;
   text-align: center;
 }
+.flex-item .hideLabel {
+  font-family: 'Courier New', Courier, monospace;
+  font-size: 25px;
+  text-align: center;
+  margin-top: 20px;
+  visibility: hidden;
+}
+.flex-item .showLabel {
+  font-family: 'Courier New', Courier, monospace;
+  font-size: 25px;
+  text-align: center;
+  visibility: hidden;
+  margin-top: 20px;
+  visibility: visible;
+}
 .flex-item .h6-label {
   text-align: center;
   font-family: 'Courier New', Courier, monospace;
@@ -117,11 +132,17 @@ body {
   height: 180px;
   width: 180px;
 }
+.flex-item .imgA {
+  height: 50px;
+  width: 50px;
+}
 .flex-item:hover {
   color: #004d40;
 }
 .flex-item:hover .h6-label,
-.flex-item:hover .h5-label {
+.flex-item:hover .h5-label,
+.flex-item:hover .hideLabel,
+.flex-item:hover .showLabel {
   color: #004d40;
   visibility: visible;
   background-color: rgba(240, 248, 255, 0.205);

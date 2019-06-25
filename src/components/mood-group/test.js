@@ -16,15 +16,15 @@ class MoodGroup extends React.Component {
       <div>
       <form>
        <ul className="block">
-        <Mood mood="sad" img={sad} type="radio"  onClick={this.props.onMoodChange}/>
-        <Mood mood="wow"  img={wow}  type="radio" onClick={this.props.onMoodChange}/>
+        <Mood mood="sad" img={sad} imgClicked={happy} type="radio"  onClick={this.props.onMoodChange}/>
+        <Mood mood="wow"  img={wow} imgClicked={happy} type="radio" onClick={this.props.onMoodChange}/>
          <Mood mood="wtf"   img={wtf}  type="radio" onClick={this.props.onMoodChange} />
          <Mood mood="good"  img={good}  type="radio" onClick={this.props.onMoodChange}/>
          <Mood mood="excited"  img={excited}  type="radio" onClick={this.props.onMoodChange}/>
        <Mood mood="happy"  img={happy}  type="radio" onClick={this.props.onMoodChange}/>
        </ul> 
      </form>
-     <h1 style = {{marginTop:"200px"}}>You choose {this.props.mood}</h1>
+     
      </div>
     );
   }

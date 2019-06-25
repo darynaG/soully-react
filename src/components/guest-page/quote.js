@@ -1,11 +1,8 @@
 import React ,{ Component}from 'react';
-import { BrowserRouter as Router, Route, Link } from "react-router-dom";
 
 import Q from '../../data/quotes.js';
 
 import { library } from '@fortawesome/fontawesome-svg-core'
-
-import { far} from '@fortawesome/free-brands-svg-icons'
 
 import {
         faQuoteLeft,
@@ -38,7 +35,7 @@ componentDidMount(){
     var a=Q.getAll().then((data)=>{
         for(var i=0;i<data.length;i++){
             if(this.props.mood){
-                if(this.props.mood==data[i].mood)
+                if(this.props.mood===data[i].mood)
                 mood_quotes.push(data[i]);
             }else{
                 mood_quotes.push(data[i]);

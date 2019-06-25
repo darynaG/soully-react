@@ -1,7 +1,11 @@
 @media screen and (max-width: 1800px) {
   .recomendation {
-    padding-top: 10vh;
+    flex-direction: row;
+    align-items: baseline;
     align-items: center;
+  }
+  .recomendation .container {
+    width: 35%;
   }
   .recomendation p {
     font-size: 18px;
@@ -15,9 +19,18 @@
     width: 90%;
     padding-top: 5%;
   }
+  .up {
+    flex-direction: row;
+  }
   .up .calendar {
-    height: 100VH;
     width: 50%;
+  }
+  .up .whenMemos {
+    width: 50%;
+  }
+  .daily-log {
+    display: flex;
+    flex-direction: column;
   }
   .daily-log h1 {
     font-size: 20px;
@@ -27,6 +40,9 @@
   }
   .daily-log .story_text {
     font-size: 18px;
+  }
+  .daily-log .content {
+    flex-direction: row;
   }
 }
 @media screen and (max-width: 1300px) {
@@ -63,15 +79,22 @@
     width: 100%;
     padding: 10px;
   }
-  .daily-log h1,
-  .daily-log h3 {
+  .daily-log .content {
+    flex-direction: column;
+  }
+  .daily-log .content .leftside,
+  .daily-log .content .stories {
+    width: 100%;
+  }
+  .daily-log .content h1,
+  .daily-log .content h3 {
     font-size: 16px;
   }
-  .daily-log .story {
+  .daily-log .content .story {
     font-size: 16px;
   }
 }
-@media screen and (max-width: 550px) {
+@media screen and (max-width: 990px) and screen and (max-width: 550px) {
   .recomendation {
     padding-top: 15vh;
     flex-direction: column;
@@ -97,14 +120,7 @@
   .up .whenMemos .memoListOfTheDay .item-memo-textcontent {
     padding: 10px 10px;
   }
-  .daily-log .content {
-    flex-direction: column;
-  }
-  .daily-log .content .leftside,
-  .daily-log .content .stories {
-    width: 100%;
-  }
-  .daily-log .story {
+  .story {
     font-size: 15px;
   }
 }
@@ -117,7 +133,7 @@
   }
   .daily-log .stories .story .story_text {
     font-family: 'Courier New', Courier, monospace;
-    font-size: 16px;
+    font-size: 15px;
   }
   .whenMemos {
     font-size: 12px;

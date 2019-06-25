@@ -1,0 +1,16 @@
+@media screen and (max-width: 1800px) {
+  .top-menu-nav-list {
+    visibility: visible;
+  }
+  .b-top-menu {
+    visibility: collapse;
+  }
+}
+@media screen and (max-width: 730px) {
+  .top-menu-nav-list {
+    visibility: collapse;
+  }
+  .b-top-menu {
+    visibility: visible;
+  }
+}

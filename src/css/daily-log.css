@@ -1,6 +1,4 @@
 .daily-log {
-  display: flex;
-  flex-direction: column;
   box-sizing: border-box;
   align-items: center;
   font-family: 'Courier New', Courier, monospace;
@@ -8,7 +6,6 @@
 }
 .daily-log .content {
   display: flex;
-  flex-direction: row;
 }
 .daily-log .leftside {
   width: 40%;

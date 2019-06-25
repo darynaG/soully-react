@@ -1,23 +1,27 @@
-import{
-    hideMobileNavMenu,
-    showMobileNavMenu
-    
-}from '../actions/index'
-import {connect} from 'react-redux'
-import BurgerIcon from '../components/header/BurgerIcon'
+import { connect } from "react-redux";
+import {
+  hideMobileNavigationMenu,
+  showMobileNavigationMenu
+} from "../actions/BurgerActions";
+
+import HamburgerIcon from "../components/header/BurgerIcon";
 
 const mapStateToProps = (state, ownProps) => {
-    return {
-        ...ownProps
-    }
-
+  return {
+    ...ownProps
+  }
 };
 
 const mapDispatchToProps = (dispatch) => {
-    return {
-        onHideMobileNavMenu: () => dispatch(hideMobileNavMenu()),
-        onShowMobileNavMenu: () => dispatch(showMobileNavMenu())
-    }
+  return {
+    onHideMobileNavigationMenu: () => dispatch(hideMobileNavigationMenu()),
+    onShowMobileNavigationMenu: () => dispatch(showMobileNavigationMenu())
+  }
 };
-const HamburgerIconContainer = connect(mapStateToProps,mapDispatchToProps)(BurgerIcon);
+
+const HamburgerIconContainer = connect(
+  mapStateToProps,
+  mapDispatchToProps
+)(HamburgerIcon);
+
 export default HamburgerIconContainer;

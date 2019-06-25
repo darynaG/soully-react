@@ -1,11 +1,9 @@
 .recomendation {
   display: flex;
-  flex-direction: row;
-  align-items: baseline;
+  padding-top: 15vh;
   background: linear-gradient(to bottom, #ffffff, #f2e3de, #e5c7bd);
 }
 .recomendation .container {
-  width: 35%;
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -14,9 +12,14 @@
   align-items: baseline;
   background-color: transparent;
 }
+.recomendation .content p,
+.recomendation .content i {
+  padding: 5%;
+}
 .recomendation .content img {
   height: 30vh;
   width: 90%;
+  padding-top: 5%;
 }
 .recomendation .content h2 {
   padding-top: 5%;

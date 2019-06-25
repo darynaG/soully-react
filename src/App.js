@@ -1,105 +1,39 @@
 import React from 'react';
 import { BrowserRouter as Router, Route, Link } from "react-router-dom";
 import './App.css';
-import '././css/header_s.css';
-import '././css/new-mood-page.css';
-import '././css/stories.css'
-import '././css/quote.css'
-
-import '././css/containers.css'
-import '././css/story-input.css'
-import '././css/button.css'
-
-import '././css/daily-log.css';
-import '././css/header_s.css';
-import '././css/calendar.css';
-import '././css/recomendation.css';
-
+/*
+import '../src/css/header-responsible.css'
+*/
 import Header from './components/header/header';
-import StoryBoard from './components/guest-page/storyBord';
-import Quote from './components/guest-page/quote'
-import WithMonth from "../src/containers/WithMonth";
-import DailyMood from './components/recomendation-page/daily-status/daily';
-import Recomendation from './components/recomendation-page/swiper/swiper';
 import MoodPage  from './components/mood-group/moodPage';
-import MoodGroup from './components/mood-group/test'
-import burger from './containers/HamburgerIconContainer'
-import HamburgerIconContainer from './containers/HamburgerIconContainer';
 import Footer from '../src/components/footer/footer';
+import Day from '../src/components/Route/Day'
+import Month from '../src/components/Route/Month'
+import Guest from '../src/components/Route/Guest'
+import StoryPage from '../src/components/Route/StoryPage'
+import HamburgerIconContainer from '../src/containers/HamburgerIconContainer'
 
-
-function App () {
+class App extends React.Component {
+  render(){
   return (
     <Router>
       <div>
-        <Header />
-        
+      
+        <Header/>
+        <HamburgerIconContainer showSideBarMenu />
         <Route exact path="/" component={MoodPage} />
-        <Route path="/day" component={Day} />
-        <Route path="/guest" component={Guest} />
-        <Route path="/stories" component={Storypage} />
-        <Route path="/month" component={Month} />
+        <Route exact path="/day" component={Day} />
+        <Route exact path="/guest" component={Guest} />
+        <Route exact path="/stories" component={StoryPage} />
+        <Route exact path="/month" component={Month} />
+        
+        
         <Footer/>
-
       </div>
     </Router>
   );
+  }
 }
 
-
-function Guest (){
-  return (
-  <div>
-    
-     <MoodGroup />
-    <div className="container add-margin">
-    <Quote mood="sad" />
-    <StoryBoard mood="sad" visible='true'/>
-    </div>
-
- </div>
-  )
-}
-
-function Storypage (){
-  return(
-
-     <div>
-    </div>
-  );
-}
-
-
-
-function Day () {
- 
-  return(
-    <div>
-      
-    <div className = "recomendation">
-      
-      <Recomendation mood = "sad" category = "books"/>
-      <Recomendation mood = "sad" category = "films"/>
-      <Recomendation mood = "sad" category = "activities"/>
-      </div>
-      <DailyMood  username = "Tom" mood = "sad" date = '19/6/2019'/> 
-    
-
-    </div>
-  );
-}
-
-
-
-
-function Month (){
-
-  return (
-    <div>
-     <WithMonth /> 
-   </div>
-  );
-
-}
 
 export default App;

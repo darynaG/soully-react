@@ -21,3 +21,8 @@
   background-position: 0 0;
   color: white;
 }
+.submit-btn {
+  position: fixed;
+  bottom: 126px;
+  right: 50px;
+}

@@ -4,9 +4,18 @@ import MoodGroup from '../mood-group/test'
 import StoryEditor from '../../containers/story-editor'
 import Footer from '../../components/footer/footer'
 import videoClip from '../../assets/video/Nature.mp4';
+import {connect} from 'react-redux'
 
-const MoodPage = (props) => (
-    <div>
+class MoodPage extends React.Component {
+    constructor(props) {
+        super(props); 
+        };
+    
+    onKeepTrack () {
+       // console.log(this.props.mood);
+    }
+    render (){
+    return(    <div>
 
     <div className="mood-picker">
      <MoodGroup />
@@ -23,8 +32,20 @@ const MoodPage = (props) => (
      <video className="video" playsInline autoPlay muted loop id="myVideo">
          <source src={videoClip} type="video/mp4"/>
      </video>
+
+     <button className="round-btn submit-btn" onClick = {(event) => console.log(this.props.mood, this.props.activities)}>Keep track</button>
      <Footer/>
     </div>
-)
-
-export default MoodPage;
+     ); }
+}
+const mapStateToProps = (state) => {
+    
+    let activities = state.changeActivity;
+    console.log ("activities : ", activities);
+    let arr;
+    return {
+       mood : state.changeMood.mood,
+       activities: state.changeActivity
+    };
+   }
+export default connect (mapStateToProps)(MoodPage);

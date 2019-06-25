@@ -1,16 +1,16 @@
 @media screen and (max-width: 1800px) {
-  .top-menu-nav-list {
+  .top-menu {
     visibility: visible;
   }
-  .b-top-menu {
+  .burger-container {
     visibility: collapse;
   }
 }
-@media screen and (max-width: 730px) {
-  .top-menu-nav-list {
-    visibility: collapse;
+@media screen and (max-width: 750px) {
+  .top-menu {
+    visibility: visible;
   }
-  .b-top-menu {
+  .burger-icon-link {
     visibility: visible;
   }
 }

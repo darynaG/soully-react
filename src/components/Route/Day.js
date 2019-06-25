@@ -21,6 +21,7 @@ class Day extends React.Component{
 
 }
 const mapStateToProps = (state)=>{
+    console.log("state", state.changeMood.mood);
     return{
         mood:state.changeMood.mood
     }

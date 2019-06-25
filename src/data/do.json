@@ -112,11 +112,27 @@
 
     },
     {
-        "mood":"good",
+        "mood":"wtf",
         "title":"Play a game",
         "image":"https://live.staticflickr.com/1787/43317960531_d7ac804d70_z.jpg",
-        "tag":"#mood #good #doit",
+        "tag":"#mood #wtf #doit",
         "description":"Pull out an old-school board game, a pack of cards, or your computer."
+
+    },
+    {
+        "mood":"wtf",
+        "title":"Watch music videos",
+        "image":"https://media.defense.gov/2012/Feb/25/2000175411/-1/-1/0/120202-F-MP475-002.JPG",
+        "tag":"#mood #wtf #doit",
+        "description":"Here are some of my favorites to get you started: “Downtown” by Macklemore, “Let’s Have a Kiki” by Scissor Sisters, “Hideaway” by Kiesza, and “Ego” by Beyoncé."
+
+    },
+    {
+        "mood":"wtf",
+        "title":"Call an old friend",
+        "image":"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQLKtSMIPEMGvQADMyrJxhT_iAh8zmyRuAdfHia5N6R8n5dJ8RX",
+        "tag":"#mood #wtf #doit",
+        "description":"Call an old friend you haven’t talked to in forever. Catch up or leave a friendly voicemail."
 
     }
     

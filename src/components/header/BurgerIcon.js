@@ -5,21 +5,6 @@ import "../../css/Burger.css";
 
 class HamburgerIcon extends Component{
 
-  constructor(props) {
-    super(props);
-    this.onClickHandler = this.onClickHandler.bind(this);
-  }
-
-  onClickHandler() {
-
-    const {
-      showSideBarMenu,
-      onShowMobileNavigationMenu,
-      onHideMobileNavigationMenu
-    } = this.props;
-
-    showSideBarMenu ? onShowMobileNavigationMenu() : onHideMobileNavigationMenu();
-  }
 
   render() {
 
@@ -30,6 +15,29 @@ class HamburgerIcon extends Component{
           <span className="burger-span-element white-burger-icon-color"></span>
           <span className="burger-span-element white-burger-icon-color"></span>
         </a>
+        <header className="b-top-menu">
+        <nav className="b-top-menu-nav">
+            <div className="b-centered">
+                <ul className="b-top-menu-nav-list">
+                    <li>
+                        <Link to="/">Home</Link>
+                    </li>
+                    <li>
+                        <Link to="/day">Day</Link>
+                    </li>
+                    <li>
+                        <Link to="/month">Month</Link>
+                     </li>
+                    <li>
+                         <Link to="/stories">Stories</Link>
+                        </li>
+                </ul>
+             </div>
+             <div className="b-top-menu-nav-list">
+                 <li>Log out</li>
+            </div>
+         </nav>
+        </header>
       </div>
         /*
         <header className="b-top-menu">

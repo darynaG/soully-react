@@ -26,7 +26,6 @@ class App extends React.Component {
         <Route exact path="/guest" component={Guest} />
         <Route exact path="/stories" component={StoryPage} />
         <Route exact path="/month" component={Month} />
-        <Burger/>
         <Footer/>
       </div>
     </Router>

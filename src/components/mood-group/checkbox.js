@@ -15,7 +15,7 @@ class Check extends React.Component {
         showlabel = "hideLabel";
       }
         return (
-            <div   className="flex-item" style = {{marginTop:"300px"}} >
+            <div   className="flex-item"  >
                 <label>        
             <input className="hide"
                 name="activity"

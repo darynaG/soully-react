@@ -1,9 +1,10 @@
 @import "variables.less";
+*{
+    scroll-behavior: smooth;
+}
 .hide { 
     display: none; 
 }
-
-
 
 body{
     margin: 0;
@@ -11,17 +12,11 @@ body{
     width: 100%;
     height: 100%;
     overflow-x: hidden;
-    //background-image: url(../img/Untitled\ design.png);
-    //background-size: cover;
+    
 }
-
 
 .mood-picker{
 
-    //height: 91vh;    
-    //width: 100vw;
-    
-    
          display: flex;
 
         flex-direction: column;
@@ -29,10 +24,8 @@ body{
         align-content: center;
         align-items: stretch;
         padding-top: 150px;
-        //margin-top: 150px;
         .arrow{
             padding-top: 200px;
-           // margin-top: 30vh;
         }
         a {
             align-self: center;
@@ -43,14 +36,8 @@ body{
         }
 
 }
-.cover-img {
-    //background-image: url(../img/strokes-hard.png);
-    //background-size: cover;
-}
+
 .activity-picker{
-    
-    //height: 91vh;
-    //width: 100vw;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -81,13 +68,11 @@ body{
     flex-direction: column;
     justify-content: center;
     align-content: center;
-    //height: 71vh;
-    //width: 100vw;
+   
     margin-top: 200px;
     
     .h3-label{
         font-size: 40px;   
-        //margin-top: 10hv; 
     }
     
 }
@@ -117,7 +102,6 @@ body{
 }
 //flex-box block and item - used in smiles and activities picking
 .block {
-       
     padding: 0;
     margin: 0;
     margin-left: 100px;
@@ -166,12 +150,11 @@ body{
     display: inline-block;
     padding: 5px;
       height: 50px;
-    margin-top: 100px;
+
+   margin-top: 100px;
     
     line-height: 60px;
-
     color: @darkGreen;
-    
     font-weight: bold;
     text-align: center;
     
@@ -179,10 +162,12 @@ body{
         height: @emoji;
         width: @emoji;
     }
+
     .imgA {
         height: 50px;
         width: 50px;
     }
+
     &:hover {
             color:#004d40;
         
@@ -231,18 +216,16 @@ body{
     left: 50%;
     transform: translate(-50%,-50%);
     text-align: center;
-    //margin-bottom: 100vw;
-background-size: cover;
-background-repeat: no-repeat;
-background-position: 100%;
-width: 100%;
-margin:0;
-padding: 0;
-z-index: -100;
-object-fit: fill;
-min-height: 100%;
-min-width: 100%;
-
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: 100%;
+    width: 100%;
+    margin:0;
+    padding: 0;
+    z-index: -100;
+    object-fit: fill;
+    min-height: 100%;
+    min-width: 100%;
     }
 
     .h3-label {

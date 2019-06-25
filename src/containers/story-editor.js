@@ -9,22 +9,63 @@ const StoryEdit =(props)=>{
     let divElement;
     if (props.isMin === true)
     {
-    divElement = <div className="row-container">
+    divElement =<div className="story-sharer minimize" id="story">
+    <form className="story-input" method="post" onSubmit={e=>{      
+                    e.preventDefault();
+                        var a={
+                            "mood":props.mood,
+                            "text":input.value
+                        }
+                        var j=JSON.stringify(a);
+
+                       
+                        input.value ='';
+                       
+                        alert('You Wrote: ' + j);
+
+                        //add json to file
+                    //update storyline
+                    }}>
+        <div className="row-container">
                     <h5 className="h3-label">Share your story</h5>
          <textarea className={"story-text min" } name="subject" placeholder="Write something.." ref={node=>input=node} ></textarea>
          <button className={"round-btn min-btn" } type="submit"  > Share</button>
          
-         </div>;
+         </div>
+    </form>
+ </div>
+ 
     }
     else {
-        divElement =    <div className="story-sharer" >
+        divElement =  <div className="story-sharer " id="story">
+        <form className="story-input" method="post" onSubmit={e=>{      
+                        e.preventDefault();
+                            var a={
+                                "mood":props.mood,
+                                "text":input.value
+                            }
+                            var j=JSON.stringify(a);
+
+                           
+                            input.value ='';
+                           
+                            alert('You Wrote: ' + j);
+
+                            //add json to file
+                        //update storyline
+                        }}>
+          <div className="story-sharer" >
         <h5 className="h3-label">Share your story</h5>
          <textarea className={"story-text" } name="subject" placeholder="Write something.." ref={node=>input=node} ></textarea>
         <button className={"round-btn" } type="submit"  > Share</button>
-        </div>;
+        </div>
+        </form>
+     </div>  
     }
         return(
-            <div className="story-sharer minimize" id="story">
+            <span>{divElement}</span>
+            
+           /*  <div className="story-sharer minimize" id="story">
                 <form className="story-input" method="post" onSubmit={e=>{      
                                 e.preventDefault();
                                     var a={
@@ -43,7 +84,7 @@ const StoryEdit =(props)=>{
                                 }}>
                     {divElement}
                 </form>
-             </div>
+             </div> */
         )
 }
 export default (StoryEdit);

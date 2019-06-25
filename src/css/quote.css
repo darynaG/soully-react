@@ -16,3 +16,6 @@
   font-size: 30px;
   text-align: left;
 }
+.fix-position {
+  flex-direction: column;
+}

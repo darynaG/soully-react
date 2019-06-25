@@ -1,3 +1,4 @@
+
 import * as actionTypes from "../constants/action-types";
 
 export const displayDetailsDays = day => {
@@ -9,6 +10,7 @@ export const displayDetailsDays = day => {
   };
 };
 
+
 export const showMobileNavMenu = () => ({
   type: actionTypes.SHOW_MOBILE_NAV_MENU
 })
@@ -16,6 +18,7 @@ export const showMobileNavMenu = () => ({
 export const hideMobileNavMenu = () => ({
   type: actionTypes.HIDE_MOBILE_NAV_MENU
 })
+
 
 
 let nextTodoId = 0
@@ -33,24 +36,20 @@ export const setVisibilityFilter = filter => ({
 })
 
 
+export const likeStory = (liked,id )=> ({
+  type: 'LIKE_STORY',
+  payload: {liked,id}
+})
+
 
 export const chooseMood = mood => ({
   type: 'CHOOSE_MOOD',
   mood
 })
 
-export const chooseActivity = activities => ({
+export const selectActivity = (checked, name) => ({
   type: 'SELECT_ACTIVITY',
-  
-    activities
-  
-})
-
-export const unselectActivity = activities => ({
-  type: 'UNSELECT_ACTIVITY',
-
-    activities
-  
+  payload: {checked, name}
 })
 
 export const VisibilityFilters = {

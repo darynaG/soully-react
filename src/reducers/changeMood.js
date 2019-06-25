@@ -1,5 +1,4 @@
-import * as types from '../constants/action-types'
-import { CHOOSE_MOOD } from '../actions/actions';
+
 const initialState ={
     mood: "sad"
 }

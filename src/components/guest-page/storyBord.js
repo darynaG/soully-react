@@ -1,6 +1,5 @@
 import React ,{ Component}from 'react';
 import Messages from '../../data/posts.js';
-import { BrowserRouter as Router, Route, Link } from "react-router-dom";
 import { library } from '@fortawesome/fontawesome-svg-core'
 
 import { far} from '@fortawesome/free-brands-svg-icons'
@@ -16,6 +15,7 @@ library.add(
     faQuoteLeft,
     faQuoteRight
 )
+
 
 class StoryBoard extends Component {
     constructor(props){
@@ -57,7 +57,7 @@ class StoryBoard extends Component {
     render(){
     return(
         <React.Fragment>
-            <h1 >Stories</h1>
+            <h1 className="centered-text">Stories</h1>
         <div className="storyboard">
        
     <div className="story_column left">
@@ -76,7 +76,10 @@ class StoryBoard extends Component {
 
                     <article className="story_text"> <FontAwesomeIcon icon={faQuoteLeft} size="1x"/>
                     {data.text}
-                    </article>
+
+                        </article>
+
+
             </div>
 
              )

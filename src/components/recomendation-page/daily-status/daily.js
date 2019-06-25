@@ -7,7 +7,9 @@ import {
     faQuoteRight
 } from '@fortawesome/free-solid-svg-icons'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+
 import '../../../css/button.css'
+import store from '../../../store'
 
 library.add(
     faQuoteLeft,
@@ -37,7 +39,7 @@ class DailyMood extends React.Component {
     }
 
     render () {
-    
+   
         const stor = this.state.stories.map((story) =>
         <ol className="story">
             <FontAwesomeIcon icon={faQuoteLeft}> </FontAwesomeIcon>

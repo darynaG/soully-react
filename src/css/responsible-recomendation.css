@@ -1,4 +1,4 @@
-@media screen and (max-width: 1800px) {
+@media screen and (max-width: 1900px) {
   .recomendation {
     flex-direction: row;
     align-items: baseline;
@@ -28,22 +28,26 @@
   .up .whenMemos {
     width: 50%;
   }
-  .daily-log {
-    display: flex;
-    flex-direction: column;
-  }
-  .daily-log h1 {
-    font-size: 20px;
-  }
-  .daily-log h3 {
-    font-size: 18px;
-  }
-  .daily-log .story_text {
-    font-size: 18px;
-  }
-  .daily-log .content {
-    flex-direction: row;
-  }
+  /*
+    .daily-log{
+        display: flex;
+        flex-direction: column;
+        align-items: baseline;
+        h1{
+            font-size: 20px;
+        }
+        h3{
+            font-size:18px;
+        }
+        .story_text{
+            font-size:18px;
+        }
+        .content{
+            display:flex;
+            flex-direction: row;
+        }
+    }
+    */
 }
 @media screen and (max-width: 1300px) {
   .recomendation p {

@@ -3,7 +3,6 @@ import ManageMemo from "../components/recomendation-page/monthly-log/Calendar/Ma
 import Messages from '../data/stories.json'
 
 
-
 const mapStateToProps = state => {
   var stor = [];
   Messages.map((data) => {

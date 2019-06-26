@@ -1,8 +1,7 @@
 .storyboard {
   justify-content: space-between;
-  width: 80%;
   font-family: 'Courier New', Courier, monospace;
-  padding: 5px;
+  padding: 35px;
   display: flex;
   flex-wrap: wrap;
   position: sticky;
@@ -75,6 +74,13 @@
   margin-bottom: 15px;
   display: inline-block;
 }
+.like_img {
+  width: 50px;
+  height: 50px;
+}
+.grey {
+  filter: grayscale(90%);
+}
 .left {
   flex: 70%;
 }
@@ -131,4 +137,18 @@
   margin-right: 3%;
   padding: 7%;
   justify-content: center;
+}
+@media screen and (max-width: 900px) {
+  .storyboard {
+    padding: 0;
+  }
+  .story {
+    margin: 5px;
+  }
+  .story article {
+    font-size: 16px;
+  }
+  .story-board .leftcolumn {
+    width: 100%;
+  }
 }

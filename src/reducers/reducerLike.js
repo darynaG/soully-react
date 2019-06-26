@@ -1,50 +1,16 @@
 
-const postsData=[
-  {
-  id:1,
-  "mood":"sad",
-  "username": "Aizek",
-  "date":"2019-06-18",
-  likes:2,
-  "text": "No matter how much the world tries to hold you back, always continue with the belief that what you want to achieve is possible. Believing you can become successful is the most important step in actually achieving it."
-},
-{
-  id:2,
-  "mood":"sad",
-  "username": "Alice",
-  "date":"2019-05-18",
-  likes:5,
-  "text": "FFFFFFF matter how much the world tries to hold you back, always continue with the belief that what you want to achieve is possible. Believing you can become successful is the most important step in actually achieving it."
-},
-{
-  id:3,
-  "mood":"sad",
-  "username": "Tom",
-  "date":"2019-06-19",
-  likes:8,
-  "text": "Thow much the world tries to hold you back, always continue with the belief that what you want to achieve is possible. Believing you can become successful is the most important step in actually achieving it."
-},
-{
-  id:4,
-  "mood":"happy",
-  "username": "Jack",
-  "date":"2019-06-18",
-  likes:1,
-  "text": "YYYY matter how much the world tries to hold you back, always continue with the belief that what you want to achieve is possible. Believing you can become successful is the most important step in actually achieving it."
-}]
-//do loading from server
-   
-const initialState = {
-  posts: postsData,
-  postsLikeCounters: postsData.reduce((out, post) => {
+const  initialState= {
+  posts: [{}],
+  postsLikeCounters: [{}].reduce((out, post) => {
+    //console.log("here",typeof(postsData()));
     return {
       ...out,
       [post.id]: post.likes
     };
   }, {})
-};
+  };
 
-export function posts(state=initialState.posts, action) {
+export function posts(state=[], action) {
   return state;
 }
 
@@ -60,12 +26,13 @@ export function postsLikes(state={}, action) {
         ...state,
         [action.post.id]: false
       };
+   
     default:
       return state;
   }
 }
 
-export function postsLikeCounters(state=initialState.postsLikeCounters, action) {
+export function postsLikeCounters(state=[], action) {
   let value;
 
   switch (action.type) {

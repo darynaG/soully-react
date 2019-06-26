@@ -1,7 +1,7 @@
 import React from 'react';
 import Group from "../activity/activityGroup";
 import MoodGroup from '../mood-group/test'
-import StoryEditor from '../../containers/story-editor'
+import StoryEditor from '../../components/story-page/story-editor'
 import Footer from '../../components/footer/footer'
 import videoClip from '../../assets/video/Nature.mp4';
 import {connect} from 'react-redux'
@@ -34,7 +34,6 @@ class MoodPage extends React.Component {
      </video>
 
      <button className="round-btn submit-btn" onClick = {(event) => console.log(this.props.mood, this.props.activities)}>Keep track</button>
-     <Footer/>
     </div>
      ); }
 }

@@ -37,7 +37,8 @@
 .minimize {
   justify-content: left;
   background-color: #004d408f;
-  margin-top: 7%;
+  position: relative;
+  margin-top: 90px;
   padding: 20px;
 }
 .minimize .h3-label {
@@ -55,4 +56,15 @@
   margin: 0;
   margin-left: 10%;
   justify-self: right;
+}
+@media screen and (max-width: 900px) {
+  .minimize .min-btn {
+    margin-left: 45%;
+  }
+  .minimize .min {
+    width: 90%;
+  }
+  .story-input .row-container {
+    display: block;
+  }
 }

@@ -1,0 +1,15 @@
+svg {
+  width: 10%;
+  height: 10%;
+  visibility: hidden;
+}
+text {
+  -moz-user-select: -moz-none;
+  -khtml-user-select: none;
+  -webkit-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+#hit {
+  cursor: pointer;
+}

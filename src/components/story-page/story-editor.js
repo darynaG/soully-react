@@ -1,8 +1,9 @@
 import React ,{ Component}from 'react';
 import { connect } from 'react-redux'
 import { BrowserRouter as Router, Route, Link } from "react-router-dom";
-import { addTodo } from '../actions/index.js';
-import P from '../data/posts'
+import { onAddPost } from '../../actions/index.js';
+import P from '../../data/posts'
+import store from '../../store/index.js';
 const StoryEdit =(props)=>{
    
     let input
@@ -68,17 +69,16 @@ const StoryEdit =(props)=>{
            /*  <div className="story-sharer minimize" id="story">
                 <form className="story-input" method="post" onSubmit={e=>{      
                                 e.preventDefault();
+                                let t=input.value;
+                                if(t.replace(/\s/g, "")!==""){
                                     var a={
                                         "mood":props.mood,
                                         "text":input.value
                                     }
                                     var j=JSON.stringify(a);
-
-                                   
                                     input.value ='';
-                                   
                                     alert('You Wrote: ' + j);
-
+                                    store.dispatch(onAddPost(a));}
                                     //add json to file
                                 //update storyline
                                 }}>

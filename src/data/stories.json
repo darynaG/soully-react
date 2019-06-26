@@ -49,6 +49,16 @@
     "id":5,
     "mood":"happy",
     "username": "Jack",
+    "likes":8,
+    "date":"20/6/2019",
+    "activities": ["running", "working","sleeping"],
+    "text": "matter how much the world tries to hold you back, always continue with the belief that what you want to achieve is possible. Believing you can become successful is the most important step in actually achieving it."
+},
+{
+    "id":6,
+    "mood":"happy",
+    "likes":8,
+    "username": "Nick Scratch",
     "date":"20/6/2019",
     "activities": ["running", "working","sleeping"],
     "text": "matter how much the world tries to hold you back, always continue with the belief that what you want to achieve is possible. Believing you can become successful is the most important step in actually achieving it."

@@ -43,12 +43,12 @@ return (
     <Router history={history}>
       <div>
         <HeaderR/>
-        <PrivateRoute exact path="/" component={HomePage} />
-        <Route exact path="/home" component={MoodPage} />
-        <Route exact path="/day" component={Day} />
-        <Route exact path="/guest" component={Guest} />
-        <Route exact path="/stories" component={StoryPage} />
-        <Route exact path="/month" component={Month} />
+        <PrivateRoute exact path="/" component={MoodPage} />
+        <PrivateRoute exact path="/home" component={MoodPage} />
+        <PrivateRoute   exact path="/day" component={Day} />
+        <Route  exact path="/guest" component={Guest} />
+        <PrivateRoute exact  path="/stories" component={StoryPage} />
+        <PrivateRoute exact  path="/month" component={Month} />
         <Route exact path="/login" component={LoginPage} />
         <Route exact path="/register" component={RegisterPage} />
         <Footer/>

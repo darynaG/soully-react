@@ -23,7 +23,7 @@ class MoodPage extends React.Component {
     render (){
     return(    <div>
 
-    <div className="mood-picker">
+    <div className="mood-picker" id="top">
      <MoodGroup />
      <a href="#activity"> <div className="arrow"></div></a>
      </div> 

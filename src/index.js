@@ -1,11 +1,14 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
-import App from './App';
+import { App } from '../src/App';
 
 
 import { Provider } from 'react-redux';
 import store from './store';
+
+import { configureFakeBackend } from './helpers'
+configureFakeBackend();
 
 ReactDOM.render(
     

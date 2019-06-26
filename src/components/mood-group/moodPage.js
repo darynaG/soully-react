@@ -1,10 +1,16 @@
 import React from 'react';
+import {connect} from 'react-redux'
+
 import Group from "../activity/activityGroup";
 import MoodGroup from '../mood-group/test'
 import StoryEditor from '../../components/story-page/story-editor'
 import Footer from '../../components/footer/footer'
+
 import videoClip from '../../assets/video/Nature.mp4';
-import {connect} from 'react-redux'
+
+
+import '../../css/new-mood-page.css';
+import '../../css/responsible-mood.css';
 
 class MoodPage extends React.Component {
     constructor(props) {

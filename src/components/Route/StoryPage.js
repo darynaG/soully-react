@@ -15,7 +15,7 @@ class StoryPage extends React.Component {
     }
 
 }
-const mapStaeToPops = (state) =>{
+const mapStateToPops = (state) =>{
         return{
             posts:state.loadData.posts
         }

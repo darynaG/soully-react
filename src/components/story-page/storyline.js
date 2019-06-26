@@ -2,15 +2,16 @@ import React ,{ Component}from 'react';
 import { library } from '@fortawesome/fontawesome-svg-core'
 import Post from '../story-page/message'
 import {connect} from "react-redux";
-import { far, faGratipay} from '@fortawesome/free-brands-svg-icons'
+import {  faGratipay} from '@fortawesome/free-brands-svg-icons'
 import Messages from '../../data/posts.js';
-
+import Spinner from 'react-spinner-material';
 
 import {
         faQuoteLeft,
         faQuoteRight
   
 } from '@fortawesome/free-solid-svg-icons'
+import store from '../../store';
 
 library.add(
     faQuoteLeft,
@@ -37,9 +38,18 @@ export class  Posts extends React.Component{
 
     }
   render(){ 
+    
+    if(store.getState().dataReducer.loading===true){
+        console.log("!!!!!!!!!!!loooooading",store.getState().dataReducer.loading);
+        return(
+            <div className="loadingContainer">
+                <Spinner size={120} spinnerColor={"#004d408f"} spinnerWidth={8} visible={true} />
+            </div>
+        )
+    }else
       return (
-                    <div className="story-board">
-                    <div className="leftcolumn">
+                    <div >
+                    <div className="centeredcolumn">
                     { 
                         this.state.posts.map((post,index)=>{
                             if(this.props.postsLikeCounters[post.id]===undefined) this.props.postsLikeCounters[post.id]=0;

@@ -2,8 +2,6 @@ import React ,{ Component}from 'react';
 import Messages from '../../data/posts.js';
 import { library } from '@fortawesome/fontawesome-svg-core'
 
-import { far} from '@fortawesome/free-brands-svg-icons'
-
 import {
         faQuoteLeft,
         faQuoteRight
@@ -29,9 +27,9 @@ class StoryBoard extends Component {
     }
     
     componentDidMount(){
-        var mood_stories=[];
-        var st=[];
-        var a=Messages.getAll().then((data)=>{
+        let mood_stories=[];
+        let st=[];
+        let a=Messages.getAll().then((data)=>{
            
             for(var i=0;i<data.length;i++){
                 if(this.props.mood){
@@ -54,7 +52,34 @@ class StoryBoard extends Component {
             this.setState({stories:mood_stories});
         })
     }
+    /*componentDidUpdate(){
+        let mood_stories=[];
+        let st=[];
+        let a=Messages.getAll().then((data)=>{
+           
+            for(var i=0;i<data.length;i++){
+                if(this.props.mood){
+                    if(this.props.mood==data[i].mood)
+                    st.push(data[i]);
+                }else{
+                    st.push(data[i]);
+                }}
+                var maxNumber=st.length-2;
+                var rand=Math.floor(Math.random()*maxNumber);
+                for(var j=0;j<3;j++){
+                    mood_stories.push(st[rand+j]);
+                }
+                //console.log("mmoood",mood_stories);
+      
+    
+        })//.then(()=>{console.log("this is mood_stories",mood_stories.length)})
+        .then(()=>{
+            
+            this.setState({stories:mood_stories});
+        })
+    }*/
     render(){
+       
     return(
         <React.Fragment>
             <h1 className="centered-text">Stories</h1>

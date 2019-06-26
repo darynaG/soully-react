@@ -21,7 +21,7 @@ constructor(props){
     
    this.state={
        //mood:props.mood,
-       
+       all:[],
        text:"",//mood_quotes[rand].text,
        author: ""//mood_quotes[rand].author
     
@@ -31,9 +31,12 @@ constructor(props){
 
 }
 componentDidMount(){    
-    var mood_quotes=[];
-    var a=Q.getAll().then((data)=>{
+   
+    let mood_quotes=[];
+    let f=[];
+    let a=Q.getAll().then((data)=>{
         for(var i=0;i<data.length;i++){
+            f.push(data[i])
             if(this.props.mood){
                 if(this.props.mood===data[i].mood)
                 mood_quotes.push(data[i]);
@@ -46,9 +49,10 @@ componentDidMount(){
     .then(()=>{
         var maxNumber=mood_quotes.length;
         var rand=Math.floor(Math.random()*maxNumber);
-        this.setState({text:mood_quotes[rand].text, author:mood_quotes[rand].author});
+        this.setState({text:mood_quotes[rand].text, author:mood_quotes[rand].author,all:f});
     })
 }
+
 render(){
     return(
         <div className="centered-text">  

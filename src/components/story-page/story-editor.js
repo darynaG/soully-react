@@ -13,7 +13,8 @@ const StoryEdit =(props)=>{
     divElement =<div className="story-sharer minimize" id="story">
     <form className="story-input" method="post" onSubmit={e=>{      
                     e.preventDefault();
-                        var a={
+                    let t=input.value;
+                    if(t.replace(/\s/g, "")!==""){ var a={
                             "mood":props.mood,
                             "text":input.value
                         }
@@ -22,13 +23,13 @@ const StoryEdit =(props)=>{
                        
                         input.value ='';
                        
-                        alert('You Wrote: ' + j);
+                        alert('You Wrote: ' + j);}
 
                         //add json to file
                     //update storyline
                     }}>
         <div className="row-container">
-                    <h5 className="h3-label">Share your story</h5>
+                    <h5 className="h3-label" >Share your story</h5>
          <textarea className={"story-text min" } name="subject" placeholder="Write something.." ref={node=>input=node} ></textarea>
          <button className={"round-btn min-btn" } type="submit"  > Share</button>
          

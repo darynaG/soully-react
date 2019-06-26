@@ -26,11 +26,11 @@ class Post extends React.Component{
         </article> {
             this.props.liked? (
                 <button className="story_footer"  onClick={()=>this.props.onUnlike(this.props.post)} style={{color:'red'}}>  
-                    <p> Hugs: { this.props.likes} </p> <img className="like_img " src={likeim}></img>
+                    <div> {"Hugs:" +' '+this.props.likes} </div> <img className="like_img " src={likeim}></img>
                 </button>
             ):(
                 <button className="story_footer"  onClick={()=>this.props.onLike(this.props.post)} style={{color:'black'}}>  
-                <p> Hugs: { this.props.likes} </p> <img className="like_img grey" src={likeim}></img>
+                <div>{"Hugs:" +' '+this.props.likes}</div> <img className="like_img grey" src={likeim}></img>
             </button>
             )
         }

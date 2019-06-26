@@ -1,9 +1,9 @@
-import {fetchDataSuccess,fetchDataFailure} from '../actions'
+import {fetchDataSuccess,fetchDataFailure, fetchDataLoading} from '../actions'
 import { connect } from 'react-redux'
 import store from '../store';
 class Messages{
     static getAll(){
-
+        store.dispatch(fetchDataLoading());
         return fetch('http://localhost:3002/soully/posts')
 
         .then(response=> response.json()

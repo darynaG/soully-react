@@ -1,5 +1,5 @@
 import React from 'react'
-import StoryEdit from "../../containers/story-editor"
+import StoryEdit from '../story-page/story-editor'
 import PostsWithLikes from '../../containers/LikedStoryline'
 import '../../css/stories.css'
 import '../../css/quote.css'

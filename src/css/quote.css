@@ -1,7 +1,5 @@
 .centered-text {
-  display: flexbox;
   padding: 35px;
-  max-width: 75%;
   margin: 40px;
   text-align: center;
   left: 10%;
@@ -18,4 +16,15 @@
 }
 .fix-position {
   flex-direction: column;
+}
+@media screen and (max-width: 900px) {
+  .centered-text {
+    margin: 5px;
+  }
+  .centered-text article {
+    font-size: 25px;
+  }
+  .centered-text p {
+    font-size: 20px;
+  }
 }

@@ -1,13 +1,15 @@
 import React from 'react'
 import im1 from '../../assets/img/camera.jpeg'
+import likeim from '../../assets/img/like.png'
 import {
         faQuoteLeft,
-        faQuoteRight
-  
+        faQuoteRight,
+       
 } from '@fortawesome/free-solid-svg-icons'
+
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 class Post extends React.Component{
-    
+ 
     render(){return(
     <div className="story" >
       { console.log("Post",this.props)}
@@ -24,11 +26,11 @@ class Post extends React.Component{
         </article> {
             this.props.liked? (
                 <button className="story_footer"  onClick={()=>this.props.onUnlike(this.props.post)} style={{color:'red'}}>  
-                    <p> Hugs: { this.props.likes} </p>
+                    <p> Hugs: { this.props.likes} </p> <img className="like_img " src={likeim}></img>
                 </button>
             ):(
                 <button className="story_footer"  onClick={()=>this.props.onLike(this.props.post)} style={{color:'black'}}>  
-                <p> Hugs: { this.props.likes} </p>
+                <p> Hugs: { this.props.likes} </p> <img className="like_img grey" src={likeim}></img>
             </button>
             )
         }

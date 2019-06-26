@@ -31,6 +31,7 @@ class Group extends React.Component {
    render() {
     return (
       <div>
+        <h3 class="h3-label">What you`ve been up to?</h3>
       <form>
        <ul className="block">
         <Check mood="water"  img={water} imgClicked={waterClicked} checked={this.props.water} type="checkbox"  onClick={this.props.onActivitySelect}  />
@@ -45,7 +46,6 @@ class Group extends React.Component {
         <Check mood="charity"   img={charity} imgClicked={charityClicked} checked={this.props.charity} type="checkbox" onClick={this.props.onActivitySelect} />
        </ul> 
      </form>
-     
      </div>
     );
   }

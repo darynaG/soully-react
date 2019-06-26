@@ -1,0 +1,136 @@
+@import "variables.less";
+*{
+    font-family: 'Courier New', Courier, monospace;
+}
+header{
+    position:absolute;
+    top:0;
+    left:0;
+    padding:0 10px;
+    height: 9vh;
+    background-color: @grey;
+    width:100%;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: row;
+    .logo{
+        width: 10vw;
+             img{
+             height: 9vh;
+             }
+        
+
+    }
+    nav{
+        //align-self: center;
+        margin: auto;
+        //width: 100vw;
+       
+        ul{
+            margin: auto;
+            padding:10px;
+            display:flex;
+           // padding-left: 25%;
+            .logOut{
+                //padding-left: 27%;
+            }
+            li{
+                font-weight: bold;
+                padding-right: 20px;
+                list-style:none;
+              
+                a{
+                    height: 50px;
+                    line-height: 50px;
+                    padding: 0 20px;
+                    color:@green;
+                    text-decoration: none;
+                    display:block;  
+                    &:hover{
+                        background: grey;
+                        color: azure;
+                    }
+                }
+               
+               
+            }
+
+        }
+    
+    }
+    /*
+    .logOut{
+        color:@green;
+        margin-top: auto;
+        margin-bottom: auto;
+        a{
+            height: 50px;
+            line-height: 50px;
+            padding: 0 20px;
+            color:@green;
+            text-decoration: none;
+            display:block;
+            &:hover,.active{
+                color:#fff;
+                background: #2196f3;
+            }
+        }
+        */
+
+    
+    .menu-toogle{
+        margin-top: auto;
+        margin-bottom: auto;
+        margin-left: auto;
+        color:@green;
+        float:right;
+        line-height: 50px;
+        font-size: 24px;
+        cursor: pointer;
+        display:none;
+    }
+}
+@media (max-width:730px){
+    header{
+        
+        z-index: 99999999;
+        .menu-toogle{
+            display:block;
+        }
+        
+        .active{
+           
+            display: block;
+        }
+        .active-logout{
+           
+            display: block;
+        }
+        .logOut{
+            display:none;
+        }
+        nav{
+            display:none;
+            position: absolute;
+            width:100%;
+            background: @grey;
+            top:50px;
+            transition:0.5s;
+           
+           
+            
+            ul{
+                display:block;
+                text-align: center;
+                li{
+                    a{
+                        border-bottom: 1px solid rgba(0, 0, 0, .2);
+                    }
+                }
+
+            }
+        }
+    }
+    
+
+}

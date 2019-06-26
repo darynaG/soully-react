@@ -1,0 +1,107 @@
+* {
+  font-family: 'Courier New', Courier, monospace;
+}
+header {
+  position: absolute;
+  top: 0;
+  left: 0;
+  padding: 0 10px;
+  height: 9vh;
+  background-color: #EDEAE5;
+  width: 100%;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: row;
+  /*
+    .logOut{
+        color:@green;
+        margin-top: auto;
+        margin-bottom: auto;
+        a{
+            height: 50px;
+            line-height: 50px;
+            padding: 0 20px;
+            color:@green;
+            text-decoration: none;
+            display:block;
+            &:hover,.active{
+                color:#fff;
+                background: #2196f3;
+            }
+        }
+        */
+}
+header .logo {
+  width: 10vw;
+}
+header .logo img {
+  height: 9vh;
+}
+header nav {
+  margin: auto;
+}
+header nav ul {
+  margin: auto;
+  padding: 10px;
+  display: flex;
+}
+header nav ul li {
+  font-weight: bold;
+  padding-right: 20px;
+  list-style: none;
+}
+header nav ul li a {
+  height: 50px;
+  line-height: 50px;
+  padding: 0 20px;
+  color: #004d40;
+  text-decoration: none;
+  display: block;
+}
+header nav ul li a:hover {
+  background: grey;
+  color: azure;
+}
+header .menu-toogle {
+  margin-top: auto;
+  margin-bottom: auto;
+  margin-left: auto;
+  color: #004d40;
+  float: right;
+  line-height: 50px;
+  font-size: 24px;
+  cursor: pointer;
+  display: none;
+}
+@media (max-width: 730px) {
+  header {
+    z-index: 99999999;
+  }
+  header .menu-toogle {
+    display: block;
+  }
+  header .active {
+    display: block;
+  }
+  header .active-logout {
+    display: block;
+  }
+  header .logOut {
+    display: none;
+  }
+  header nav {
+    display: none;
+    position: absolute;
+    width: 100%;
+    background: #EDEAE5;
+    top: 50px;
+    transition: 0.5s;
+  }
+  header nav ul {
+    display: block;
+    text-align: center;
+  }
+  header nav ul li a {
+    border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+  }
+}

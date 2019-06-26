@@ -6,6 +6,7 @@ import changeActivity from './changeActivity';
 import dataReducer from './dataReducer'
 import {posts, postsLikes, postsLikeCounters} from './reducerLike'
 
+
 const rootReducer = combineReducers({
   currentday,
   changeMood,

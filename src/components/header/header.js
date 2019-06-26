@@ -4,12 +4,13 @@ import logo from "../../assets/img/logo_soully.png";
 import '../../css/header_s.css';
 
 class Header extends React.Component{
+
     render() {
         return (
-        <header className="top-menu">
+        <header className="top-menu" >
             <nav className="top-menu-nav">
-                <div className="logo">
-                    <img src= {logo}/>
+                <div className="logo" >
+                    <img src= {logo} />
                 </div>
                 <div className="centered">
                     <ul className="top-menu-nav-list">

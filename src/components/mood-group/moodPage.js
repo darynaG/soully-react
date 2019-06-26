@@ -1,7 +1,7 @@
 import React from 'react';
 import Group from "../activity/activityGroup";
 import MoodGroup from '../mood-group/test'
-import StoryEditor from '../../containers/story-editor'
+import StoryEditor from '../story-page/story-editor'
 import videoClip from '../../assets/video/Nature.mp4';
 
 const MoodPage = (props) => (

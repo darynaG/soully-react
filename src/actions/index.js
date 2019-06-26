@@ -25,10 +25,6 @@ export const setVisibilityFilter = filter => ({
 })
 
 
-export const likeStory = (liked,id )=> ({
-  type: 'LIKE_STORY',
-  payload: {liked,id}
-})
 
 
 export const chooseMood = mood => ({
@@ -48,5 +44,38 @@ export const VisibilityFilters = {
     WOW_MOOD:'WOW_MOOD',
     WTF_MOOD:'WTF_MOOD',
     EXCITED_MOOD:'EXCITED_MOOD',
-    GOOD_MOOD:'GOOD_MOOD'
+    GOOD_MOOD:'GOOD_MOOD',
+    
   }
+
+export const onCreatePost=(post)=>({
+  type:'NEW_POST_CREATED',
+  post
+})
+export const onAddPost=(post)=>({
+  type:'NEW_POST_ADDED',
+  payload: {post}
+})
+export const GetPosts=()=>({
+
+})
+export const fetchDataSuccess = posts => ({
+    type: 'FETCH_DATA_SUCCESS',
+    payload: { posts }
+});
+
+export const fetchDataFailure = error => ({
+    type: 'FETCH_DATA_FAILURE',
+    payload: {error}
+
+})
+
+/*
+export const fetchPosts= () =>
+ {(dispatch) => {
+    dispatch({ type:' FETCH_POSTS '});
+    return fetch('...')
+      .then(posts => dispatch({ type: 'FETCH_POSTS_SUCCESS', posts}))
+      .catch(error => dispatch({ type: 'FETCH_POSTS_FAIL'}));
+  }}
+*/

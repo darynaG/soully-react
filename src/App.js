@@ -1,6 +1,6 @@
 import React from 'react';
 import { BrowserRouter as Router, Route, Link } from "react-router-dom";
-
+import { connect } from 'react-redux';
 
 import './App.css';
 import '././css/header_s.css';
@@ -16,6 +16,7 @@ import '././css/calendar.css';
 import '././css/recomendation.css';
 import '././css/responsible-mood.css'
 
+
 import videoClip from './assets/video/Nature.mp4';
 
 import Header from './components/header/header';
@@ -26,8 +27,9 @@ import DailyMood from './components/recomendation-page/daily-status/daily';
 import Recomendation from './components/recomendation-page/swiper/swiper';
 import MoodPage  from './components/mood-group/moodPage';
 import MoodGroup from './components/mood-group/test'
-import StoryEdit from './containers/story-editor'
+import StoryEdit from './components/story-page/story-editor'
 import PostsWithLikes from './containers/LikedStoryline'
+import store from './store';
 
 //const store = createStore(reducer);
 
@@ -67,7 +69,7 @@ function Storypage(){
   return(
     <div>
     <StoryEdit></StoryEdit>
-    <PostsWithLikes/>
+    <PostsWithLikes />
     </div>
   )
 }
@@ -99,5 +101,7 @@ function Month (){
   );
 
 }
+
+
 
 export default App;

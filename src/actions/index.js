@@ -1,5 +1,7 @@
 
 import * as actionTypes from "../constants/action-types";
+export * from './alert.actions';
+export * from './user.actions';
 
 export const displayDetailsDays = day => {
   return {
@@ -81,12 +83,5 @@ export const fetchDataFailure = error => ({
 
 })
 
-/*
-export const fetchPosts= () =>
- {(dispatch) => {
-    dispatch({ type:' FETCH_POSTS '});
-    return fetch('...')
-      .then(posts => dispatch({ type: 'FETCH_POSTS_SUCCESS', posts}))
-      .catch(error => dispatch({ type: 'FETCH_POSTS_FAIL'}));
-  }}
-*/
+
+

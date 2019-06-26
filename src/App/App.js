@@ -20,7 +20,7 @@ import { PrivateRoute } from '../components/privateRoute';
 import { HomePage } from '../components/HomePage';
 import { LoginPage } from '../components/LoginPage';
 import { RegisterPage } from '../components/RegisterPage';
-
+import HeaderR from '../components/header/new-header'
 import videoClip from '../assets/video/Nature.mp4';
 
 
@@ -42,7 +42,7 @@ return (
                         
     <Router history={history}>
       <div>
-        <Header/>
+        <HeaderR/>
         <PrivateRoute exact path="/" component={HomePage} />
         <Route exact path="/home" component={MoodPage} />
         <Route exact path="/day" component={Day} />

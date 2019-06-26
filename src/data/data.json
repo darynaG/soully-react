@@ -1,0 +1,141 @@
+{
+    "id": "mockoon_export",
+    "appVersion": "1.4.0",
+    "checksum": "867bbf0fa78a6421ed6ead6e54346e0d",
+    "subject": "full",
+    "data": [
+        {
+            "uuid": "03135523-93f5-11e9-aaf1-11c6719b1007",
+            "name": "Soully",
+            "endpointPrefix": "soully",
+            "latency": 0,
+            "port": 3002,
+            "routes": [
+                {
+                    "uuid": "03135524-93f5-11e9-aaf1-11c6719b1007",
+                    "documentation": "",
+                    "method": "get",
+                    "endpoint": "posts",
+                    "body": "{}",
+                    "latency": 0,
+                    "statusCode": "200",
+                    "headers": [
+                        {
+                            "key": "",
+                            "value": ""
+                        }
+                    ],
+                    "filePath": "/Users/admin/front-end/soully-react/src/data/stories.json",
+                    "sendFileAsBody": false
+                },
+                {
+                    "uuid": "03135525-93f5-11e9-aaf1-11c6719b1007",
+                    "documentation": "",
+                    "method": "get",
+                    "endpoint": "books",
+                    "body": "{}",
+                    "latency": 0,
+                    "statusCode": "200",
+                    "headers": [
+                        {
+                            "key": "",
+                            "value": ""
+                        }
+                    ],
+                    "filePath": "/Users/admin/front-end/soully-react/src/data/book.json",
+                    "sendFileAsBody": false
+                },
+                {
+                    "uuid": "03135526-93f5-11e9-aaf1-11c6719b1007",
+                    "documentation": "",
+                    "method": "get",
+                    "endpoint": "films",
+                    "body": "{}",
+                    "latency": 0,
+                    "statusCode": "200",
+                    "headers": [
+                        {
+                            "key": "",
+                            "value": ""
+                        }
+                    ],
+                    "filePath": "/Users/admin/front-end/soully-react/src/data/film.json",
+                    "sendFileAsBody": false
+                },
+                {
+                    "uuid": "03135527-93f5-11e9-aaf1-11c6719b1007",
+                    "documentation": "",
+                    "method": "get",
+                    "endpoint": "do",
+                    "body": "{}",
+                    "latency": 0,
+                    "statusCode": "200",
+                    "headers": [
+                        {
+                            "key": "",
+                            "value": ""
+                        }
+                    ],
+                    "filePath": "/Users/admin/front-end/soully-react/src/data/do.json",
+                    "sendFileAsBody": false
+                },
+                {
+                    "uuid": "03135528-93f5-11e9-aaf1-11c6719b1007",
+                    "documentation": "",
+                    "method": "get",
+                    "endpoint": "quotes",
+                    "body": "{}",
+                    "latency": 0,
+                    "statusCode": "200",
+                    "headers": [
+                        {
+                            "key": "",
+                            "value": ""
+                        }
+                    ],
+                    "filePath": "/Users/admin/front-end/soully-react/src/data/quotes.json",
+                    "sendFileAsBody": false
+                },
+                {
+                    "uuid": "03135529-93f5-11e9-aaf1-11c6719b1007",
+                    "documentation": "",
+                    "method": "put",
+                    "endpoint": "add-post",
+                    "body": "{\n        \"date\":\"19.06\",\n        \"answer\":\"done\"\n    }\n    \n ",
+                    "latency": 0,
+                    "statusCode": "200",
+                    "headers": [
+                        {
+                            "key": "Content-Type",
+                            "value": "application/json"
+                        }
+                    ],
+                    "filePath": "",
+                    "sendFileAsBody": false
+                }
+            ],
+            "proxyMode": false,
+            "proxyHost": "",
+            "https": false,
+            "cors": true,
+            "headers": [
+                {
+                    "key": "Content-Type",
+                    "value": "application/json"
+                },
+                {
+                    "key": "Access-Control-Allow-Origin",
+                    "value": "*"
+                },
+                {
+                    "key": "Access-Control-Allow-Methods",
+                    "value": "GET,POST,PUT,PATCH,DELETE,HEAD,OPTIONS"
+                },
+                {
+                    "key": "Access-Control-Allow-Headers",
+                    "value": "Content-Type, Origin, Accept, Authorization, Content-Length, X-Requested-With"
+                }
+            ]
+        }
+    ]
+}

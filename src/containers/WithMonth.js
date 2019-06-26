@@ -4,7 +4,7 @@ import * as actions from "../actions";
 
 
 const mapStateToProps = state => {
- 
+ console.log("state",state.changeMood);
   return {
     day: state.currentday,
     memos: state.data

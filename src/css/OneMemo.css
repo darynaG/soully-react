@@ -6,7 +6,7 @@
 }
 .item-memo-textcontent {
   flex: 1;
-  color: white;
+  color: black;
   padding: 10px 70px;
   margin: 3px 0;
   position: relative;
@@ -18,5 +18,5 @@
   top: 13px;
 }
 .item-memo-textcontent:hover {
-  background-color: #845A6D;
+  background-color: #a59f9e2d;
 }

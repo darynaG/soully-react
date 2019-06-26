@@ -1,0 +1,16 @@
+@media screen and (max-width: 1800px) {
+  .top-menu {
+    visibility: visible;
+  }
+  .burger-container {
+    visibility: collapse;
+  }
+}
+@media screen and (max-width: 750px) {
+  .top-menu {
+    visibility: visible;
+  }
+  .burger-icon-link {
+    visibility: visible;
+  }
+}

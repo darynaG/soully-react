@@ -1,6 +1,7 @@
 import { connect } from "react-redux";
 import ManageMemo from "../components/recomendation-page/monthly-log/Calendar/ManageMemo";
-import Messages from '/Users/admin/front-end/soully-react/src/data/stories.json'
+import Messages from '../data/stories.json'
+
 
 
 const mapStateToProps = state => {

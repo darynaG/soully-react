@@ -1,5 +1,6 @@
 import React from 'react';
 import '../../../css/swiper.css';
+import '../../../css/responsible-recomendation.css';
 import {
     faAngleLeft,
     faAngleRight

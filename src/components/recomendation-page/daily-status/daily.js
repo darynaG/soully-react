@@ -1,4 +1,5 @@
 import React from 'react';
+import { BrowserRouter as Router, Route, Link } from "react-router-dom";
 import { library } from '@fortawesome/fontawesome-svg-core'
 import Stories from '../../../data/posts.js'
 import {
@@ -6,6 +7,8 @@ import {
     faQuoteRight
 } from '@fortawesome/free-solid-svg-icons'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+
+import '../../../css/button.css'
 import store from '../../../store'
 
 library.add(
@@ -56,6 +59,9 @@ class DailyMood extends React.Component {
         return( 
         <div className = "daily-log">
             <h1> Daily mood </h1>
+            <div className="content">
+       
+            <div className="leftside">
             <div className = "mood">
                 <h1> Your mood is </h1>
                 <h1> {this.props.mood} </h1>
@@ -63,11 +69,15 @@ class DailyMood extends React.Component {
                 <div className = "action">
                     <h1>You've been up to</h1>
                     <ul  className = "block"> {activities} </ul>
-                    </div>    
+                    </div>   
+                    </div> 
                  <div className = "stories">
-                     <h3> Your story: </h3> 
+                     <h3> Your stories: </h3> 
                      <ul> {stor} </ul>
                      </div>
+                      </div>
+                     
+                     <button className="round-btn"><Link to ="/">Keep track</Link></button>
                      </div>
                 );
         }

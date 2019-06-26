@@ -1,6 +1,4 @@
 .daily-log {
-  width: 100vw;
-  height: 100vh;
   display: flex;
   flex-direction: column;
   box-sizing: border-box;
@@ -8,8 +6,16 @@
   font-family: 'Courier New', Courier, monospace;
   background-size: cover;
 }
-.daily-log .scroll {
-  margin-bottom: 30px;
+.daily-log .content {
+  display: flex;
+}
+.daily-log .leftside {
+  width: 40%;
+  border-right: 1px solid black;
+  height: fit-content;
+  align-self: baseline;
+  display: flex;
+  flex-direction: column;
 }
 .daily-log h1 {
   padding-top: 5%;
@@ -19,12 +25,19 @@
 }
 .daily-log .action {
   align-items: center;
+  display: flex;
+  flex-direction: column;
 }
 .daily-log .stories {
-  width: 85%;
+  width: 60%;
+  height: fit-content;
+  display: flex;
+  flex-direction: column;
 }
 .daily-log .stories .story {
   margin: 20px ;
+  max-height: 250px;
+  overflow-y: auto;
   padding: 15px;
   border-radius: 10px;
   position: relative;
@@ -40,13 +53,11 @@
 }
 .daily-log .stories .story .story_text {
   font-family: 'Courier New', Courier, monospace;
-  font-size: 20px;
 }
 .daily-log div {
   margin: 10px;
   align-items: center;
   display: flex;
-  flex-direction: column;
 }
 .daily-log .block {
   display: -webkit-box;
@@ -59,21 +70,18 @@
 }
 .daily-log .block li {
   margin: 15px 15px 15px 15px;
-}
-#keep_track_btn {
-  display: block;
-  height: 90px;
-  width: 90px;
-  border-radius: 50%;
-  margin: auto ;
-  position: relative;
   font-family: 'Courier New', Courier, monospace;
-  color: black;
-  font-size: 20px;
-  border: 1px solid black;
-  border-width: 2px;
-  background: transparent;
+  list-style: circle;
 }
-#keep_track_btn a {
-  text-decoration: none;
+* {
+  scroll-behavior: smooth;
+}
+.scrollRec {
+  display: flex;
+  flex-direction: column;
+  background: linear-gradient(to bottom, #ffffff, #f2e3de, #e5c7bd);
+  height: 100vh;
+}
+.scrollRec .scrollDiv {
+  height: 10%;
 }

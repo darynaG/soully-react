@@ -10,6 +10,17 @@ export const displayDetailsDays = day => {
   };
 };
 
+
+export const showMobileNavMenu = () => ({
+  type: actionTypes.SHOW_MOBILE_NAV_MENU
+})
+
+export const hideMobileNavMenu = () => ({
+  type: actionTypes.HIDE_MOBILE_NAV_MENU
+})
+
+
+
 let nextTodoId = 0
 export const addStory = text => ({
   type: 'ADD_TODO',

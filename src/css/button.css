@@ -6,7 +6,7 @@
   margin: auto ;
   position: relative;
   font-family: 'Courier New', Courier, monospace;
-  color: #004d40;
+  color: black;
   font-size: 21px;
   border: solid;
   border-color: #004d40;
@@ -17,8 +17,20 @@
   background-size: 200% 100%;
   transition: all 0.25s ease-in;
 }
+.round-btn a {
+  text-decoration: none;
+}
+.round-btn a:visited {
+  color: black;
+}
+.round-btn a:hover {
+  color: #ffffff;
+}
 .round-btn:hover {
   background-position: 0 0;
+  background-color: #004d40;
+}
+.round-btn:hover a {
   color: white;
 }
 .submit-btn {

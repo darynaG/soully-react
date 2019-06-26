@@ -1,4 +1,6 @@
 .daily-log {
+  display: flex;
+  flex-direction: column;
   box-sizing: border-box;
   align-items: center;
   font-family: 'Courier New', Courier, monospace;
@@ -12,9 +14,8 @@
   border-right: 1px solid black;
   height: fit-content;
   align-self: baseline;
-}
-.daily-log .scroll {
-  margin-bottom: 30px;
+  display: flex;
+  flex-direction: column;
 }
 .daily-log h1 {
   padding-top: 5%;
@@ -24,10 +25,14 @@
 }
 .daily-log .action {
   align-items: center;
+  display: flex;
+  flex-direction: column;
 }
 .daily-log .stories {
   width: 60%;
   height: fit-content;
+  display: flex;
+  flex-direction: column;
 }
 .daily-log .stories .story {
   margin: 20px ;
@@ -53,7 +58,6 @@
   margin: 10px;
   align-items: center;
   display: flex;
-  flex-direction: column;
 }
 .daily-log .block {
   display: -webkit-box;
@@ -68,4 +72,16 @@
   margin: 15px 15px 15px 15px;
   font-family: 'Courier New', Courier, monospace;
   list-style: circle;
+}
+* {
+  scroll-behavior: smooth;
+}
+.scrollRec {
+  display: flex;
+  flex-direction: column;
+  background: linear-gradient(to bottom, #ffffff, #f2e3de, #e5c7bd);
+  height: 100vh;
+}
+.scrollRec .scrollDiv {
+  height: 10%;
 }

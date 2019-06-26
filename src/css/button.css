@@ -9,10 +9,10 @@
   color: black;
   font-size: 21px;
   border: solid;
-  border-color: #e5c7bd;
+  border-color: #004d40;
   border-width: 2px;
   background: transparent;
-  background-image: linear-gradient(to left, transparent, transparent 50%, #e5c7bd, 50%, #e5c7bd);
+  background-image: linear-gradient(to left, transparent, transparent 50%, #004d40, 50%, #004d40);
   background-position: 100% 0;
   background-size: 200% 100%;
   transition: all 0.25s ease-in;
@@ -28,7 +28,7 @@
 }
 .round-btn:hover {
   background-position: 0 0;
-  background-color: #e5c7bd;
+  background-color: #004d40;
 }
 .round-btn:hover a {
   color: white;

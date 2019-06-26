@@ -10,10 +10,10 @@
     color: black;
     font-size:21px;
     border:solid;
-    border-color: #e5c7bd;
+    border-color: @green;
     border-width: 2px;
     background: transparent;
-    background-image: linear-gradient(to left,transparent,transparent 50%, #e5c7bd, 50%, #e5c7bd);
+    background-image: linear-gradient(to left,transparent,transparent 50%, @green, 50%, @green);
     background-position: 100% 0;
     background-size: 200% 100%;
     transition: all .25s ease-in;
@@ -29,7 +29,7 @@
 
     &:hover {
         background-position: 0 0;
-        background-color: #e5c7bd;
+        background-color: @green;
         a{
         color: white;
         }

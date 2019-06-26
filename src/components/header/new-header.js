@@ -22,7 +22,9 @@ class HeaderR extends React.Component{
         return(
             <header>
                 <div className="logo">
+                    <Link to="/">
                 <img src= {logo} />
+                </Link>
                 </div>
                 <nav >
                    

@@ -1,6 +1,5 @@
 .recomendation {
   display: flex;
-  padding-top: 5%;
 }
 .recomendation .container {
   display: flex;
@@ -8,8 +7,10 @@
   align-items: center;
   font-family: 'Courier New', Courier, monospace;
   justify-content: center;
-  align-items: baseline;
-  background-color: transparent;
+  background-color: #ffffff69;
+}
+.recomendation .content p {
+  height: 500px;
 }
 .recomendation .content p,
 .recomendation .content i {

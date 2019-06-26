@@ -53,6 +53,9 @@ class DailyMood extends React.Component {
         <li> {activiti} </li>
          )
         );
+        console.log(this.props.activity);
+        var a = this.props.activiti.map((act)=>
+        console.log(act))
 
 
 

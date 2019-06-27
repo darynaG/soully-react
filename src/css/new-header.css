@@ -12,24 +12,6 @@ header {
   box-sizing: border-box;
   display: flex;
   flex-direction: row;
-  /*
-    .logOut{
-        color:@green;
-        margin-top: auto;
-        margin-bottom: auto;
-        a{
-            height: 50px;
-            line-height: 50px;
-            padding: 0 20px;
-            color:@green;
-            text-decoration: none;
-            display:block;
-            &:hover,.active{
-                color:#fff;
-                background: #2196f3;
-            }
-        }
-        */
 }
 header .logo {
   width: 10vw;
@@ -38,19 +20,33 @@ header .logo img {
   height: 9vh;
 }
 header nav {
+  width: 100vw;
   margin: auto;
+}
+header nav .list {
+  display: flex;
+  flex-direction: row;
+  margin: auto;
+}
+header nav .logout {
+  margin-top: auto;
+  margin-bottom: auto;
+  margin-right: 0;
+  margin-left: auto;
 }
 header nav ul {
   margin: auto;
   padding: 10px;
   display: flex;
 }
-header nav ul li {
+header nav ul li,
+header nav ul p {
   font-weight: bold;
   padding-right: 20px;
   list-style: none;
 }
-header nav ul li a {
+header nav ul li a,
+header nav ul p a {
   height: 50px;
   line-height: 50px;
   padding: 0 20px;
@@ -58,7 +54,8 @@ header nav ul li a {
   text-decoration: none;
   display: block;
 }
-header nav ul li a:hover {
+header nav ul li a:hover,
+header nav ul p a:hover {
   background: grey;
   color: azure;
 }
@@ -74,22 +71,27 @@ header .menu-toogle {
   display: none;
 }
 @media (max-width: 730px) {
-  header {
+  .logged {
     z-index: 99999999;
   }
-  header .menu-toogle {
+  .logged .menu-toogle {
     display: block;
   }
-  header .active {
+  .logged .active {
     display: block;
   }
-  header .active-logout {
+  .logged .active-logout {
     display: block;
   }
-  header .logOut {
+  .logged .logOut {
     display: none;
   }
-  header nav {
+  .logged .list {
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+  }
+  .logged nav {
     display: none;
     position: absolute;
     width: 100%;
@@ -97,11 +99,36 @@ header .menu-toogle {
     top: 50px;
     transition: 0.5s;
   }
-  header nav ul {
+  .logged nav ul {
     display: block;
     text-align: center;
   }
-  header nav ul li a {
+  .logged nav ul li a {
     border-bottom: 1px solid rgba(0, 0, 0, 0.2);
   }
+}
+.logIn {
+  color: #004d40;
+  margin-top: auto;
+  margin-bottom: auto;
+  text-decoration: none;
+  font-weight: bold;
+  float: right;
+}
+.logIn a {
+  height: 50px;
+  line-height: 50px;
+  padding: 0 20px;
+  color: #004d40;
+  text-decoration: none;
+  display: block;
+}
+.logIn a:hover {
+  background: grey;
+  color: azure;
+}
+.unLogged nav {
+  margin-top: auto;
+  margin-bottom: auto;
+  margin-right: 0;
 }

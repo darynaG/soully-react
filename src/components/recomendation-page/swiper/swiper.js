@@ -10,6 +10,9 @@ import { library } from '@fortawesome/fontawesome-svg-core'
 import Books from '../../../data/book.js'
 import Films from '../../../data/film.js'
 import Actions from '../../../data/do.js'
+import Spinner from 'react-spinner-material';
+import store from '../../../store';
+
 library.add(
     faAngleLeft,
     faAngleRight
@@ -91,6 +94,18 @@ class Recomendation extends React.Component {
    render() {
        const index = this.state.currentIndex;
        let first = this.state.contents.slice(index, index + 1);
+       /*
+       console.log("store",store.getState().dataReducer)
+       if(store.getState().dataReducer.loading===true){
+        console.log("!!!!!!!!!!!loooooading",store.getState().dataReducer.loading);
+        return(
+            <div className="loadingContainer">
+                <Spinner size={120} spinnerColor={"#004d408f"} spinnerWidth={8} visible={true} />
+            </div>
+        )
+    }else*/
+      
+ 
        
        return (
        <div className="container">

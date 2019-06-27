@@ -70,7 +70,7 @@ header .menu-toogle {
   cursor: pointer;
   display: none;
 }
-@media (max-width: 730px) {
+@media (max-width: 805px) {
   .logged {
     z-index: 99999999;
   }

@@ -27,7 +27,7 @@ class HeaderR extends React.Component{
         let headerShow;
         if (this.props.loggedIn === true)
         {
-            headerShow = <header>
+            headerShow = <header className="logged">
             <div className="logo">
             <Link to="/">
         <img src= {logo} />
@@ -36,7 +36,7 @@ class HeaderR extends React.Component{
         <nav>
            
             <ul>
-               
+               <p className="list">
             <li >
                     <Link to="/home">Home</Link>
                 </li>
@@ -49,13 +49,12 @@ class HeaderR extends React.Component{
                  <li>
                      <Link to="/stories">Stories</Link>
                     </li>
-                    
-                   
-               
+                    </p>
+                    <p className="logout">
+                    <Link to="/login">Log out</Link>
+                      </p>   
             </ul>
-            <p className="logout">
-                    <Link to="/login">Logout</Link>
-            </p>
+            
             
         </nav>
        
@@ -66,14 +65,14 @@ class HeaderR extends React.Component{
         </header>
         }
         else{
-            headerShow = <header>
+            headerShow = <header className="unLogged">
             <div className="logo">
             <Link to="/">
         <img src= {logo} />
         </Link>
         </div>
         <nav>               
-            <p className="logout"><Link to="/login">Log in</Link></p>
+            <p className="logIn"><Link to="/login">Log in</Link></p>
 
         </nav>
        

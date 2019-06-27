@@ -5,9 +5,18 @@ import { connect } from "react-redux";
 import '../../css/recomendation.css';
 import '../../css/daily-log.css';
 import '../../css/containers.css';
-
+import Spinner from 'react-spinner-material';
+import store from '../../store';
 class Day extends React.Component{
     render() {
+        // if(store.getState().dataReducer.loading===true){
+        //     //console.log("!!!!!!!!!!!loooooading",store.getState().dataReducer.loading);
+        //     return(
+        //         <div className="loadingContainer">
+        //             <Spinner size={120} spinnerColor={"#004d408f"} spinnerWidth={8} visible={true} />
+        //         </div>
+        //     )}
+        //     else
         return (
              <div>
                  <div className="scrollRec">

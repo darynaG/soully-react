@@ -9,7 +9,7 @@ class Messages{
         .then(response=> response.json()
         ) .then(json => {
             store.dispatch(fetchDataSuccess(json))
-            console.log("in message class")
+           
             return json;
         }).catch(error => store.dispatch(fetchDataFailure(error)));
          

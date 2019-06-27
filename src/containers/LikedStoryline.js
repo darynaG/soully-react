@@ -11,6 +11,7 @@ function mapStateToProps(state) {
     posts: state.dataReducer,
     postsLikes: state.postsLikes,
     postsLikeCounters: state.postsLikeCounters
+    
   };
 };
 const mapDispatchToProps = {

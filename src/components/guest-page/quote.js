@@ -1,4 +1,4 @@
-import React ,{ Component}from 'react';
+import React ,{ PureComponent}from 'react';
 
 import Q from '../../data/quotes.js';
 
@@ -15,7 +15,7 @@ library.add(
     faQuoteLeft,
     faQuoteRight
 )
-class Quote extends Component{
+class Quote extends PureComponent{
 constructor(props){
     super(props);
     
@@ -47,12 +47,28 @@ componentDidMount(){
 }
     })
     .then(()=>{
-        var maxNumber=mood_quotes.length;
-        var rand=Math.floor(Math.random()*maxNumber);
+        let maxNumber=mood_quotes.length;
+        let rand=Math.floor(Math.random()*maxNumber);
         this.setState({text:mood_quotes[rand].text, author:mood_quotes[rand].author,all:f});
     })
 }
 
+componentDidUpdate(){
+    let mood_quotes=[];
+    for(var i=0;i<this.state.all.length;i++){
+       
+        if(this.props.mood){
+            if(this.props.mood===this.state.all[i].mood)
+            mood_quotes.push(this.state.all[i]);
+        }else{
+            mood_quotes.push(this.state.all[i]);
+        }
+        let maxNumber=mood_quotes.length;
+        let rand=Math.floor(Math.random()*maxNumber);
+        if(maxNumber>0)
+        this.setState({text:mood_quotes[rand].text, author:mood_quotes[rand].author});
+}
+}
 render(){
     return(
         <div className="centered-text">  

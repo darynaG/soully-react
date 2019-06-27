@@ -5,13 +5,13 @@ import Quote from '../guest-page/quote'
 import '../../css/new-mood-page.css';
 import '../../css/story-input.css'
 import store from '../../store';
-
+import {connect } from 'react-redux'
 import Spinner from 'react-spinner-material';
 import videoClip from '../../assets/video/Nature.mp4';
 class Guest extends React.Component{
     render() {
         if(store.getState().dataReducer.loading===true){
-            console.log("!!!!!!!!!!!loooooading",store.getState().dataReducer.loading);
+            console.log("!!!!!!!!!!!loooooading",this.props.loading);
             return(
                 <div className="loadingContainer">
                     <Spinner size={120} spinnerColor={"#004d408f"} spinnerWidth={8} visible={true} />
@@ -28,8 +28,8 @@ class Guest extends React.Component{
                 <source src={videoClip} type="video/mp4"/>
              </video>
             <div className="container-s add-margin" id="s">
-                <Quote mood={store.getState().changeMood.mood}/>
-                <StoryBoard mood={store.getState().changeMood.mood} visible='true'/>
+                <Quote mood={this.props.mood}/>
+                <StoryBoard mood={this.props.mood} visible='true'/>
             </div>
         </div>
         )
@@ -37,4 +37,11 @@ class Guest extends React.Component{
 
 }
 
-export default Guest;
+const mapStateToProps = (state)=>{
+    console.log("state", state.changeMood.mood);
+    return{
+        mood:state.changeMood.mood,
+       // loading:state.dataReducer.loading
+    }
+}
+export default (connect)(mapStateToProps)(Guest);

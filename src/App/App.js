@@ -3,9 +3,6 @@ import { BrowserRouter as Router, Route, Link } from "react-router-dom";
 import { connect } from 'react-redux';
 
 import '../App.css';
-import '../../src/css/header-responsible.css'
-
-import Header from '../components/header/header';
 import MoodPage  from '../components/mood-group/moodPage';
 import Footer from '../components/footer/footer';
 import Day from '../components/Route/Day'

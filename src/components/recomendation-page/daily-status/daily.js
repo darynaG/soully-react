@@ -48,12 +48,25 @@ class DailyMood extends React.Component {
             </FontAwesomeIcon>
         </ol> );
 
-        const activities = this.state.stories.map((story) => 
-         story.activities.map((activiti) =>
-        <li> {activiti} </li>
-         )
-        );
-
+       var a =this.props.activity;
+       console.log(a);
+       //var activities = [];
+       
+        var act = [];
+        var arr = Object.keys(a);
+        
+        for (var i=0; i<arr.length; ++i)
+          {
+            if(this.props.activity[arr[i]] === true)
+              {
+                act.push(arr[i]);
+              }
+              console.log(arr[i]);
+        
+          }
+          const activities = act.map((activiti) => 
+         <li> {activiti} </li>
+         );
 
 
         return( 

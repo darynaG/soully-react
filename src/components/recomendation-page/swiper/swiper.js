@@ -91,18 +91,20 @@ class Recomendation extends React.Component {
    render() {
        const index = this.state.currentIndex;
        let first = this.state.contents.slice(index, index + 1);
+       
        return (
        <div className="container">
            <FontAwesomeIcon icon = {faAngleLeft} size = "3x"onClick = {this.prevSlide}/>
            {first.map((contents) =>
            <div className="content">
-               <img  src = {contents.image} alt = ""/>
+               <img  src = {contents.image}alt = ""/>
                <h2 >{contents.title}</h2>
                <p >{contents.description}</p>
                <i className = "tag">{contents.tag}</i>
             </div>)}
                <FontAwesomeIcon icon = {faAngleRight} size = "3x" onClick = {this.nextSlide}/>
         </div>
+           
         );
     }
 }

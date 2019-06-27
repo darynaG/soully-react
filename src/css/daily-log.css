@@ -20,6 +20,9 @@
 .daily-log h1 {
   padding-top: 5%;
 }
+.daily-log .mood {
+  flex-direction: column;
+}
 .daily-log .mood i {
   margin: 30px;
 }

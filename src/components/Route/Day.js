@@ -26,7 +26,7 @@ class Day extends React.Component{
                
                 
                     <div id ='scroll' className='scroll'>
-                     <DailyMood  username = "Tom" mood = "sad" date = '19/6/2019'/>
+                     <DailyMood  username = "Tom" mood = {this.props.mood} activity={this.props.activity} date = '19/6/2019'/>
                      </div>
                 </div>
         )
@@ -34,9 +34,10 @@ class Day extends React.Component{
 
 }
 const mapStateToProps = (state)=>{
-    console.log("state", state.changeMood.mood);
+    console.log("state", state.changeActivity);
     return{
-        mood:state.changeMood.mood
+        mood:state.changeMood.mood,
+        activity: state.changeActivity
     }
 }
 export default (connect)(mapStateToProps)(Day);

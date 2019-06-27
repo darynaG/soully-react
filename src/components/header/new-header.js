@@ -29,7 +29,7 @@ class HeaderR extends React.Component{
         {
             headerShow = <header className="logged">
             <div className="logo">
-            <Link to="/">
+            <Link to="/home">
         <img src= {logo} />
         </Link>
         </div>

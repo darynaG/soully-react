@@ -49,9 +49,9 @@
   background-color: transparent;
 }
 .up .calendar .content .calendarContainer .react-calendar .react-calendar__tile--hasActive {
-  background: #f7d3c7;
+  background: #2ea7330d;
   border-radius: 10%;
-  color: white;
+  color: #004d40;
 }
 .up .calendar .content .calendarContainer .react-calendar .react-calendar__month-view .react-calendar__month-view__weekdays {
   font-family: 'Courier New', Courier, monospace;
@@ -60,9 +60,9 @@
   text-decoration: none;
 }
 .up .calendar .content .calendarContainer .react-calendar .react-calendar__month-view .react-calendar__tile--active {
-  background: #f7d3c7;
+  background: #2ea7330d;
   border-radius: 10%;
-  color: white;
+  color: #004d40;
 }
 .up .whenMemos {
   position: relative;

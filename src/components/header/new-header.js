@@ -54,7 +54,10 @@ class HeaderR extends React.Component{
                     <Link to="/login">Log out</Link>
                       </p>   
             </ul>
-            
+            <p className="logout">
+                    <a href="#" onClick={(event)=>this.props.dispatch(userActions.logout())}>Logout</a>
+            </p>
+
             
         </nav>
        

@@ -1,5 +1,6 @@
 import React from 'react';
 import {connect} from 'react-redux'
+import { Redirect } from 'react-router-dom'
 
 import Group from "../activity/activityGroup";
 import MoodGroup from '../mood-group/test'
@@ -15,10 +16,13 @@ import '../../css/responsible-mood.css';
 class MoodPage extends React.Component {
     constructor(props) {
         super(props); 
+        this.onKeepTrack = this.onKeepTrack.bind(this);
         };
-    
-    onKeepTrack () {
-       // console.log(this.props.mood);
+//
+
+    onKeepTrack (event) {       
+        console.log("redirect");
+        return <Redirect to={'/day'}/>
     }
     render (){
     return(    <div>
@@ -39,7 +43,7 @@ class MoodPage extends React.Component {
          <source src={videoClip} type="video/mp4"/>
      </video>
 
-     <button className="round-btn submit-btn" onClick = {(event) => console.log(this.props.mood, this.props.activities)}>Keep track</button>
+     <button className="round-btn submit-btn" onClick = {this.onKeepTrack} >Keep track</button>
     </div>
      ); }
 }

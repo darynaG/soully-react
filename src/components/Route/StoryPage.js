@@ -6,6 +6,7 @@ import '../../css/quote.css'
 import '../../css/story-input.css'
 class StoryPage extends React.Component {
     render() {
+        
         return (
             <div>
                 <StoryEdit  isMin ={true}/>

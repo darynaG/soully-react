@@ -1,5 +1,5 @@
 import { connect } from 'react-redux'
-import { onAddPost,fetchDataFailure,fetchDataSuccess } from '../actions';
+import { onAddPost,fetchDataFailure,fetchDataSuccess,fetchDataLoading } from '../actions';
 
 import {Posts} from '../components/story-page/storyline';
 
@@ -11,6 +11,7 @@ function mapStateToProps(state) {
     posts: state.dataReducer,
     postsLikes: state.postsLikes,
     postsLikeCounters: state.postsLikeCounters
+    
   };
 };
 const mapDispatchToProps = {
@@ -18,7 +19,8 @@ const mapDispatchToProps = {
   onUnlike,
   onAddPost,
   fetchDataFailure,
-  fetchDataSuccess
+  fetchDataSuccess,
+  fetchDataLoading
 
 };
 const PostsWithLikes = connect(mapStateToProps, mapDispatchToProps)(Posts);

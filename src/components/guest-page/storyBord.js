@@ -1,8 +1,6 @@
-import React ,{ Component}from 'react';
+import React ,{ PureComponent}from 'react';
 import Messages from '../../data/posts.js';
 import { library } from '@fortawesome/fontawesome-svg-core'
-
-import { far} from '@fortawesome/free-brands-svg-icons'
 
 import {
         faQuoteLeft,
@@ -17,52 +15,109 @@ library.add(
 )
 
 
-class StoryBoard extends Component {
+class StoryBoard extends PureComponent {
     constructor(props){
-        super(props);
-       
-      
-      // this.state={visibility:props.visible,mood:props.mood,stories:mood_stories, i:rand};
-        this.state={stories:[]};
-        //console.log(this.state)
+    super(props);
+    this.state={sad:[],wow:[],wtf:[], excited:[],good:[],happy:[],current:[]};
       
     }
     
     componentDidMount(){
-        var mood_stories=[];
-        var st=[];
-        var a=Messages.getAll().then((data)=>{
-           
-            for(var i=0;i<data.length;i++){
-                if(this.props.mood){
-                    if(this.props.mood==data[i].mood)
-                    st.push(data[i]);
-                }else{
-                    st.push(data[i]);
-                }}
-                var maxNumber=st.length-2;
-                var rand=Math.floor(Math.random()*maxNumber);
-                for(var j=0;j<3;j++){
-                    mood_stories.push(st[rand+j]);
+        console.log("did mount",this.props.mood);
+        let c= [];
+        let sad=[],wow=[],wtf=[], excited=[],good=[],happy=[];
+        let allstories = [];
+        Messages.getAll().then((data)=>{
+            for(let i = 0;i < data.length;i++){
+                allstories.push(data[i]);
+                switch (data[i].mood){
+                    case "sad":
+                    sad.push(data[i]);
+                    break;
+                    case "wow":
+                    wow.push(data[i]);
+                    break;
+                    case "wtf":
+                    wtf.push(data[i]);
+                    break;
+                    case "excited":
+                    excited.push(data[i]);
+                    break;
+                    case "good":
+                    good.push(data[i]);
+                    break;
+                    case "happy":
+                    happy.push(data[i]);
+                    break;
                 }
-                //console.log("mmoood",mood_stories);
-      
-    
-        })//.then(()=>{console.log("this is mood_stories",mood_stories.length)})
-        .then(()=>{
-            
-            this.setState({stories:mood_stories});
-        })
+            }
+            switch(this.props.mood){
+                case "sad":
+                    c=sad;
+                    break;
+                    case "wow":
+                    c=wow;
+                    break;
+                    case "wtf":
+                    c=wtf;
+                    break;
+                    case "excited":
+                    c=excited;
+                    break;
+                    case "good":
+                    c=good;
+                    break;
+                    case "happy":
+                    c=happy;
+            }
+            }).then(
+            this.setState({sad:sad,wow:wow,wtf:wtf, excited:excited,good:good,happy:happy,current:c}))
     }
+  
+    componentDidUpdate(){
+       
+       let c=[]; 
+        switch(this.props.mood){
+            case "sad":
+                    
+                c=this.state.sad;
+                break;
+            case "wow":
+                  
+                c=this.state.wow;
+                break;
+            case "wtf":
+                  
+                c=this.state.wtf;
+                break;
+            case "excited":
+                    
+                c=this.state.excited;
+                break;
+            case "good":
+                  
+                c=this.state.good;
+                break;
+            case "happy":
+                  
+                c=this.state.happy;
+        }
+    
+        this.setState({current:c})
+                
+    }
+
+   
     render(){
+       
     return(
         <React.Fragment>
-            <h1 className="centered-text">Stories</h1>
+            <h1 className="centered-text" style={{marginTop:'10px'}}>Stories</h1>
         <div className="storyboard">
        
     <div className="story_column left">
          {
-             this.state.stories.slice(0,2).map((data)=>{
+             this.state.current.slice(0,2).map((data)=>{
                 
                     return(
                     <div className="story">
@@ -70,6 +125,8 @@ class StoryBoard extends Component {
                     <div className="story_head">
                        
                        <div> {data.username}
+                       </div>
+                       <div> {data.mood}
                        </div>
                     </div>
                    
@@ -92,13 +149,15 @@ class StoryBoard extends Component {
     <div className="story_column right">
     
     {
-             this.state.stories.slice(2,3).map((data)=>{
+             this.state.current.slice(2,3).map((data)=>{
                  return(
                     <div className="story">
                     
                     <div className="story_head">
                        
                        <div> {data.username}
+                       </div>
+                       <div> {data.mood}
                        </div>
                     </div>
                    

@@ -82,6 +82,9 @@ export const fetchDataFailure = error => ({
     payload: {error}
 
 })
+export const fetchDataLoading=()=>({
+  type: 'FETCH_DATA_LOADING'
+})
 
 
 

@@ -7,7 +7,14 @@ const initialState = {
 export default function dataReducer(state=initialState, action) {
     let value=state.posts;
     switch(action.type) {
-      
+        case 'FETCH_DATA_LOADING':
+                return {
+                    ...state,
+                    loading: true,
+                  
+                };
+            
+            
         case 'FETCH_DATA_FAILURE':
             return {
                 ...state,

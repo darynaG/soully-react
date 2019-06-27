@@ -62,5 +62,116 @@
     "date":"20/6/2019",
     "activities": ["running", "working","sleeping"],
     "text": "matter how much the world tries to hold you back, always continue with the belief that what you want to achieve is possible. Believing you can become successful is the most important step in actually achieving it."
+},
+{
+    "id":7,
+    "mood":"wow",
+    "likes":8,
+    "username": "Julia",
+    "date":"20/6/2019",
+    "activities": ["running", "sleeping"],
+    "text": "prefer to gfgfkg how much the world tries to hold you back, always continue with the belief that what you want to achieve is possible. Believing you can become successful is the most important step in actually achieving it."
+},
+{
+    "id":8,
+    "mood":"wow",
+    "likes":4,
+    "username": "Severus",
+    "date":"20/6/2019",
+    "activities": ["running", "sleeping"],
+    "text": "prefer to gfgfkg how much the world tries to hold you back, always continue with the belief that what you want to achieve is possible. Believing you can become successful is the most important step in actually achieving it."
+},
+{
+    "id":9,
+    "mood":"wow",
+    "likes":0,
+    "username": "Dammie",
+    "date":"20/6/2019",
+    "activities": ["running", "sleeping"],
+    "text": "prefer to gfgfkg how much the world tries to hold you back, always continue with the belief that what you want to achieve is possible. Believing you can become successful is the most important step in actually achieving it."
+},
+{
+    "id":10,
+    "mood":"excited",
+    "likes":1,
+    "username": "Ann Dolly",
+    "date":"20/6/2019",
+    "activities": ["running", "sleeping"],
+    "text": "prefer to gfgfkg how much the world tries to hold you back, always continue with the belief that what you want to achieve is possible. Believing you can become successful is the most important step in actually achieving it."
+},
+{
+    "id":11,
+    "mood":"excited",
+    "likes":18,
+    "username": "Diego",
+    "date":"20/6/2019",
+    "activities": ["running", "sleeping"],
+    "text": "prefer to gfgfkg how much the world tries to hold you back, always continue with the belief that what you want to achieve is possible. Believing you can become successful is the most important step in actually achieving it."
+},
+{
+    "id":12,
+    "mood":"excited",
+    "likes":14,
+    "username": "Brienna",
+    "date":"20/6/2019",
+    "activities": ["running", "sleeping"],
+    "text": "prefer to gfgfkg how much the world tries to hold you back, always continue with the belief that what you want to achieve is possible. Believing you can become successful is the most important step in actually achieving it."
 }
+,
+{
+    "id":13,
+    "mood":"wtf",
+    "likes":1,
+    "username": "Ann Dolly",
+    "date":"20/6/2019",
+    "activities": ["running", "sleeping"],
+    "text": "prefer to gfgfkg how much the world tries to hold you back, always continue with the belief that what you want to achieve is possible. Believing you can become successful is the most important step in actually achieving it."
+},
+{
+    "id":14,
+    "mood":"wtf",
+    "likes":18,
+    "username": "Diego",
+    "date":"20/6/2019",
+    "activities": ["running", "sleeping"],
+    "text": "prefer to gfgfkg how much the world tries to hold you back, always continue with the belief that what you want to achieve is possible. Believing you can become successful is the most important step in actually achieving it."
+},
+{
+    "id":15,
+    "mood":"wtf",
+    "likes":14,
+    "username": "Brienna",
+    "date":"20/6/2019",
+    "activities": ["running", "sleeping"],
+    "text": "prefer to gfgfkg how much the world tries to hold you back, always continue with the belief that what you want to achieve is possible. Believing you can become successful is the most important step in actually achieving it."
+}
+,
+{
+    "id":16,
+    "mood":"good",
+    "likes":1,
+    "username": "Ann Dolly",
+    "date":"20/6/2019",
+    "activities": ["running", "sleeping"],
+    "text": "prefer to gfgfkg how much the world tries to hold you back, always continue with the belief that what you want to achieve is possible. Believing you can become successful is the most important step in actually achieving it."
+},
+{
+    "id":11,
+    "mood":"good",
+    "likes":18,
+    "username": "Diego",
+    "date":"20/6/2019",
+    "activities": ["running", "sleeping"],
+    "text": "prefer to gfgfkg how much the world tries to hold you back, always continue with the belief that what you want to achieve is possible. Believing you can become successful is the most important step in actually achieving it."
+},
+{
+    "id":17,
+    "mood":"good",
+    "likes":14,
+    "username": "Brienna",
+    "date":"20/6/2019",
+    "activities": ["running", "sleeping"],
+    "text": "prefer to gfgfkg how much the world tries to hold you back, always continue with the belief that what you want to achieve is possible. Believing you can become successful is the most important step in actually achieving it."
+}
+
 ]

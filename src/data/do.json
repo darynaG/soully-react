@@ -36,6 +36,7 @@
         "mood":"excited",
         "title":"Watch music videos",
         "image":"https://images.unsplash.com/photo-1517509226241-64ec72c124a3?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=700&q=60",
+
         "tag":"#mood #sad #doit",
         "description":"Here are some of my favorites to get you started: “Downtown” by Macklemore, “Let’s Have a Kiki” by Scissor Sisters, “Hideaway” by Kiesza, and “Ego” by Beyoncé."
 
@@ -60,6 +61,7 @@
         "mood":"wow",
         "title":"Meditate",
         "image":"https://images.unsplash.com/photo-1510894347713-fc3ed6fdf539?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80",
+
         "tag":"#mood #wow #doit",
         "description":"Download a free app and follow along as you learn to be more in tune with your breathing, body, heart, and mind."
 
@@ -139,7 +141,7 @@
     {
         "mood":"good",
         "title":"Learn about wine",
-        "image":"https://live.staticflickr.com/7102/7395684972_aa5413c32a_b.jpg",
+        "image":"https://images.unsplash.com/photo-1506377247377-2a5b3b417ebb?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60",
         "tag":"#mood #good #doit",
         "description":"Whether you’re into sparkling rosé or Argentinean malbec, get to know how it’s made, who the best producers are, and what pairs well with it. Remember, one of the best ways to learn about wine is to drink as much of it as you can."
 

@@ -19,7 +19,8 @@ function login(username, password) {
             .then(
                 user => { 
                     dispatch(success(user));
-                    history.push('/');
+                    //history.push('/');
+                    //window.location.reload(true);
                 },
                 error => {
                     dispatch(failure(error));
@@ -47,6 +48,7 @@ function register(user) {
                 user => { 
                     dispatch(success());
                     history.push('/login');
+                    window.location.reload(true);
                     dispatch(alertActions.success('Registration successful'));
                 },
                 error => {

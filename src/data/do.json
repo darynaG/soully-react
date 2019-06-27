@@ -18,7 +18,24 @@
     {
         "mood":"sad",
         "title":"Watch music videos",
-        "image":"https://images.unsplash.com/photo-1547355253-ff0740f6e8c1?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60",
+        "image":"https://images.unsplash.com/photo-1490031161325-6543d19a68bb?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60",
+        "tag":"#mood #sad #doit",
+        "description":"Here are some of my favorites to get you started: “Downtown” by Macklemore, “Let’s Have a Kiki” by Scissor Sisters, “Hideaway” by Kiesza, and “Ego” by Beyoncé."
+
+    },
+    {
+        "mood":"sad",
+        "title":"Dance this sadness off",
+        "image":"https://images.unsplash.com/photo-1520732909378-de1bbe254dc0?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60",
+        "tag":"#mood #sad #doit",
+        "description":"Maybe dancing sounds like to much fun to you right now. But just give it a try. Put some moody and viby music on. Start to move and make that sadness go away."
+
+    },
+    
+    {
+        "mood":"excited",
+        "title":"Watch music videos",
+        "image":"https://images.unsplash.com/photo-1517509226241-64ec72c124a3?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=700&q=60",
         "tag":"#mood #sad #doit",
         "description":"Here are some of my favorites to get you started: “Downtown” by Macklemore, “Let’s Have a Kiki” by Scissor Sisters, “Hideaway” by Kiesza, and “Ego” by Beyoncé."
 
@@ -26,7 +43,7 @@
     {
         "mood":"wow",
         "title":"Call an old friend",
-        "image":"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQLKtSMIPEMGvQADMyrJxhT_iAh8zmyRuAdfHia5N6R8n5dJ8RX",
+        "image":"https://images.unsplash.com/uploads/1413222992504f1b734a6/1928e537?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80",
         "tag":"#mood #wow #doit",
         "description":"Call an old friend you haven’t talked to in forever. Catch up or leave a friendly voicemail."
 
@@ -34,7 +51,7 @@
     {
         "mood":"wow",
         "title":"Take a bubble bath",
-        "image":"https://cdn.pixabay.com/photo/2019/01/11/22/09/bubble-bath-3927674_960_720.jpg",
+        "image":"https://images.unsplash.com/photo-1532926381893-7542290edf1d?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60",
         "tag":"#mood #wow #doit",
         "description":"Why not? Let yourself relax!"
 
@@ -42,15 +59,31 @@
     {
         "mood":"wow",
         "title":"Meditate",
-        "image":"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRCeeT2FvoSe9JmcH4Ve6S9jwLVqd9bSCOWWTFPQT1Rg7GCORbC",
+        "image":"https://images.unsplash.com/photo-1510894347713-fc3ed6fdf539?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80",
         "tag":"#mood #wow #doit",
         "description":"Download a free app and follow along as you learn to be more in tune with your breathing, body, heart, and mind."
 
     },
     {
+        "mood":"wow",
+        "title":"Go to a restaurant",
+        "image":"https://images.unsplash.com/photo-1414235077428-338989a2e8c0?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60",
+        "tag":"#mood #wow #doit",
+        "description":"Go to your favourite place. Or shake things up and go to a new one. Enjoy yourself anf tasty food."
+
+    },
+    {
+        "mood":"wow",
+        "title":"Share",
+        "image":"https://images.unsplash.com/photo-1527168027773-0cc890c4f42e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60",
+        "tag":"#mood #wow #doit",
+        "description":"Tweeter, Facebook, Instagram or even our site. Find a courage to share your story. We promise, you will feel better."
+
+    },
+    {
         "mood":"excited",
         "title":"Make something!",
-        "image":"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRIZW9yTXeRK6nT-sX8IpRUf8hLZhg3vfhHe2ZMjOY5XH09iXo_",
+        "image":"https://images.unsplash.com/photo-1490645935967-10de6ba17061?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60",
         "tag":"#mood #excited #doit",
         "description":"Scour your pantry and fridge. Use the ingredients you have on hand to make a scrumptious salad."
 
@@ -58,15 +91,15 @@
     {
         "mood":"excited",
         "title":"Plan a party",
-        "image":"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSuO9nhZabHhf7msJYTPvg33qHJWLX8nzQEF3LCuAOT-N3KsT-1",
+        "image":"https://images.unsplash.com/photo-1482575832494-771f74bf6857?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60",
         "tag":"#mood #excited #doit",
         "description":"Plan a party because life is too short not to plan parties. Need a reason for the party?"
 
     },
     {
-        "mood":"excited",
+        "mood":"happy",
         "title":"Get lost on Pinterest",
-        "image":"iVBORw0KGgoAAAANSUhEUgAAAOEAAADhCAMAAAAJbSJIAAAAnFBMVEXw8PABFicAAADz8",
+        "image":"https://images.unsplash.com/photo-1535057866921-a768e391e410?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60",
         "tag":"#mood #excited #doit",
         "description":"Not sure how to style your new black pencil skirt? Need a theme for your baby’s first birthday party? Thinking about painting your kitchen chairs? Pinterest is full of ideas on all of these topics and so much more."
 
@@ -133,6 +166,22 @@
         "image":"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQLKtSMIPEMGvQADMyrJxhT_iAh8zmyRuAdfHia5N6R8n5dJ8RX",
         "tag":"#mood #wtf #doit",
         "description":"Call an old friend you haven’t talked to in forever. Catch up or leave a friendly voicemail."
+
+    },
+    {
+        "mood":"excited",
+        "title":"Listen music",
+        "image":"https://images.unsplash.com/photo-1517509226241-64ec72c124a3?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=700&q=60",
+        "tag":"#mood #exited #doit",
+        "description":"Here are some of my favorites to get you started: “Downtown” by Macklemore, “Let’s Have a Kiki” by Scissor Sisters, “Hideaway” by Kiesza, and “Ego” by Beyoncé."
+
+    },
+    {
+        "mood":"excited",
+        "title":"Move it",
+        "image":"https://images.unsplash.com/photo-1507106944447-cb2c63329b69?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60",
+        "tag":"#mood #exited #doit",
+        "description":"Be active. Learn smth new. Go run, jump, act craaazy! Put your energy to work."
 
     }
     

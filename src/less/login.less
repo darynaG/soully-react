@@ -1,0 +1,116 @@
+@import "variables.less";
+*{
+    font-family: 'Courier New', Courier, monospace;
+}
+.login{
+    display: flex;
+    min-height: 583px;
+    background-color: #fff;
+    border-radius: 6px;
+    height: 90vh;
+    .content{
+        
+        margin:auto;
+        display:flex;
+        flex-direction:row;
+        width: 50%;
+        .leftSide, .rightSide{
+            width:50%;
+            margin-top:10vh;
+        }
+        .leftSide{
+            
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            border-top-left-radius: 6px;
+            border-bottom-left-radius: 6px;
+            background-color:@grey;
+            .headerImg{
+                user-select: none;
+                box-sizing:border-box;
+                h2{
+                   
+                    line-height: 22px;
+                    text-transform: uppercase;
+                    color:@green;
+                }
+                img{
+                    user-select: none;
+                    width: 100%;
+                }
+            }
+            .account{
+                display:flex;
+                flex-wrap: wrap;
+                color: @green;
+                font-size: 20px;
+                line-height: 21px;
+                h3,a{
+                    width: 100%;
+                    margin-bottom: 10px;
+                    color:@green;
+                    
+                }
+                a{
+
+                text-decoration:underline;
+                }
+                
+            }
+        }
+        .rightSide{
+            box-sizing: border-box;
+            user-select:none;
+            padding: 0px 40px 40px;
+            input{
+                outline:none;
+                overflow:visible;
+                line-height: 1.15;
+            }
+            h1{
+                font-size: 20px;
+                font-family: GeometriaMedium;
+                text-transform: capitalize;
+                color:@green;
+            }
+            .form{
+                touch-action: none;
+                .username{
+                    margin-bottom: 20px;
+                    position: relative;
+                    max-width: 320px;
+                    label{
+                        font-size: 14px;
+                        transition: all .3s;
+                        position: absolute;
+                        top: 0;
+                        left: 0;
+                        color: #a0a0a0;
+                        transform-origin: left;
+                        pointer-events: none;
+                    }
+                    .form-control{
+                        font-size: 14px;
+                        transition: all .3s;
+                        width: 100%;
+                        padding: 20px 0 3px;
+                        border: none;
+                        border-bottom: 1px solid #a0a0a0;
+                    }
+                }
+                }
+            .btn{
+                    width: 100%;
+                    height: 40px;
+                    margin-top: 30px;
+                    color: #fff;
+                    font-size: 14px;
+                    text-align: center;
+                    background-color: @green;
+                    border-radius: 8px;
+                    transition: background-color .4s;
+                }
+            }
+        }
+    }

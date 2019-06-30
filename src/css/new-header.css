@@ -2,7 +2,7 @@
   font-family: 'Courier New', Courier, monospace;
 }
 header {
-  position: absolute;
+  position: fixed;
   top: 0;
   left: 0;
   padding: 0 10px;
@@ -73,6 +73,7 @@ header .menu-toogle {
 @media (max-width: 805px) {
   .logged {
     z-index: 99999999;
+    position: fixed;
   }
   .logged .menu-toogle {
     display: block;
@@ -126,6 +127,9 @@ header .menu-toogle {
 .logIn a:hover {
   background: grey;
   color: azure;
+}
+.unLogged {
+  position: fixed;
 }
 .unLogged nav {
   margin-top: auto;

@@ -19,7 +19,7 @@
     "date":"18/5/2019",
     "activities": ["running", "sleep"],
 
-    "text": "FFFFFFF matter how much the world tries to hold you back, always continue with the belief that what you want to achieve is possible. Believing you can become successful is the most important step in actually achieving it."
+    "text": "Before I am going to talk about that further, it's necessary to dive into a bit of prejudice people can have about me. I usually don't talk about this topic, but it's important to speak up about it once and for all."
 },
 {
     "id":3,
@@ -181,6 +181,26 @@
     "date":"20/6/2019",
     "activities": ["running", "sleeping"],
     "text": "prefer to gfgfkg how much the world tries to hold you back, always continue with the belief that what you want to achieve is possible. Believing you can become successful is the most important step in actually achieving it."
+},
+{
+    "id":19,
+    "mood":"excited",
+    "likes":18,
+    "username": "Jack",
+    "date":"28/6/2019",
+    "activities": ["running", "sleeping"],
+    "text": "I didn't realize it at first, or at least I tried my best to ignore it as much as possible. I kept teling myself that everything was still the same, that nothing has changed and I had everything under control. I was desperately trying to stay in the old swing of things, my old balance. It was all a big, big lie. With all the things that happened, it was just impossible for me to stay the same."
+},
+{
+    "id":20,
+    "mood":"excited",
+    "likes":18,
+    "username": "Jack",
+    "date":"28/6/2019",
+    "activities": ["running", "sleeping"],
+    "text": "Before I am going to talk about that further, it's necessary to dive into a bit of prejudice people can have about me. I usually don't talk about this topic, but it's important to speak up about it once and for all. Of course, being judged by others comes with the job I chose. It's not like I didn't expect people to have opinions about me. It's also not like I have never encountered others judging me before either. I have always been one of those people that could never fit into the crowd. In a way, I did not even want to fit in. I just did not understand the 'point' of being like others. "
 }
+
+
 
 ]

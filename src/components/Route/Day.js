@@ -7,16 +7,10 @@ import '../../css/daily-log.css';
 import '../../css/containers.css';
 import Spinner from 'react-spinner-material';
 import store from '../../store';
+import moment from 'moment'
 class Day extends React.Component{
     render() {
-        // if(store.getState().dataReducer.loading===true){
-        //     //console.log("!!!!!!!!!!!loooooading",store.getState().dataReducer.loading);
-        //     return(
-        //         <div className="loadingContainer">
-        //             <Spinner size={120} spinnerColor={"#004d408f"} spinnerWidth={8} visible={true} />
-        //         </div>
-        //     )}
-        //     else
+        var a=moment().format("DD/M/YYYY")
         return (
              <div>
                  <div className="scrollRec">
@@ -35,7 +29,7 @@ class Day extends React.Component{
                
                 
                     <div id ='scroll' className='scroll'>
-                     <DailyMood  username = "Tom" mood = {this.props.mood} activity={this.props.activity} date = '19/6/2019'/>
+                     <DailyMood  username = "Jack" mood = {this.props.mood} activity={this.props.activity} date = {a}/>
                      </div>
                 </div>
         )
@@ -47,6 +41,7 @@ const mapStateToProps = (state)=>{
     return{
         mood:state.changeMood.mood,
         activity: state.changeActivity
+       // username: state.authentification.username
     }
 }
 export default (connect)(mapStateToProps)(Day);

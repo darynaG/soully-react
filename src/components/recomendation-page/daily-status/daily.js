@@ -49,9 +49,7 @@ class DailyMood extends React.Component {
         </ol> );
 
        var a =this.props.activity;
-       console.log(a);
-       //var activities = [];
-       
+
         var act = [];
         var arr = Object.keys(a);
         
@@ -85,7 +83,7 @@ class DailyMood extends React.Component {
                     </div>   
                     </div> 
                  <div className = "stories">
-                     <h3> Your stories: </h3> 
+                     <h2> Your stories: </h2> 
                      <ul> {stor} </ul>
                      </div>
                       </div>

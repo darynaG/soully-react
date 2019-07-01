@@ -8,7 +8,6 @@ import {
   
 } from '@fortawesome/free-solid-svg-icons'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-
 library.add(
     faQuoteLeft,
     faQuoteRight
@@ -112,7 +111,6 @@ class StoryBoard extends PureComponent {
        
     return(
         <React.Fragment>
-            <h1 className="centered-text" style={{marginTop:'10px'}}>Stories</h1>
         <div className="storyboard">
        
     <div className="story_column left">
@@ -121,24 +119,13 @@ class StoryBoard extends PureComponent {
                 
                     return(
                     <div className="story">
-                    
-                    <div className="story_head">
-                       
-                       <div> {data.username}
-                       </div>
-                       <div> {data.mood}
-                       </div>
-                    </div>
-                   
 
-                    <article className="story_text"> <FontAwesomeIcon icon={faQuoteLeft} size="1x"/>
-                    {data.text}
+                       <article className="story_text"> <FontAwesomeIcon icon={faQuoteLeft} size="1x"/>
+                       {data.text}
+                       <FontAwesomeIcon icon={faQuoteRight} size="1x"/>
 
                         </article>
-
-
-            </div>
-
+                     </div>
              )
          
          })
@@ -146,33 +133,24 @@ class StoryBoard extends PureComponent {
 
     </div>
 
-    <div className="story_column right">
+    { <div className="story_column right">
     
     {
              this.state.current.slice(2,3).map((data)=>{
                  return(
                     <div className="story">
-                    
-                    <div className="story_head">
-                       
-                       <div> {data.username}
-                       </div>
-                       <div> {data.mood}
-                       </div>
+
+                        <article className="story_text"> <FontAwesomeIcon icon={faQuoteLeft} size="1x"/>
+                         {data.text}
+                         <FontAwesomeIcon icon={faQuoteRight} size="1x"/>
+                        </article> 
+                        
                     </div>
-                   
 
-                    <article className="story_text"> <FontAwesomeIcon icon={faQuoteLeft} size="1x"/>
-                    {data.text}
-
-              
-              </article> 
-                    
-            </div>
              )
          })
         }
-    </div>
+    </div> }
 </div>
 </React.Fragment>
     );

@@ -43,7 +43,7 @@ export class  Posts extends React.Component{
   render(){ 
     
     if(store.getState().dataReducer.loading===true){
-        console.log("!!!!!!!!!!!loooooading",store.getState().dataReducer.loading);
+        
         return(
             <div className="loadingContainer three">
                 <Spinner size={120} spinnerColor={"#004d408f"} spinnerWidth={8} visible={true} />
@@ -51,7 +51,7 @@ export class  Posts extends React.Component{
         )
     }else
       return (
-                    <div >
+                    <div className="all_s">
                     <div className="centeredcolumn">
                     { 
                         this.state.posts.map((post,index)=>{

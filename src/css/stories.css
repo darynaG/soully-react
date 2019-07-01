@@ -12,11 +12,12 @@
   clear: both;
 }
 .story {
-  background-color: rgba(240, 230, 230, 0.705);
   display: flexbox;
   margin: 20px;
   padding: 15px;
   border-radius: 2px;
+  BORDER: 1PX SOLID #0000002b;
+  border-radius: 10px;
   font-family: 'Courier New', Courier, monospace;
 }
 .story .story_footer {

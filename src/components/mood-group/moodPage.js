@@ -1,6 +1,7 @@
 import React from 'react';
 import {connect} from 'react-redux'
 import { Redirect } from 'react-router-dom'
+import { BrowserRouter as Router, Route, Link } from "react-router-dom";
 
 import Group from "../activity/activityGroup";
 import MoodGroup from '../mood-group/test'
@@ -43,7 +44,7 @@ class MoodPage extends React.Component {
          <source src={videoClip} type="video/mp4"/>
      </video>
 
-     <button className="round-btn submit-btn" onClick = {this.onKeepTrack} >Keep track</button>
+     <button className="round-btn submit-btn" onClick = {this.onKeepTrack} ><Link to="/day">Keep track</Link></button>
     </div>
      ); }
 }

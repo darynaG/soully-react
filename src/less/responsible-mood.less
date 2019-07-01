@@ -3,8 +3,11 @@
     .video {
         width: unset;
     }
+    .submit-btn{
+        right: 60px;
+    }
 }
-@media screen and (max-width: 1064px) {
+@media screen and (max-width: 1190px) {
     .video {
         top: 47%;
         width: unset;
@@ -16,25 +19,39 @@
         }
         .block {
             margin-top: 50px;  
+            .flex-item{
+                margin-top:20px;
+                img{
+                    height: 100px;
+                    width: 100px;
+                    }
+                }
+            }
         }
         .arrow {
             padding-top: 250px;
         }
     }
     .activity-picker {
+        .h3-label{
+            padding-top:120px;
+        }
         .block {
-            margin-top: 10px;  
+           // margin-top: 10px;  
         }
         .arrow {
             padding-top: 85px;
         }
     }
-}
+
 @media screen and (max-width: 800px) {
     .video {
         top: 47%;
         width: unset;
         min-height: 100%;
+    }
+    .submit-btn{
+        bottom:200px;
     }
     .mood-picker {
         .h3-label {
@@ -72,19 +89,12 @@
 }
 @media screen and (max-width:630px) 
 {
+
     .mood-picker {
-        
-        .block {
-            margin-top: 50px; 
-            margin-left: 30px;
-            margin-right: 50px;
+        .arrow{
+            bottom: 110px;
+            position: absolute;
         }
-        
-    }
-}
-@media screen and (max-width:530px) 
-{
-    .mood-picker {
         
         .block {
             margin-top: 50px; 
@@ -92,7 +102,14 @@
             margin-right: 10px;
     
         .flex-item {
-            padding-right: 80px;
+            img{
+                height: 90px;
+                width: 90px;
+            }
+            .hideLabel, .showLabel{
+                font-size: 15px;
+            }
+           // padding-right: 80px;
         }
         }
         .arrow {
@@ -101,20 +118,100 @@
         }
     }
     .activity-picker{
+        .h3-label{
+            padding-top: 120px;
+            font-size:20px;
+        }
+        .block{
+            .flex-item{
+                line-height: 20px;
+                .hideLabel, .showLabel{
+                    font-size: 15px;
+                }
+                .imgA{
+                    height: 40px;
+                    width: 40px;
+                }
+            }
+        }
         .arrow {
             padding-top: 20px;
             margin-top: 110px;
         }
     }
+    .story-sharer{
+        .story-sharer{
+            .h3-label{
+                font-size:20px;
+            }
+            .story-text{
+                width: 80%;
+            }
+        }
+        }
 }
-@media screen and (max-width:450px)
+@media screen and (max-width:450px) 
 {
-    .arrow{
-        padding-top: 20px;
-    margin-top: 80px;
+    .submit-btn{
+        visibility: collapse;
     }
-    .sad {
-        height: 20px;
-        width: 20px;
+    .mood-picker {
+        .arrow{
+            bottom: 110px;
+            position: absolute;
+        }
+        
+        .block {
+            margin-top: 50px; 
+            margin-left: 20px;
+            margin-right: 10px;
+    
+        .flex-item {
+            img{
+                height: 70px;
+                width: 70px;
+            }
+            .hideLabel, .showLabel{
+                font-size: 15px;
+            }
+           // padding-right: 80px;
+        }
+        }
+        .arrow {
+            padding-top: 100px;
+            margin-top: 100px;
+        }
     }
+    .activity-picker{
+        .h3-label{
+            padding-top: 120px;
+            font-size:20px;
+        }
+        .block{
+            .flex-item{
+                line-height: 20px;
+                .hideLabel, .showLabel{
+                    font-size: 15px;
+                }
+                .imgA{
+                    height: 40px;
+                    width: 40px;
+                }
+            }
+        }
+        .arrow {
+            padding-top: 20px;
+            margin-top: 110px;
+        }
+    }
+    .story-sharer{
+        .story-sharer{
+            .h3-label{
+                font-size:20px;
+            }
+            .story-text{
+                width: 80%;
+            }
+        }
+        }
 }

@@ -75,6 +75,13 @@
   position: relative;
   max-width: 320px;
 }
+.login .content .rightSide .form .username .inp {
+  display: flex;
+}
+.login .content .rightSide .form .username .inp .help-block {
+  color: red;
+  font-size: 25px;
+}
 .login .content .rightSide .form .username label {
   font-size: 14px;
   transition: all 0.3s;

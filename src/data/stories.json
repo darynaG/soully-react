@@ -3,47 +3,38 @@
     "id":1,
     "mood":"sad",
     "username": "Aizek",
-
     "likes":2,
     "date":"18/6/2019",
     "activities": ["running", "reading"],
-    "text": "No matter how much the world tries to hold you back, always continue with the belief that what you want to achieve is possible. Believing you can become successful is the most important step in actually achieving it."
+    "text": "My family and I are headed off on a road trip. My son and my parents are tagging along as well. My son's name is Charlie. He is 3 years old. My moms name is Charlotte, and my dad's name is Daniel. We are all headed to California. Then we were T-boned by a truck. My son and my family are all dead. I was the only one who made it out alive. I went for help. They got my family out of the car crash. My son was breathing but they couldn't save his life. I was the only one who made it out alive. I went home and tried to sleep. I kept hearing things in Charlie's room, but nobody was in there. It has been happening for 15 years now. I have another son who says he is playing with a ghost boy named Charlie."
 },
 {
     "id":2,
     "mood":"sad",
     "username": "Alice",
-
     "likes":5,
-
     "date":"18/5/2019",
     "activities": ["running", "sleep"],
-
-    "text": "Before I am going to talk about that further, it's necessary to dive into a bit of prejudice people can have about me. I usually don't talk about this topic, but it's important to speak up about it once and for all."
+    "text": "I awoke to a strange clanking sound. I opened my eyes, blinking out black spots. My head throbbed, my heart pounding, ringing in my ears. I tried to move my hands, but something held me back. I looked down, sweat covering my frail body. There were leather straps restraining my hands down. I was unable to move anything but my head. My middle, legs, and chest were also strapped down. My head collapsed back with the effort to keep it up. I was laying on a hard concrete table, like an old torture table."
 },
 {
     "id":3,
     "mood":"sad",
     "username": "Tom",
-
     "likes":8,
-
     "date":"19/6/2019",
     "activities": ["walking", "reading"],
-
     "text": "Thow much the world tries to hold you back, always continue with the belief that what you want to achieve is possible. Believing you can become successful is the most important step in actually achieving it."
 },
 {
     "id":4,
     "mood":"happy",
     "username": "Jack",
-
     "likes":1,
-
     "date":"18/6/2019",
     "activities": ["running", "working"],
+    "text": "In my junior year of high school, this guy asked me on a date. He rented a Redbox movie and made a pizza. We were watching the movie and the oven beeped so the pizza was done. He looked me dead in the eye and said, “This is the worst part.” I then watched this boy open the oven and pull the pizza out with his bare hands, rack and all, screaming at the top of his lungs. We never had a second date."
 
-    "text": "YYYY matter how much the world tries to hold you back, always continue with the belief that what you want to achieve is possible. Believing you can become successful is the most important step in actually achieving it."
 },
 {
     "id":5,
@@ -52,7 +43,7 @@
     "likes":8,
     "date":"20/6/2019",
     "activities": ["running", "working","sleeping"],
-    "text": "matter how much the world tries to hold you back, always continue with the belief that what you want to achieve is possible. Believing you can become successful is the most important step in actually achieving it."
+    "text": "I failed the first quarter of a class in middle school, so I made a fake report card. I did this every quarter that year. I forgot that they mail home the end-of-year cards, and my mom got it before I could intercept with my fake. She was PISSED—at the school for their error. The teacher also retired that year and had already thrown out his records, so they had to take my mother’s “proof” (the fake ones I made throughout the year) and “correct” the “mistake.” I’ve never told her the truth."
 },
 {
     "id":6,
@@ -61,7 +52,7 @@
     "username": "Nick Scratch",
     "date":"20/6/2019",
     "activities": ["running", "working","sleeping"],
-    "text": "matter how much the world tries to hold you back, always continue with the belief that what you want to achieve is possible. Believing you can become successful is the most important step in actually achieving it."
+    "text": "I went to this girl’s party the week after she beat the shit out of my friend. While everyone was getting trashed, I went around putting tuna inside all the curtain rods and so like weeks went by and they couldn’t figure out why the house smelled like festering death. They caught me through this video where these guys at the party were singing Beyoncé while I was in the background with a can of tuna."
 },
 {
     "id":7,
@@ -70,7 +61,7 @@
     "username": "Julia",
     "date":"20/6/2019",
     "activities": ["running", "sleeping"],
-    "text": "prefer to gfgfkg how much the world tries to hold you back, always continue with the belief that what you want to achieve is possible. Believing you can become successful is the most important step in actually achieving it."
+    "text": "When I was little, I would go on Nickelodeon.com all the time and they had this game similar to Club Penguin, except it was called Nicktropolis. And if you forgot your password, a security question you could choose was “What is your eye color?” and if you got it right it’d tell you your password. So I would go to popular locations in Nicktropolis and write down random usernames who were also in those areas, and then I would log out and type in the username as if it were my own and see which of these usernames had a security question set to “What is your eye color?” (Which was most of them, since it was easy and we were all kids). I would then try either brown, blue, or green, and always get in, then I would go to their house and send all of their furniture and decorations to my own accounts. And if I didn’t want it, I could sell it for money."
 },
 {
     "id":8,
@@ -79,7 +70,7 @@
     "username": "Severus",
     "date":"20/6/2019",
     "activities": ["running", "sleeping"],
-    "text": "prefer to gfgfkg how much the world tries to hold you back, always continue with the belief that what you want to achieve is possible. Believing you can become successful is the most important step in actually achieving it."
+    "text": "One time my drama class’s teacher had gone home sick so we were just put in a classroom with a movie to entertain us for the period when an alarm went off. None of us were sure if it was the fire alarm or the lockdown alarm, so we all head out into the hall to check and no one’s out there, so we head back in and climb under our desks as is lockdown procedure. Cut to an hour or so later when a teacher bursts in and nearly dies of relief because the school was on fire and we were the only students not accounted for and half the faculty and fire department had been searching for us for ages. Literally, the whole school had filled with smoke while we’d kept super safe under our wooden desks."
 },
 {
     "id":9,
@@ -180,7 +171,7 @@
     "username": "Diego",
     "date":"20/6/2019",
     "activities": ["running", "sleeping"],
-    "text": "prefer to gfgfkg how much the world tries to hold you back, always continue with the belief that what you want to achieve is possible. Believing you can become successful is the most important step in actually achieving it."
+    "text": "When an accountant from Alaska decides to give up her day job, not everybody is supportive. However, her fortunes improve when her tutor buys a record company. It turns out all the secondary characters are manifestations of the accountant's multiple personality disorder."
 },
 {
     "id":19,

@@ -37,11 +37,14 @@
   margin-top: 50px;
   margin-bottom: 100px;
 }
+.all_s {
+  background-repeat: repeat-y;
+}
 .minimize {
   justify-content: left;
   background-color: #004d408f;
   position: relative;
-  margin-top: 90px;
+  margin-top: 75px;
   padding: 20px;
 }
 .minimize .h3-label {

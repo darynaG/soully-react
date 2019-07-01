@@ -129,11 +129,8 @@ class StoryBoard extends PureComponent {
                        <div> {data.mood}
                        </div>
                     </div>
-                   
-
                     <article className="story_text"> <FontAwesomeIcon icon={faQuoteLeft} size="1x"/>
                     {data.text}
-
                         </article>
 
 
@@ -152,21 +149,15 @@ class StoryBoard extends PureComponent {
              this.state.current.slice(2,3).map((data)=>{
                  return(
                     <div className="story">
-                    
                     <div className="story_head">
-                       
                        <div> {data.username}
                        </div>
                        <div> {data.mood}
                        </div>
                     </div>
-                   
-
                     <article className="story_text"> <FontAwesomeIcon icon={faQuoteLeft} size="1x"/>
                     {data.text}
-
-              
-              </article> 
+                    </article> 
                     
             </div>
              )

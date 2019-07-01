@@ -150,6 +150,7 @@
 .centeredcolumn {
   width: 60%;
   margin: auto;
+  background: #ffffff;
 }
 .loadingContainer {
   padding-top: 20%;

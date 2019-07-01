@@ -23,12 +23,7 @@ export const hideMobileNavMenu = () => ({
 
 
 
-let nextTodoId = 0
-export const addStory = text => ({
-  type: 'ADD_TODO',
-  id: nextTodoId++,
-  text
-})
+
 
 
 
@@ -85,6 +80,11 @@ export const fetchDataFailure = error => ({
 export const fetchDataLoading=()=>({
   type: 'FETCH_DATA_LOADING'
 })
-
+export const DataLoaded=()=>({
+  type: 'DATA_LOADED'
+})
+export const DataLoading=()=>({
+  type: 'DATA_LOADING'
+})
 
 

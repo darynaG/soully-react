@@ -12,7 +12,7 @@ class Post extends React.Component{
  
     render(){return(
     <div className="story" >
-      { console.log("Post",this.props)}
+      
                         
         <div className="story_head">
                 <img className="image_user" src={im1}/>

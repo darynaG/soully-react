@@ -4,13 +4,14 @@ import PostsWithLikes from '../../containers/LikedStoryline'
 import '../../css/stories.css'
 import '../../css/quote.css'
 import '../../css/story-input.css'
+import {connect} from 'react-redux'
 class StoryPage extends React.Component {
     render() {
         
         return (
             <div>
                 <StoryEdit  isMin ={true}/>
-                <PostsWithLikes posts ={this.props.postst} />
+                <PostsWithLikes posts ={this.props.posts} />
             </div>
         )
     }
@@ -18,8 +19,8 @@ class StoryPage extends React.Component {
 }
 const mapStateToPops = (state) =>{
         return{
-            posts:state.loadData.posts
+            posts:state.dataReducer.posts
         }
     
 }
-export default StoryPage;
+export default (connect)(mapStateToPops)(StoryPage);

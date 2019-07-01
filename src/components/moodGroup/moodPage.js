@@ -2,9 +2,9 @@ import React from 'react';
 import {connect} from 'react-redux'
 import { Redirect } from 'react-router-dom'
 
-import Group from "../activity/activityGroup";
-import MoodGroup from '../mood-group/test'
-import StoryEditor from '../../components/story-page/story-editor'
+import Group from "../../containers/activityGroup";
+import MoodGroup from '../moodGroup/test'
+import StoryEditor from '../../components/storyPage/storyEditor'
 import Footer from '../../components/footer/footer'
 
 import videoClip from '../../assets/video/Nature.mp4';

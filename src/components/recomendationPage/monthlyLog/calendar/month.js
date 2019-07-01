@@ -3,7 +3,7 @@ import PropTypes from "prop-types";
 import "../../../../css/Month_.css";
 import Calendar from "react-calendar";
 
-import WithManageMemo from "../../../../containers/WithManageMemo";
+import WithManageMemo from "../../../../containers/withManageMemo";
 
 
 const Month = ({ onClickDay,  day, memos }) => {

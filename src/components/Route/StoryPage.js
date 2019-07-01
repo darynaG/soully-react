@@ -1,6 +1,6 @@
 import React from 'react'
-import StoryEdit from '../story-page/story-editor'
-import PostsWithLikes from '../../containers/LikedStoryline'
+import StoryEdit from '../storyPage/storyEditor'
+import PostsWithLikes from '../../containers/likedStoryline'
 import '../../css/stories.css'
 import '../../css/quote.css'
 import '../../css/story-input.css'

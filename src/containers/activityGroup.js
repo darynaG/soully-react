@@ -1,30 +1,29 @@
 import React from 'react';
-import Check from '../mood-group/checkbox';
-import imgL from '../../assets/img/angle-left.png'
-import imgH from '../../assets/img/angle-right.png'
+import Check from '../components/moodGroup/checkbox';
+
 import { connect } from 'react-redux'
 
-import water from '../../assets/img/water_black.png'
-import sport from '../../assets/img/tennis_black.png'
-import lazy from '../../assets/img/sleep_black.png'
-import walking from '../../assets/img/walking_black.png'
-import hiking from '../../assets/img/hiking_black.png'
-import running from '../../assets/img/running_black.png'
-import date from '../../assets/img/date_black.png'
-import birthday from '../../assets/img/cake_black.png'
-import party from '../../assets/img/party_black.png'
-import charity from '../../assets/img/charity_black.png'
+import water from '../assets/img/water_black.png'
+import sport from '../assets/img/tennis_black.png'
+import lazy from '../assets/img/sleep_black.png'
+import walking from '../assets/img/walking_black.png'
+import hiking from '../assets/img/hiking_black.png'
+import running from '../assets/img/running_black.png'
+import date from '../assets/img/date_black.png'
+import birthday from '../assets/img/cake_black.png'
+import party from '../assets/img/party_black.png'
+import charity from '../assets/img/charity_black.png'
 
-import waterClicked from '../../assets/img/water_green.png'
-import sportClicked from '../../assets/img/tennis_green.png'
-import lazyClicked from '../../assets/img/sleep_green.png'
-import walkingClicked from '../../assets/img/walking_green.png'
-import hikingClicked from '../../assets/img/hiking_green.png'
-import runningClicked from '../../assets/img/running_green.png'
-import dateClicked from '../../assets/img/date_green.png'
-import birthdayClicked from '../../assets/img/cake_green.png'
-import partyClicked from '../../assets/img/party_green.png'
-import charityClicked from '../../assets/img/charity_green.png'
+import waterClicked from '../assets/img/water_green.png'
+import sportClicked from '../assets/img/tennis_green.png'
+import lazyClicked from '../assets/img/sleep_green.png'
+import walkingClicked from '../assets/img/walking_green.png'
+import hikingClicked from '../assets/img/hiking_green.png'
+import runningClicked from '../assets/img/running_green.png'
+import dateClicked from '../assets/img/date_green.png'
+import birthdayClicked from '../assets/img/cake_green.png'
+import partyClicked from '../assets/img/party_green.png'
+import charityClicked from '../assets/img/charity_green.png'
 
 class Group extends React.Component {
    arr;

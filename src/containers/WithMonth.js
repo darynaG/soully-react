@@ -1,5 +1,5 @@
 import { connect } from "react-redux";
-import Month from "../components/recomendation-page/monthly-log/Calendar/Month"
+import Month from "../components/recomendationPage/monthlyLog/calendar/month"
 import * as actions from "../actions";
 
 

@@ -3,21 +3,21 @@ import { BrowserRouter as Router, Route, Link } from "react-router-dom";
 import { connect } from 'react-redux';
 
 import '../App.css';
-import MoodPage  from '../components/mood-group/moodPage';
+import MoodPage  from '../components/moodGroup/moodPage';
 import Footer from '../components/footer/footer';
-import Day from '../components/Route/Day'
-import Month from '../components/Route/Month'
-import Guest from '../components/Route/Guest'
-import StoryPage from '../components/Route/StoryPage'
+import Day from '../components/route/day'
+import Month from '../components/route/month'
+import Guest from '../components/route/guest'
+import StoryPage from '../components/route/storyPage'
 
 import { history } from '../helpers';
 import { alertActions } from '../actions';
 import { PrivateRoute } from '../components/privateRoute';
 
-import { HomePage } from '../components/HomePage';
-import { LoginPage } from '../components/LoginPage';
-import { RegisterPage } from '../components/RegisterPage';
-import HeaderR from '../components/header/new-header'
+
+import { LoginPage } from '../containers/loginPage';
+import { RegisterPage } from '../components/registerPage';
+import HeaderR from '../components/header/header'
 import videoClip from '../assets/video/Nature.mp4';
 
 

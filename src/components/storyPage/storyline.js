@@ -1,6 +1,6 @@
 import React ,{ Component}from 'react';
 import { library } from '@fortawesome/fontawesome-svg-core'
-import Post from '../story-page/message'
+import Post from '../storyPage/message'
 import {connect} from "react-redux";
 import {  faGratipay} from '@fortawesome/free-brands-svg-icons'
 import Messages from '../../data/posts.js';

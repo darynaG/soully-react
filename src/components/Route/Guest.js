@@ -1,7 +1,7 @@
 import React from 'react'
-import MoodGroup from '../mood-group/test'
-import StoryBoard from '../guest-page/storyBord';
-import Quote from '../guest-page/quote'
+import MoodGroup from '../moodGroup/test'
+import StoryBoard from '../guestPage/storyBord';
+import Quote from '../guestPage/quote'
 import '../../css/new-mood-page.css';
 import '../../css/story-input.css'
 import store from '../../store';

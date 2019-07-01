@@ -1,7 +1,7 @@
 import { connect } from 'react-redux'
 import { onAddPost,fetchDataFailure,fetchDataSuccess,fetchDataLoading } from '../actions';
 
-import {Posts} from '../components/story-page/storyline';
+import {Posts} from '../components/storyPage/storyline';
 
 
 const onLike = (post) => ({ type: 'LIKE_POST', post });

@@ -1,6 +1,6 @@
 import React from 'react'
-import DailyMood from '../recomendation-page/daily-status/daily';
-import Recomendation from '../recomendation-page/swiper/swiper';
+import DailyMood from '../recomendationPage/dailyStatus/daily';
+import Recomendation from '../recomendationPage/swiper/swiper';
 import { connect } from "react-redux";
 import '../../css/recomendation.css';
 import '../../css/daily-log.css';

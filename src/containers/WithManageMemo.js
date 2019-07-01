@@ -1,5 +1,5 @@
 import { connect } from "react-redux";
-import ManageMemo from "../components/recomendation-page/monthly-log/Calendar/ManageMemo";
+import ManageMemo from "../components/recomendationPage/monthlyLog/calendar/manageMemo";
 import Messages from '../data/stories.json'
 import store from '../store'
 

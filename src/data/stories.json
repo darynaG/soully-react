@@ -190,7 +190,26 @@
     "date":"28/6/2019",
     "activities": ["running", "sleeping"],
     "text": "Before I am going to talk about that further, it's necessary to dive into a bit of prejudice people can have about me. I usually don't talk about this topic, but it's important to speak up about it once and for all. Of course, being judged by others comes with the job I chose. It's not like I didn't expect people to have opinions about me. It's also not like I have never encountered others judging me before either. I have always been one of those people that could never fit into the crowd. In a way, I did not even want to fit in. I just did not understand the 'point' of being like others. "
+},
+{
+    "id":21,
+    "mood":"excited",
+    "likes":18,
+    "username": "Jack",
+    "date":"01/7/2019",
+    "activities": ["running", "sleeping"],
+    "text": "Before I am going to talk about that further, it's necessary to dive into a bit of prejudice people can have about me. I usually don't talk about this topic, but it's important to speak up about it once and for all. Of course, being judged by others comes with the job I chose. It's not like I didn't expect people to have opinions about me. It's also not like I have never encountered others judging me before either. I have always been one of those people that could never fit into the crowd. In a way, I did not even want to fit in. I just did not understand the 'point' of being like others. "
+},
+{
+    "id":22,
+    "mood":"excited",
+    "likes":18,
+    "username": "Jack",
+    "date":"01/7/2019",
+    "activities": ["running", "sleeping"],
+    "text": "It was a really hard day today"
 }
+
 
 
 

@@ -1,0 +1,134 @@
+@import "variables.less";
+*{
+    font-family: 'Courier New', Courier, monospace;
+}
+.registration{
+    display: flex;
+    min-height: 583px;
+   // background-color: #fff;
+    border-radius: 6px;
+    height: 90vh;
+    background-image: url(../assets//img//sky.jpg);
+    background-size: cover;
+    //filter: blur(8px);
+    //-webkit-filter: blur(8px);
+    .content{
+        
+        margin:auto;
+        display:flex;
+        flex-direction:row;
+        width: 50%;
+        .leftSide, .rightSide{
+            width:50%;
+            margin-top:10vh;
+            background-color: #fff;
+            padding:5%;
+        }
+        .leftSide{
+            
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            .headerImg{
+                user-select: none;
+                box-sizing:border-box;
+                img{
+                    user-select: none;
+                    width: 100%;
+                }
+            }
+            .account{
+                display:flex;
+                flex-wrap: wrap;
+                color: @green;
+                font-size: 20px;
+                line-height: 21px;
+                h5,a{
+                    width: 100%;
+                    margin-bottom: 10px;
+                    color:@green;
+                    
+                }
+                a{
+
+                text-decoration:underline;
+                font-size: 15px;
+                }
+                
+            }
+        }
+        .rightSide{
+            box-sizing: border-box;
+            user-select:none;
+            input{
+                outline:none;
+                overflow:visible;
+                line-height: 1.15;
+            }
+            h3{
+
+                text-transform: capitalize;
+                color:@green;
+            }
+            .form{
+                touch-action: none;
+                .username{
+                    margin-bottom: 20px;
+                    position: relative;
+                    max-width: 320px;
+                    .inp{
+                        display:flex;
+                        .help-block{
+                            color:red;
+                            font-size: 25px;
+                        }
+
+                    }
+                  
+                    label{
+                        font-size: 14px;
+                        transition: all .3s;
+                        position: absolute;
+                        top: 0;
+                        left: 0;
+                        color: #a0a0a0;
+                        transform-origin: left;
+                        pointer-events: none;
+                    }
+                    .form-control{
+                        font-size: 14px;
+                        transition: all .3s;
+                        width: 100%;
+                        padding: 20px 0 3px;
+                        border: none;
+                        border-bottom: 1px solid #a0a0a0;
+                    }
+                }
+                }
+            .btn{
+                    width: 100%;
+                    height: 40px;
+                    margin-top: 30px;
+                    color: #fff;
+                    font-size: 14px;
+                    text-align: center;
+                    background-color: @green;
+                    border-radius: 8px;
+                    transition: background-color .4s;
+                }
+            }
+        }
+    }
+    @media screen and (max-width:700px){
+        .registration{
+            .content{
+                .leftSide{
+                    visibility: collapse;
+                    width: 0%;
+                }
+                .rightSide{
+                    width: 100%;
+                }
+            }
+        }
+    }

@@ -4,13 +4,13 @@ import { Redirect } from 'react-router-dom'
 import { connect } from 'react-redux';
 
 import { userActions } from '../../actions/index'
+import '../../css/login.css'
+import logo from "../../assets/img/logo_soully.png"
+import llama from '../../assets/img/lama_green.png'
 
 class LoginPage extends React.Component {
     constructor(props) {
         super(props);
-
-        // reset login status
-        //this.props.dispatch(userActions.logout());
 
         this.state = {
             username: '',
@@ -45,17 +45,28 @@ class LoginPage extends React.Component {
         const { loggingIn } = this.props;
         const { username, password, submitted } = this.state;
         return (
-            <div style={{marginTop:"200px"}} className="col-md-6 col-md-offset-3">
-                <h2>Login</h2>
-                <form name="form" onSubmit={this.handleSubmit}>
-                    <div className={'form-group' + (submitted && !username ? ' has-error' : '')}>
+            <div className="login">
+                <div className="content">
+                    <div className="leftSide">
+                        <div className="headerImg">
+                        <img src = {llama}></img>
+                        </div>
+                        <div className="account">
+                        <h5>Do not have an account?</h5>
+                        <Link to="/register" className="btn-link">Create a free account</Link>
+                        </div>
+                    </div>
+                    <div className="rightSide">
+                <h1>Log In</h1>
+                <form className="form" onSubmit={this.handleSubmit}>
+                    <div className="username">
                         <label htmlFor="username">Username</label>
                         <input type="text" className="form-control" name="username" value={username} onChange={this.handleChange} />
                         {submitted && !username &&
                             <div className="help-block">Username is required</div>
                         }
                     </div>
-                    <div className={'form-group' + (submitted && !password ? ' has-error' : '')}>
+                    <div className="username">
                         <label htmlFor="password">Password</label>
                         <input type="password" className="form-control" name="password" value={password} onChange={this.handleChange} />
                         {submitted && !password &&
@@ -63,15 +74,17 @@ class LoginPage extends React.Component {
                         }
                     </div>
                     <div className="form-group">
-                        <button  className="btn btn-primary">Login</button>
-                        {loggingIn &&
-                            <img src="data:image/gif;base64,R0lGODlhEAAQAPIAAP///wAAAMLCwkJCQgAAAGJiYoKCgpKSkiH/C05FVFNDQVBFMi4wAwEAAAAh/hpDcmVhdGVkIHdpdGggYWpheGxvYWQuaW5mbwAh+QQJCgAAACwAAAAAEAAQAAADMwi63P4wyklrE2MIOggZnAdOmGYJRbExwroUmcG2LmDEwnHQLVsYOd2mBzkYDAdKa+dIAAAh+QQJCgAAACwAAAAAEAAQAAADNAi63P5OjCEgG4QMu7DmikRxQlFUYDEZIGBMRVsaqHwctXXf7WEYB4Ag1xjihkMZsiUkKhIAIfkECQoAAAAsAAAAABAAEAAAAzYIujIjK8pByJDMlFYvBoVjHA70GU7xSUJhmKtwHPAKzLO9HMaoKwJZ7Rf8AYPDDzKpZBqfvwQAIfkECQoAAAAsAAAAABAAEAAAAzMIumIlK8oyhpHsnFZfhYumCYUhDAQxRIdhHBGqRoKw0R8DYlJd8z0fMDgsGo/IpHI5TAAAIfkECQoAAAAsAAAAABAAEAAAAzIIunInK0rnZBTwGPNMgQwmdsNgXGJUlIWEuR5oWUIpz8pAEAMe6TwfwyYsGo/IpFKSAAAh+QQJCgAAACwAAAAAEAAQAAADMwi6IMKQORfjdOe82p4wGccc4CEuQradylesojEMBgsUc2G7sDX3lQGBMLAJibufbSlKAAAh+QQJCgAAACwAAAAAEAAQAAADMgi63P7wCRHZnFVdmgHu2nFwlWCI3WGc3TSWhUFGxTAUkGCbtgENBMJAEJsxgMLWzpEAACH5BAkKAAAALAAAAAAQABAAAAMyCLrc/jDKSatlQtScKdceCAjDII7HcQ4EMTCpyrCuUBjCYRgHVtqlAiB1YhiCnlsRkAAAOwAAAAAAAAAAAA==" />
+                        <button  className="btn">Log in</button>
+                        {loggingIn 
                           
                         }
-                        <Link to="/register" className="btn btn-link">Register</Link>
+                      
                     </div>
                 </form>
+                </div>
+                </div>
             </div>
+
         );
     }
 }

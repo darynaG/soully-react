@@ -6,11 +6,8 @@
   min-height: 583px;
   background-color: #fff;
   border-radius: 6px;
-
   height: 100vh;
-
   background-image: url(../assets/img/brooke.jpg);
-
   background-size: cover;
 }
 .login .content {
@@ -77,6 +74,13 @@
   margin-bottom: 20px;
   position: relative;
   max-width: 320px;
+}
+.login .content .rightSide .form .username .inp {
+  display: flex;
+}
+.login .content .rightSide .form .username .inp .help-block {
+  color: red;
+  font-size: 25px;
 }
 .login .content .rightSide .form .username label {
   font-size: 14px;

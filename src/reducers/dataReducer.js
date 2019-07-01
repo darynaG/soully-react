@@ -1,6 +1,7 @@
 const initialState = {
     posts: [],
     loading: false,
+
     error: null
 };
 
@@ -13,7 +14,8 @@ export default function dataReducer(state=initialState, action) {
                     loading: true,
                   
                 };
-            
+        
+                     
             
         case 'FETCH_DATA_FAILURE':
             return {
@@ -38,7 +40,7 @@ export default function dataReducer(state=initialState, action) {
                 ...state,
                 posts: value
             }
-            
+       
         default:
             return state;
     }

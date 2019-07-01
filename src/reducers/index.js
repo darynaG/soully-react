@@ -4,6 +4,7 @@ import currentday from "./currentDay";
 import changeMood from './changeMood';
 import changeActivity from './changeActivity';
 import dataReducer from './dataReducer'
+import loadingReducer from './reducers'
 import {posts, postsLikes, postsLikeCounters} from './reducerLike'
 
 import { authentication } from './authentication.reducer';
@@ -19,6 +20,7 @@ const rootReducer = combineReducers({
   postsLikeCounters,
   changeActivity,
   dataReducer,
+  loadingReducer,
   authentication,
   registration,
   users,

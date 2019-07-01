@@ -22,6 +22,7 @@ const mapDispatchToProps = {
   fetchDataSuccess,
   fetchDataLoading
 
+
 };
 const PostsWithLikes = connect(mapStateToProps, mapDispatchToProps)(Posts);
 export default PostsWithLikes

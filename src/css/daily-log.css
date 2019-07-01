@@ -9,12 +9,17 @@
 .daily-log .content {
   display: flex;
 }
+.daily-log .image {
+  margin-left: auto;
+}
+.daily-log .image img {
+  height: 20vh;
+}
 .daily-log .leftside {
   width: 40vw;
-  height: 70vh;
   border-right: 1px solid black;
   height: fit-content;
-  align-self: baseline;
+  text-align: -webkit-center;
   display: flex;
   flex-direction: column;
 }
@@ -34,9 +39,9 @@
 }
 .daily-log .stories {
   width: 60vw;
-  height: 70vh;
   display: flex;
   flex-direction: column;
+  text-align: -webkit-center;
 }
 .daily-log .stories .story {
   margin: 20px ;
@@ -60,7 +65,7 @@
 }
 .daily-log div {
   margin: 10px;
-  align-items: center;
+  align-items: baseline;
   display: flex;
 }
 .daily-log .block {

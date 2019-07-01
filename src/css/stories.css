@@ -155,6 +155,11 @@
   padding-left: 45%;
   padding-bottom: 20%;
 }
+.day_load {
+  padding-top: 17%;
+  padding-bottom: 20%;
+  padding-left: 48%;
+}
 @media screen and (max-width: 900px) {
   .centeredcolumn {
     width: 100%;
@@ -171,5 +176,8 @@
   }
   .story-board .leftcolumn {
     width: 100%;
+  }
+  .day_load {
+    padding-left: 10%;
   }
 }

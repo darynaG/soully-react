@@ -37,12 +37,15 @@ export class  Posts extends React.Component{
         }).then(console.log("Here"))
 
     }
+    componentDidUpdate(){
+       // this.setState({posts:this.props.posts});
+    }
   render(){ 
     
     if(store.getState().dataReducer.loading===true){
         console.log("!!!!!!!!!!!loooooading",store.getState().dataReducer.loading);
         return(
-            <div className="loadingContainer">
+            <div className="loadingContainer three">
                 <Spinner size={120} spinnerColor={"#004d408f"} spinnerWidth={8} visible={true} />
             </div>
         )

@@ -7,9 +7,9 @@ import {
     faQuoteRight
 } from '@fortawesome/free-solid-svg-icons'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import lama from '../../../assets/img/lama_green.png'
 
 import '../../../css/button.css'
-import store from '../../../store'
 
 library.add(
     faQuoteLeft,
@@ -87,8 +87,10 @@ class DailyMood extends React.Component {
                      <ul> {stor} </ul>
                      </div>
                       </div>
-                     
-                     <button className="round-btn"><Link to ="/">Keep track</Link></button>
+                      <div className="image">
+                      
+                      <Link to ="/home"><img src={lama} ></img></Link>
+                      </div>
                      </div>
                 );
         }

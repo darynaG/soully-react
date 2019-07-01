@@ -15,9 +15,14 @@ const StoryEdit =(props)=>{
                     e.preventDefault();
                     let t=input.value;
                     if(t.replace(/\s/g, "")!==""){ var a={
-                            "mood":props.mood,
-                            "text":input.value
-                        }
+                        "mood":props.mood,
+                        "id":18,
+                        "likes":0,
+                        "usename":"me",
+                        "date":Date.now(),
+                        "text":input.value,
+                        "activities": ["running", "sleeping"]
+                    }
                         var j=JSON.stringify(a);
 
                        
@@ -42,17 +47,22 @@ const StoryEdit =(props)=>{
         divElement =  <div className="story-sharer " id="story">
         <form className="story-input" method="post" onSubmit={e=>{      
                         e.preventDefault();
-                            var a={
+                        let t=input.value;
+                        if(t.replace(/\s/g, "")!==""){ var a={
                                 "mood":props.mood,
-                                "text":input.value
+                                "id":18,
+                                "likes":0,
+                                "usename":"me",
+                                "date":Date.now(),
+                                "text":input.value,
+                                "activities": ["running", "sleeping"]
                             }
                             var j=JSON.stringify(a);
-
+    
                            
                             input.value ='';
                            
-                            alert('You Wrote: ' + j);
-
+                            alert('You Wrote: ' + j);}
                             //add json to file
                         //update storyline
                         }}>

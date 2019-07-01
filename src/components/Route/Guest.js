@@ -11,7 +11,7 @@ import videoClip from '../../assets/video/Nature.mp4';
 class Guest extends React.Component{
     render() {
         if(store.getState().dataReducer.loading===true){
-            console.log("!!!!!!!!!!!loooooading",this.props.loading);
+            //console.log("!!!!!!!!!!!loooooading",this.props.loading);
             return(
                 <div className="loadingContainer">
                     <Spinner size={120} spinnerColor={"#004d408f"} spinnerWidth={8} visible={true} />
@@ -38,7 +38,7 @@ class Guest extends React.Component{
 }
 
 const mapStateToProps = (state)=>{
-    console.log("state", state.changeMood.mood);
+    //console.log("state", state.changeMood.mood);
     return{
         mood:state.changeMood.mood,
        // loading:state.dataReducer.loading

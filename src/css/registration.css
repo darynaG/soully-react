@@ -1,81 +1,86 @@
 * {
   font-family: 'Courier New', Courier, monospace;
 }
-.login {
+.registration {
   display: flex;
   min-height: 583px;
-  background-color: #fff;
   border-radius: 6px;
   height: 90vh;
-  background-image: url(../assets/img/sky.jpg);
+  background-image: url(../assets//img//sky.jpg);
   background-size: cover;
 }
-.login .content {
+.registration .content {
   margin: auto;
   display: flex;
   flex-direction: row;
   width: 50%;
 }
-.login .content .leftSide,
-.login .content .rightSide {
+.registration .content .leftSide,
+.registration .content .rightSide {
   width: 50%;
   margin-top: 10vh;
   background-color: #fff;
   padding: 5%;
 }
-.login .content .leftSide {
+.registration .content .leftSide {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
 }
-.login .content .leftSide .headerImg {
+.registration .content .leftSide .headerImg {
   user-select: none;
   box-sizing: border-box;
 }
-.login .content .leftSide .headerImg img {
+.registration .content .leftSide .headerImg img {
   user-select: none;
   width: 100%;
 }
-.login .content .leftSide .account {
+.registration .content .leftSide .account {
   display: flex;
   flex-wrap: wrap;
   color: #004d40;
   font-size: 20px;
   line-height: 21px;
 }
-.login .content .leftSide .account h5,
-.login .content .leftSide .account a {
+.registration .content .leftSide .account h5,
+.registration .content .leftSide .account a {
   width: 100%;
   margin-bottom: 10px;
   color: #004d40;
 }
-.login .content .leftSide .account a {
+.registration .content .leftSide .account a {
   text-decoration: underline;
   font-size: 15px;
 }
-.login .content .rightSide {
+.registration .content .rightSide {
   box-sizing: border-box;
   user-select: none;
 }
-.login .content .rightSide input {
+.registration .content .rightSide input {
   outline: none;
   overflow: visible;
   line-height: 1.15;
 }
-.login .content .rightSide h1 {
-  font-size: 20px;
+.registration .content .rightSide h3 {
   text-transform: capitalize;
   color: #004d40;
 }
-.login .content .rightSide .form {
+.registration .content .rightSide .form {
   touch-action: none;
 }
-.login .content .rightSide .form .username {
+.registration .content .rightSide .form .username {
   margin-bottom: 20px;
   position: relative;
   max-width: 320px;
 }
-.login .content .rightSide .form .username label {
+.registration .content .rightSide .form .username .inp {
+  display: flex;
+}
+.registration .content .rightSide .form .username .inp .help-block {
+  color: red;
+  font-size: 25px;
+}
+.registration .content .rightSide .form .username label {
   font-size: 14px;
   transition: all 0.3s;
   position: absolute;
@@ -85,7 +90,7 @@
   transform-origin: left;
   pointer-events: none;
 }
-.login .content .rightSide .form .username .form-control {
+.registration .content .rightSide .form .username .form-control {
   font-size: 14px;
   transition: all 0.3s;
   width: 100%;
@@ -93,7 +98,7 @@
   border: none;
   border-bottom: 1px solid #a0a0a0;
 }
-.login .content .rightSide .btn {
+.registration .content .rightSide .btn {
   width: 100%;
   height: 40px;
   margin-top: 30px;
@@ -105,11 +110,11 @@
   transition: background-color 0.4s;
 }
 @media screen and (max-width: 700px) {
-  .login .content .leftSide {
+  .registration .content .leftSide {
     visibility: collapse;
     width: 0%;
   }
-  .login .content .rightSide {
+  .registration .content .rightSide {
     width: 100%;
   }
 }

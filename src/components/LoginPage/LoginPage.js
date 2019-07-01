@@ -6,7 +6,7 @@ import { connect } from 'react-redux';
 import { userActions } from '../../actions/index'
 import '../../css/login.css'
 import logo from "../../assets/img/logo_soully.png"
-import llama from '../../assets/img/llama.png'
+import llama from '../../assets/img/lama_green.png'
 
 class LoginPage extends React.Component {
     constructor(props) {
@@ -49,11 +49,10 @@ class LoginPage extends React.Component {
                 <div className="content">
                     <div className="leftSide">
                         <div className="headerImg">
-                        <h2>Soul.ly</h2>
                         <img src = {llama}></img>
                         </div>
                         <div className="account">
-                        <h3>Do not have an account?</h3>
+                        <h5>Do not have an account?</h5>
                         <Link to="/register" className="btn-link">Create a free account</Link>
                         </div>
                     </div>
@@ -76,8 +75,7 @@ class LoginPage extends React.Component {
                     </div>
                     <div className="form-group">
                         <button  className="btn">Log in</button>
-                        {loggingIn &&
-                            <img src="data:image/gif;base64,R0lGODlhEAAQAPIAAP///wAAAMLCwkJCQgAAAGJiYoKCgpKSkiH/C05FVFNDQVBFMi4wAwEAAAAh/hpDcmVhdGVkIHdpdGggYWpheGxvYWQuaW5mbwAh+QQJCgAAACwAAAAAEAAQAAADMwi63P4wyklrE2MIOggZnAdOmGYJRbExwroUmcG2LmDEwnHQLVsYOd2mBzkYDAdKa+dIAAAh+QQJCgAAACwAAAAAEAAQAAADNAi63P5OjCEgG4QMu7DmikRxQlFUYDEZIGBMRVsaqHwctXXf7WEYB4Ag1xjihkMZsiUkKhIAIfkECQoAAAAsAAAAABAAEAAAAzYIujIjK8pByJDMlFYvBoVjHA70GU7xSUJhmKtwHPAKzLO9HMaoKwJZ7Rf8AYPDDzKpZBqfvwQAIfkECQoAAAAsAAAAABAAEAAAAzMIumIlK8oyhpHsnFZfhYumCYUhDAQxRIdhHBGqRoKw0R8DYlJd8z0fMDgsGo/IpHI5TAAAIfkECQoAAAAsAAAAABAAEAAAAzIIunInK0rnZBTwGPNMgQwmdsNgXGJUlIWEuR5oWUIpz8pAEAMe6TwfwyYsGo/IpFKSAAAh+QQJCgAAACwAAAAAEAAQAAADMwi6IMKQORfjdOe82p4wGccc4CEuQradylesojEMBgsUc2G7sDX3lQGBMLAJibufbSlKAAAh+QQJCgAAACwAAAAAEAAQAAADMgi63P7wCRHZnFVdmgHu2nFwlWCI3WGc3TSWhUFGxTAUkGCbtgENBMJAEJsxgMLWzpEAACH5BAkKAAAALAAAAAAQABAAAAMyCLrc/jDKSatlQtScKdceCAjDII7HcQ4EMTCpyrCuUBjCYRgHVtqlAiB1YhiCnlsRkAAAOwAAAAAAAAAAAA==" />
+                        {loggingIn 
                           
                         }
                       

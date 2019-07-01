@@ -10,7 +10,7 @@
   display: flex;
 }
 .daily-log .leftside {
-  width: 40%;
+  width: 40vw;
   height: 70vh;
   border-right: 1px solid black;
   height: fit-content;
@@ -33,7 +33,7 @@
   flex-direction: column;
 }
 .daily-log .stories {
-  width: 60%;
+  width: 60vw;
   height: 70vh;
   display: flex;
   flex-direction: column;

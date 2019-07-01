@@ -1,11 +1,11 @@
-import React ,{ PureComponent}from 'react';
+import React, { PureComponent } from 'react';
 import Messages from '../../data/posts.js';
 import { library } from '@fortawesome/fontawesome-svg-core'
 
 import {
-        faQuoteLeft,
-        faQuoteRight
-  
+    faQuoteLeft,
+    faQuoteRight
+
 } from '@fortawesome/free-solid-svg-icons'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 
@@ -16,166 +16,155 @@ library.add(
 
 
 class StoryBoard extends PureComponent {
-    constructor(props){
-    super(props);
-    this.state={sad:[],wow:[],wtf:[], excited:[],good:[],happy:[],current:[]};
-      
+    constructor(props) {
+        super(props);
+        this.state = { sad: [], wow: [], wtf: [], excited: [], good: [], happy: [], current: [] };
+
     }
-    
-    componentDidMount(){
-        console.log("did mount",this.props.mood);
-        let c= [];
-        let sad=[],wow=[],wtf=[], excited=[],good=[],happy=[];
-        let allstories = [];
-        Messages.getAll().then((data)=>{
-            for(let i = 0;i < data.length;i++){
-                allstories.push(data[i]);
-                switch (data[i].mood){
-                    case "sad":
-                    sad.push(data[i]);
-                    break;
-                    case "wow":
-                    wow.push(data[i]);
-                    break;
-                    case "wtf":
-                    wtf.push(data[i]);
-                    break;
-                    case "excited":
-                    excited.push(data[i]);
-                    break;
-                    case "good":
-                    good.push(data[i]);
-                    break;
-                    case "happy":
-                    happy.push(data[i]);
-                    break;
+
+    componentDidMount() {
+        console.log("did mount", this.props.mood);
+        let c = [];
+        let sad = [],
+            wow = [],
+            wtf = [],
+            excited = [],
+            good = [],
+            happy = [];
+        const allstories = [];
+        const storiesByMood = {};
+        Messages.getAll()
+            .then((data) => {
+                for (let i = 0; i < data.length; i++) {
+                    allstories.push(data[i]);
+                    if (!storiesByMood[data[i].mood]) {
+                        storiesByMood[data[i].mood] = [];
+                    }
+                    storiesByMood[data[i].mood].push(data[i]);
                 }
-            }
-            switch(this.props.mood){
-                case "sad":
-                    c=sad;
-                    break;
-                    case "wow":
-                    c=wow;
-                    break;
-                    case "wtf":
-                    c=wtf;
-                    break;
-                    case "excited":
-                    c=excited;
-                    break;
-                    case "good":
-                    c=good;
-                    break;
-                    case "happy":
-                    c=happy;
-            }
+                // { "sad": [...], "happy": [...]}
+                storiesByMood.current = storiesByMood[this.props.mood];
             }).then(
-            this.setState({sad:sad,wow:wow,wtf:wtf, excited:excited,good:good,happy:happy,current:c}))
+                this.setState(storiesByMood))
     }
-  
-    componentDidUpdate(){
-       
-       let c=[]; 
-        switch(this.props.mood){
+
+    componentDidUpdate() {
+
+        let c = [];
+        switch (this.props.mood) {
             case "sad":
-                    
-                c=this.state.sad;
+
+                c = this.state.sad;
                 break;
             case "wow":
-                  
-                c=this.state.wow;
+
+                c = this.state.wow;
                 break;
             case "wtf":
-                  
-                c=this.state.wtf;
+
+                c = this.state.wtf;
                 break;
             case "excited":
-                    
-                c=this.state.excited;
+
+                c = this.state.excited;
                 break;
             case "good":
-                  
-                c=this.state.good;
+
+                c = this.state.good;
                 break;
             case "happy":
-                  
-                c=this.state.happy;
+
+                c = this.state.happy;
         }
-    
-        this.setState({current:c})
-                
+
+        this.setState({ current: c })
+
     }
 
-   
-    render(){
-       
-    return(
-        <React.Fragment>
-            <h1 className="centered-text" style={{marginTop:'10px'}}>Stories</h1>
-        <div className="storyboard">
-       
-    <div className="story_column left">
-         {
-             this.state.current.slice(0,2).map((data)=>{
-                
-                    return(
-                    <div className="story">
-                    
-                    <div className="story_head">
-                       
-                       <div> {data.username}
-                       </div>
-                       <div> {data.mood}
-                       </div>
-                    </div>
-                   
 
-                    <article className="story_text"> <FontAwesomeIcon icon={faQuoteLeft} size="1x"/>
-                    {data.text}
+    render() {
 
-                        </article>
+        return ( <
+            React.Fragment >
+            <
+            h1 className = "centered-text"
+            style = {
+                { marginTop: '10px' } } > Stories < /h1> <
+            div className = "storyboard" >
+
+            <
+            div className = "story_column left" > {
+                this.state.current.slice(0, 2).map((data) => {
+
+                    return ( <
+                        div className = "story" >
+
+                        <
+                        div className = "story_head" >
+
+                        <
+                        div > { data.username } <
+                        /div> <
+                        div > { data.mood } <
+                        /div> <
+                        /div>
 
 
-            </div>
+                        <
+                        article className = "story_text" > < FontAwesomeIcon icon = { faQuoteLeft }
+                        size = "1x" / > { data.text }
 
-             )
-         
-         })
-        }
+                        <
+                        /article>
 
-    </div>
 
-    <div className="story_column right">
-    
-    {
-             this.state.current.slice(2,3).map((data)=>{
-                 return(
-                    <div className="story">
-                    
-                    <div className="story_head">
-                       
-                       <div> {data.username}
-                       </div>
-                       <div> {data.mood}
-                       </div>
-                    </div>
-                   
+                        <
+                        /div>
 
-                    <article className="story_text"> <FontAwesomeIcon icon={faQuoteLeft} size="1x"/>
-                    {data.text}
+                    )
 
-              
-              </article> 
-                    
-            </div>
-             )
-         })
-        }
-    </div>
-</div>
-</React.Fragment>
-    );
-}
+                })
+            }
+
+            <
+            /div>
+
+            <
+            div className = "story_column right" >
+
+            {
+                this.state.current.slice(2, 3).map((data) => {
+                    return ( <
+                        div className = "story" >
+
+                        <
+                        div className = "story_head" >
+
+                        <
+                        div > { data.username } <
+                        /div> <
+                        div > { data.mood } <
+                        /div> <
+                        /div>
+
+
+                        <
+                        article className = "story_text" > < FontAwesomeIcon icon = { faQuoteLeft }
+                        size = "1x" / > { data.text }
+
+
+                        <
+                        /article> 
+
+                        <
+                        /div>
+                    )
+                })
+            } <
+            /div> <
+            /div> <
+            /React.Fragment>
+        );
+    }
 }
 export default StoryBoard;

@@ -1,9 +1,35 @@
+@media screen and (max-width: 1690px) {
+  .video {
+    width: unset;
+  }
+  .submit-btn {
+    right: 60px;
+  }
+  .activity-picker {
+    padding-top: 50px;
+  }
+  .activity-picker .h3-label {
+    padding-top: 120px;
+  }
+  .activity-picker .arrow {
+    padding-top: 150px;
+  }
+}
 @media screen and (max-width: 1560px) {
   .video {
     width: unset;
   }
   .submit-btn {
     right: 60px;
+  }
+  .activity-picker {
+    padding-top: 80px;
+  }
+  .activity-picker .h3-label {
+    padding-top: 120px;
+  }
+  .activity-picker .arrow {
+    padding-top: 85px;
   }
 }
 @media screen and (max-width: 1190px) {
@@ -28,12 +54,15 @@
   .arrow {
     padding-top: 250px;
   }
-}
-.activity-picker .h3-label {
-  padding-top: 120px;
-}
-.activity-picker .arrow {
-  padding-top: 85px;
+  .activity-picker {
+    padding-top: 80px;
+  }
+  .activity-picker .h3-label {
+    padding-top: 120px;
+  }
+  .activity-picker .arrow {
+    padding-top: 85px;
+  }
 }
 @media screen and (max-width: 800px) {
   .video {

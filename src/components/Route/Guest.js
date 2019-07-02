@@ -3,7 +3,6 @@ import MoodGroup from '../moodGroup/test'
 import StoryBoard from '../guestPage/storyBord';
 import Quote from '../guestPage/quote'
 import '../../css/new-mood-page.css';
-import '../../css/responsible-mood.css'
 import '../../css/story-input.css'
 import store from '../../store';
 import {connect } from 'react-redux'

@@ -203,9 +203,9 @@
 {
     "id":22,
     "mood":"excited",
-    "likes":18,
-    "username": "Jack",
-    "date":"01/7/2019",
+    "likes":0,
+    "username": "Alice",
+    "date":"02/7/2019",
     "activities": ["running", "sleeping"],
     "text": "It was a really hard day today"
 }

@@ -7,8 +7,6 @@ import store from '../store'
 const mapStateToProps = state => {
   var stor = [];
   const {user } =state.authentication;
-  console.log("user", user["username"])
-  console.log("state", state.username)
   Messages.map((data) => {
     if(state.currentday == data.date && data.username == user["username"])
     stor.push( {

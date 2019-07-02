@@ -1,5 +1,5 @@
 
-export function fetchData(route) {
+export default function fetchData(route) {
     return dispatch => {
         return  fetch(route)
         .then(res => res.json())

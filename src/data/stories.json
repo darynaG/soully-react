@@ -11,7 +11,7 @@
 {
     "id":2,
     "mood":"sad",
-    "username": "Alice",
+    "username": "Anya",
     "likes":5,
     "date":"18/5/2019",
     "activities": ["running", "sleep"],
@@ -20,7 +20,7 @@
 {
     "id":3,
     "mood":"sad",
-    "username": "Tom",
+    "username": "Anya",
     "likes":8,
     "date":"19/6/2019",
     "activities": ["walking", "reading"],
@@ -29,7 +29,7 @@
 {
     "id":4,
     "mood":"happy",
-    "username": "Jack",
+    "username": "Anya",
     "likes":1,
     "date":"18/6/2019",
     "activities": ["running", "working"],
@@ -39,7 +39,7 @@
 {
     "id":5,
     "mood":"happy",
-    "username": "Jack",
+    "username": "Anya",
     "likes":8,
     "date":"20/6/2019",
     "activities": ["running", "working","sleeping"],
@@ -167,7 +167,7 @@
 {
     "id":18,
     "mood":"excited",
-    "likes":18,
+    "likes":12,
     "username": "Diego",
     "date":"20/6/2019",
     "activities": ["running", "sleeping"],
@@ -176,8 +176,8 @@
 {
     "id":19,
     "mood":"excited",
-    "likes":18,
-    "username": "Jack",
+    "likes":7,
+    "username": "Anya",
     "date":"28/6/2019",
     "activities": ["running", "sleeping"],
     "text": "I didn't realize it at first, or at least I tried my best to ignore it as much as possible. I kept teling myself that everything was still the same, that nothing has changed and I had everything under control. I was desperately trying to stay in the old swing of things, my old balance. It was all a big, big lie. With all the things that happened, it was just impossible for me to stay the same."
@@ -186,7 +186,7 @@
     "id":20,
     "mood":"excited",
     "likes":18,
-    "username": "Jack",
+    "username": "Anya",
     "date":"28/6/2019",
     "activities": ["running", "sleeping"],
     "text": "Before I am going to talk about that further, it's necessary to dive into a bit of prejudice people can have about me. I usually don't talk about this topic, but it's important to speak up about it once and for all. Of course, being judged by others comes with the job I chose. It's not like I didn't expect people to have opinions about me. It's also not like I have never encountered others judging me before either. I have always been one of those people that could never fit into the crowd. In a way, I did not even want to fit in. I just did not understand the 'point' of being like others. "
@@ -194,8 +194,8 @@
 {
     "id":21,
     "mood":"excited",
-    "likes":18,
-    "username": "Jack",
+    "likes":10,
+    "username": "Anya",
     "date":"01/7/2019",
     "activities": ["running", "sleeping"],
     "text": "Before I am going to talk about that further, it's necessary to dive into a bit of prejudice people can have about me. I usually don't talk about this topic, but it's important to speak up about it once and for all. Of course, being judged by others comes with the job I chose. It's not like I didn't expect people to have opinions about me. It's also not like I have never encountered others judging me before either. I have always been one of those people that could never fit into the crowd. In a way, I did not even want to fit in. I just did not understand the 'point' of being like others. "
@@ -203,11 +203,20 @@
 {
     "id":22,
     "mood":"excited",
-    "likes":18,
-    "username": "Jack",
+    "likes":0,
+    "username": "Anya",
     "date":"01/7/2019",
     "activities": ["running", "sleeping"],
     "text": "It was a really hard day today"
+},
+{
+    "id":23,
+    "mood":"excited",
+    "likes":0,
+    "username": "Sierova",
+    "date":"02/7/2019",
+    "activities": ["running", "sleeping"],
+    "text": "Instead of giving us an array of integers [1, 7, 11], we end up with [1, NaN, 3]. What? To find out what on earth is going on, we’ll first have to talk about some Javascript concepts. If you’d like a TLDR, I’ve included a quick summary at the end of this story."
 }
 
 

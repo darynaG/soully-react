@@ -29,7 +29,7 @@ class MoodPage extends React.Component {
     return(    <div>
 
     <div className="mood-picker" id="top">
-     <MoodGroup />
+     <MoodGroup handleClick={this.props.onMoodChange}/>
      <a href="#activity"> <div className="arrow"></div></a>
      </div> 
 
@@ -48,6 +48,8 @@ class MoodPage extends React.Component {
     </div>
      ); }
 }
+
+
 const mapStateToProps = (state) => {
     
     let activities = state.changeActivity;
@@ -58,4 +60,17 @@ const mapStateToProps = (state) => {
        activities: state.changeActivity
     };
    }
-export default connect (mapStateToProps)(MoodPage);
+
+
+   const mapDispatchToProps = (dispatch) => {
+    return {
+      // explicitly forwarding arguments
+      
+      onMoodChange: (event) => {
+        event.preventDefault();
+        dispatch({type: 'CHOOSE_MOOD', mood: event.target.value})}
+  }
+  }
+
+
+export default connect (mapStateToProps, mapDispatchToProps)(MoodPage);

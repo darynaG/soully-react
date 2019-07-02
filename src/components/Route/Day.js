@@ -35,7 +35,7 @@ class Day extends React.Component{
                
                 
                     <div id ='scroll' className='scroll'>
-                     <DailyMood  username = "Jack" mood = {this.props.mood} activity={this.props.activity} date = {a}/>
+                     <DailyMood  username = "Sierova" mood = {this.props.mood} activity={this.props.activity} date = {a}/>
                      </div>
                 </div>
         )

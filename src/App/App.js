@@ -56,11 +56,13 @@ return (
   </div>);
   }
 }
-function mapStateToProps(state) {
-  const { alert } = state;
+
+
+const mapStateToProps=(state) => {
   return {
-      alert
+      data: state.dataReducer.posts
   };
+
 }
 
 const connectedApp = connect(mapStateToProps)(App);

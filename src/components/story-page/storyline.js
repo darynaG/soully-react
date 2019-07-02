@@ -29,7 +29,7 @@ export class  Posts extends React.Component{
      
         var a=Messages.getAll().then((data)=>{
             for(var i=0;i<data.length;i++){
-            temp.push(data[i]);
+            temp.unshift(data[i]);
     }
         })
         .then(()=>{

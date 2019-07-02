@@ -26,6 +26,7 @@ class StoryBoard extends PureComponent {
         let c= [];
         let sad=[],wow=[],wtf=[], excited=[],good=[],happy=[];
         let allstories = [];
+        const storiesByMood = {};
         Messages.getAll().then((data)=>{
             for(let i = 0;i < data.length;i++){
                 allstories.push(data[i]);

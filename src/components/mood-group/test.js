@@ -26,12 +26,12 @@ class MoodGroup extends React.Component {
       <form> 
         <h3 class="h3-label">What is your mood?</h3>
        <ul className="block">
-        <Mood mood="sad" img={sad} imgClicked={sadClicked} type="radio" selected={this.props.mood} onClick={this.props.onMoodChange}/>
-        <Mood mood="wow"  img={wow} imgClicked={wowClicked} type="radio" selected={this.props.mood} onClick={this.props.onMoodChange}/>
-         <Mood mood="wtf"   img={wtf} imgClicked={wtfClicked} type="radio" selected={this.props.mood} onClick={this.props.onMoodChange} />
-         <Mood mood="good"  img={good} imgClicked={goodClicked} type="radio" selected={this.props.mood} onClick={this.props.onMoodChange}/>
-         <Mood mood="excited"  img={excited} imgClicked={excitedClicked} type="radio" selected={this.props.mood} onClick={this.props.onMoodChange}/>
-       <Mood mood="happy"  img={happy} imgClicked={happyClicked} type="radio" selected={this.props.mood} onClick={this.props.onMoodChange}/>
+        <Mood mood="sad" img={sad} imgClicked={sadClicked} type="radio" selected={this.props.mood} onClick={this.props.handleClick && this.props.onMoodChange} />
+        <Mood mood="wow"  img={wow} imgClicked={wowClicked} type="radio" selected={this.props.mood} onClick={this.props.handleClick && this.props.onMoodChange}/>
+         <Mood mood="wtf"   img={wtf} imgClicked={wtfClicked} type="radio" selected={this.props.mood} onClick={this.props.handleClick && this.props.onMoodChange} />
+         <Mood mood="good"  img={good} imgClicked={goodClicked} type="radio" selected={this.props.mood} onClick={this.props.handleClick && this.props.onMoodChange}/>
+         <Mood mood="excited"  img={excited} imgClicked={excitedClicked} type="radio" selected={this.props.mood} onClick={this.props.handleClick && this.props.onMoodChange}/>
+       <Mood mood="happy"  img={happy} imgClicked={happyClicked} type="radio" selected={this.props.mood} onClick={this.props.handleClick && this.props.onMoodChange}/>
        </ul> 
      </form>
      //{/* <a href="#activity"> <div class="arrow"></div></a> */}
@@ -45,6 +45,7 @@ const mapStateToProps = (state) => {
     mood : state.changeMood.mood
  };
 }
+
 
 const mapDispatchToProps = (dispatch) => {
   return {

@@ -8,9 +8,23 @@ const StoryEdit =(props)=>{
    
     let input
     let divElement;
-    if (props.isMin === true)
-    {
-    divElement =<div className="story-sharer minimize" id="story">
+    var c1,c2,c3,c4;
+  
+    if (props.isMin === true){
+        c1="row-container";
+        c2="story-text min" ;
+        c3="round-btn min-btn";
+        c4="story-sharer minimize";
+        console.log("true",c1,c2,c3)
+    }else{
+        c1="story-sharer";
+        c2="story-text " ;
+        c3="round-btn ";
+        c4="story-sharer ";
+        console.log("false",c1,c2,c3)
+    }
+    
+    divElement =<div className={c4} id="story">
     <form className="story-input" method="post" onSubmit={e=>{      
                     e.preventDefault();
                     let t=input.value;
@@ -26,76 +40,20 @@ const StoryEdit =(props)=>{
                         var j=JSON.stringify(a);
 
                        
-                        input.value ='';
-                       
-                        alert('You Wrote: ' + j);}
-
-                        //add json to file
-                    //update storyline
+                        input.value ='';}
                     }}>
-        <div className="row-container">
+        <div className={c1}>
                     <h5 className="h3-label" >Share your story</h5>
-         <textarea className={"story-text min" } name="subject" placeholder="Write something.." ref={node=>input=node} ></textarea>
-         <button className={"round-btn min-btn" } type="submit"  > Share</button>
+         <textarea className={c2 } name="subject" placeholder="Write something.." ref={node=>input=node} ></textarea>
+         <button className={c3} type="submit"  > Share</button>
          
          </div>
     </form>
  </div>
  
-    }
-    else {
-        divElement =  <div className="story-sharer " id="story">
-        <form className="story-input" method="post" onSubmit={e=>{      
-                        e.preventDefault();
-                        let t=input.value;
-                        if(t.replace(/\s/g, "")!==""){ var a={
-                                "mood":props.mood,
-                                "id":18,
-                                "likes":0,
-                                "usename":"me",
-                                "date":Date.now(),
-                                "text":input.value,
-                                "activities": ["running", "sleeping"]
-                            }
-                            var j=JSON.stringify(a);
     
-                           
-                            input.value ='';
-                           
-                            alert('You Wrote: ' + j);}
-                            //add json to file
-                        //update storyline
-                        }}>
-          <div className="story-sharer" >
-        <h5 className="h3-label">Share your story</h5>
-         <textarea className={"story-text" } name="subject" placeholder="Write something.." ref={node=>input=node} ></textarea>
-        <button className={"round-btn" } type="submit"  > Share</button>
-        </div>
-        </form>
-     </div>  
-    }
-        return(
-            <span>{divElement}</span>
-            
-           /*  <div className="story-sharer minimize" id="story">
-                <form className="story-input" method="post" onSubmit={e=>{      
-                                e.preventDefault();
-                                let t=input.value;
-                                if(t.replace(/\s/g, "")!==""){
-                                    var a={
-                                        "mood":props.mood,
-                                        "text":input.value
-                                    }
-                                    var j=JSON.stringify(a);
-                                    input.value ='';
-                                    alert('You Wrote: ' + j);
-                                    store.dispatch(onAddPost(a));}
-                                    //add json to file
-                                //update storyline
-                                }}>
-                    {divElement}
-                </form>
-             </div> */
+        return( divElement
+        
         )
 }
 export default (StoryEdit);

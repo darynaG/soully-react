@@ -1,5 +1,5 @@
 import React from 'react'
-import MoodGroup from '../moodGroup/test'
+import MoodGroup from '../../containers/homePage/moodGroup'
 import StoryBoard from '../guestPage/storyBord';
 import Quote from '../guestPage/quote'
 import '../../css/new-mood-page.css';

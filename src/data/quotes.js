@@ -1,5 +1,5 @@
 import store from "../store";
-import { fetchDataLoading, fetchDataSuccess,fetchDataFailure } from "../actions";
+import { fetchDataLoading, fetchDataSuccess,fetchDataFailure } from "../actions/data.actions";
 
 class Quotes{
     static getAll(){

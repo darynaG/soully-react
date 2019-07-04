@@ -13,7 +13,7 @@ import Actions from '../../../data/do.js'
 import Spinner from 'react-spinner-material';
 import store from '../../../store';
 
-import {DataLoaded, DataLoading} from '../../../actions'
+import {DataLoaded, DataLoading} from '../../../actions/data.actions'
 import { connect } from 'react-redux'
 
 library.add(

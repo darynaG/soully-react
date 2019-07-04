@@ -1,4 +1,4 @@
-import {DataLoaded, DataLoading} from '../actions'
+import {DataLoaded, DataLoading} from '../actions/data.actions'
 
 import store from '../store';
 class Films{

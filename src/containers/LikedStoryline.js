@@ -1,11 +1,11 @@
 import { connect } from 'react-redux'
-import { onAddPost,fetchDataFailure,fetchDataSuccess,fetchDataLoading } from '../actions';
+import {fetchDataFailure,fetchDataSuccess,fetchDataLoading } from '../actions/data.actions';
+import {onAddPost, onLike, onUnlike} from '../actions'
 
 import {Posts} from '../components/storyPage/storyline';
 
 
-const onLike = (post) => ({ type: 'LIKE_POST', post });
-const onUnlike = (post) => ({ type: 'UNLIKE_POST', post });
+
 function mapStateToProps(state) {
   return {
     posts: state.dataReducer,

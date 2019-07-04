@@ -1,7 +1,7 @@
 import React from 'react'
 import { BrowserRouter as Router, Route, Link } from "react-router-dom";
 import { connect } from 'react-redux'
-import { userActions } from '../../actions/index';
+import { userActions } from '../../actions';
 import logo from "../../assets/img/logo_soully.png";
 import '../../css/new-header.css'
 import { library } from '@fortawesome/fontawesome-svg-core'
@@ -45,7 +45,7 @@ class HeaderR extends React.Component{
                         </p>
                         <li>
                             <p className="logout">
-                                <a href="#" onClick={(event)=>this.props.dispatch(userActions.logout())}>Log out</a>
+                                <Link to ="/login" onClick={(event)=>this.props.dispatch(userActions.logout())}>Log out</Link>
                             </p> 
                         </li> 
                      </ul>

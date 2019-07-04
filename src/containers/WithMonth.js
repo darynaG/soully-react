@@ -1,6 +1,6 @@
 import { connect } from "react-redux";
 import Month from "../components/recomendationPage/monthlyLog/calendar/month"
-import * as actions from "../actions";
+import * as actions from "../actions/day.action";
 
 
 const mapStateToProps = state => {

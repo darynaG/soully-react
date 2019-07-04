@@ -21,6 +21,7 @@ class HeaderR extends React.Component{
     
     render() {
         let headerShow;
+       
         if (this.props.loggedIn === true)
         {
              headerShow = <header className="logged">
@@ -45,7 +46,7 @@ class HeaderR extends React.Component{
                         </p>
                         <li>
                             <p className="logout">
-                                <a href="#" onClick={(event)=>this.props.dispatch(userActions.logout())}>Log out</a>
+                                <Link to ="/login" onClick={(event)=>this.props.dispatch(userActions.logout())}>Log out </Link>
                             </p> 
                         </li> 
                      </ul>

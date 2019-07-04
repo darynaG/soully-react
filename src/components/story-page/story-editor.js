@@ -28,7 +28,8 @@ const StoryEdit =(props)=>{
                        
                         input.value ='';
                        
-                        alert('You Wrote: ' + j);}
+                        //alert('You Wrote: ' + j);
+                    }
 
                         //add json to file
                     //update storyline
@@ -62,7 +63,8 @@ const StoryEdit =(props)=>{
                            
                             input.value ='';
                            
-                            alert('You Wrote: ' + j);}
+                            //alert('You Wrote: ' + j);
+                        }
                             //add json to file
                         //update storyline
                         }}>

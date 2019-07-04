@@ -7,6 +7,7 @@ import MoodPage  from '../components/mood-group/moodPage';
 import Footer from '../components/footer/footer';
 import Day from '../components/Route/Day'
 import Month from '../components/Route/Month'
+import Test from '../components/Route/test'
 import Guest from '../components/Route/Guest'
 import StoryPage from '../components/Route/StoryPage'
 
@@ -47,6 +48,7 @@ return (
         <PrivateRoute exact  path="/stories" component={StoryPage} />
         <PrivateRoute exact  path="/month" component={Month} />
        <Route  exact path="/guest" component={Guest} />
+       <Route  exact path="/test" component={Test} />
         <Route exact path="/login" component={LoginPage} />
         <Route exact path="/register" component={RegisterPage} />
         <Footer/>

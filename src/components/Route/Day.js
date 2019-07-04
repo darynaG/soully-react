@@ -16,7 +16,7 @@ class Day extends React.Component{
 
         var a=moment().format("DD/M/YYYY")
         
-
+        console.log("USERNAME",this.props.username);
         return (
              <div>
                 
@@ -36,7 +36,7 @@ class Day extends React.Component{
                
                 
                     <div id ='scroll' className='scroll'>
-                     <DailyMood  username = {this.props.username} mood = {this.props.mood} activity={this.props.activity} date = {a}/>
+                     <DailyMood  username = {this.props.user["username"]} mood = {this.props.mood} activity={this.props.activity}  date = {a}/>
                      </div>
                 </div>
         )
@@ -44,11 +44,11 @@ class Day extends React.Component{
 
 }
 const mapStateToProps = (state)=>{
-
     return{
         mood:state.changeMood.mood,
         activity: state.changeActivity,
-        username: state.authentication["username"]
+        user : state.authentication["user"],
+        //stories: state.DataLoaded.stories
     }
 }
 const mapDispatchToProps = {

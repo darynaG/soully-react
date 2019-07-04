@@ -1,4 +1,7 @@
 import { authHeader } from '../helpers';
+import React from 'react';
+
+import { Redirect } from 'react-router-dom'
 
 export const userService = {
     login,
@@ -30,6 +33,7 @@ function login(username, password) {
 function logout() {
     // remove user from local storage to log user out
     localStorage.removeItem('user');
+   
 }
 
 function getAll() {

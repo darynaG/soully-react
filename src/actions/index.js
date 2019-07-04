@@ -2,6 +2,7 @@
 import * as actionTypes from "../constants/action-types";
 export * from './alert.actions';
 export * from './user.actions';
+export * from './actions'
 
 export const displayDetailsDays = day => {
   return {

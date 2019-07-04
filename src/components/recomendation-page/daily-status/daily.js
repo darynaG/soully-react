@@ -18,9 +18,6 @@ library.add(
 class DailyMood extends React.Component {
     constructor(props) {
         super(props);
-        this.state = { 
-            stories: []   
-        }
     }
     componentDidMount () {
         var  mood_stories = [];
@@ -30,11 +27,6 @@ class DailyMood extends React.Component {
                 if(this.props.username == data[i].username && this.props.date == data[i].date)
                 mood_stories.push(data[i]);  
             }
-        })
-        .then(() => { 
-            this.setState({
-                stories: mood_stories
-            })
         })
     }
 

@@ -208,6 +208,15 @@
     "date":"02/7/2019",
     "activities": ["running", "sleeping"],
     "text": "It was a really hard day today"
+},
+{
+    "id":22,
+    "mood":"excited",
+    "likes":0,
+    "username": "Anika99",
+    "date":"02/7/2019",
+    "activities": ["sport", "running", "hiking"],
+    "text": "It was really hard day"
 }
 
 

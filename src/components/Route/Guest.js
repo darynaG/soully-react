@@ -10,13 +10,19 @@ import {connect } from 'react-redux'
 import Spinner from 'react-spinner-material';
 import videoClip from '../../assets/video/Nature.mp4';
 import fetchData from '../../actions/actions';
-
+import Messages from '../../data/posts';
+import Q from '../../data/quotes';
 
 
 class Guest extends React.Component{
   
 
     render() {
+        const activities = this.props.users;
+        const list=activities.map((activiti) => 
+         <li > {activiti['name']} </li>
+         );
+         console.log("users",this.props.users)
         if(store.getState().dataReducer.loading===true){
        
             return(
@@ -28,7 +34,7 @@ class Guest extends React.Component{
         return (
         <div>
             <div className="mood-picker">
-                <MoodGroup handleClick={()=>this.props.dispatch(fetchData("http://localhost:3002/soully/posts"))}/>
+                <MoodGroup handleClick={()=>Messages.getAllGuest()} initQuotes={()=>Q.getAll()} isGuest={true}/>
                 <a href="#s"> <div className="arrow"></div></a>
             </div> 
             <video className="video" playsInline autoPlay muted loop id="myVideo">
@@ -38,6 +44,7 @@ class Guest extends React.Component{
                 <Quote mood={this.props.mood}/>
                 <StoryBoard mood={this.props.mood} visible='true'/>
             </div>
+            <ul>{list}</ul>
         </div>
         )
     }
@@ -45,11 +52,11 @@ class Guest extends React.Component{
 }
 
 const mapStateToProps = (state)=>{
- 
-    return{
+ console.log("log",state.dataReducer.users)
+    return({
         mood:state.changeMood.mood,
-    
-    }
+        users:state.dataReducer.users
+    })
 }
  
 

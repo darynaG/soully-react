@@ -1,7 +1,7 @@
 import React ,{ PureComponent}from 'react';
 
 import Q from '../../data/quotes.js';
-
+import {connect} from 'react-redux'
 import { library } from '@fortawesome/fontawesome-svg-core'
 
 import {
@@ -16,70 +16,37 @@ library.add(
     faQuoteRight
 )
 class Quote extends PureComponent{
-constructor(props){
-    super(props);
-    
-   this.state={
-       //mood:props.mood,
-       all:[],
-       text:"",//mood_quotes[rand].text,
-       author: ""//mood_quotes[rand].author
-    
-   }
 
 
-
-}
-componentDidMount(){    
-   
-    let mood_quotes=[];
-    let f=[];
-    let a=Q.getAll().then((data)=>{
-        for(var i=0;i<data.length;i++){
-            f.push(data[i])
-            if(this.props.mood){
-                if(this.props.mood===data[i].mood)
-                mood_quotes.push(data[i]);
-            }else{
-                mood_quotes.push(data[i]);
-            }
-  
-}
-    })
-    .then(()=>{
-        let maxNumber=mood_quotes.length;
-        let rand=Math.floor(Math.random()*maxNumber);
-        this.setState({text:mood_quotes[rand].text, author:mood_quotes[rand].author,all:f});
-    })
-}
-
-componentDidUpdate(){
-    let mood_quotes=[];
-    for(var i=0;i<this.state.all.length;i++){
-       
-        if(this.props.mood){
-            if(this.props.mood===this.state.all[i].mood)
-            mood_quotes.push(this.state.all[i]);
-        }else{
-            mood_quotes.push(this.state.all[i]);
-        }
-        let maxNumber=mood_quotes.length;
-        let rand=Math.floor(Math.random()*maxNumber);
-        if(maxNumber>0)
-        this.setState({text:mood_quotes[rand].text, author:mood_quotes[rand].author});
-}
-}
 render(){
+    let data=this.props.quotes;
+    let current={}
+    for(let i = 0;i < data.length;i++){
+                
+        if (data[i].mood===this.props.mood) {
+          
+        current=data[i];
+        break;
+    }
+    }
     return(
         <div className="centered-text">  
     
            <article>
-               {this.state.text}
+               {current.text}
               <br></br>
-               <p>-{this.state.author}-</p>
+               <p>-{current.author}-</p>
            </article>
     </div> 
     )
 }
 }
-export default Quote;
+const mapStateToProps= (state) => {
+    
+    
+    return {
+       mood : state.changeMood.mood,
+       quotes: state.dataReducer.quotes
+    };
+   }
+export default connect(mapStateToProps)(Quote);

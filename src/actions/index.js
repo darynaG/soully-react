@@ -86,5 +86,9 @@ export const DataLoaded=()=>({
 export const DataLoading=()=>({
   type: 'DATA_LOADING'
 })
+export const fetchQuoteSuccess = quotes => ({
+  type: 'FETCH_Q_SUCCESS',
+  payload: { quotes }
+});
 
 

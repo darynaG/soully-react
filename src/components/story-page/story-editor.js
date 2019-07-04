@@ -4,6 +4,7 @@ import { BrowserRouter as Router, Route, Link } from "react-router-dom";
 import { onAddPost } from '../../actions/index.js';
 import P from '../../data/posts'
 import store from '../../store/index.js';
+import Messages from '../../data/posts';
 const StoryEdit =(props)=>{
    
     let input
@@ -29,17 +30,14 @@ const StoryEdit =(props)=>{
                     e.preventDefault();
                     let t=input.value;
                     if(t.replace(/\s/g, "")!==""){ var a={
-                        "mood":props.mood,
-                        "id":18,
-                        "likes":0,
-                        "usename":"me",
-                        "date":Date.now(),
-                        "text":input.value,
-                        "activities": ["running", "sleeping"]
+
+                        "name":"sasha",
+                        "email":"my@gmail.com",
+                        "password": "123456"
                     }
                         var j=JSON.stringify(a);
 
-                       
+                       Messages.newPost(j);
                         input.value ='';}
                     }}>
         <div className={c1}>

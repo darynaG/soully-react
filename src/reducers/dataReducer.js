@@ -1,7 +1,8 @@
 const initialState = {
     posts: [],
+    users:[],
     loading: false,
-
+    quotes: [],
     error: null
 };
 
@@ -31,6 +32,21 @@ export default function dataReducer(state=initialState, action) {
                 ...state,
                 loading: false,
                 posts: action.payload.posts
+
+          };
+
+        case 'FETCH_Q_SUCCESS':
+            return {
+                ...state,
+                loading: false,
+                quotes: action.payload.quotes
+
+          };
+          case 'FETCH_DATA_SUCCESS_USERS':
+            return {
+                ...state,
+                loading: false,
+                users: action.payload.users
 
           };
         case 'NEW_POST_ADDED':

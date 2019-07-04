@@ -1,5 +1,5 @@
 import store from "../store";
-import { fetchDataLoading, fetchDataSuccess,fetchDataFailure } from "../actions";
+import { fetchDataLoading, fetchQuoteSuccess,fetchDataFailure } from "../actions";
 
 class Quotes{
     static getAll(){
@@ -8,7 +8,7 @@ class Quotes{
 
       .then(response=> response.json()
       ) .then(json => {
-          store.dispatch(fetchDataSuccess(json))
+          store.dispatch(fetchQuoteSuccess(json))
          
           return json;
       }).catch(error => store.dispatch(fetchDataFailure(error)));

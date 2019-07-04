@@ -20,28 +20,19 @@ library.add(
 )
 
 export class  Posts extends React.Component{
-    constructor(props){
-        super(props);
-        this.state={posts:[]}
-    }
+  
     componentDidMount(){
-        var temp=[];
-     
-        var a=Messages.getAll().then((data)=>{
-            for(var i=0;i<data.length;i++){
-            temp.unshift(data[i]);
+      
+        //Messages.getAll();
     }
-        })
-        .then(()=>{
-            this.setState({posts:temp});
-        }).then(console.log("Here"))
-
-    }
-    componentDidUpdate(){
-       // this.setState({posts:this.props.posts});
-    }
+   
   render(){ 
-    
+    let a=this.props.posts.posts;
+    let data=[];
+    for(let i=a.length-1;i>=0;i--){
+        data.push(a[i]);
+    }
+   
     if(store.getState().dataReducer.loading===true){
         
         return(
@@ -54,7 +45,7 @@ export class  Posts extends React.Component{
                     <div className="all_s">
                     <div className="centeredcolumn">
                     { 
-                        this.state.posts.map((post,index)=>{
+                        data.map((post,index)=>{
                             if(this.props.postsLikeCounters[post.id]===undefined) this.props.postsLikeCounters[post.id]=0;
                             return(
                               
@@ -78,8 +69,13 @@ export class  Posts extends React.Component{
 
                 }
    
-                const mapStateToProps = state => ({
-                    posts: state.state.posts
-                });        
+                const mapStateToProps = (state) => {
+                  return{  
+                    loading:state.dataReducer.loading,
+                   // posts:state.dataReducer.posts
+                   posts:state.dataReducer.users
+                   
+                }
+                };        
                 
 export default connect(mapStateToProps)(Posts);

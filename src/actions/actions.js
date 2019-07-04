@@ -22,8 +22,13 @@ export const fetchDataSuccess = posts => ({
     type: 'FETCH_DATA_SUCCESS',
     payload: { posts }
 });
-
+export const fetchDataSuccessUsers = users => ({
+    type: 'FETCH_DATA_SUCCESS_USERS',
+    payload: { users}
+});
 export const fetchDataFailure = error => ({
     type: 'FETCH_DATA_FAILURE',
     payload: {error}
 });
+
+

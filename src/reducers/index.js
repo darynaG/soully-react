@@ -5,7 +5,7 @@ import changeMood from './changeMood';
 import changeActivity from './changeActivity';
 import dataReducer from './dataReducer'
 import loadingReducer from './loadReducer'
-import {posts, postsLikes, postsLikeCounters} from './reducerLike'
+import { posts, postsLikes, postsLikeCounters } from './reducerLike'
 
 import { authentication } from './authentication.reducer';
 import { registration } from './registration.reducer';

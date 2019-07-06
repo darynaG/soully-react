@@ -1,17 +1,17 @@
 
-const initialState ={
+const initialState = {
     mood: "sad"
 }
-const changeMood = (state =initialState, action) => {
-    switch(action.type){
-    case 'CHOOSE_MOOD':
-        return {
-            ...state, 
-            mood: action.mood}
-    default:
-        return state;
+const changeMood = (state = initialState, action) => {
+    switch (action.type) {
+        case 'CHOOSE_MOOD':
+            return {
+                ...state,
+                mood: action.mood
+            }
+        default:
+            return state;
     }
-  }
-  
-  export default changeMood;
-  
+}
+
+export default changeMood;

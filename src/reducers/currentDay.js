@@ -1,4 +1,4 @@
-import {actionType} from "../constants/actionTypes.constants";
+import { actionType } from "../constants/actionTypes.constants";
 
 const initialState = "";
 

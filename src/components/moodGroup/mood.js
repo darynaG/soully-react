@@ -1,5 +1,4 @@
 import React from 'react';
-import { chooseMood } from '../../actions';
 
 class Mood extends React.Component {
   constructor(props) {

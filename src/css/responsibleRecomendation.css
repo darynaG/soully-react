@@ -1,0 +1,139 @@
+@media screen and (max-width: 1900px) {
+  .recomendation {
+    flex-direction: row;
+    align-items: baseline;
+    align-items: center;
+  }
+  .recomendation .container {
+    width: 35%;
+  }
+  .recomendation p {
+    font-size: 18px;
+    padding: 5%;
+  }
+  .recomendation .tag {
+    font-size: 20px;
+    padding-left: 5%;
+  }
+  .recomendation img {
+    width: 90%;
+    padding-top: 5%;
+  }
+  .up {
+    flex-direction: row;
+  }
+  .up .calendar {
+    width: 50%;
+  }
+  .up .whenMemos {
+    width: 50%;
+  }
+}
+@media screen and (max-width: 1300px) {
+  .recomendation p {
+    font-size: 16px;
+  }
+  .recomendation .tag {
+    font-size: 16px;
+  }
+}
+@media screen and (max-width: 1190) {
+  .arrow {
+    bottom: 150px;
+  }
+}
+@media screen and (max-width: 990px) {
+  .arrow {
+    visibility: collapse;
+  }
+  .recomendation {
+    flex-direction: column;
+  }
+  .recomendation .container {
+    padding-top: 20px;
+    width: 90%;
+  }
+  .recomendation .container img {
+    height: 40%;
+  }
+  .recomendation .container p {
+    font-size: 18px;
+  }
+  .recomendation .container .tag {
+    font-size: 18px;
+  }
+  .up {
+    flex-direction: column;
+  }
+  .up .calendar,
+  .up .whenMemos {
+    height: 100%;
+    width: 100%;
+    padding: 10px;
+  }
+  .daily-log .content {
+    flex-direction: column;
+  }
+  .daily-log .content .leftside,
+  .daily-log .content .stories {
+    width: 100%;
+  }
+  .daily-log .content .leftside {
+    border: none;
+  }
+  .daily-log .content h1,
+  .daily-log .content h3 {
+    font-size: 16px;
+  }
+  .daily-log .content .story {
+    font-size: 16px;
+  }
+}
+@media screen and (max-width: 990px) {
+  .recomendation {
+    padding-top: 15vh;
+    flex-direction: column;
+  }
+  .recomendation .container img {
+    height: 25%;
+  }
+  .recomendation .container p {
+    font-size: 16px;
+  }
+  .recomendation .container .tag {
+    font-size: 16px;
+  }
+  .up {
+    flex-direction: column;
+  }
+  .up .whenMemos {
+    font-size: 15px;
+  }
+  .up .whenMemos .memoListOfTheDay {
+    margin-top: 0;
+  }
+  .up .whenMemos .memoListOfTheDay .item-memo-textcontent {
+    padding: 10px 10px;
+  }
+  .story {
+    font-size: 15px;
+  }
+}
+@media screen and (max-width: 400px) {
+  .recomendation .container p {
+    font-size: 15px;
+  }
+  .recomendation .container img {
+    height: 20%;
+  }
+  .daily-log h1 {
+    font-size: 18px;
+  }
+  .daily-log .stories .story .story_text {
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 15px;
+  }
+  .whenMemos {
+    font-size: 12px;
+  }
+}

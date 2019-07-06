@@ -33,113 +33,118 @@ class Recomendation extends React.Component {
             currentIndex: 0,
             contents: [],
         };
+  
+
         this.nextSlide = this.nextSlide.bind(this);
         this.prevSlide = this.prevSlide.bind(this);
     }
-    componentDidMount() {
+    componentDidMount(){
         let content = [];
-        switch (this.props.category) {
-            case ("books"):
-                var books = Books.getAll().then((data) => {
-                    for (let i = 0; i < data.length; i++) {
-                        if (this.props.mood == data[i].mood)
-                            content.push(data[i]);
-                    }
-                })
-                    .then(() => {
-                        this.setState({
-                            contents: content
-                        });
-                    })
-                break;
-            case ("films"):
-                var films = Films.getAll().then((data) => {
-                    for (let i = 0; i < data.length; i++) {
-                        if (this.props.mood == data[i].mood)
-                            content.push(data[i]);
-                    }
-                })
-                    .then(() => {
-                        this.setState({
-                            contents: content
-                        });
-                    })
-                break;
-            case ("activities"):
-                var activities = Actions.getAll().then((data) => {
-                    for (let i = 0; i < data.length; i++) {
-                        if (this.props.mood == data[i].mood)
-                            content.push(data[i])
-                    }
-                })
-                    .then(() => {
-                        this.setState({
-                            contents: content
-                        });
-                    })
-                break;
-
+        switch(this.props.category) {
+            case("books"):
+            var books = Books.getAll().then((data) => {
+                for(let i = 0; i < data.length; i++){
+                    if(this.props.mood == data[i].mood)
+                     content.push(data[i]);
+                }
+            })
+            .then(() => {
+               this.setState ( {
+                    contents: content
+                });
+            })
+            break;
+            case("films"):
+            var films = Films.getAll().then((data) => {
+                for(let i = 0; i < data.length; i++) {
+                    if(this.props.mood == data[i].mood)
+                    content.push(data[i]);
+                }
+            })
+            .then(() => {
+                this.setState ({
+                    contents: content
+                });
+            })
+            break;
+            case("activities"):
+            var activities = Actions.getAll().then((data) => {
+                for(let i = 0; i < data.length; i++) {
+                    if(this.props.mood == data[i].mood)
+                    content.push(data[i])
+                }
+            })
+            .then(()=>{
+                this.setState({
+                    contents:content
+                });
+            })
+            break;
+            
         }
     }
     prevSlide() {
         const lastIndex = this.state.contents.length - 1;
         const resetIndex = this.state.currentIndex === 0;
         const index = resetIndex ? lastIndex : this.state.currentIndex - 1;
-        this.setState({
+        this.setState( {
             currentIndex: index
         })
     }
-
+    
     nextSlide() {
-        const lastIndex = this.state.contents.length - 1;
-        const resetIndex = this.state.currentIndex === lastIndex;
-        const index = resetIndex ? 0 : this.state.currentIndex + 1;
-        this.setState({
-            currentIndex: index
+       const lastIndex = this.state.contents.length - 1;
+       const resetIndex = this.state.currentIndex === lastIndex;
+       const index = resetIndex ? 0 : this.state.currentIndex + 1;
+       this.setState( {
+           currentIndex: index
         });
     }
+  
 
-
-    render() {
-        const index = this.state.currentIndex;
+   render() {
+      const index = this.state.currentIndex;
         let first = this.state.contents.slice(index, index + 1);
-        if (store.getState().loadingReducer.data_loading !== 0) {
-            return (
+        if(store.getState().loadingReducer.data_loading!==0){
+            return(
                 <div className={this.props.classL}>
                     <Spinner size={120} spinnerColor={"#004d408f"} spinnerWidth={8} visible={true} />
                 </div>
             )
-        } else
-            return (
-                <div className="container">
-                    <FontAwesomeIcon icon={faAngleLeft} size="3x" onClick={this.prevSlide} />
-                    {first.map((contents) =>
-                        <div className="content">
-                            <img src={contents.image} alt="" />
-                            <h2 >{contents.title}</h2>
-                            <p >{contents.description}</p>
-                            <i className="tag">{contents.tag}</i>
-                        </div>
-                    )}
-                    <FontAwesomeIcon icon={faAngleRight} size="3x" onClick={this.nextSlide} />
-                </div>
-            );
-    }
+        }else
+        return (   
+        <div className="container">
+            <FontAwesomeIcon icon = {faAngleLeft} size = "3x"onClick = {this.prevSlide}/>
+            {first.map((contents) =>
+            <div className="content">
+                <img  src = {contents.image} alt = ""/>
+                <h2 >{contents.title}</h2>
+                <p >{contents.description}</p>
+           
+                <i className = "tag">{contents.tag}</i>
+                
+             </div>)}
+                <FontAwesomeIcon icon = {faAngleRight} size = "3x" onClick = {this.nextSlide}/>
+         </div>
+         );
+    
+    
+    
+    
 }
-
+}
 function mapStateToProps(state) {
     return {
-        data_loading: state.loadingReducer,
-    }
-}
+        data_loading:state.loadingReducer,
+        postsPersonal: state.dataReducer.postsPersonal
+    }}
 const mapDispatchToProps = {
     DataLoading,
     DataLoaded
 }
 
 
-export default connect(mapStateToProps, mapDispatchToProps)(Recomendation);
-
+export default connect(mapStateToProps,mapDispatchToProps) ( Recomendation);
 
 
 

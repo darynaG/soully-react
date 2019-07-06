@@ -17,7 +17,7 @@ import { PrivateRoute } from '../components/privateRoute';
 
 import { LoginPage } from '../containers/login';
 import { RegisterPage } from '../containers/registration';
-import HeaderR from '../containers/header/header'
+import Header from '../containers/header/header'
 
 
 
@@ -37,7 +37,7 @@ class App extends React.Component {
       <div >
         <Router history={history}>
           <div>
-            <HeaderR />
+            <Header />
             <Route exact path="/" component={Guest} />
             <PrivateRoute exact path="/home" component={MoodPage} />
             <PrivateRoute exact path="/day" component={Day} />

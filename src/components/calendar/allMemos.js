@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import PropTypes from "prop-types";
-import "../../css/allMemos.css";
+import '../../css/allMemos.css'
 import OneMemo from "./oneMemo";
 
 class AllMemos extends Component {

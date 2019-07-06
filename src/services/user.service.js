@@ -17,7 +17,7 @@ function login(username, password) {
         body: JSON.stringify({ username, password })
     };
 
-    return fetch(`http://127.0.0.1:5000/api/users/auth`, requestOptions)
+    return fetch(`http://ec2-54-236-86-235.compute-1.amazonaws.com:5000/api/accounts/auth`, requestOptions)
         .then(handleResponse)
         .then(user => {
             // store user details and jwt token in local storage to keep user logged in between page refreshes
@@ -56,7 +56,7 @@ function register(user) {
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify(user)
     };
-    return fetch(`http://127.0.0.1:5000/api/users`, requestOptions).then(handleResponse);
+    return fetch(`http://ec2-54-236-86-235.compute-1.amazonaws.com:5000/api/accounts/`, requestOptions).then(handleResponse);
     //return fetch(`/users/register`, requestOptions).then(handleResponse);
 }
 

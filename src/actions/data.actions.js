@@ -20,4 +20,11 @@ export const DataLoading = () => ({
     type: actionType.DATA_LOADING
   })
 
-  
+  export const fetchDataSuccessId = postsPersonal => ({
+    type: 'FETCH_DATA_SUCCESS_ID',
+    payload: { postsPersonal }
+});
+export const fetchDataSuccessUsers = users => ({
+    type: 'FETCH_DATA_SUCCESS_USERS',
+    payload: { users}
+}); 

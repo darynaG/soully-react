@@ -15,8 +15,8 @@ import { alertActions } from '../actions';
 import { PrivateRoute } from '../components/privateRoute';
 
 
-import { LoginPage } from '../containers/login';
-import { RegisterPage } from '../containers/registration';
+import { LoginPage } from '../containers/route/login';
+import { RegisterPage } from '../containers/route/registration';
 import HeaderR from '../containers/header/header'
 
 

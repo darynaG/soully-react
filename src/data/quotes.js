@@ -10,7 +10,7 @@ class Quotes{
       ) .then(json => {
           store.dispatch(fetchDataSuccess(json))
          
-          return json;
+          //return json;
       }).catch(error => store.dispatch(fetchDataFailure(error)));
        
        

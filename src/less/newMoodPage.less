@@ -1,0 +1,239 @@
+@import "variables.less";
+*{
+    scroll-behavior: smooth;
+}
+.hide { 
+    display: none; 
+}
+
+body{
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    overflow-x: hidden;
+    
+}
+
+
+.mood-picker{
+
+         display: flex;
+        flex-direction: column;
+        align-content: center;
+        align-items: stretch;
+        padding-top: 150px;
+        .arrow{
+            //padding-top: 200px;
+            position:relative;
+        }
+        a {
+            align-self: center;
+        }
+        .h3-label{
+        font-size: 40px;    
+        padding-top: 210px;
+        }
+
+}
+
+.activity-picker{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: stretch;
+    align-content: center;
+    margin-top: 120px;
+    padding-top: 150px;
+    
+    .h3-label{
+        font-size: 40px;   
+        padding-top: 150px
+    }
+    .arrow{
+
+       padding-top: 130px;
+    }
+    a {
+        align-self: center;
+    }
+    .block {
+        padding-top: 100px;
+    }
+
+   
+}
+.story-sharer{
+    
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+   
+    margin-top: 200px;
+    
+    .h3-label{
+        font-size: 40px;   
+    }
+    
+}
+
+.story{
+    display: flex;
+    flex-direction: column;
+   .story-text{
+       font-family: @font-label;
+       font-size: 18px;
+       resize: none;
+       word-wrap: normal;
+       margin: auto;
+       margin-top: 70px;
+       width: 500px;
+       height: 200px;
+       outline: none;
+    -moz-appearance: none;
+    border: none;
+    
+   } 
+   .round-btn {
+        margin: auto;
+        margin-top: 50px;
+        margin-bottom: 100px;
+   }
+}
+//flex-box block and item - used in smiles and activities picking
+.block {
+    padding: 0;
+    margin: 0;
+    margin-left: 100px;
+    margin-right: 100px;
+    margin-top: 30px;
+    list-style: none;
+    
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    
+    -webkit-flex-flow: row wrap;
+    flex-flow: wrap;
+    justify-content: space-around;
+  }
+    
+  .flex-item {
+    .hideLabel {
+        font-family: @font-label;
+          font-size: 25px;
+          text-align: center;
+            visibility: hidden;
+            margin-top: 20px;
+        visibility: hidden;
+    }
+    .showLabel {
+        font-family: @font-label;
+          font-size: 25px;
+          text-align: center;
+            visibility: hidden;
+            margin-top: 20px;
+        visibility: visible;
+    }  
+    
+    .h6-label{
+        text-align: center;
+        font-family: @font-label;
+        font-size: 13px;
+        visibility: hidden;
+        margin-top: 20px;
+        
+    }
+    
+    display: inline-block;
+    padding: 5px;
+      //height: 50px;
+
+   margin-top: 100px;
+    
+   // line-height: 60px;
+    color: @darkGreen;
+    font-weight: bold;
+    text-align: center;
+    
+    img {
+        height: @emoji;
+        width: @emoji;
+    }
+
+    .imgA {
+        height: 50px;
+        width: 50px;
+    }
+
+    &:hover {
+            color:#004d40;
+        
+        .h6-label, .h5-label, .hideLabel, .showLabel{
+            color : #004d40;
+            visibility: visible;
+            background-color: rgba(240, 248, 255, 0.205);
+        }
+        
+        .sad {
+         
+            content: url(../assets/img/sad_green.png)
+        }
+        .happy {
+            content: url(../assets/img/happy_green.png)
+        }
+        .good {
+            content: url(../assets/img/good_green.png)
+        }
+        .wow {
+            content: url(../assets/img/wow_green.png)
+        }
+        .wtf {
+            content: url(../assets/img/wtf_green.png)
+        }
+        .excited {
+            content: url(../assets/img/excited_green.png)
+        }
+    }
+       
+  }
+  
+  .h5-label{
+      font-family: @font-label;
+      font-size: 25px;
+      text-align: center;
+        visibility: hidden;
+        margin-top: 20px;
+       
+  }
+  
+ .video {
+    width: 100%;
+    position: absolute;
+     top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    text-align: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: 100%;
+    width: 100%;
+    margin:0;
+    padding: 0;
+    z-index: -100;
+    object-fit: fill;
+    min-height: 100%;
+    min-width: 100%;
+    }
+
+    .h3-label {
+        text-align: center;
+        font-family: @font-label;   
+        color: black;
+    }
+    
+
+    

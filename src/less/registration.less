@@ -58,6 +58,22 @@
         .rightSide{
             box-sizing: border-box;
             user-select:none;
+            .account{
+                visibility: collapse;
+                display:flex;
+                flex-wrap: wrap;
+                color: @green;
+                font-size: 20px;
+                line-height: 21px;
+                a{
+                    width: 100%;
+                    margin-bottom: 10px;
+                    color:@green;
+                    text-decoration:underline;
+                    font-size: 15px;
+                }
+                
+            }
             input{
                 outline:none;
                 overflow:visible;
@@ -125,6 +141,11 @@
                     width: 0%;
                 }
                 .rightSide{
+                    .account{
+                        padding-top:20px;
+                        visibility: visible;
+                        text-align: center;
+                    }
                     width: 100%;
                 }
             }

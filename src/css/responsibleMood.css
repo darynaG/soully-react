@@ -1,0 +1,106 @@
+@media screen and (max-width: 1200px) {
+  .video {
+    top: 47%;
+    width: unset;
+    min-height: 100%;
+  }
+  .activity-picker .h3-label {
+    padding-top: 100px;
+  }
+  .activity-picker .block .flex-item {
+    width: 15vw;
+    padding: 0px;
+    margin-top: 0px;
+  }
+  .submit-btn {
+    bottom: 100px;
+  }
+}
+@media screen and (max-width: 1090px) {
+  .mood-picker .h3-label {
+    padding-top: 50px;
+    padding-bottom: 2%;
+  }
+  .mood-picker .block .flex-item {
+    width: 25vw;
+    margin-top: 0px;
+  }
+}
+@media screen and (max-width: 980px) {
+  .mood-picker {
+    padding-top: 0px;
+  }
+  .mood-picker .h3-label {
+    padding-top: 100px;
+  }
+  .mood-picker .block {
+    margin-left: 0px;
+    margin-right: 0px;
+    padding-top: 50px;
+  }
+  .mood-picker .block .flex-item {
+    width: 25vw;
+  }
+  .mood-picker .arrow {
+    padding: 0px;
+  }
+  .activity-picker {
+    padding-top: 0px;
+  }
+  .activity-picker .h3-label {
+    padding-top: 100px;
+  }
+  .activity-picker .block {
+    margin-left: 0px;
+    margin-right: 0px;
+    padding-top: 50px;
+  }
+  .activity-picker .block .flex-item {
+    width: 25vw;
+  }
+  .activity-picker .arrow {
+    padding: 0px;
+  }
+}
+@media screen and (max-width: 580px) {
+  .mood-picker .block .flex-item {
+    width: 30vw;
+    padding: 0px;
+  }
+  .mood-picker .block .flex-item img {
+    height: 120px;
+    width: 120px;
+  }
+  .activity-picker .block .flex-item imgA {
+    height: 40px;
+    width: 40px;
+  }
+  .story-sharer .story-input .story-text {
+    width: 80%;
+  }
+}
+@media screen and (max-width: 420px) {
+  .submit-btn {
+    visibility: collapse;
+  }
+  .mood-picker .h3-label {
+    font-size: 30px;
+  }
+  .mood-picker .block .flex-item {
+    width: 35vw;
+  }
+  .mood-picker .block .flex-item img {
+    height: 100px;
+    width: 100px;
+  }
+  .activity-picker .h3-label {
+    font-size: 30px;
+  }
+  .activity-picker .block .flex-item {
+    width: 30vw;
+  }
+  .activity-picker .block .flex-item .showLabel,
+  .activity-picker .block .flex-item .hideLabel {
+    font-size: 20px;
+  }
+}

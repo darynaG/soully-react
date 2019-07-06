@@ -17,7 +17,7 @@ function login(username, password) {
 
         userService.login(username, password)
             .then(
-                user => { 
+                user => {
                     dispatch(success(user));
                     //history.push('/');
                     //window.location.reload(true);
@@ -45,7 +45,7 @@ function register(user) {
 
         userService.register(user)
             .then(
-                user => { 
+                user => {
                     dispatch(success());
                     history.push('/login');
                     window.location.reload(true);
@@ -86,7 +86,7 @@ function _delete(id) {
 
         userService.delete(id)
             .then(
-                user => { 
+                user => {
                     dispatch(success(id));
                 },
                 error => {

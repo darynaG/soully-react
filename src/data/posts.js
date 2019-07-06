@@ -1,4 +1,4 @@
-import {fetchDataSuccess,fetchDataFailure, fetchDataLoading} from '../actions'
+import {fetchDataSuccess,fetchDataFailure, fetchDataLoading} from '../actions/data.actions'
 
 import store from '../store';
 class Messages{
@@ -30,6 +30,5 @@ class Messages{
         
     }
 }
-
 
 export default Messages;

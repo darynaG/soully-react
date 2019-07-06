@@ -57,6 +57,21 @@
   box-sizing: border-box;
   user-select: none;
 }
+.login .content .rightSide .account {
+  display: flex;
+  flex-wrap: wrap;
+  color: #004d40;
+  font-size: 20px;
+  line-height: 21px;
+  visibility: collapse;
+}
+.login .content .rightSide .account a {
+  width: 100%;
+  margin-bottom: 10px;
+  color: #004d40;
+  text-decoration: underline;
+  font-size: 15px;
+}
 .login .content .rightSide input {
   outline: none;
   overflow: visible;
@@ -118,5 +133,10 @@
   }
   .login .content .rightSide {
     width: 100%;
+  }
+  .login .content .rightSide .account {
+    padding-top: 20px;
+    visibility: visible;
+    text-align: center;
   }
 }

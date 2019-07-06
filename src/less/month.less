@@ -1,15 +1,145 @@
-.container{
-    width:100%;
-    height: 100vh;
-    position: relative;
-    .dayContainer, .calendarContainer{
-        width: 50vw;
+@import "variables.less";
+.up {
+  padding-top:15vh;
+    display: flex;
+    width: 100%;
+    font-family: 'Courier New', Courier, monospace;
+    border-left:1px solid black;
+    height:100vh;
+    .calendar{
+        justify-self: center;
+        //height: 100vh;
+       
+        .title {
+            color: black;
+            font-size: 30px;
+            text-align: center;
+          }
+          .content {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 93%;
+      
+            .calendarContainer{
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                height: 50%;
+                //width:40vw;
+                .react-calendar{
+                    font-family: 'Courier New', Courier, monospace;
+                    font-size: 20px;
+                    width: 60%;
+                    border: 0px;
+                    .react-calendar__navigation{
+                      height:30vh;
+                      //width: 100%;
+                      background-position-x: center;
+                      background-image: url(../assets//img/brush.jpeg);
+                      background-size: cover;
+                      background-position-y: center;
+                      align-items: center;
+
+                      button{
+                        font-size: 130%;
+                        font-family: cursive;
+                        &:hover{
+                          background-color: transparent;
+                        }
+                        &:focus{
+                          background-color: transparent;
+                        }
+                      }
+                    }
+                    .react-calendar__tile--hasActive {
+                      background: #2ea7330d;
+                      border-radius: 10%;
+                      color: @green;
+                  }
+                    .react-calendar__month-view{
+                      .react-calendar__month-view__weekdays{
+                        font-family: 'Courier New', Courier, monospace;
+                        abbr{
+                          text-decoration: none;
+                        }
+                      }
+                      .react-calendar__tile--active {
+                        background: #2ea7330d;
+                        border-radius: 10%;
+                        color: #004d40;
+                    }
+                    }
+                }
+            }
+          }
     }
-    .dayContainer{
-        .daily-log{
-            width: 50vw;
+    .whenMemos {
+       background-image: url(https://images.unsplash.com/photo-1533383132262-41c48ffd7ac9?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60);
+       background-size: cover;
+       position: relative;
+       background-size:cover;
+       width: 60vw;
+       height:100vh;
+        
+      }
+  }
+
+  @media screen and (max-width:1900px){
+    .calendar,.whenMemos{
+        width:50vw;
+    }
+    .calendar{
+        height:100vh;
+        background-color: #fff;
+        .react-calendar__navigation{
+           height: 30vh;
+        }
+        .content{
+            
+            .calendarContainer{
+                width: 40vw;
+            }
         }
     }
-    
+}
+@media screen and (max-width: 990px){
+    .up{
+        flex-direction: column;
+        .calendar{
+            //margin: auto;
+            height: fit-content;
+            align-items: center;
+            width: 100vw;
+            .title{
+                padding:10%;
+                text-align: center;
+                margin: auto;
+            }
+            .content{
+                width: 100vw;
+                height: fit-content;
+                .react-calendar__navigation{
+                    height: 20vh;
+                }
+                
+            .calendarContainer{
+                    width:100vw;
+            }
+                
+            }
+        }
+        .whenMemos{
+            margin:auto;
+            height: fit-content;
+            width: 100vw;
+            text-align: center;
+        }
+    }
+}
 
+@media screen and (max-width: 850px){
+    .react-calendar__navigation{
+        font-size:1.0em;
+    }
 }

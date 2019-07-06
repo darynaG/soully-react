@@ -1,6 +1,7 @@
 import { connect } from "react-redux";
 import Month from "../../components/calendar/month"
 import * as actions from "../../actions/day.action";
+import '../../css/calendarResponsible.css'
 
 
 const mapStateToProps = state => {

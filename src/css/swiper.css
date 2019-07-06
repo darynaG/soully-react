@@ -13,6 +13,7 @@
   flex-direction: column;
   background-color: #ffffff69;
   height: 80vh;
+  //padding-top: 7.5%;
 }
 .container .content p {
   text-align: justify;

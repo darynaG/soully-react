@@ -28,3 +28,7 @@ export const fetchDataSuccessUsers = users => ({
     type: 'FETCH_DATA_SUCCESS_USERS',
     payload: { users}
 }); 
+export const fetchQuoteSuccess = quotes => ({
+  type: 'FETCH_Q_SUCCESS',
+  payload: { quotes }
+});

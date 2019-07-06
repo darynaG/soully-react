@@ -4,11 +4,11 @@ import store from '../store';
 class Messages{
     static getAllGuest(){
         store.dispatch(fetchDataLoading());
-        return fetch('http://ec2-54-236-86-235.compute-1.amazonaws.com:5000/api/story')//to do 6*3
+        return fetch('http://127.0.0.1:5000/api/story')//to do 6*3
 
         .then(response=> response.json()
         ) .then(json => {
-            store.dispatch(fetchDataSuccess(json))
+            store.dispatch(fetchDataSuccess(json.stories))
             //store.dispatch(fetchDataSuccessUsers(json.users))
           
            // return json;
@@ -18,12 +18,12 @@ class Messages{
     }
     static getAll(){
         store.dispatch(fetchDataLoading());
-        return fetch('http://ec2-54-236-86-235.compute-1.amazonaws.com:5000/api/story')//to do pagination if possible
+        return fetch('http://127.0.0.1:5000/api/story')//to do pagination if possible
 
         .then(response=> response.json()
         ) .then(json => {
           
-            store.dispatch(fetchDataSuccessUsers(json))
+            store.dispatch(fetchDataSuccessUsers(json.stories))
           
            // return json;
         }).catch(error => store.dispatch(fetchDataFailure(error)));
@@ -32,12 +32,12 @@ class Messages{
     }
     static getByDayAndUsername(){//to do 
         store.dispatch(fetchDataLoading());
-        return fetch('http://ec2-54-236-86-235.compute-1.amazonaws.com:5000/api/story')//to do current
+        return fetch('http://127.0.0.1:5000/api/story')//to do current
 
         .then(response=> response.json()
         ) .then(json => {
           
-            store.dispatch(fetchDataSuccessId(json))
+            store.dispatch(fetchDataSuccessId(json.stories))
           
            // return json;
         }).catch(error => store.dispatch(fetchDataFailure(error)));

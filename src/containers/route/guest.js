@@ -57,7 +57,8 @@ const mapStateToProps = (state)=>{
     return({
         mood:state.changeMood.mood,
         users:state.dataReducer.users,
-        posts:state.dataReducer.posts
+        posts:state.dataReducer.posts,
+        //quotes:state.dataReducer.quotes,
     })
 }
  

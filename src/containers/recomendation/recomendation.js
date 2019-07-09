@@ -42,7 +42,7 @@ class Recomendation extends React.Component {
         let content = [];
         switch(this.props.category) {
             case("books"):
-            var books = Books.getAll(this.props.mood).then((data) => {
+            Books.getAll(this.props.mood).then((data) => {
                 for(let i = 0; i < data.length; i++){
                      content.push(data[i]);
                 }
@@ -54,7 +54,7 @@ class Recomendation extends React.Component {
             })
             break;
             case("films"):
-            var films = Films.getAll(this.props.mood).then((data) => {
+            Films.getAll(this.props.mood).then((data) => {
                 for(let i = 0; i < data.length; i++) {
                     content.push(data[i]);
                 }
@@ -66,7 +66,7 @@ class Recomendation extends React.Component {
             })
             break;
             case("activities"):
-            var activities = Actions.getAll(this.props.mood).then((data) => {
+            Actions.getAll(this.props.mood).then((data) => {
                 for(let i = 0; i < data.length; i++) {
                     content.push(data[i])
                 }
@@ -77,8 +77,8 @@ class Recomendation extends React.Component {
                 });
             })
             break;
-            
-        }
+        default: break;
+    }
     }
     prevSlide() {
         const lastIndex = this.state.contents.length - 1;

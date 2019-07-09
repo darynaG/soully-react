@@ -50,7 +50,7 @@ class LoginPage extends React.Component {
                 <div className="content">
                     <div className="leftSide">
                         <div className="headerImg">
-                            <img src={llama}></img>
+                            <img src={llama} alt=''></img>
                         </div>
                         <div className="account">
                             <h5>Do not have an account?</h5>

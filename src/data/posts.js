@@ -1,13 +1,12 @@
-import {fetchDataSuccess,fetchDataFailure, fetchDataLoading,fetchDataSuccessUsers, fetchDataSuccessId, DataLoading , DataLoaded} from '../actions/data.actions'
+import {fetchDataSuccess,fetchDataFailure, fetchDataLoading,fetchDataSuccessUsers, fetchDataSuccessId} from '../actions/data.actions'
 import store from '../store';
 
 class Messages{
     static getAllGuest(){
         store.dispatch(fetchDataLoading());
         return fetch('http://127.0.0.1:5000/api/story')//to do 6*3
-
         .then(response=> response.json()
-        ) .then(json => {
+        ).then(json => {
             store.dispatch(fetchDataSuccess(json.stories))
             //store.dispatch(fetchDataSuccessUsers(json.users))
           
@@ -19,9 +18,8 @@ class Messages{
     static getAll(){
         store.dispatch(fetchDataLoading());
         return fetch('http://127.0.0.1:5000/api/story')//to do pagination if possible
-
         .then(response=> response.json()
-        ) .then(json => {
+        ).then(json => {
           
             store.dispatch(fetchDataSuccessUsers(json.stories))
           
@@ -33,9 +31,8 @@ class Messages{
     static getByDayAndUsername(user_id, date){ 
         store.dispatch(fetchDataLoading());
         return fetch('http://127.0.0.1:5000/api/accounts/'+user_id+'/day/'+date)
-
         .then(response=> response.json()
-       ) .then(json => {
+       ).then(json => {
             store.dispatch(fetchDataSuccessId(json)) 
         return json;
        }).catch(error => store.dispatch(fetchDataFailure(error)));

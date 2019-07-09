@@ -15,7 +15,7 @@ class Post extends React.Component {
         return (
             <div className="story" >
                 <div className="story_head">
-                    <img className="image_user" src={im1} />
+                    <img className="image_user" src={im1} alt=''/>
                     <div> {this.props.localData.username}</div>
                 </div>
                 <br />
@@ -26,11 +26,11 @@ class Post extends React.Component {
                 </article> {
                     this.props.liked ? (
                         <button className="story_footer" onClick={() => this.props.onUnlike(this.props.post)} style={{ color: 'red' }}>
-                            <div> {"Hugs:" + ' ' + this.props.likes} </div> <img className="like_img " src={likeim}></img>
+                            <div> {"Hugs: " + this.props.likes} </div> <img className="like_img " src={likeim} alt=''></img>
                         </button>
                     ) : (
                             <button className="story_footer" onClick={() => this.props.onLike(this.props.post)} style={{ color: 'black' }}>
-                                <div>{"Hugs:" + ' ' + this.props.likes}</div> <img className="like_img grey" src={likeim}></img>
+                                <div>{"Hugs: " + this.props.likes}</div> <img className="like_img grey" src={likeim} alt=''></img>
                             </button>
                         )
                 }

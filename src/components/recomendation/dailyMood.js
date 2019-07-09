@@ -1,6 +1,6 @@
 import React from 'react';
 import {connect} from 'react-redux'
-import { BrowserRouter as Router, Route, Link } from "react-router-dom";
+import {Link } from "react-router-dom";
 import { library } from '@fortawesome/fontawesome-svg-core'
 import Stories from '../../data/posts.js'
 import {
@@ -70,7 +70,7 @@ class DailyMood extends React.Component {
                       </div>
                       <div className="image">
                       
-                      <Link to ="/home"><img src={lama} ></img></Link>
+                      <Link to ="/home"><img src={lama} alt=''></img></Link>
                       </div>
                      </div>
                 );}

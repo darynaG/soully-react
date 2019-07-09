@@ -1,4 +1,4 @@
-import React ,{ Component}from 'react';
+import React from 'react';
 import { library } from '@fortawesome/fontawesome-svg-core'
 import Post from '../../components/stories/message'
 import {connect} from "react-redux";

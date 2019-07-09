@@ -4,7 +4,7 @@ import "../../css/month.css";
 import '../../css/calendarResponsible.css'
 import Calendar from "react-calendar";
 
-import WithManageMemo from "../../containers/month/withManageMemo";
+import WithManageMemo from "../../containers/calendar/withManageMemo";
 
 
 const Month = ({ onClickDay, day, memos }) => {

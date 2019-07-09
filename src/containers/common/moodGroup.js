@@ -18,7 +18,14 @@ import happyClicked from '../../assets/img/happy_green.png'
 import { connect } from 'react-redux'
 
 class MoodGroup extends React.Component {
-
+  constructor(props){
+    super(props);
+    if(this.props.isGuest===true) {
+      this.props.handleClick();
+      this.props.initQuotes();
+    }
+    
+  }
   render() {
     return (
       <form>

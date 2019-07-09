@@ -62,7 +62,7 @@ class MoodPage extends React.Component {
                 <a href="#story"> <div className="arrow"></div></a>
             </div>
 
-            <StoryEditor mood="good" isMin="false" />
+            <StoryEditor isMin ={false} user={this.props.user}/>
 
             <video className="video" playsInline autoPlay muted loop id="myVideo">
                 <source src={videoClip} type="video/mp4" />

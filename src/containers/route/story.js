@@ -22,7 +22,7 @@ class StoryPage extends React.Component {
 const mapStateToPops = (state) =>{
         return{
             posts:state.dataReducer.posts,
-            user:state.authentication.user,
+            user:state.authentication.user.user
         }    
 }
 export default (connect)(mapStateToPops)(StoryPage);

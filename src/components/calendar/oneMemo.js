@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import PropTypes from "prop-types";
-import "../../css/oneMemo.css";
+import "../../css/OneMemo.css";
 
 class OneMemo extends Component {
   state = {

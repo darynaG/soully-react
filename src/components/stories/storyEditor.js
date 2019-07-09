@@ -1,12 +1,14 @@
 import React from 'react';
 
 import Messages from '../../data/posts';
+
 const StoryEdit =(props)=>{
    
     let input
     let divElement;
     var c1,c2,c3,c4;
-  
+    //console.log("SOME PROPS",props.user.user.id)
+    
     if (props.isMin === true){
         c1="row-container";
         c2="story-text min" ;
@@ -28,12 +30,11 @@ const StoryEdit =(props)=>{
 
         if(dd<10) dd='0'+dd;
         if(mm<10) mm='0'+mm;
-        return (mm+'/'+dd+'/'+yyyy);
+        return (yyyy+'-'+mm+'-'+dd);
         
     }
     
     divElement =<div className={c4} id="story">
-      
     <form className="story-input" method="post" onSubmit={e=>{      
                     e.preventDefault();
                     let t=input.value;
@@ -41,7 +42,7 @@ const StoryEdit =(props)=>{
                     let date=getTodayDate();
                     if(t.replace(/\s/g, "")!==""){  a={
 
-                        "acountId":props.user.id,
+                        "account_id":props.user.user.id,
                         "text":input.value,
                         "date":date
                     }
@@ -49,7 +50,10 @@ const StoryEdit =(props)=>{
                         var j=JSON.stringify(a);
                      
                        Messages.newPost(j);
-                        input.value ='';}
+
+                        input.value ='';
+                        }
+
                     }}>
         <div className={c1}>
                     <h5 className="h3-label" >Share your story</h5>

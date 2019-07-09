@@ -4,7 +4,7 @@ import { fetchDataLoading, fetchQuoteSuccess,fetchDataFailure } from "../actions
 class Quotes{
     static getAll(){
       store.dispatch(fetchDataLoading());
-      return fetch('http://localhost:3002/soully/quotes')
+      return fetch('http://127.0.0.1:5000/api/quotes')
 
       .then(response=> response.json()
       ) .then(json => {

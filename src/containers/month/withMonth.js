@@ -17,12 +17,15 @@ const mapDispatchToProps = dispatch => {
   return {
     onClickDay: (dateObj, memos) => {
       let day = dateObj.getDate();
+      let month = dateObj.getMonth() + 1;
       if (day < 10) {
         day = "0" + day;
       }
-      const month = dateObj.getMonth() + 1;
+      if(month < 10) {
+        month = '0' + month;
+      }
       const year = dateObj.getFullYear();
-      const fullDate = `${day}/${month}/${year}`;
+      const fullDate = `${year}-${month}-${day}`;
 
       dispatch(actions.displayDetailsDays(fullDate));
     },

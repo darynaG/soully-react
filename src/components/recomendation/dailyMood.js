@@ -20,13 +20,12 @@ library.add(
 class DailyMood extends React.Component {
     constructor(props) {
         super(props);
-        Stories.getByDayAndUsername();
-     
-       
+        Stories.getByDayAndUsername(this.props.user_id, this.props.date);
     }
   
 
     render () { 
+        console.log("hjfjfyu",this.props.postsPersonal)
         if(store.getState().dataReducer.loading===true){
      
             return(
@@ -36,7 +35,8 @@ class DailyMood extends React.Component {
             )
         }else
         {
-            let prep=this.props.postsPersonal;
+        let prep=this.props.postsPersonal;
+        console.log('jkggikg',prep)
         
         let data=[];
         for(let i=prep.length-1;i>=0;i--){
@@ -51,6 +51,7 @@ class DailyMood extends React.Component {
         </ol> );
 
        var a =this.props.activity;
+       
 
         var act = [];
         var arr = Object.keys(a);
@@ -61,7 +62,7 @@ class DailyMood extends React.Component {
               {
                 act.push(arr[i]);
               }
-              console.log(arr[i]);
+            //   console.log(arr[i]);
         
           }
           const activities = act.map((activiti) => 
@@ -98,8 +99,6 @@ class DailyMood extends React.Component {
         }
 }
 const mapStateToProps= (state) => {
-    
-    
     return {
         loading:state.dataReducer.loading,
         postsPersonal: state.dataReducer.postsPersonal

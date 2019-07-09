@@ -1,4 +1,4 @@
-import {fetchDataSuccess,fetchDataFailure, fetchDataLoading,fetchDataSuccessUsers, fetchDataSuccessId } from '../actions/data.actions'
+import {fetchDataSuccess,fetchDataFailure, fetchDataLoading,fetchDataSuccessUsers, fetchDataSuccessId, DataLoading , DataLoaded} from '../actions/data.actions'
 import store from '../store';
 
 class Messages{
@@ -30,20 +30,22 @@ class Messages{
          
 
     }
-    static getByDayAndUsername(){//to do 
+    static getByDayAndUsername(user_id, date){ 
         store.dispatch(fetchDataLoading());
-        return fetch('http://127.0.0.1:5000/api/story')//to do current
+        return fetch('http://127.0.0.1:5000/api/accounts/'+user_id+'/day/'+date)
 
         .then(response=> response.json()
-        ) .then(json => {
-          
-            store.dispatch(fetchDataSuccessId(json.stories))
-          
-           // return json;
-        }).catch(error => store.dispatch(fetchDataFailure(error)));
+       ) .then(json => {
+            console.log("!!!!!!!!!!!!!!!!!!!!!!!!!!!",json)
+            store.dispatch(fetchDataSuccessId(json))
+        
+        return json;
+       }).catch(error => store.dispatch(fetchDataFailure(error)));
          
 
-    }
+     }
+
+        
     static newPost = post=>{
         let headers = new Headers();
 

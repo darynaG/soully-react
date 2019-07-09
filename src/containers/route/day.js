@@ -14,7 +14,7 @@ class Day extends React.Component{
    
     render() {
         
-        var a=moment().format("DD/M/YYYY")
+        var a=moment().format("YYYY-MM-DD")
 
         return (
              <div>
@@ -29,21 +29,21 @@ class Day extends React.Component{
                    <a href="#scroll"> <div className ="arrow"></div></a>
                    </div>          
                 </div>
-                    <div id ='scroll' className='scroll'>
-                     <DailyMood  username = "Sierova" mood = {this.props.mood} activity={this.props.activity} date = {a}/>
-                     </div>
+                    {<div id ='scroll' className='scroll'>
+                     <DailyMood  user_id = {this.props.username} mood = {this.props.mood} activity={this.props.activity} date = {'2019-07-08'}/>
+                     </div> }
                 </div>
         )
     }
 
 }
 const mapStateToProps = (state)=>{
-    console.log("state", state.changeActivity);
     return{
         mood:state.changeMood.mood,
         activity: state.changeActivity,
         posts: state.dataReducer.posts,
-        postsPersonal:state.dataReducer.postsPersonal
+        postsPersonal:state.dataReducer.postsPersonal,
+        username: state.authentication.user.user.id
     }
 }
 const mapDispatchToProps = {

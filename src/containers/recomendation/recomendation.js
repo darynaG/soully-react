@@ -42,9 +42,8 @@ class Recomendation extends React.Component {
         let content = [];
         switch(this.props.category) {
             case("books"):
-            var books = Books.getAll().then((data) => {
+            var books = Books.getAll(this.props.mood).then((data) => {
                 for(let i = 0; i < data.length; i++){
-                    if(this.props.mood == data[i].mood)
                      content.push(data[i]);
                 }
             })
@@ -55,9 +54,8 @@ class Recomendation extends React.Component {
             })
             break;
             case("films"):
-            var films = Films.getAll().then((data) => {
+            var films = Films.getAll(this.props.mood).then((data) => {
                 for(let i = 0; i < data.length; i++) {
-                    if(this.props.mood == data[i].mood)
                     content.push(data[i]);
                 }
             })
@@ -68,9 +66,8 @@ class Recomendation extends React.Component {
             })
             break;
             case("activities"):
-            var activities = Actions.getAll().then((data) => {
+            var activities = Actions.getAll(this.props.mood).then((data) => {
                 for(let i = 0; i < data.length; i++) {
-                    if(this.props.mood == data[i].mood)
                     content.push(data[i])
                 }
             })
@@ -117,7 +114,7 @@ class Recomendation extends React.Component {
             <FontAwesomeIcon icon = {faAngleLeft} size = "3x"onClick = {this.prevSlide}/>
             {first.map((contents) =>
             <div className="content">
-                <img  src = {contents.image} alt = ""/>
+                <img  src = {contents.img} alt = ""/>
                 <h2 >{contents.title}</h2>
                 <p >{contents.description}</p>
            

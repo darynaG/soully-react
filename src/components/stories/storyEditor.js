@@ -28,7 +28,7 @@ const StoryEdit =(props)=>{
 
         if(dd<10) dd='0'+dd;
         if(mm<10) mm='0'+mm;
-        return (mm+'/'+dd+'/'+yyyy);
+        return (yyyy+'-'+mm+'-'+dd);
         
     }
     
@@ -41,7 +41,7 @@ const StoryEdit =(props)=>{
                     let date=getTodayDate();
                     if(t.replace(/\s/g, "")!==""){  a={
 
-                        "acountId":props.user.id,
+                        "accountId":props.user.id,
                         "text":input.value,
                         "date":date
                     }

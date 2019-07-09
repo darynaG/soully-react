@@ -2,10 +2,9 @@ import {DataLoaded, DataLoading} from '../actions/data.actions'
 
 import store from '../store';
 class Films{
-    static getAll(){
+    static getAll(mood){
         store.dispatch(DataLoading());
-       
-        return fetch('http://localhost:3002/soully/films')
+        return fetch('http://localhost:5000/api/content/film/'+mood)
         .then(response=> response.json()
         ).then(json => {
             store.dispatch(DataLoaded())

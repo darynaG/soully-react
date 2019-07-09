@@ -14,16 +14,18 @@ export function posts(state = [], action) {
 }
 
 export function postsLikes(state = {}, action) {
+  
   switch (action.type) {
     case 'LIKE_POST':
       return {
         ...state,
-        [action.post.id]: true
+        
+        [action.payload.post.id]: true
       };
     case 'UNLIKE_POST':
       return {
         ...state,
-        [action.post.id]: false
+        [action.payload.post.id]: false
       };
 
     default:
@@ -33,21 +35,21 @@ export function postsLikes(state = {}, action) {
 
 export function postsLikeCounters(state = [], action) {
   let value;
-
+  
   switch (action.type) {
     case 'LIKE_POST':
-      value = state[action.post.id] || 0;
+      value = state[action.payload.post.id] || 0;
 
       return {
         ...state,
-        [action.post.id]: value + 1
+        [action.payload.post.id]: value + 1
       };
     case 'UNLIKE_POST':
-      value = state[action.post.id] || 0;
+      value = state[action.payload.post.id] || 0;
 
       return {
         ...state,
-        [action.post.id]: Math.max(value - 1, 0)
+        [action.payload.post.id]: Math.max(value - 1, 0)
       };
     default:
       return state;

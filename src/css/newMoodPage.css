@@ -19,8 +19,7 @@ body {
   padding-top: 150px;
 }
 .mood-picker .arrow {
-  padding-top: 200px;
-  position: absolute;
+  position: relative;
 }
 .mood-picker a {
   align-self: center;

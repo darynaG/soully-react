@@ -4,7 +4,7 @@ import Post from '../../components/stories/message'
 import {connect} from "react-redux";
 import {  faGratipay} from '@fortawesome/free-brands-svg-icons'
 import Spinner from 'react-spinner-material';
-
+import Messages from '../../data/posts'
 import {
         faQuoteLeft,
         faQuoteRight
@@ -19,11 +19,15 @@ library.add(
 )
 
 export class  Posts extends React.Component{
+  constructor(props){
+      super(props);
+    Messages.getAll()
+  }
   
-  
-   
+
   render(){ 
     let a=this.props.posts.posts;
+    console.log("IN STORYLINE",this.props)
     let data=[];
     for(let i=a.length-1;i>=0;i--){
         data.push(a[i]);
@@ -48,7 +52,7 @@ export class  Posts extends React.Component{
                                 <Post localData={post}  
                                 key={post.id}  
                                 post={post}
-                                
+                                //currUser={user}
                                 likes={this.props.postsLikeCounters[post.id]+post.likes}
                                 liked={this.props.postsLikes[post.id]}
                                 onLike={this.props.onLike}
@@ -68,8 +72,8 @@ export class  Posts extends React.Component{
                 const mapStateToProps = (state) => {
                   return{  
                     loading:state.dataReducer.loading,
-                    posts:state.dataReducer.posts
-                 
+                    posts:state.dataReducer.posts,
+                   
                    
                 }
                 };        

@@ -1,6 +1,7 @@
 import React from "react";
 import PropTypes from "prop-types";
 import "../../css/month.css";
+import '../../css/calendarResponsible.css'
 import Calendar from "react-calendar";
 
 import WithManageMemo from "../../containers/month/withManageMemo";
@@ -24,12 +25,9 @@ const Month = ({ onClickDay, day, memos }) => {
           </div>
         </div>
       </div>
-      {day && (
         <div className="whenMemos">
-          {day !== "All Memos"}
           <WithManageMemo />
         </div>
-      )}
     </div>
   );
 };

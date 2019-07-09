@@ -4,7 +4,7 @@ import store from '../store';
 class Messages{
     static getAllGuest(){
         store.dispatch(fetchDataLoading());
-        return fetch('http://127.0.0.1:5000/api/story')//to do 6*3
+        return fetch('http://127.0.0.1:5000/api/story')//to do 3
 
         .then(response=> response.json()
         ) .then(json => {
@@ -23,7 +23,7 @@ class Messages{
         .then(response=> response.json()
         ) .then(json => {
           
-            store.dispatch(fetchDataSuccessUsers(json.stories))
+            store.dispatch(fetchDataSuccess(json.stories))
           
            // return json;
         }).catch(error => store.dispatch(fetchDataFailure(error)));
@@ -46,7 +46,55 @@ class Messages{
      }
 
         
-    static newPost = post=>{
+   
+    static newPost = post =>{
+        let headers = new Headers();
+
+  headers.append('Content-Type', 'application/json');
+  headers.append('Accept', 'application/json');
+  headers.append('Access-Control-Allow-Credentials', 'true');
+
+  headers.append('GET', 'POST', 'HEAD');
+        const options={
+            method:"POST",
+            headers:headers,
+            mode: 'cors',
+            body:post
+        }
+        return fetch('http://127.0.0.1:5000/api/story',options)//add post method
+        .then(res=>res.json())
+        .then(json => {
+          
+            store.dispatch(fetchDataSuccess(json.stories))
+          
+        })
+        .catch(error=>console.log(error));
+        
+    }
+    static likePost = data=>{
+        let headers = new Headers();
+
+  headers.append('Content-Type', 'application/json');
+  headers.append('Accept', 'application/json');
+
+  headers.append('Access-Control-Allow-Origin', 'http://localhost:3001');
+  headers.append('Access-Control-Allow-Credentials', 'true');
+
+  headers.append('GET', 'HEAD');
+        const options={
+            method:"POST",
+            headers:headers,
+            mode: 'cors',
+            body:data
+        }
+        return fetch('http://127.0.0.1:5000/api/story/1',options)
+        .then(res=>res.json())
+        .then(res=>console.log(res))
+        .catch(error=>console.log(error));
+        
+    }
+static unlikePost = data=>{
+
         let headers = new Headers();
 
   headers.append('Content-Type', 'application/json');
@@ -60,9 +108,9 @@ class Messages{
             method:"POST",
             headers:headers,
             mode: 'cors',
-            body:post
+            body:data
         }
-        return fetch('http://ec2-54-236-86-235.compute-1.amazonaws.com:5000/api/story',options)//add post method
+        return fetch('http://127.0.0.1:5000/api/story/0',options)
         .then(res=>res.json())
         .then(res=>console.log(res))
         .catch(error=>console.log(error));

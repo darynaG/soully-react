@@ -34,6 +34,10 @@ const StoryEdit =(props)=>{
         
     }
     
+    function onSubmitFunction()
+    {
+        
+    }
     divElement =<div className={c4} id="story">
     <form className="story-input" method="post" onSubmit={e=>{      
                     e.preventDefault();
@@ -41,6 +45,7 @@ const StoryEdit =(props)=>{
                     var a={}
                     let date=getTodayDate();
                     if(t.replace(/\s/g, "")!==""){  a={
+
 
                         "account_id":props.user.user.id,
                         "text":input.value,
@@ -58,7 +63,7 @@ const StoryEdit =(props)=>{
         <div className={c1}>
                     <h5 className="h3-label" >Share your story</h5>
          <textarea className={c2 } name="subject" placeholder="Write something.." ref={node=>input=node} ></textarea>
-         <button className={c3} type="submit"  > Share</button>
+         <button className={c3} type="submit" onSubmit={onSubmitFunction}> Share</button>
          
          </div>
     </form>

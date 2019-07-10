@@ -29,10 +29,13 @@ export class  Posts extends React.Component{
     let a=this.props.posts.posts;
     console.log("IN STORYLINE",this.props)
     let data=[];
+  
     for(let i=a.length-1;i>=0;i--){
+     
         data.push(a[i]);
+
     }
-   
+    //console.log("IN STORYLINE",this.props)
     if(store.getState().dataReducer.loading===true){
         
         return(
@@ -47,12 +50,14 @@ export class  Posts extends React.Component{
                     { 
                         data.map((post,index)=>{
                             if(this.props.postsLikeCounters[post.id]===undefined) this.props.postsLikeCounters[post.id]=0;
+                            //if(this.props.postsLike[post.id]===undefined) 
+                            
                             return(
                               
                                 <Post localData={post}  
                                 key={post.id}  
                                 post={post}
-                                //currUser={user}
+                                
                                 likes={this.props.postsLikeCounters[post.id]+post.likes}
                                 liked={this.props.postsLikes[post.id]}
                                 onLike={this.props.onLike}

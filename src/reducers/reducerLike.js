@@ -13,10 +13,11 @@ export function posts(state = [], action) {
   return state;
 }
 
-export function postsLikes(state = {}, action) {
-  
+export function postsLikes(state=[] , action) {
+  let value;
   switch (action.type) {
     case 'LIKE_POST':
+       
       return {
         ...state,
         
@@ -49,7 +50,7 @@ export function postsLikeCounters(state = [], action) {
 
       return {
         ...state,
-        [action.payload.post.id]: Math.max(value - 1, 0)
+        [action.payload.post.id]: value-1
       };
     default:
       return state;

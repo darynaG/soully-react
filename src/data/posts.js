@@ -1,9 +1,10 @@
 import {fetchDataSuccess,fetchDataFailure, fetchDataLoading,fetchDataSuccessUsers, fetchDataSuccessId } from '../actions/data.actions'
 import store from '../store';
-
+import { authHeader } from '../helpers';
 class Messages{
     static getAllGuest(){
         store.dispatch(fetchDataLoading());
+       
         return fetch('http://127.0.0.1:5000/api/story')//to do 3
 
         .then(response=> response.json()
@@ -18,7 +19,11 @@ class Messages{
     }
     static getAll(){
         store.dispatch(fetchDataLoading());
-        return fetch('http://127.0.0.1:5000/api/story')//to do pagination if possible
+        const requestOptions = {
+            method: 'GET',
+            headers: authHeader()
+        };
+        return fetch('http://127.0.0.1:5000/api/story', requestOptions)//to do pagination if possible
 
         .then(response=> response.json()
         ) .then(json => {

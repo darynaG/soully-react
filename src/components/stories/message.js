@@ -12,9 +12,12 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import store from '../../store'
 
 class Post extends React.Component {
-    
+   
     render() {
-        console.log("@@@@@@@@",{"user_id":store.getState().authentication.user.user.id})
+        let check;
+        if(this.props.liked===undefined) check=this.props.localData.isLiked;
+        else check=this.props.liked;
+        //if(this.props.localData.isLiked>0){this.props.onLike(this.props.post);}
         return (
             <div className="story" >
                 <div className="story_head">
@@ -27,7 +30,7 @@ class Post extends React.Component {
                     {this.props.localData.text}
                     <FontAwesomeIcon icon={faQuoteRight} />
                 </article> {
-                    this.props.liked ? (
+                    check? (
                         <button className="story_footer" onClick={() => {this.props.onUnlike(this.props.post); Messages.unlikePost(JSON.stringify({"story_id":this.props.post.id, "user_id":store.getState().authentication.user.user.id}));}} style={{ color: 'red' }}>
                             <div> {"Hugs:" + ' ' + this.props.likes} </div> <img className="like_img " src={likeim}></img>
                         </button>

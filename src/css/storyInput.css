@@ -23,7 +23,7 @@
   height: 200px;
   outline: none;
   -moz-appearance: none;
-  border: none;
+  border: 1px solid #00000047;
 }
 .story-input .row-container {
   display: flex;

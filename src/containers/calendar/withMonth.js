@@ -2,21 +2,21 @@ import { connect } from "react-redux";
 import Month from "../../components/calendar/month"
 import * as actions from "../../actions/day.action";
 import '../../css/calendarResponsible.css'
-
+import Posts from '../../data/posts'
+import store from '../../store'
 
 const mapStateToProps = state => {
-  console.log("state", state.changeMood);
   return {
-    day: state.currentday,
-    memos: state.data
+    day: state.currentday.day,
+    information: state.currentday.information,
+    user_id:state.authentication.user.user.id
   };
 };
 
-const mapDispatchToProps = dispatch => {
-
+const mapDispatchToProps = (dispatch)=> {
 
   return {
-    onClickDay: (dateObj, memos) => {
+    onClickDay: (dateObj) => {
       let day = dateObj.getDate();
       let month = dateObj.getMonth() + 1;
       if (day < 10) {
@@ -26,14 +26,12 @@ const mapDispatchToProps = dispatch => {
         month = "0" + month;
 
       }
-      
+     const user = store.getState().authentication.user.user.id
       const year = dateObj.getFullYear();
       const fullDate = `${year}-${month}-${day}`;
-
-      dispatch(actions.displayDetailsDays(fullDate));
-    },
-    onClickSeeAll: memos => {
-      dispatch(actions.displayDetailsDays("All Memos"));
+      var a = Posts.getByUsername(user,fullDate)
+      dispatch(actions.displayDetailsDays(fullDate, a));   
+      
     }
   };
 };
@@ -41,3 +39,4 @@ const mapDispatchToProps = dispatch => {
 const WithMonth = connect(mapStateToProps, mapDispatchToProps)(Month);
 
 export default WithMonth;
+

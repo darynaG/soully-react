@@ -62,6 +62,18 @@
     padding: 0px;
   }
 }
+@media screen and (max-width: 805px) {
+  video {
+    display: none;
+  }
+  .mood-picker {
+    background-image: url(../assets//img/background.jpg);
+    background-size: cover;
+  }
+  .arrow {
+    display: none;
+  }
+}
 @media screen and (max-width: 580px) {
   .mood-picker .block .flex-item {
     width: 30vw;
@@ -81,7 +93,9 @@
 }
 @media screen and (max-width: 420px) {
   .submit-btn {
-    visibility: collapse;
+    position: relative;
+    margin: auto;
+    bottom: 50px;
   }
   .mood-picker .h3-label {
     font-size: 30px;
@@ -102,5 +116,8 @@
   .activity-picker .block .flex-item .showLabel,
   .activity-picker .block .flex-item .hideLabel {
     font-size: 20px;
+  }
+  .story-sharer {
+    display: none;
   }
 }

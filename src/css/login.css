@@ -127,12 +127,15 @@
   transition: background-color 0.4s;
 }
 @media screen and (max-width: 700px) {
+  .login .content {
+    width: 100%;
+  }
   .login .content .leftSide {
     visibility: collapse;
     width: 0%;
   }
   .login .content .rightSide {
-    width: 100%;
+    width: 75%;
   }
   .login .content .rightSide .account {
     padding-top: 20px;

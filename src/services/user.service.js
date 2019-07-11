@@ -57,7 +57,7 @@ function register(user) {
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify(user)
     };
-    return fetch(dbConstants.SERVER_ADDRESS +'/api/accounts/', requestOptions).then(handleResponse);
+    return fetch(dbConstants.SERVER_ADDRESS +'/api/accounts', requestOptions).then(handleResponse);
     //return fetch(`/users/register`, requestOptions).then(handleResponse);
 }
 

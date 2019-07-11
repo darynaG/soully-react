@@ -35,7 +35,9 @@ const Month = ({ onClickDay, day, memos }) => {
 Month.propTypes = {
   onClickDay: PropTypes.func.isRequired,
   day: PropTypes.string,
-  memos: PropTypes.array
+  memos: PropTypes.object
 };
 
 export default Month;
+
+

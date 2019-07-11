@@ -21,6 +21,7 @@ class DailyMood extends React.Component {
     constructor(props) {
         super(props);
         Stories.getByDayAndUsername(this.props.username, this.props.date); 
+        
     }
   
     render () { 

@@ -88,7 +88,7 @@ const mapDispatchToProps = dispatch => {
       const year = dateObj.getFullYear();
       const fullDate = `${year}-${month}-${day}`;
       //Messages.getByUsername(48, fullDate);
-      //dispatch(actions.displayDetailsDays(fullDate));
+      dispatch(actions.displayDetailsDays(fullDate));
       Messages.getDayMood(store.getState().authentication.user.user.id, fullDate);
       Messages.getDayActivity(store.getState().authentication.user.user.id, fullDate);
       Messages.getDayStory(store.getState().authentication.user.user.id, fullDate);

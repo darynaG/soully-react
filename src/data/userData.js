@@ -1,3 +1,4 @@
+import {authHeader} from '../helpers/authHeader'
 class UserData {
     constructor() {
         this.handleResponse = this.handleResponse.bind(this);
@@ -6,11 +7,11 @@ static postData(uData) {
     
     const requestOptions = {
         method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
+        headers: authHeader(),
         body: JSON.stringify(uData)
     };
 
-    return fetch('http://127.0.0.1:5000/api/accounts' + '/' + uData['userId'], requestOptions).then(this.handleResponse);
+    return fetch('http://127.0.0.1:5000/api/accounts/current' , requestOptions).then(this.handleResponse);
     //return fetch(`/users/register`, requestOptions).then(handleResponse);
 }
 handleResponse(response) {

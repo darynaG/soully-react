@@ -78,6 +78,18 @@
         
     }
 }
+@media screen and (max-width: 805px){
+    video{
+        display:none;
+    }
+    .mood-picker{
+        background-image: url(../assets//img/background.jpg);
+         background-size: cover;
+    }
+    .arrow{
+        display:none;
+    }
+}
 
 @media screen and (max-width:580px){
     .mood-picker{
@@ -115,9 +127,11 @@
 
 @media screen and (max-width:420px){
     
-    .submit-btn{
-        visibility: collapse;
-    }
+  .submit-btn{
+      position: relative;
+      margin:auto;
+      bottom:50px;
+  }
     .mood-picker{
         .h3-label{
             font-size: 30px;
@@ -145,5 +159,8 @@
                 }
             }
         }
+    }
+    .story-sharer{
+        display:none
     }
 }

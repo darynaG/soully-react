@@ -1,21 +1,23 @@
 import React from 'react';
 import Mood from '../../components/moodGroup/mood';
 
-import sad from '../../assets/img/sad_black.png'
-import good from '../../assets/img/good_black.png'
-import wow from '../../assets/img/wow_black.png'
-import wtf from '../../assets/img/wtf_black.png'
-import excited from '../../assets/img/excited_black.png'
-import happy from '../../assets/img/happy_black.png'
+import sad from '../../assets/img/sad.svg'
+import good from '../../assets/img/good.svg'
+import wow from '../../assets/img/wow.svg'
+import wtf from '../../assets/img/wtf.svg'
+import excited from '../../assets/img/excited.svg'
+import happy from '../../assets/img/happy.svg'
 
-import sadClicked from '../../assets/img/sad_green.png'
-import goodClicked from '../../assets/img/good_green.png'
-import wowClicked from '../../assets/img/wow_green.png'
-import wtfClicked from '../../assets/img/wtf_green.png'
-import excitedClicked from '../../assets/img/excited_green.png'
-import happyClicked from '../../assets/img/happy_green.png'
+import sadClicked from '../../assets/img/sad_green.svg'
+import goodClicked from '../../assets/img/good_green.svg'
+import wowClicked from '../../assets/img/wow_green.svg'
+import wtfClicked from '../../assets/img/wtf_green.svg'
+import excitedClicked from '../../assets/img/excited_green.svg'
+import happyClicked from '../../assets/img/happy_green.svg'
+
 
 import { connect } from 'react-redux'
+
 
 class MoodGroup extends React.Component {
   constructor(props){

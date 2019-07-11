@@ -21,7 +21,7 @@ class Post extends React.Component {
         return (
             <div className="story" >
                 <div className="story_head">
-                    <img className="image_user" src={im1} />
+                    <img className="image_user" src={im1} alt=''/>
                     <div> {this.props.localData.username}</div>
                 </div>
                 <br />
@@ -30,6 +30,7 @@ class Post extends React.Component {
                     {this.props.localData.text}
                     <FontAwesomeIcon icon={faQuoteRight} />
                 </article> {
+
                     check? (
                         <button className="story_footer" onClick={() => {this.props.onUnlike(this.props.post); Messages.unlikePost(JSON.stringify({"story_id":this.props.post.id, "user_id":store.getState().authentication.user.user.id}));}} style={{ color: 'red' }}>
                             <div> {"Hugs:" + ' ' + this.props.likes} </div> <img className="like_img " src={likeim}></img>
@@ -37,6 +38,7 @@ class Post extends React.Component {
                     ) : (
                             <button className="story_footer" onClick={() => {this.props.onLike(this.props.post); Messages.likePost(JSON.stringify({"story_id":this.props.post.id, "user_id":store.getState().authentication.user.user.id}));}} style={{ color: 'black' }}>
                                 <div>{"Hugs:" + ' ' + this.props.likes}</div> <img className="like_img grey" src={likeim}></img>
+
                             </button>
                         )
                 }

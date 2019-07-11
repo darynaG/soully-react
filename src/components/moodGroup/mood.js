@@ -1,19 +1,19 @@
 import React from 'react';
 
+
 class Mood extends React.Component {
-  constructor(props) {
-    super(props);
-  }
+
+
 
   render() {
     let imgElement;
     let showlabel;
     if (this.props.selected === this.props.mood) {
-      imgElement = <img className={this.props.mood} src={this.props.imgClicked} />;
+      imgElement =<img  src={this.props.imgClicked} alt=''/>;
       showlabel = "showLabel";
     }
     else {
-      imgElement = <img className={this.props.mood} src={this.props.img} />
+      imgElement = <img className={this.props.mood} src={this.props.img} alt=''/>
       showlabel = "hideLabel";
     }
     return (

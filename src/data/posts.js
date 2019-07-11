@@ -1,5 +1,7 @@
-import {fetchDataSuccess,fetchDataFailure, fetchDataLoading,fetchDataSuccessUsers, fetchDataSuccessId } from '../actions/data.actions'
+import {fetchDataSuccess,fetchDataFailure, fetchDataLoading,fetchDataSuccessUsers, fetchDataSuccessId }from '../actions/data.actions'
+import { fetchDataSuccessDay} from '../actions/day.action'
 import store from '../store';
+
 import { authHeader } from '../helpers';
 import React from 'react'
 import { Redirect } from 'react-router-dom'
@@ -7,15 +9,28 @@ class Messages{
     static getAllGuest(){
         store.dispatch(fetchDataLoading());
         return fetch('http://127.0.0.1:5000/api/story')
+
         .then(response=> response.json()
-        ) .then(json => {
+        ).then(json => {
             store.dispatch(fetchDataSuccess(json.stories))
         }).catch(error => store.dispatch(fetchDataFailure(error)));
          
 
     }
+
+    // static getAllByUsername(account_id){
+    //     store.dispatch(fetchDataLoading());
+    //     return fetch('http://127.0.0.1:5000/api/account/'+account_id)
+    //     .then(response=> response.json()
+    //     ).then(json => {
+    //         store.dispatch(fetchDataSuccessUsers(json.stories))
+    //        return json;
+    //     }).catch(error => store.dispatch(fetchDataFailure(error)));
+
+    // }
     static getAll(){
         store.dispatch(fetchDataLoading());
+
         const requestOptions = {
             method: 'GET',
             headers: authHeader()
@@ -36,20 +51,33 @@ class Messages{
             //return (<Redirect to='/home'></Redirect>);
             store.dispatch(fetchDataFailure(error));
         });
+
          
 
     }
-    static getByDayAndUsername(){//to do 
+    static getByDayAndUsername(user_id, date){ 
         store.dispatch(fetchDataLoading());
-        return fetch('http://127.0.0.1:5000/api/story')//to do current
-
+        console.log("vhgfvjvjv,kv",'http://127.0.0.1:5000/api/accounts/'+user_id+'/day/'+date )
+        return fetch('http://127.0.0.1:5000/api/accounts/'+user_id+'/day/'+date)
         .then(response=> response.json()
-        ) .then(json => {
-          
-            store.dispatch(fetchDataSuccessId(json.stories))
-          
-           // return json;
-        }).catch(error => store.dispatch(fetchDataFailure(error)));
+       ).then(json => {
+            store.dispatch(fetchDataSuccessId(json)) 
+        return json;
+       }).catch(error => store.dispatch(fetchDataFailure(error)));
+     }
+     static getByUsername(user_id, date){ 
+        
+        var str =''
+        if(date === "") 
+        str = 'http://127.0.0.1:5000/api/accounts/'+user_id+'/day/'+moment().format("YYYY-MM-DD")
+        else str = 'http://127.0.0.1:5000/api/accounts/'+user_id+'/day/'+date
+        return fetch(str)
+        .then(response=> response.json()
+       ).then(json => {
+            store.dispatch(fetchDataSuccessDay(json)) 
+        return json;
+       })
+      .catch(error => store.dispatch(fetchDataFailure(error)));
          
 
     }
@@ -95,6 +123,7 @@ class Messages{
     }
 static unlikePost = data=>{
 //         let headers = new Headers();
+
 
 //   headers.append('Content-Type', 'application/json');
 //   headers.append('Accept', 'application/json');

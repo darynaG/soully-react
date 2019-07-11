@@ -1,5 +1,5 @@
 import React from 'react';
-import { BrowserRouter as Router, Route, Link } from "react-router-dom";
+import { BrowserRouter as Router, Route} from "react-router-dom";
 import { connect } from 'react-redux';
 
 import '../App.css';
@@ -14,12 +14,9 @@ import { history } from '../helpers';
 import { alertActions } from '../actions';
 import { PrivateRoute } from '../components/privateRoute';
 
-
 import { LoginPage } from '../containers/route/login';
 import { RegisterPage } from '../containers/route/registration';
-import HeaderR from '../containers/header/header'
-
-
+import Header from '../containers/header/header'
 
 class App extends React.Component {
   constructor(props) {
@@ -32,14 +29,13 @@ class App extends React.Component {
     });
   }
   render() {
-    const { alert } = this.props;
     return (
       <div >
         <Router history={history}>
           <div>
-            <HeaderR />
+            <Header />
             <Route exact path="/" component={Guest} />
-            <PrivateRoute exact path="/home" component={MoodPage} />
+            <Route exact path="/home" component={MoodPage} />
             <PrivateRoute exact path="/day" component={Day} />
             <PrivateRoute exact path="/cabinet" component={Month} />
             <PrivateRoute exact path="/stories" component={StoryPage} />

@@ -1,5 +1,5 @@
 import React from 'react'
-import { BrowserRouter as Router, Route, Link } from "react-router-dom";
+import { Link } from "react-router-dom";
 import { connect } from 'react-redux'
 
 import { library } from '@fortawesome/fontawesome-svg-core'
@@ -28,7 +28,7 @@ class Header extends React.Component {
         if (this.props.loggedIn === true) {
             headerShow = <header className="logged">
                 <div className="logo">
-                    <Link to="/home"><img src={logo} /></Link>
+                    <Link to="/home"><img src={logo} alt=''/></Link>
                 </div>
                 <nav>
                     <ul>
@@ -61,7 +61,7 @@ class Header extends React.Component {
         else {
             headerShow = <header className="unLogged">
                 <div className="logo">
-                    <Link to="/"> <img src={logo} /> </Link>
+                    <Link to="/"> <img src={logo} alt=''/> </Link>
                 </div>
                 <nav>
                     <p className="logIn"><Link to="/login">Log in</Link></p>

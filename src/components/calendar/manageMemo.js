@@ -1,16 +1,25 @@
 import React, { Component } from "react";
 import PropTypes from "prop-types";
-import "../../css/ManageMemo.css";
-import AllMemos from "./allMemos";
+
+// import '../../css/ManageMemo.css'
+import "../../css/manageMemo.css";
 
 
 class ManageMemo extends Component {
+  componentDidMount(){
+  
+  }
 
   render() {
-    const { memos, day } = this.props;
+    // const { memos, day } = this.props;
+
     return (
       <div className="manageMemos">
-        {day && (
+        
+        {/* { <OneMemo day = {day} moods = {memos.moods} activities = {memos.activities} stories = {memos.stories}/> } */}
+
+        {/* <OneMemo/> */}
+        {/* {day && (
           <div className="memoOfTheDay">
             <div className="dayClicked"> {day} </div>
             {day === "All Memos" && <div> Click on a day to add a memo! </div>}
@@ -26,7 +35,7 @@ class ManageMemo extends Component {
               </div>
             )}
           </div>
-        )}
+        )} */}
       </div>
     );
   }
@@ -34,7 +43,7 @@ class ManageMemo extends Component {
 
 ManageMemo.propTypes = {
   day: PropTypes.string,
-  memos: PropTypes.array
+  memos: PropTypes.object
 
 };
 

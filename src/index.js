@@ -7,9 +7,6 @@ import { App } from '../src/App/App';
 import { Provider } from 'react-redux';
 import store from './store';
 
-import { configureFakeBackend } from './helpers'
-//configureFakeBackend();
-
 ReactDOM.render(
 
     <Provider store={store}>

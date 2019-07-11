@@ -29,26 +29,28 @@ class Day extends React.Component{
                    <a href="#scroll"> <div className ="arrow"></div></a>
                    </div>          
                 </div>
-                    <div id ='scroll' className='scroll'>
-                     <DailyMood  username = {this.props.username} mood = {this.props.mood} activity={this.props.activity} date = {a} />
-                     </div>
+                    {<div id ='scroll' className='scroll'>
+                     <DailyMood  user_id = {this.props.username.user.id} mood = {this.props.mood} activity={this.props.activity} date = {a}/>
+                     </div> }
                 </div>
         )
     }
 
 }
 const mapStateToProps = (state)=>{
-    console.log("state", state.changeActivity);
     return{
         mood:state.changeMood.mood,
         activity: state.changeActivity,
         posts: state.dataReducer.posts,
-        username: state.authentication.user.user.id
+        postsPersonal:state.dataReducer.postsPersonal,
+        username: state.authentication.user
     }
 }
 const mapDispatchToProps = {
    
     DataLoading,
     DataLoaded
+  
+  
   };
 export default (connect)(mapStateToProps,mapDispatchToProps)(Day);

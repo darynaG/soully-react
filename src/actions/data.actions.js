@@ -32,3 +32,15 @@ export const fetchQuoteSuccess = quotes => ({
   type: 'FETCH_Q_SUCCESS',
   payload: { quotes }
 });
+export const fetchDataSuccessMood = mood => ({
+  type: 'FETCH_DATA_SUCCESS_MOOD',
+  payload: { mood }
+});
+export const fetchDataSuccessActivity = activity => ({
+  type: 'FETCH_DATA_SUCCESS_ACTIVITY',
+  payload: { activity }
+});
+export const fetchDataSuccessStory = story => ({
+  type: 'FETCH_DATA_SUCCESS_STORY',
+  payload: { story }
+});

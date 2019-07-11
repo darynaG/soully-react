@@ -1,4 +1,4 @@
-import {fetchDataSuccess,fetchDataFailure, fetchDataLoading,fetchDataSuccessUsers, fetchDataSuccessId }from '../actions/data.actions'
+import {fetchDataSuccess,fetchDataFailure, fetchDataLoading,fetchDataSuccessUsers, fetchDataSuccessId, fetchDataSuccessMood, fetchDataSuccessStory, fetchDataSuccessActivity} from '../actions/data.actions'
 import { fetchDataSuccessDay} from '../actions/day.action'
 import store from '../store';
 import moment from 'moment'
@@ -6,6 +6,7 @@ import {dbConstants} from '../constants'
 import { authHeader } from '../helpers';
 import React from 'react'
 import { Redirect } from 'react-router-dom'
+
 class Messages{
     static getAllGuest(){
         store.dispatch(fetchDataLoading());
@@ -56,6 +57,7 @@ class Messages{
          
 
     }
+
     static getByDayAndUsername(user_id, date){ 
         const requestOptions = {
             method: 'GET',
@@ -79,13 +81,79 @@ class Messages{
         return fetch(str)
         .then(response=> response.json()
        ).then(json => {
-            store.dispatch(fetchDataSuccessDay(json)) 
+            store.dispatch(fetchDataSuccessId(json)) 
         return json;
        })
       .catch(error => store.dispatch(fetchDataFailure(error)));
+    }
+    static getByDayAndUsername(user_id, date){ 
+        //store.dispatch(fetchDataLoading());
+        var str =''
+        if(date === undefined) 
+        str = 'http://127.0.0.1:5000/api/accounts/'+user_id+'/day/'+moment().format("YYYY-MM-DD")
+        else str = 'http://127.0.0.1:5000/api/accounts/'+user_id+'/day/'+date
+        console.log(str)
+        return fetch(str)
+
+        .then(response=> response.json()
+       ) .then(json => {
+            console.log("!!!!!!!!!!!!!!!!!!!!!!!!!!!",json)
+            store.dispatch(fetchDataSuccessId(json))
+            console.log("!!!!!!!!!!!!!!!!!!!!!!!!!!!",json)
+
+        return json;
+       }).catch(error => store.dispatch(fetchDataFailure(error)));
          
 
-    }
+     }
+     static getDayMood(user_id,date){
+        store.dispatch(fetchDataLoading())
+        var str =''
+        if(date === undefined) 
+        str = 'http://127.0.0.1:5000/api/accounts/'+user_id+'/day/'+moment().format("YYYY-MM-DD")+'/mood'
+        else str = 'http://127.0.0.1:5000/api/accounts/'+user_id+'/day/'+date+'/mood'
+        return fetch(str)
+        .then(response=> response.json()
+       ).then(json => {
+            store.dispatch(fetchDataSuccessMood(json)) 
+        return json;
+       })
+      .catch(error => store.dispatch(fetchDataFailure(error)));
+     }
+
+
+     static getDayActivity(user_id,date){
+        store.dispatch(fetchDataLoading())
+        var str =''
+        if(date === undefined) 
+        str = 'http://127.0.0.1:5000/api/accounts/'+user_id+'/day/'+moment().format("YYYY-MM-DD")+'/activity'
+        else str = 'http://127.0.0.1:5000/api/accounts/'+user_id+'/day/'+date+'/activity'
+        return fetch(str)
+        .then(response=> response.json()
+       ).then(json => {
+            store.dispatch(fetchDataSuccessActivity(json)) 
+        return json;
+       })
+      .catch(error => store.dispatch(fetchDataFailure(error)));
+     }
+
+
+     static getDayStory(user_id,date){
+        store.dispatch(fetchDataLoading())
+        var str =''
+        if(date === undefined) 
+        str = 'http://127.0.0.1:5000/api/accounts/'+user_id+'/day/'+moment().format("YYYY-MM-DD")+'/story'
+        else str = 'http://127.0.0.1:5000/api/accounts/'+user_id+'/day/'+date+'/story'
+        return fetch(str)
+        .then(response=> response.json()
+       ).then(json => {
+            store.dispatch(fetchDataSuccessStory(json)) 
+        return json;
+       })
+      .catch(error => store.dispatch(fetchDataFailure(error)));
+     }
+        
+   
     static newPost = post =>{
 
         const options={
@@ -127,7 +195,9 @@ class Messages{
         
     }
 static unlikePost = data=>{
-//         let headers = new Headers();
+
+
+        //let headers = new Headers();
 
 
 //   headers.append('Content-Type', 'application/json');

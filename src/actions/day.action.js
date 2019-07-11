@@ -1,17 +1,12 @@
 import {actionType} from '../constants'
 
-export const displayDetailsDays = (day, information) => {
+export const displayDetailsDays = (day) => {
+    
     return {
       type: actionType.DISPLAY_DETAILS_DAY,
       payload: {
-        day: day,
-        information: information
+        day: day
+        
       }
     };
   };
-
-  export const fetchDataSuccessDay = (day,information) => ({
-    type: 'FETCH_DATA_SUCCESS_DAY',
-    payload: { information: information,
-    day:day}
-});

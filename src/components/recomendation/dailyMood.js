@@ -20,11 +20,14 @@ library.add(
 class DailyMood extends React.Component {
     constructor(props) {
         super(props);
-        Stories.getByDayAndUsername(this.props.username, this.props.date); 
-        
     }
-  
+    componentDidMount() 
+    {
+        Stories.getByDayAndUsername(this.props.user_id, this.props.date);
+    }
+
     render () { 
+        console.log("hjfjfyu",this.props.postsPersonal)
         if(store.getState().dataReducer.loading===true){
      
             return(
@@ -34,7 +37,14 @@ class DailyMood extends React.Component {
             )
         }else
         {
-        const stor = this.props.postsPersonal.stories.map((story) =>
+        let prep=this.props.postsPersonal;
+        console.log('jkggikg',prep)
+        
+        let data=[];
+        for(let i=prep.length-1;i>=0;i--){
+            data.push(prep[i]);
+        }
+        const stor = data.map((story) =>
         <ol className="story">
             <FontAwesomeIcon icon={faQuoteLeft}> </FontAwesomeIcon>
             <article className="story_text"> {story} </article>
@@ -42,8 +52,22 @@ class DailyMood extends React.Component {
             </FontAwesomeIcon>
         </ol> );
 
+       var a =this.props.activity;
+       
 
-          const activities = this.props.postsPersonal.activities.map((activiti) => 
+        var act = [];
+        var arr = Object.keys(a);
+        
+        for (var i=0; i<arr.length; ++i)
+          {
+            if(this.props.activity[arr[i]] === true)
+              {
+                act.push(arr[i]);
+              }
+            //   console.log(arr[i]);
+        
+          }
+          const activities = act.map((activiti) => 
          <li> {activiti} </li>
          );
          const mood = this.props.postsPersonal.moods.slice(-1)[0]
@@ -78,8 +102,6 @@ class DailyMood extends React.Component {
         }
 }
 const mapStateToProps= (state) => {
-    
-    
     return {
         loading:state.dataReducer.loading,
         postsPersonal: state.dataReducer.postsPersonal

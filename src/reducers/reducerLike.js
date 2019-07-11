@@ -1,14 +1,3 @@
-
-// const initialState = {
-//   posts: [{}],
-//   postsLikeCounters: [{}].reduce((out, post) => {
-//     return {
-//       ...out,
-//       [post.id]: post.likes
-//     };
-//   }, {})
-// };
-
 export function posts(state = [], action) {
   return state;
 }

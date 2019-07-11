@@ -13,10 +13,9 @@ const initialState = {
     charity: false
 }
 const changeActivity = (state = initialState, action) => {
-    console.log("state- ", state, "I state - ", initialState, " Action - ", action)
+
     switch (action.type) {
         case 'SELECT_ACTIVITY':
-            console.log(" IN REDUCER   ", action.name, " IN REDUCER   ", action.checked)
             return {
                 ...state,
                 [action.name]: action.checked

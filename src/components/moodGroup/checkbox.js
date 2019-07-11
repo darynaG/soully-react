@@ -1,19 +1,17 @@
 import React from 'react';
 
 class Check extends React.Component {
-  // constructor(props) {
-  //   super(props);
-  // };
+
 
   render() {
     let imgElement;
     let showlabel;
 
     if (this.props.checked) {
-      imgElement = <img className="imgA" src={this.props.imgClicked} alt=''/>;
+      imgElement = <img className="imgA" src={this.props.imgClicked} alt='' />;
       showlabel = "showLabel";
     } else {
-      imgElement = <img className="imgA" src={this.props.img} alt=''/>;
+      imgElement = <img className="imgA" src={this.props.img} alt='' />;
       showlabel = "hideLabel";
     }
     return (

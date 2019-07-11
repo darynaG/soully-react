@@ -3,7 +3,6 @@ export function posts(state = [], action) {
 }
 
 export function postsLikes(state=[] , action) {
-  let value;
   switch (action.type) {
     case 'LIKE_POST':
        

@@ -1,5 +1,5 @@
 import React, { PureComponent } from 'react';
-import {connect} from 'react-redux'
+import { connect } from 'react-redux'
 import { library } from '@fortawesome/fontawesome-svg-core'
 import {
     faQuoteLeft,
@@ -13,58 +13,55 @@ library.add(
 )
 
 class StoryBoard extends PureComponent {
-render(){
-        let data=this.props.posts;     
+    render() {
+        let data = this.props.posts;
         const current = [];
-            for(let i = 0;i < data.length&&current.length<3;i++){
-                
-                
-                  
-                current.push(data[i]);
-            } 
-    return(
-        <React.Fragment>
-        <div className="storyboard">
-    <div className="story_column left">
-         { 
-             current.slice(0,2).map((data)=>{
-                    return(
-                    <div className="story">
-                       <article className="story_text"> <FontAwesomeIcon icon={faQuoteLeft} size="1x"/>
-                       {data.text}
-                       <FontAwesomeIcon icon={faQuoteRight} size="1x"/>
-                        </article>
-                     </div>
-             )
-         })
+        for (let i = 0; i < data.length && current.length < 3; i++) {
+            current.push(data[i]);
         }
-    </div>
-
-    { <div className="story_column right">
-    {
-             current.slice(2,3).map((data)=>{
-                 return(
-                    <div className="story">
-                        <article className="story_text"> <FontAwesomeIcon icon={faQuoteLeft} size="1x"/>
-                         {data.text}
-                         <FontAwesomeIcon icon={faQuoteRight} size="1x"/>
-                        </article>                         
+        return (
+            <React.Fragment>
+                <div className="storyboard">
+                    <div className="story_column left">
+                        {
+                            current.slice(0, 2).map((data) => {
+                                return (
+                                    <div className="story">
+                                        <article className="story_text"> <FontAwesomeIcon icon={faQuoteLeft} size="1x" />
+                                            {data.text}
+                                            <FontAwesomeIcon icon={faQuoteRight} size="1x" />
+                                        </article>
+                                    </div>
+                                )
+                            })
+                        }
                     </div>
-             )
-         })
-        }
-    </div> }
-</div>
-</React.Fragment>
-    );
+
+                    {<div className="story_column right">
+                        {
+                            current.slice(2, 3).map((data) => {
+                                return (
+                                    <div className="story">
+                                        <article className="story_text"> <FontAwesomeIcon icon={faQuoteLeft} size="1x" />
+                                            {data.text}
+                                            <FontAwesomeIcon icon={faQuoteRight} size="1x" />
+                                        </article>
+                                    </div>
+                                )
+                            })
+                        }
+                    </div>}
+                </div>
+            </React.Fragment>
+        );
+    }
 }
-}
-const mapStateToProps= (state) => {
-    
-    
+const mapStateToProps = (state) => {
+
+
     return {
-       mood : state.changeMood.mood,
-       posts: state.dataReducer.posts
+        mood: state.changeMood.mood,
+        posts: state.dataReducer.posts
     };
-   }
+}
 export default connect(mapStateToProps)(StoryBoard);

@@ -1,5 +1,9 @@
 .manageMemos {
   width: 100%;
+  text-align: center;
+}
+.list {
+  list-style: none;
 }
 .memoOfTheDay {
   padding: 30px;

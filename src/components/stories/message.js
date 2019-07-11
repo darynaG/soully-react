@@ -12,16 +12,15 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import store from '../../store'
 
 class Post extends React.Component {
-   
+
     render() {
         let check;
-        if(this.props.liked===undefined) check=this.props.localData.isLiked;
-        else check=this.props.liked;
-        //if(this.props.localData.isLiked>0){this.props.onLike(this.props.post);}
+        if (this.props.liked === undefined) check = this.props.localData.isLiked;
+        else check = this.props.liked;
         return (
             <div className="story" >
                 <div className="story_head">
-                    <img className="image_user" src={im1} alt=''/>
+                    <img className="image_user" src={im1} alt='' />
                     <div> {this.props.localData.username}</div>
                 </div>
                 <br />
@@ -31,13 +30,13 @@ class Post extends React.Component {
                     <FontAwesomeIcon icon={faQuoteRight} />
                 </article> {
 
-                    check? (
-                        <button className="story_footer" onClick={() => {this.props.onUnlike(this.props.post); Messages.unlikePost(JSON.stringify({"story_id":this.props.post.id, "user_id":store.getState().authentication.user.user.id}));}} style={{ color: 'red' }}>
-                            <div> {"Hugs:" + ' ' + this.props.likes} </div> <img className="like_img " src={likeim}></img>
+                    check ? (
+                        <button className="story_footer" onClick={() => { this.props.onUnlike(this.props.post); Messages.unlikePost(JSON.stringify({ "story_id": this.props.post.id, "user_id": store.getState().authentication.user.user.id })); }} style={{ color: 'red' }}>
+                            <div> {"Hugs: " + this.props.likes} </div> <img className="like_img " src={likeim} alt=""></img>
                         </button>
                     ) : (
-                            <button className="story_footer" onClick={() => {this.props.onLike(this.props.post); Messages.likePost(JSON.stringify({"story_id":this.props.post.id, "user_id":store.getState().authentication.user.user.id}));}} style={{ color: 'black' }}>
-                                <div>{"Hugs:" + ' ' + this.props.likes}</div> <img className="like_img grey" src={likeim}></img>
+                            <button className="story_footer" onClick={() => { this.props.onLike(this.props.post); Messages.likePost(JSON.stringify({ "story_id": this.props.post.id, "user_id": store.getState().authentication.user.user.id })); }} style={{ color: 'black' }}>
+                                <div>{"Hugs: " + this.props.likes}</div> <img className="like_img grey" src={likeim} alt=" "></img>
 
                             </button>
                         )

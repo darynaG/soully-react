@@ -52,7 +52,6 @@ class Group extends React.Component {
 }
 
 const mapStateToProps = (state) => {
-  console.log("state -", state.changeActivity);
   return {
     water: state.changeActivity["water"],
     sport: state.changeActivity["sport"],
@@ -73,7 +72,6 @@ const mapDispatchToProps = (dispatch) => {
   return {
 
     onActivitySelect: (event) => {
-      console.log("event.target.value: ", event.target.value, "event.target.checked: ", event.target.checked);
       event.preventDefault();
       dispatch({ type: 'SELECT_ACTIVITY', name: event.target.value, checked: event.target.checked })
     },

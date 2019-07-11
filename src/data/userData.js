@@ -1,4 +1,5 @@
 import {authHeader} from '../helpers/authHeader'
+import {dbConstants} from '../constants'
 class UserData {
     constructor() {
         this.handleResponse = this.handleResponse.bind(this);
@@ -11,15 +12,13 @@ static postData(uData) {
         body: JSON.stringify(uData)
     };
 
-    return fetch('http://127.0.0.1:5000/api/accounts/current' , requestOptions).then(this.handleResponse);
-    //return fetch(`/users/register`, requestOptions).then(handleResponse);
+    return fetch(dbConstants.SERVER_ADDRESS +'/api/accounts/current' , requestOptions).then(this.handleResponse);
 }
 handleResponse(response) {
     return response.text().then(text => {
         const data = text && JSON.parse(text);
         if (!response.ok) {
             if (response.status === 401) {
-                // auto logout if 401 response returned from api
                 window.location.reload(true);
             }
 

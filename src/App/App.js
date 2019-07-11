@@ -3,7 +3,7 @@ import { BrowserRouter as Router, Route} from "react-router-dom";
 import { connect } from 'react-redux';
 
 import '../App.css';
-import MoodPage from '../containers/common/moodPage';
+import MoodPage from '../containers/route/moodPage';
 import Footer from '../components/footer/footer';
 import Day from '../containers/route/day'
 import Month from '../containers/route/month'
@@ -24,7 +24,7 @@ class App extends React.Component {
 
     const { dispatch } = this.props;
     history.listen((location, action) => {
-      // clear alert on location change
+
       dispatch(alertActions.clear());
     });
   }

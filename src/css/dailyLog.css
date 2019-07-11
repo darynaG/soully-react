@@ -44,21 +44,14 @@
   text-align: -webkit-center;
 }
 .daily-log .stories .story {
-  margin: 20px ;
-  max-height: 200px;
-  overflow-y: auto;
-  padding: 15px;
-  border-radius: 10px;
-  position: relative;
+  margin: 20px;
   text-align: justify;
-  overflow: auto;
-  border: 3px solid black;
-  -webkit-border-radius: 30px;
-  -moz-border-radius: 30px;
-  border-radius: 30px;
-  -webkit-box-shadow: 2px 2px 4px #888;
-  -moz-box-shadow: 2px 2px 4px #888;
-  box-shadow: 2px 2px 4px #888;
+  padding: 15px;
+  width: 45vw;
+  border-radius: 2px;
+  BORDER: 1PX SOLID #0000002b;
+  border-radius: 10px;
+  font-family: 'Courier New', Courier, monospace;
 }
 .daily-log .stories .story .story_text {
   font-family: 'Courier New', Courier, monospace;

@@ -19,8 +19,6 @@ function login(username, password) {
             .then(
                 user => {
                     dispatch(success(user));
-                    //history.push('/');
-                    //window.location.reload(true);
                 },
                 error => {
                     dispatch(failure(error));
@@ -78,8 +76,6 @@ function getAll() {
     function success(users) { return { type: userConstants.GETALL_SUCCESS, users } }
     function failure(error) { return { type: userConstants.GETALL_FAILURE, error } }
 }
-
-// prefixed function name with underscore because delete is a reserved word in javascript
 function _delete(id) {
     return dispatch => {
         dispatch(request(id));

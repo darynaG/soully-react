@@ -78,7 +78,6 @@ export default function dataReducer(state=initialState, action) {
           };
         case 'NEW_POST_ADDED':
                 value.push(action.payload.post);
-                console.log("new post",value)
             return{
                 ...state,
                 posts: value

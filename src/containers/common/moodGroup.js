@@ -20,13 +20,13 @@ import { connect } from 'react-redux'
 
 
 class MoodGroup extends React.Component {
-  constructor(props){
+  constructor(props) {
     super(props);
-    if(this.props.isGuest===true) {
+    if (this.props.isGuest === true) {
       this.props.handleClick();
       this.props.initQuotes();
     }
-    
+
   }
   render() {
     return (

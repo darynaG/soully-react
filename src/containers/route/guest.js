@@ -23,7 +23,6 @@ class Guest extends React.Component{
         const list=activities.map((activiti) => 
          <li > {activiti['name']} </li>
          );
-         console.log("users",this.props.users)
         if(store.getState().dataReducer.loading===true){
        
             return(
@@ -53,7 +52,6 @@ class Guest extends React.Component{
 }
 
 const mapStateToProps = (state)=>{
- console.log("log",state.dataReducer.users)
     return({
         mood:state.changeMood.mood,
         users:state.dataReducer.users,

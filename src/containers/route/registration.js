@@ -41,15 +41,19 @@ class RegisterPage extends React.Component {
         this.setState({ submitted: true });
         const { user } = this.state;
         const { dispatch } = this.props;
-        if (user.email && user.username && user.password) {
-            dispatch(userActions.register(user));
+        if (user.password.length > 6) {
+            if (user.email && user.username && user.password) {
+                dispatch(userActions.register(user));
+            }
+        }
+        else {
+            alert("Password is too short! Be more creative...")
         }
     }
 
     render() {
         const { registering } = this.props;
         const { user, submitted } = this.state;
-        console.log("user reg", user)
         return (
             <div className="registration">
                 <div className="content">
@@ -68,7 +72,7 @@ class RegisterPage extends React.Component {
                             <div className="username">
                                 <label htmlFor="email">Email</label>
                                 <div className="inp">
-                                    <input type="text" className="form-control" name="email" value={user.firstName} onChange={this.handleChange} />
+                                    <input type="email" className="form-control" name="email" value={user.firstName} onChange={this.handleChange} />
                                     {submitted && !user.email &&
                                         <div className="help-block">!</div>
 
@@ -99,8 +103,8 @@ class RegisterPage extends React.Component {
                                 {registering}
                             </div>
                             <div className="account">
-                            <Link to="/login" className="btn-link">Log in</Link>
-                        </div>
+                                <Link to="/login" className="btn-link">Log in</Link>
+                            </div>
                         </form>
                     </div>
                 </div>

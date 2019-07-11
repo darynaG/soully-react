@@ -5,21 +5,15 @@ import Calendar from "react-calendar";
 import Messages from '../../data/posts'
 import store from '../../store'
 import * as actions from "../../actions/day.action";
-
 import {connect} from 'react-redux'
 import ManageMemo from '../calendar/manageMemo'
 
 class MonthC extends React.Component{
-  constructor(props){
-    super(props);
-  }
+
   act = [];
-
-
   render(){
     
     return (
-      <div>
           <div className="up">
             <div class="calendar">
               <div className="title">
@@ -36,12 +30,13 @@ class MonthC extends React.Component{
                 </div>
               </div>
             </div>
+              <div className="whenMemos">
+                
+                <ManageMemo/>
+              
+              </div>
           </div>
-        <div className="whenMemos">
-          <ManageMemo />
-        </div>
-      </div>
-    );
+        );
   }
 }
 const mapStateToProps = state => {
@@ -61,7 +56,7 @@ const mapDispatchToProps = dispatch => {
       if (day < 10) {
         day = "0" + day;
       }
-      if (month < 10) {
+      if(month < 10) {
         month = '0' + month;
       }
       const year = dateObj.getFullYear();
@@ -75,4 +70,3 @@ const mapDispatchToProps = dispatch => {
 };
 
 export default connect(mapStateToProps, mapDispatchToProps)(MonthC)
-

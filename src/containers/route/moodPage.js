@@ -2,9 +2,10 @@ import React from 'react';
 import { connect } from 'react-redux'
 import { Redirect } from 'react-router-dom'
 import moment from 'moment'
+import { Link } from "react-router-dom";
 
-import Group from "./activityGroup";
-import MoodGroup from './moodGroup'
+import Group from "../common/activityGroup";
+import MoodGroup from '../common/moodGroup'
 import StoryEditor from '../../components/stories/storyEditor'
 
 import videoClip from '../../assets/video/Nature.mp4';
@@ -22,7 +23,6 @@ class MoodPage extends React.Component {
     
 
     onKeepTrack(event) {
-        //
         var s = this.props.activities;
           var act = [];
           var arr = Object.keys(s);
@@ -34,17 +34,13 @@ class MoodPage extends React.Component {
                   act.push(arr[i]);
                 }
             }
-        //
         var userdata = {
-            //user_id: this.props.user['id'],
             userId: this.props.user.user['id'],
             mood: this.props.mood,
             date: moment().format("YYYY-MM-DD"),
             activities: act
         }
-        
-        console.log('USER DATA',userdata)
-        //console.log('USER ID',userdata['userId'])
+
         UserData.postData(userdata);
         return <Redirect to={'/day'} />
     }
@@ -68,7 +64,8 @@ class MoodPage extends React.Component {
                 <source src={videoClip} type="video/mp4" />
             </video>
 
-            <button className="round-btn submit-btn" onClick={this.onKeepTrack} >Keep track</button>
+            <button className="round-btn submit-btn" onClick={this.onKeepTrack} >
+                <Link to ="/day">Keep track</Link></button>
         </div>
         );
     }
@@ -76,7 +73,6 @@ class MoodPage extends React.Component {
 
 const mapStateToProps = (state) => {
    
-    //console.log(state.authentication['user'])
     return {
         mood: state.changeMood.mood,
         activities: state.changeActivity,

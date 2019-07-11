@@ -1,0 +1,140 @@
+* {
+  font-family: 'Courier New', Courier, monospace;
+}
+header {
+  position: fixed;
+  z-index: 100;
+  top: 0;
+  left: 0;
+  padding: 0 10px;
+  height: 9vh;
+  background-color: #EDEAE5;
+  width: 100%;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: row;
+  z-index: 1;
+}
+header .logo {
+  width: 10vw;
+}
+header .logo img {
+  height: 9vh;
+}
+header nav {
+  width: 100vw;
+  margin: auto;
+}
+header nav .list {
+  display: flex;
+  flex-direction: row;
+  margin: auto;
+}
+header nav .logout {
+  margin-top: auto;
+  margin-bottom: auto;
+  margin-right: 0;
+  margin-left: auto;
+}
+header nav ul {
+  margin: auto;
+  padding: 10px;
+  display: flex;
+}
+header nav ul li,
+header nav ul p {
+  font-weight: bold;
+  padding-right: 20px;
+  list-style: none;
+}
+header nav ul li a,
+header nav ul p a {
+  height: 50px;
+  line-height: 50px;
+  padding: 0 20px;
+  color: #004d40;
+  text-decoration: none;
+  display: block;
+}
+header nav ul li a:hover,
+header nav ul p a:hover {
+  background: grey;
+  color: azure;
+}
+header .menu-toogle {
+  margin-top: auto;
+  margin-bottom: auto;
+  margin-left: auto;
+  color: #004d40;
+  float: right;
+  line-height: 50px;
+  font-size: 24px;
+  cursor: pointer;
+  display: none;
+}
+@media (max-width: 805px) {
+  .logged {
+    z-index: 99999999;
+    position: fixed;
+  }
+  .logged .menu-toogle {
+    display: block;
+  }
+  .logged .active {
+    display: block;
+  }
+  .logged .active-logout {
+    display: block;
+  }
+  .logged .logOut {
+    display: none;
+  }
+  .logged .list {
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+  }
+  .logged nav {
+    display: none;
+    position: absolute;
+    width: 100%;
+    background: #EDEAE5;
+    top: 50px;
+    transition: 0.5s;
+  }
+  .logged nav ul {
+    display: block;
+    text-align: center;
+  }
+  .logged nav ul li a {
+    border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+  }
+}
+.logIn {
+  color: #004d40;
+  margin-top: auto;
+  margin-bottom: auto;
+  text-decoration: none;
+  font-weight: bold;
+  float: right;
+}
+.logIn a {
+  height: 50px;
+  line-height: 50px;
+  padding: 0 20px;
+  color: #004d40;
+  text-decoration: none;
+  display: block;
+}
+.logIn a:hover {
+  background: grey;
+  color: azure;
+}
+.unLogged {
+  position: fixed;
+}
+.unLogged nav {
+  margin-top: auto;
+  margin-bottom: auto;
+  margin-right: 0;
+}

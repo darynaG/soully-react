@@ -1,0 +1,142 @@
+* {
+  font-family: 'Courier New', Courier, monospace;
+}
+.login {
+  display: flex;
+  min-height: 583px;
+  background-color: #fff;
+  border-radius: 6px;
+  height: 100vh;
+  background-image: url(../assets/img/brooke.jpg);
+  background-size: cover;
+}
+.login .content {
+  margin: auto;
+  display: flex;
+  flex-direction: row;
+  width: 50%;
+}
+.login .content .leftSide,
+.login .content .rightSide {
+  width: 50%;
+  margin-top: 10vh;
+  background-color: #fff;
+  padding: 5%;
+}
+.login .content .leftSide {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.login .content .leftSide .headerImg {
+  user-select: none;
+  box-sizing: border-box;
+}
+.login .content .leftSide .headerImg img {
+  user-select: none;
+  width: 100%;
+}
+.login .content .leftSide .account {
+  display: flex;
+  flex-wrap: wrap;
+  color: #004d40;
+  font-size: 20px;
+  line-height: 21px;
+}
+.login .content .leftSide .account h5,
+.login .content .leftSide .account a {
+  width: 100%;
+  margin-bottom: 10px;
+  color: #004d40;
+}
+.login .content .leftSide .account a {
+  text-decoration: underline;
+  font-size: 15px;
+}
+.login .content .rightSide {
+  box-sizing: border-box;
+  user-select: none;
+}
+.login .content .rightSide .account {
+  display: flex;
+  flex-wrap: wrap;
+  color: #004d40;
+  font-size: 20px;
+  line-height: 21px;
+  visibility: collapse;
+}
+.login .content .rightSide .account a {
+  width: 100%;
+  margin-bottom: 10px;
+  color: #004d40;
+  text-decoration: underline;
+  font-size: 15px;
+}
+.login .content .rightSide input {
+  outline: none;
+  overflow: visible;
+  line-height: 1.15;
+}
+.login .content .rightSide h1 {
+  font-size: 20px;
+  text-transform: capitalize;
+  color: #004d40;
+}
+.login .content .rightSide .form {
+  touch-action: none;
+}
+.login .content .rightSide .form .username {
+  margin-bottom: 20px;
+  position: relative;
+  max-width: 320px;
+}
+.login .content .rightSide .form .username .inp {
+  display: flex;
+}
+.login .content .rightSide .form .username .inp .help-block {
+  color: red;
+  font-size: 25px;
+}
+.login .content .rightSide .form .username label {
+  font-size: 14px;
+  transition: all 0.3s;
+  position: absolute;
+  top: 0;
+  left: 0;
+  color: #a0a0a0;
+  transform-origin: left;
+  pointer-events: none;
+}
+.login .content .rightSide .form .username .form-control {
+  font-size: 14px;
+  transition: all 0.3s;
+  width: 100%;
+  padding: 20px 0 3px;
+  border: none;
+  border-bottom: 1px solid #a0a0a0;
+}
+.login .content .rightSide .btn {
+  width: 100%;
+  height: 40px;
+  margin-top: 30px;
+  color: #fff;
+  font-size: 14px;
+  text-align: center;
+  background-color: #004d40;
+  border-radius: 8px;
+  transition: background-color 0.4s;
+}
+@media screen and (max-width: 700px) {
+  .login .content .leftSide {
+    visibility: collapse;
+    width: 0%;
+  }
+  .login .content .rightSide {
+    width: 100%;
+  }
+  .login .content .rightSide .account {
+    padding-top: 20px;
+    visibility: visible;
+    text-align: center;
+  }
+}

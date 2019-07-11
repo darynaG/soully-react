@@ -1,10 +1,6 @@
 import React, { Component } from "react";
-import PropTypes from "prop-types";
 import "../../css/manageMemo.css";
-import AllMemos from "./allMemos";
 import store from '../../store'
-import OneMemo from "./oneMemo";
-import Messages from "../../data/posts"
 import { connect } from "react-redux";
 
 class ManageMemo extends Component {
@@ -18,8 +14,6 @@ class ManageMemo extends Component {
     }
 
 }
-
-
   render() {
     const mood =this.props.mood.slice(-1)[0];
 
@@ -42,7 +36,7 @@ class ManageMemo extends Component {
     else
     {
     return (
-      <div className="manageMemos">
+      <div className="manageMemos" style ={{"textAlign":"center"}}>
          <div className="dayClicked"> {this.props.day} </div>
         { lenght === 0 &&(
              <div className="memoListEmpty">
@@ -58,7 +52,7 @@ class ManageMemo extends Component {
         {this.props.activities.length !==0 &&(
           <div>
         <h1>Your've been up to </h1>
-        <ul>
+        <ul className="list" style ={{"list-style":"none"}}>
           {activities}
         </ul>
         </div>
@@ -66,27 +60,9 @@ class ManageMemo extends Component {
         {this.props.stories.length !== 0 && (
           <div>
         <h1>Your stories</h1>
-        <ul>{stories}</ul>
+        <ul className="list" style ={{"list-style":"none"}}>{stories}</ul>
         </div>
         )}
-        {/* <OneMemo/> */}
-        {/* {day && (
-          <div className="memoOfTheDay">
-            <div className="dayClicked"> {day} </div>
-            {day === "All Memos" && <div> Click on a day to add a memo! </div>}
-            {memos.length === 0 &&
-              day !== "All Memos" && (
-                <div className="memoListEmpty">
-                  You have not share your day! Tell us about it!
-                </div>
-              )}
-            {memos.length !== 0 && (
-              <div className="memoListOfTheDay">
-                <AllMemos memos={memos} day={day} />
-              </div>
-            )}
-          </div>
-        )} */}
       </div>
     );
       }

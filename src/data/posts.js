@@ -1,6 +1,7 @@
 import {fetchDataSuccess,fetchDataFailure, fetchDataLoading,fetchDataSuccessStory, fetchDataSuccessId, fetchDataSuccessMood, fetchDataSuccessActivity} from '../actions/data.actions'
 import store from '../store'
 import moment from 'moment'
+import { authHeader } from '../helpers/authHeader';
 
 class Messages{
     static getAllGuest(){
@@ -114,16 +115,16 @@ class Messages{
         
    
     static newPost = post =>{
-        let headers = new Headers();
+//         let headers = new Headers();
 
-  headers.append('Content-Type', 'application/json');
-  headers.append('Accept', 'application/json');
-  headers.append('Access-Control-Allow-Credentials', 'true');
+//   headers.append('Content-Type', 'application/json');
+//   headers.append('Accept', 'application/json');
+//   headers.append('Access-Control-Allow-Credentials', 'true');
 
   headers.append('GET', 'POST', 'HEAD');
         const options={
             method:"POST",
-            headers:headers,
+            headers:authHeader(),
             mode: 'cors',
             body:post
         }

@@ -1,0 +1,81 @@
+.story-sharer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-content: center;
+  margin-top: 200px;
+}
+.story-sharer .h3-label {
+  font-size: 40px;
+}
+.story-input {
+  display: flex;
+  flex-direction: column;
+}
+.story-input .story-text {
+  font-family: 'Courier New', Courier, monospace;
+  font-size: 18px;
+  resize: none;
+  word-wrap: normal;
+  margin: auto;
+  margin-top: 70px;
+  width: 30%;
+  height: 200px;
+  outline: none;
+  -moz-appearance: none;
+  border: none;
+}
+.story-input .row-container {
+  display: flex;
+  flex-direction: row;
+  padding-top: 10px;
+  padding-left: 20%;
+  padding-right: 20%;
+}
+.story-input .round-btn {
+  margin: auto;
+  margin-top: 50px;
+  margin-bottom: 100px;
+}
+.all_s {
+  background-repeat: repeat-y;
+}
+.minimize {
+  justify-content: left;
+  background-color: #004d408f;
+  position: relative;
+  margin-top: 75px;
+  padding: 20px;
+}
+.minimize .h3-label {
+  font-size: 20px;
+  align-self: center;
+}
+.minimize .min {
+  height: 70px;
+  width: 50%;
+  margin: 0;
+  margin-left: 5%;
+  margin-top: 10px;
+}
+.minimize .min-btn {
+  margin: 0;
+  margin-left: 10%;
+  justify-self: right;
+}
+.minimize .min-btn:hover {
+  color: white;
+}
+@media screen and (max-width: 900px) {
+  .minimize .min-btn {
+    margin-left: 45%;
+  }
+  .minimize .min {
+    width: 90%;
+  }
+  .story-input .row-container {
+    display: block;
+    padding: 0;
+    padding-top: 10px;
+  }
+}

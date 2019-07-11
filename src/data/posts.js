@@ -16,20 +16,7 @@ class Messages{
         ).then(json => {
             store.dispatch(fetchDataSuccess(json.stories))
         }).catch(error => store.dispatch(fetchDataFailure(error)));
-         
-
     }
-
-    // static getAllByUsername(account_id){
-    //     store.dispatch(fetchDataLoading());
-    //     return fetch('http://127.0.0.1:5000/api/account/'+account_id)
-    //     .then(response=> response.json()
-    //     ).then(json => {
-    //         store.dispatch(fetchDataSuccessUsers(json.stories))
-    //        return json;
-    //     }).catch(error => store.dispatch(fetchDataFailure(error)));
-
-    // }
     static getAll(){
         store.dispatch(fetchDataLoading());
 
@@ -50,12 +37,8 @@ class Messages{
             store.dispatch(fetchDataSuccess(json.stories))
         })
         .catch(error => {
-            //return (<Redirect to='/home'></Redirect>);
             store.dispatch(fetchDataFailure(error));
         });
-
-         
-
     }
 
     static getByDayAndUsername(user_id, date){ 
@@ -64,7 +47,6 @@ class Messages{
             headers: authHeader()
         };
         store.dispatch(fetchDataLoading());
-        //console.log("vhgfvjvjv,kv",'http://127.0.0.1:5000/api/accounts/'+user_id+'/day/'+date )
         return fetch(dbConstants.SERVER_ADDRESS +'/api/accounts/current/day/'+date,requestOptions)
         .then(response=> response.json()
        ).then(json => {
@@ -155,7 +137,6 @@ class Messages{
         
    
     static newPost = post =>{
-
         const options={
             method:"POST",
             headers:authHeader(),
@@ -173,15 +154,6 @@ class Messages{
         
     }
     static likePost = data=>{
-        // let headers = new Headers();
-
-//   headers.append('Content-Type', 'application/json');
-//   headers.append('Accept', 'application/json');
-
-//   headers.append('Access-Control-Allow-Origin', 'http://localhost:3001');
-//   headers.append('Access-Control-Allow-Credentials', 'true');
-
-  //headers.append('GET', 'HEAD');
         const options={
             method:"POST",
             headers:authHeader(),
@@ -195,18 +167,6 @@ class Messages{
         
     }
 static unlikePost = data=>{
-
-
-        //let headers = new Headers();
-
-
-//   headers.append('Content-Type', 'application/json');
-//   headers.append('Accept', 'application/json');
-
-//   //headers.append('Access-Control-Allow-Origin', 'http://localhost:3001');
-//   headers.append('Access-Control-Allow-Credentials', 'true');
-
-//   headers.append('GET', 'POST', 'HEAD');
         const options={
             method:"POST",
             headers:authHeader(),
@@ -220,6 +180,5 @@ static unlikePost = data=>{
         
     }
 }
-
 
 export default Messages;

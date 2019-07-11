@@ -1,0 +1,30 @@
+.centered-text {
+  padding: 35px;
+  margin: 40px;
+  text-align: center;
+  left: 10%;
+  right: 10%;
+  top: 30%;
+  font-size: 40px;
+  justify-content: space-around;
+  display: flex;
+}
+.centered-text p {
+  font-size: 30px;
+  font-family: cursive;
+  text-align: right;
+}
+.fix-position {
+  flex-direction: column;
+}
+@media screen and (max-width: 900px) {
+  .centered-text {
+    margin: 5px;
+  }
+  .centered-text article {
+    font-size: 25px;
+  }
+  .centered-text p {
+    font-size: 20px;
+  }
+}

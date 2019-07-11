@@ -1,0 +1,28 @@
+.container-s {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  flex-direction: column;
+  align-content: center;
+  padding-top: 20px;
+}
+.arrow {
+  box-sizing: border-box;
+  height: 3vw;
+  width: 3vw;
+  border-style: solid;
+  border-color: black;
+  border-width: 0px 0px 4px 0px;
+  margin: auto;
+  transition: border-width 150ms ease-in-out;
+  position: relative;
+  bottom: 5%;
+}
+.arrow:hover {
+  border-bottom-width: 6px;
+  border-right-width: 0px;
+}
+.add-margin {
+  margin-top: 250px;
+}

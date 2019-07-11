@@ -5,29 +5,38 @@ import Calendar from "react-calendar";
 import Messages from '../../data/posts'
 import store from '../../store'
 import * as actions from "../../actions/day.action";
-import { connect } from 'react-redux'
+
+import {connect} from 'react-redux'
 import ManageMemo from '../calendar/manageMemo'
 
-class MonthC extends React.Component {
-  
-  render() {
+class MonthC extends React.Component{
+  constructor(props){
+    super(props);
+  }
+  act = [];
+
+
+  render(){
+    
     return (
-      <div className="up">
-        <div class="calendar">
-          <div className="title">
-            <div> Monthly Log </div>
-          </div>
-          <div className="content">
-            <div className="calendarContainer">
-              <Calendar
-                className="calendar"
-                onClickDay={day => {
-                  this.props.onClickDay(day);
-                }}
-              />
+      <div>
+          <div className="up">
+            <div class="calendar">
+              <div className="title">
+                <div> Monthly Log </div>
+              </div>
+              <div className="content">
+                <div className="calendarContainer">
+                  <Calendar
+                    className="calendar"
+                    onClickDay={day => {
+                      this.props.onClickDay(day);
+                    }}
+                  />
+                </div>
+              </div>
             </div>
           </div>
-        </div>
         <div className="whenMemos">
           <ManageMemo />
         </div>
@@ -36,7 +45,6 @@ class MonthC extends React.Component {
   }
 }
 const mapStateToProps = state => {
-  console.log("MAP STATE TO PROPS MONTH");
   return {
     day: state.currentday,
     memos: state.dataReducer.actions,
@@ -46,7 +54,6 @@ const mapStateToProps = state => {
 };
 
 const mapDispatchToProps = dispatch => {
-  console.log("MAP DISPATCH MONTH");
   return {
     onClickDay: (dateObj) => {
       let day = dateObj.getDate();
@@ -68,3 +75,4 @@ const mapDispatchToProps = dispatch => {
 };
 
 export default connect(mapStateToProps, mapDispatchToProps)(MonthC)
+

@@ -1,0 +1,140 @@
+* {
+  font-family: 'Courier New', Courier, monospace;
+}
+.registration {
+  display: flex;
+  min-height: 583px;
+  border-radius: 6px;
+  height: 100vh;
+  background-image: url(../assets/img/brooke.jpg);
+  background-size: cover;
+}
+.registration .content {
+  margin: auto;
+  display: flex;
+  flex-direction: row;
+  width: 50%;
+}
+.registration .content .leftSide,
+.registration .content .rightSide {
+  width: 50%;
+  margin-top: 10vh;
+  background-color: #fff;
+  padding: 5%;
+}
+.registration .content .leftSide {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.registration .content .leftSide .headerImg {
+  user-select: none;
+  box-sizing: border-box;
+}
+.registration .content .leftSide .headerImg img {
+  user-select: none;
+  width: 100%;
+}
+.registration .content .leftSide .account {
+  display: flex;
+  flex-wrap: wrap;
+  color: #004d40;
+  font-size: 20px;
+  line-height: 21px;
+}
+.registration .content .leftSide .account h5,
+.registration .content .leftSide .account a {
+  width: 100%;
+  margin-bottom: 10px;
+  color: #004d40;
+}
+.registration .content .leftSide .account a {
+  text-decoration: underline;
+  font-size: 15px;
+}
+.registration .content .rightSide {
+  box-sizing: border-box;
+  user-select: none;
+}
+.registration .content .rightSide .account {
+  visibility: collapse;
+  display: flex;
+  flex-wrap: wrap;
+  color: #004d40;
+  font-size: 20px;
+  line-height: 21px;
+}
+.registration .content .rightSide .account a {
+  width: 100%;
+  margin-bottom: 10px;
+  color: #004d40;
+  text-decoration: underline;
+  font-size: 15px;
+}
+.registration .content .rightSide input {
+  outline: none;
+  overflow: visible;
+  line-height: 1.15;
+}
+.registration .content .rightSide h3 {
+  text-transform: capitalize;
+  color: #004d40;
+}
+.registration .content .rightSide .form {
+  touch-action: none;
+}
+.registration .content .rightSide .form .username {
+  margin-bottom: 20px;
+  position: relative;
+  max-width: 320px;
+}
+.registration .content .rightSide .form .username .inp {
+  display: flex;
+}
+.registration .content .rightSide .form .username .inp .help-block {
+  color: red;
+  font-size: 25px;
+}
+.registration .content .rightSide .form .username label {
+  font-size: 14px;
+  transition: all 0.3s;
+  position: absolute;
+  top: 0;
+  left: 0;
+  color: #a0a0a0;
+  transform-origin: left;
+  pointer-events: none;
+}
+.registration .content .rightSide .form .username .form-control {
+  font-size: 14px;
+  transition: all 0.3s;
+  width: 100%;
+  padding: 20px 0 3px;
+  border: none;
+  border-bottom: 1px solid #a0a0a0;
+}
+.registration .content .rightSide .btn {
+  width: 100%;
+  height: 40px;
+  margin-top: 30px;
+  color: #fff;
+  font-size: 14px;
+  text-align: center;
+  background-color: #004d40;
+  border-radius: 8px;
+  transition: background-color 0.4s;
+}
+@media screen and (max-width: 700px) {
+  .registration .content .leftSide {
+    visibility: collapse;
+    width: 0%;
+  }
+  .registration .content .rightSide {
+    width: 100%;
+  }
+  .registration .content .rightSide .account {
+    padding-top: 20px;
+    visibility: visible;
+    text-align: center;
+  }
+}

@@ -11,9 +11,7 @@ class ManageMemo extends Component {
       day: "",
 
     }
-
-  }
-
+}
 
   render() {
     const mood = this.props.mood.slice(-1)[0];
@@ -34,13 +32,16 @@ class ManageMemo extends Component {
         <div>Wait please</div>
       )
     }
-    else {
-      return (
-        <div className="manageMemos">
-          <div className="dayClicked"> {this.props.day} </div>
-          {lenght === 0 && (
-            <div className="memoListEmpty">
-              You have not share your day! Tell us about it!
+    else
+    {
+    return (
+      <div>
+      <div className="manageMemos" style ={{"textAlign":"center"}}>
+         <div className="dayClicked"> {this.props.day} </div>
+        { lenght === 0 &&(
+             <div className="memoListEmpty">
+             You have not share your day! Tell us about it!
+
            </div>
           )}
           {this.props.mood.length !== 0 && (
@@ -65,9 +66,27 @@ class ManageMemo extends Component {
           )}
           
         </div>
-      );
-    }
+
+        )}
+        {this.props.activities.length !==0 &&(
+          <div>
+        <h1>Your've been up to </h1>
+        <ul className="list" style ={{"list-style":"none"}}>
+          {activities}
+        </ul>
+        </div>
+        )}
+        {this.props.stories.length !== 0 && (
+          <div>
+        <h1>Your stories</h1>
+        <ul className="list" style ={{"list-style":"none"}}>{stories}</ul>
+        </div>
+        )}
+      </div>
+    );
+      
   }
+}
 }
 const mapStateToProps = state => {
   var stor = [];

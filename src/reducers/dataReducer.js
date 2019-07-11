@@ -1,10 +1,15 @@
 const initialState = {
     posts: [],
-    postsPersonal:[],
+    postsPersonal: [],
+    mood: [],
+    activity: [],
+    story: [],
     users:[],
     loading: false,
     quotes: [],
     error: null
+   
+    
 };
 
 export default function dataReducer(state=initialState, action) {
@@ -36,8 +41,26 @@ export default function dataReducer(state=initialState, action) {
             return {
                 ...state,
                 loading: false,
-                postsPersonal: action.payload.postsPersonal
+                postsPersonal:action.payload.postsPersonal
 
+          };
+          case 'FETCH_DATA_SUCCESS_MOOD':
+            return {
+                ...state,
+                loading: false,
+                mood:action.payload.mood
+          };
+          case 'FETCH_DATA_SUCCESS_ACTIVITY':
+            return {
+                ...state,
+                loading: false,
+                activity:action.payload.activity
+          };
+          case 'FETCH_DATA_SUCCESS_STORY':
+            return {
+                ...state,
+                loading: false,
+                story:action.payload.story
           };
         case 'FETCH_Q_SUCCESS':
             return {

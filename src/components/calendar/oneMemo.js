@@ -1,33 +1,32 @@
 import React, { Component } from "react";
 import PropTypes from "prop-types";
 import "../../css/oneMemo.css";
+import Messages from "../../data/posts"
+import store from '../../store'
 
 class OneMemo extends Component {
-  state = {
-    done: false
-  };
-
+  constructor(props){
+    super(props);
+  }
 
   render() {
-    const { day, date, text, mood, username, activities } = this.props;
-    const actions_ = activities.map((action) =>
-      <li> {action} </li>);
-
     return (
       <span
-        className="itemMemoContainer"
-        ref={element => (this.element = element)}>
-        <span
-          className={`item-memo-textcontent ${this.state.done ? "done" : ""}`}>
-          {day === "All Memos" && <span className="dateMemoText">{date}</span>}
-          <div>
-            <h1>{username}</h1>
-            <i>{mood}</i>
-            <p>{text}</p>
-            <ul>{actions_}</ul>
-          </div>
+        className="itemMemoContainer">
+        <ul>{this.props.act.length}</ul>
         </span>
-      </span>
+        // ref={element => (this.element = element)}>
+        // <span
+        //   className={`item-memo-textcontent ${this.state.done ? "done" : ""}`}>
+        //   {day === "All Memos" && <span className="dateMemoText">{date}</span>}
+        //   <div>
+        //     {/* <h1>{username}</h1>
+        //     <i>{mood}</i>
+        //     <p>{text}</p> */}
+        //     <ul>{actions_}</ul>
+        //   </div>
+        // </span>
+      
     );
   }
 }

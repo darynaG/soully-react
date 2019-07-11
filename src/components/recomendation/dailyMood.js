@@ -20,9 +20,13 @@ library.add(
 class DailyMood extends React.Component {
     constructor(props) {
         super(props);
+        
+        //Stories.getByDayAndUsername(this.props.user_id, this.props.date);
+    }
+    componentDidMount() 
+    {
         Stories.getByDayAndUsername(this.props.user_id, this.props.date);
     }
-  
 
     render () { 
         console.log("hjfjfyu",this.props.postsPersonal)

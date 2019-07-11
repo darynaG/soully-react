@@ -37,7 +37,7 @@ class MoodPage extends React.Component {
         //
         var userdata = {
             //user_id: this.props.user['id'],
-            userId: this.props.user['id'],
+            userId: this.props.user.user['id'],
             mood: this.props.mood,
             date: moment().format("YYYY-MM-DD"),
             activities: act
@@ -75,13 +75,12 @@ class MoodPage extends React.Component {
 }
 
 const mapStateToProps = (state) => {
-    console.log(state.authentication)
-    console.log(state.authentication.user.user)
+   
     //console.log(state.authentication['user'])
     return {
         mood: state.changeMood.mood,
         activities: state.changeActivity,
-        user: state.authentication.user.user
+        user: state.authentication.user
     };
 }
 

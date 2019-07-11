@@ -7,7 +7,7 @@ const StoryEdit =(props)=>{
     let input
     let divElement;
     var c1,c2,c3,c4;
-    //console.log("SOME PROPS",props.user.user.id)
+    //console.log("SOME PROPS",props.user.id)
     
     if (props.isMin === true){
         c1="row-container";
@@ -42,7 +42,7 @@ const StoryEdit =(props)=>{
                     let date=getTodayDate();
                     if(t.replace(/\s/g, "")!==""){  a={
 
-                        "account_id":props.user.user.id,
+                        
                         "text":input.value,
                         "date":date
                     }

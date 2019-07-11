@@ -1,14 +1,15 @@
 import {fetchDataSuccess,fetchDataFailure, fetchDataLoading,fetchDataSuccessUsers, fetchDataSuccessId }from '../actions/data.actions'
 import { fetchDataSuccessDay} from '../actions/day.action'
 import store from '../store';
-
+import moment from 'moment'
+import {dbConstants} from '../constants'
 import { authHeader } from '../helpers';
 import React from 'react'
 import { Redirect } from 'react-router-dom'
 class Messages{
     static getAllGuest(){
         store.dispatch(fetchDataLoading());
-        return fetch('http://127.0.0.1:5000/api/story')
+        return fetch(dbConstants.SERVER_ADDRESS +'/api/story')
 
         .then(response=> response.json()
         ).then(json => {
@@ -35,7 +36,7 @@ class Messages{
             method: 'GET',
             headers: authHeader()
         };
-        return fetch('http://127.0.0.1:5000/api/story', requestOptions)
+        return fetch(dbConstants.SERVER_ADDRESS +'/api/story', requestOptions)
         .then(res=>{
             if(!res.ok){
                 throw new Error(res.status)
@@ -56,9 +57,13 @@ class Messages{
 
     }
     static getByDayAndUsername(user_id, date){ 
+        const requestOptions = {
+            method: 'GET',
+            headers: authHeader()
+        };
         store.dispatch(fetchDataLoading());
-        console.log("vhgfvjvjv,kv",'http://127.0.0.1:5000/api/accounts/'+user_id+'/day/'+date )
-        return fetch('http://127.0.0.1:5000/api/accounts/'+user_id+'/day/'+date)
+        //console.log("vhgfvjvjv,kv",'http://127.0.0.1:5000/api/accounts/'+user_id+'/day/'+date )
+        return fetch(dbConstants.SERVER_ADDRESS +'/api/accounts/current/day/'+date,requestOptions)
         .then(response=> response.json()
        ).then(json => {
             store.dispatch(fetchDataSuccessId(json)) 
@@ -69,8 +74,8 @@ class Messages{
         
         var str =''
         if(date === "") 
-        str = 'http://127.0.0.1:5000/api/accounts/'+user_id+'/day/'+moment().format("YYYY-MM-DD")
-        else str = 'http://127.0.0.1:5000/api/accounts/'+user_id+'/day/'+date
+        str = dbConstants.SERVER_ADDRESS +'/api/accounts/current/day/'+moment().format("YYYY-MM-DD")
+        else str = dbConstants.SERVER_ADDRESS +'/api/accounts/current/day/'+date
         return fetch(str)
         .then(response=> response.json()
        ).then(json => {
@@ -89,7 +94,7 @@ class Messages{
             mode: 'cors',
             body:post
         }
-        return fetch('http://127.0.0.1:5000/api/story',options)//add post method
+        return fetch(dbConstants.SERVER_ADDRESS +'/api/story',options)//add post method
         .then(res=>res.json())
         .then(json => {
           
@@ -138,7 +143,7 @@ static unlikePost = data=>{
             mode: 'cors',
             body:data
         }
-        return fetch('http://127.0.0.1:5000/api/story/0',options)
+        return fetch(dbConstants.SERVER_ADDRESS +'/api/story/0',options)
         .then(res=>res.json())
         .then(res=>console.log(res))
         .catch(error=>console.log(error));

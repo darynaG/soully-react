@@ -1,18 +1,15 @@
 import {fetchDataSuccess,fetchDataFailure, fetchDataLoading,fetchDataSuccessUsers, fetchDataSuccessId } from '../actions/data.actions'
 import store from '../store';
 import { authHeader } from '../helpers';
+import React from 'react'
+import { Redirect } from 'react-router-dom'
 class Messages{
     static getAllGuest(){
         store.dispatch(fetchDataLoading());
-       
-        return fetch('http://127.0.0.1:5000/api/story')//to do 3
-
+        return fetch('http://127.0.0.1:5000/api/story')
         .then(response=> response.json()
         ) .then(json => {
             store.dispatch(fetchDataSuccess(json.stories))
-            //store.dispatch(fetchDataSuccessUsers(json.users))
-          
-           // return json;
         }).catch(error => store.dispatch(fetchDataFailure(error)));
          
 
@@ -23,15 +20,22 @@ class Messages{
             method: 'GET',
             headers: authHeader()
         };
-        return fetch('http://127.0.0.1:5000/api/story', requestOptions)//to do pagination if possible
-
+        return fetch('http://127.0.0.1:5000/api/story', requestOptions)
+        .then(res=>{
+            if(!res.ok){
+                throw new Error(res.status)
+            }else {
+                return res
+            }
+        })
         .then(response=> response.json()
         ) .then(json => {
-          
             store.dispatch(fetchDataSuccess(json.stories))
-          
-           // return json;
-        }).catch(error => store.dispatch(fetchDataFailure(error)));
+        })
+        .catch(error => {
+            //return (<Redirect to='/home'></Redirect>);
+            store.dispatch(fetchDataFailure(error));
+        });
          
 
     }
@@ -50,16 +54,10 @@ class Messages{
 
     }
     static newPost = post =>{
-        let headers = new Headers();
 
-  headers.append('Content-Type', 'application/json');
-  headers.append('Accept', 'application/json');
-  headers.append('Access-Control-Allow-Credentials', 'true');
-
-  headers.append('GET', 'POST', 'HEAD');
         const options={
             method:"POST",
-            headers:headers,
+            headers:authHeader(),
             mode: 'cors',
             body:post
         }
@@ -74,18 +72,18 @@ class Messages{
         
     }
     static likePost = data=>{
-        let headers = new Headers();
+        // let headers = new Headers();
 
-  headers.append('Content-Type', 'application/json');
-  headers.append('Accept', 'application/json');
+//   headers.append('Content-Type', 'application/json');
+//   headers.append('Accept', 'application/json');
 
-  headers.append('Access-Control-Allow-Origin', 'http://localhost:3001');
-  headers.append('Access-Control-Allow-Credentials', 'true');
+//   headers.append('Access-Control-Allow-Origin', 'http://localhost:3001');
+//   headers.append('Access-Control-Allow-Credentials', 'true');
 
-  headers.append('GET', 'HEAD');
+  //headers.append('GET', 'HEAD');
         const options={
             method:"POST",
-            headers:headers,
+            headers:authHeader(),
             mode: 'cors',
             body:data
         }
@@ -96,18 +94,18 @@ class Messages{
         
     }
 static unlikePost = data=>{
-        let headers = new Headers();
+//         let headers = new Headers();
 
-  headers.append('Content-Type', 'application/json');
-  headers.append('Accept', 'application/json');
+//   headers.append('Content-Type', 'application/json');
+//   headers.append('Accept', 'application/json');
 
-  //headers.append('Access-Control-Allow-Origin', 'http://localhost:3001');
-  headers.append('Access-Control-Allow-Credentials', 'true');
+//   //headers.append('Access-Control-Allow-Origin', 'http://localhost:3001');
+//   headers.append('Access-Control-Allow-Credentials', 'true');
 
-  headers.append('GET', 'POST', 'HEAD');
+//   headers.append('GET', 'POST', 'HEAD');
         const options={
             method:"POST",
-            headers:headers,
+            headers:authHeader(),
             mode: 'cors',
             body:data
         }

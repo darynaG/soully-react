@@ -5,6 +5,8 @@ import {connect} from "react-redux";
 import {  faGratipay} from '@fortawesome/free-brands-svg-icons'
 import Spinner from 'react-spinner-material';
 import Messages from '../../data/posts'
+import { Redirect } from 'react-router-dom'
+import { userActions } from '../../actions';
 import {
         faQuoteLeft,
         faQuoteRight
@@ -23,11 +25,8 @@ export class  Posts extends React.Component{
       super(props);
     Messages.getAll()
   }
-  
-
   render(){ 
     let a=this.props.posts.posts;
-    console.log("IN STORYLINE",this.props)
     let data=[];
   
     for(let i=a.length-1;i>=0;i--){
@@ -35,13 +34,18 @@ export class  Posts extends React.Component{
         data.push(a[i]);
 
     }
-    //console.log("IN STORYLINE",this.props)
     if(store.getState().dataReducer.loading===true){
         
         return(
             <div className="loadingContainer three">
                 <Spinner size={120} spinnerColor={"#004d408f"} spinnerWidth={8} visible={true} />
             </div>
+        )
+    }else if(store.getState().dataReducer.error===401){
+     
+        store.dispatch(userActions.logout())
+        return(
+         <Redirect to='/login'></Redirect>
         )
     }else
       return (
@@ -50,30 +54,21 @@ export class  Posts extends React.Component{
                     { 
                         data.map((post,index)=>{
                             if(this.props.postsLikeCounters[post.id]===undefined) this.props.postsLikeCounters[post.id]=0;
-                            //if(this.props.postsLike[post.id]===undefined) 
-                            
                             return(
-                              
                                 <Post localData={post}  
                                 key={post.id}  
                                 post={post}
-                                
                                 likes={this.props.postsLikeCounters[post.id]+post.likes}
                                 liked={this.props.postsLikes[post.id]}
                                 onLike={this.props.onLike}
                                 onUnlike={this.props.onUnlike} />
                             )
-
                         })
                     }  
                 </div>
                 </div>
-            
-
                     );}
-
                 }
-   
                 const mapStateToProps = (state) => {
                   return{  
                     loading:state.dataReducer.loading,

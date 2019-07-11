@@ -125,12 +125,15 @@
   transition: background-color 0.4s;
 }
 @media screen and (max-width: 700px) {
+  .registration .content {
+    width: 100%;
+  }
   .registration .content .leftSide {
     visibility: collapse;
     width: 0%;
   }
   .registration .content .rightSide {
-    width: 100%;
+    width: 75%;
   }
   .registration .content .rightSide .account {
     padding-top: 20px;

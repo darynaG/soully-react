@@ -55,7 +55,7 @@ class RegisterPage extends React.Component {
                 <div className="content">
                     <div className="leftSide">
                         <div className="headerImg">
-                            <img src={llama}></img>
+                            <img src={llama} alt=''></img>
                         </div>
                         <div className="account">
                             <h5>Already have an account?</h5>

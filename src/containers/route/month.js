@@ -1,6 +1,7 @@
 import React from 'react'
 
-import WithMonth from "../month/withMonth";
+import WithMonth from "../calendar/withMonth";
+
 
 import '../../css/responsibleRecomendation.css'
 

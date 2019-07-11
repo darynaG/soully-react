@@ -1,16 +1,34 @@
 .footer {
   background-color: #EDEAE5;
-  margin-left: -10px;
-  margin-right: -10px;
-  height: 20vh;
   display: flex;
   flex-direction: column;
+}
+a {
+  color: black;
+  text-decoration: none;
+}
+a:visited {
+  text-decoration: none;
+}
+a:link {
+  text-decoration: none;
+}
+a .icon {
+  color: black;
+}
+a .icon:visited {
+  color: black;
+}
+a .icon:link {
+  color: black;
+}
+a .icon:active {
+  color: black;
 }
 .footer-content {
   padding-left: 30%;
   padding-right: 30%;
   margin-top: 30px;
-  margin-bottom: 30px;
   display: flex;
   flex-direction: row;
   justify-content: space-between;

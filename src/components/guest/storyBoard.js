@@ -18,9 +18,9 @@ render(){
         const current = [];
             for(let i = 0;i < data.length&&current.length<3;i++){
                 
-                if (data[i].mood===this.props.mood) {
+                
                   
-                current.push(data[i]);}
+                current.push(data[i]);
             } 
     return(
         <React.Fragment>

@@ -18,10 +18,17 @@ function Footer() {
         <footer class="footer">
 
             <div class="footer-content">
-                <FontAwesomeIcon icon={faFacebookF} size="3x" />
-                <FontAwesomeIcon icon={faInstagram} size="3x" />
-                <FontAwesomeIcon icon={faTwitter} size="3x" />
-
+                <div>
+            <a  href= "https://www.fb.me/soully.xyz" target="blank">
+                <FontAwesomeIcon icon={faFacebookF} size="3x" className = "icon" />
+</a>
+                </div>
+                <a href = "https://www.instagram.com/soully.xyz/?hl=ru" target="blank">
+                <FontAwesomeIcon icon={faInstagram} size="3x" className = "icon"  />
+                </a>
+                < a href= "https://twitter.com/Soully43369957" target="blank">
+                <FontAwesomeIcon icon={faTwitter} size="3x"  className = "icon" />
+                </a>
             </div>
             <span class="footer-label">
                 <h3 class="h3-label">Made by team Oscar. Bootcamp`19.</h3>

@@ -4,7 +4,7 @@ import "../../css/month.css";
 import '../../css/calendarResponsible.css'
 import Calendar from "react-calendar";
 
-import WithManageMemo from "../../containers/month/withManageMemo";
+import WithManageMemo from "../../containers/calendar/withManageMemo";
 
 
 const Month = ({ onClickDay, day, memos }) => {
@@ -35,7 +35,9 @@ const Month = ({ onClickDay, day, memos }) => {
 Month.propTypes = {
   onClickDay: PropTypes.func.isRequired,
   day: PropTypes.string,
-  memos: PropTypes.array
+  memos: PropTypes.object
 };
 
 export default Month;
+
+

@@ -1,4 +1,5 @@
 import { authHeader } from '../helpers';
+import {dbConstants} from '../constants'
 
 export const userService = {
     login,
@@ -17,7 +18,9 @@ function login(username, password) {
         body: JSON.stringify({ username, password })
     };
 
-    return fetch(`http://ec2-54-236-86-235.compute-1.amazonaws.com:5000/api/accounts/auth`, requestOptions)
+
+    return fetch(dbConstants.SERVER_ADDRESS + '/api/accounts/login', requestOptions)
+
         .then(handleResponse)
         .then(user => {
             // store user details and jwt token in local storage to keep user logged in between page refreshes
@@ -51,12 +54,14 @@ function getById(id) {
 }
 
 function register(user) {
-    const requestOptions = {
+    const requestOptions = { 
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify(user)
     };
-    return fetch(`http://ec2-54-236-86-235.compute-1.amazonaws.com:5000/api/accounts/`, requestOptions).then(handleResponse);
+
+    return fetch(dbConstants.SERVER_ADDRESS +'/api/accounts', requestOptions).then(handleResponse);
+
     //return fetch(`/users/register`, requestOptions).then(handleResponse);
 }
 

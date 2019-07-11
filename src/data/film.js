@@ -1,11 +1,10 @@
 import {DataLoaded, DataLoading} from '../actions/data.actions'
 
 import store from '../store';
-class Films{
-    static getAll(){
+class Books{
+    static getAll(mood){
         store.dispatch(DataLoading());
-       
-        return fetch('http://localhost:3002/soully/films')
+        return fetch('http://127.0.0.1:5000/api/content/film/'+mood)
         .then(response=> response.json()
         ).then(json => {
             store.dispatch(DataLoaded())
@@ -15,4 +14,4 @@ class Films{
     }
 
 }
-export default Films;
+export default Books;

@@ -1,19 +1,8 @@
 import React, { Component } from "react";
 import PropTypes from "prop-types";
-import {connect} from 'react-redux'
-// import "../../css/OneMemo.css";
-import "../../css/oneMemo.css";
-import { library } from '@fortawesome/fontawesome-svg-core'
-import {
-  faQuoteLeft,
-  faQuoteRight
-} from '@fortawesome/free-solid-svg-icons'
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 
-library.add(
-  faQuoteLeft,
-  faQuoteRight
-)
+import "../../css/oneMemo.css";
+
 
 class OneMemo extends Component {
   state = {

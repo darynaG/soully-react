@@ -18,7 +18,9 @@ function login(username, password) {
         body: JSON.stringify({ username, password })
     };
 
-    return fetch(dbConstants.SERVER_ADDRESS + '/api/accounts/auth', requestOptions)
+
+    return fetch(dbConstants.SERVER_ADDRESS + '/api/accounts/login', requestOptions)
+
         .then(handleResponse)
         .then(user => {
             // store user details and jwt token in local storage to keep user logged in between page refreshes
@@ -57,7 +59,9 @@ function register(user) {
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify(user)
     };
+
     return fetch(dbConstants.SERVER_ADDRESS +'/api/accounts', requestOptions).then(handleResponse);
+
     //return fetch(`/users/register`, requestOptions).then(handleResponse);
 }
 

@@ -1,7 +1,9 @@
 import React, { Component } from "react";
 import PropTypes from "prop-types";
+
 // import '../../css/ManageMemo.css'
 import "../../css/manageMemo.css";
+
 
 class ManageMemo extends Component {
   componentDidMount(){

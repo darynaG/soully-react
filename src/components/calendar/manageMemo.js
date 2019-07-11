@@ -30,7 +30,10 @@ class ManageMemo extends Component {
     const stories = this.props.stories.map((story) =>
       <li>{story}</li>
     )
-    
+    var lenght = 0;
+    lenght = this.props.activities.length + this.props.mood.length + this.props.stories.length;
+    console.log(store.getState().d)
+
     if(store.getState().dataReducer.loading === true){
       return(
         <div>Wait please</div>
@@ -38,17 +41,34 @@ class ManageMemo extends Component {
     }
     else
     {
-      //console.log("IN ELSE OF N+MANAGE MEMO", store.getState().dataReducer.postsPersonal.activities.length)
     return (
       <div className="manageMemos">
+         <div className="dayClicked"> {this.props.day} </div>
+        { lenght === 0 &&(
+             <div className="memoListEmpty">
+             You have not share your day! Tell us about it!
+           </div>
+        )}
+        {this.props.mood.length !== 0 && (
+          <div>
         <h1>Your moods</h1>
         <h2>{mood}</h2>
+        </div>
+        )}
+        {this.props.activities.length !==0 &&(
+          <div>
         <h1>Your've been up to </h1>
         <ul>
           {activities}
         </ul>
+        </div>
+        )}
+        {this.props.stories.length !== 0 && (
+          <div>
         <h1>Your stories</h1>
         <ul>{stories}</ul>
+        </div>
+        )}
         {/* <OneMemo/> */}
         {/* {day && (
           <div className="memoOfTheDay">
